@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:c="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt">
+	
+	<head>
+		<title>Crux Framework - Test Features</title>
+	</head>
+	
+	<body>
+		<script type="text/javascript" src="../cruxtestwidgets/cruxtestwidgets.nocache.js"></script>
+		<c:screen useController="homeController" useView="**/views/*" 
+			smallViewport="user-scalable=no, width=320" 
+			largeViewport="user-scalable=no, width=device-width, height=device-height"
+			useResource="testWidgetsResources"
+			height="100%"/>
+        <crux:horizontalSwapViewContainer id="views"/>
+        
+		<gwt:flowPanel id="features_options">
+	        <gwt:button id="button_database" onClick="homeController.showViewDatabase" text="Database"/>
+	        <gwt:button id="button_inputs" onClick="homeController.showViewInputs" text="Inputs"/>
+	    </gwt:flowPanel>
+	</body>
+</html>
