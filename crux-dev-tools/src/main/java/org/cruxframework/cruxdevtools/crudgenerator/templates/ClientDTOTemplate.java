@@ -8,8 +8,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.cruxframework.crux.core.client.controller.Parameter;
-import org.cruxframework.crux.core.client.controller.ParameterObject;
 import org.cruxframework.cruxdevtools.crudgenerator.GenerationException;
 import org.cruxframework.cruxdevtools.crudgenerator.Template;
 import org.cruxframework.cruxdevtools.crudgenerator.dto.AcceptableValuesDTO;
@@ -62,8 +60,8 @@ public class ClientDTOTemplate extends Template
 
         //imports.add(ValueObject.class.getCanonicalName());
         imports.add(Serializable.class.getCanonicalName());
-        imports.add(Parameter.class.getCanonicalName());
-        imports.add(ParameterObject.class.getCanonicalName());
+//        imports.add(Parameter.class.getCanonicalName());
+//        imports.add(ParameterObject.class.getCanonicalName());
 
 		return context;
 	}
