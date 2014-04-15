@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.cruxframework.test</groupId>
 	<artifactId>crux-test-smart-gwt</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>CruxTestSmartGWT</name>
 	<description>Crux Test Smart GWT</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cruxVersion>5.0.4</cruxVersion>
+        <cruxVersion>5.2.0-SNAPSHOT</cruxVersion>
         <webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
 		<webinf.lib.folder>${webappDirectory}/WEB-INF/lib/</webinf.lib.folder>
 		<webinf.classes.folder>${webappDirectory}/WEB-INF/classes/</webinf.classes.folder>
@@ -32,7 +32,7 @@
 		<dependency>
 			<groupId>org.cruxframework</groupId>
 			<artifactId>crux-smart-gwt</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	
