@@ -5,7 +5,7 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="mainController" title="Form Display"> 
+	useController="mainController,formDisplayController" title="Form Display"> 
 	
 	<center>
 		<crux:styledPanel id="panel">
@@ -27,7 +27,7 @@
 					</gwt:horizontalPanel>
 				</crux:entry>			
 				<crux:entry horizontalAlignment="center">
-					<crux:button id="btn" text="Fechar" onSelect="mainController.showMenu"/>	
+					<crux:button id="btn" text="Limpar" onSelect="formDisplayController.clearFields"/>	
 				</crux:entry>
 			</crux:formDisplay>	
 		</crux:styledPanel>
