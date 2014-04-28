@@ -1,0 +1,26 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view" 
+	xmlns:crux="http://www.cruxframework.org/crux" 
+	xmlns:widgets="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:smart="http://www.cruxframework.org/crux/smartgwt"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="treeController" title="SmartGWT Tree"> 
+	
+	<center>
+		<widgets:styledPanel id="panel1">
+            <smart:treeGrid id="testeTreeGrid" tooltip="testeTreeGrid" cantDragIntoChildMessage="TriggoChildMessage" cantDragIntoSelfMessage="TriggoSelgMessage"/>	       		
+		</widgets:styledPanel>
+		
+		<showcase:info title="TreeBox">
+			<showcase:description>
+				<p>
+					Estas são as árvores do SmartGWT.  					
+				</p>
+			</showcase:description>
+		</showcase:info>
+		
+	</center>		
+	
+</v:view>

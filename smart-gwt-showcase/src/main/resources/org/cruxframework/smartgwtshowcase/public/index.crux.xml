@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:c="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:smart="http://www.cruxframework.org/crux/smartgwt">
+	
+	<head>
+		<title>Crux Framework - Hello World</title>
+	</head>
+	
+	<body>
+<!-- 	    <script type="text/javascript"> var isomorphicDir = "/sddddddddddddmartgwtshowcase/sc/"; </script> -->
+	
+		<script type="text/javascript" src="../smartgwtshowcase/smartgwtshowcase.nocache.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../syntax-highlight/shCore.css" />
+        <link rel="stylesheet" type="text/css" href="../syntax-highlight/shCoreDefault.css" />
+        <link rel="stylesheet" type="text/css" href="../syntax-highlight/shThemeEclipse.css" />
+        
+        <script type="text/javascript" src="../syntax-highlight/shCore.js"></script>
+        <script type="text/javascript" src="../syntax-highlight/shBrushJava.js"></script>
+        <script type="text/javascript" src="../syntax-highlight/shBrushXml.js"></script>
+    
+        <script type="text/javascript">
+            function doHighlight()
+            {
+                SyntaxHighlighter.defaults['auto-links'] = false;
+                SyntaxHighlighter.defaults['quick-code'] = false;
+                SyntaxHighlighter.highlight();
+            }
+        </script>
+		
+		<c:screen useView="*" 
+			smallViewport="user-scalable=no, width=320" largeViewport="user-scalable=no, width=device-width, height=device-height"
+			useController="mainController"
+			useResource="xStandardResources,showcaseResources" height="100%"
+			onLoad="mainController.wellcome"/>
+		
+        <crux:menuTabsDisposal id="menuDisposal">
+            <crux:header>
+                <gwt:flowPanel id="topBarpanel">
+                    <gwt:label text="Welcome" id="activeViewPage" styleName="activeView"></gwt:label>
+                    <crux:button id="siteButton" text="site" onSelect="mainController.navigateToSite" styleName="topBarIcon siteIcon"/>
+                    <crux:button id="projectButton" text="projeto" onSelect="mainController.navigateToProject" styleName="topBarIcon projectIcon"/>
+                </gwt:flowPanel>
+            </crux:header>
+            <crux:menuSection label="Elementos de Árvores"/>
+            <crux:menuEntry label="Árvore básica" targetView="tree"/>
+        </crux:menuTabsDisposal>
+	</body>
+</html>
