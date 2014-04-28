@@ -1,9 +1,4 @@
 <module rename-to='crossdeviceshowcase'>
-	<inherits name='org.cruxframework.crux.core.Crux' />
-	<inherits name='org.cruxframework.crux.gwt.CruxGWTWidgets' />
-	<inherits name='org.cruxframework.crux.widgets.CruxWidgets' />
-	<inherits name='org.cruxframework.crux.crossdevice.CrossDeviceWidgets' />
-	<inherits name='org.cruxframework.crux.themes.widgets.xstandard.XStandard' />
 	<inherits name='org.cruxframework.showcasecore.ShowcaseCore' />
 
 <!-- 	<super-source path="client" /> -->
