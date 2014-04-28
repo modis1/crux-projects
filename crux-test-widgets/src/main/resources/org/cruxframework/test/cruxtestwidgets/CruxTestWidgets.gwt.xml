@@ -7,7 +7,10 @@
     <inherits name='com.google.gwt.user.theme.standard.Standard'/>
 	<source path='client' />
 	<public path='public' excludes='**/*.crux.xml,**/*.view.xml,**/*.template.xml,**/*.offline.xml' />
-
+    <inherits name="com.google.gwt.i18n.CldrLocales"/>
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    
+    
 	<!-- To enable super dev mode -->
 	<!--
 	<add-linker name="xsiframe"/>
@@ -17,13 +20,13 @@
     <set-property name="device.features" value="largeDisplayMouse"/>
      -->
 
-    <!-- <set-property name="device.features" value="largeDisplayMouse"/> -->
+    <set-property name="device.features" value="largeDisplayMouse"/>
     <!-- <set-property name="device.features" value="largeDisplayArrows"/> -->
     <!-- <set-property name="device.features" value="smallDisplayTouch"/> -->
     <!-- <set-property name="device.features" value="smallDisplayArrows"/> -->
 
-	<extend-property name="locale" values="pt_BR"/>
-	<set-property name="locale" value="pt_BR" />
+<!-- 	<extend-property name="locale" values="pt_BR"/> -->
+<!-- 	<set-property name="locale" value="pt_BR" /> -->
 
 	<!-- To enable logging -->
 	<inherits name="com.google.gwt.logging.Logging" />
