@@ -11,17 +11,15 @@
 	</head>
 	
 	<body>
-<!-- 	    <script type="text/javascript"> var isomorphicDir = "/sddddddddddddmartgwtshowcase/sc/"; </script> -->
-	
 		<script type="text/javascript" src="../smartgwtshowcase/smartgwtshowcase.nocache.js"></script>
 		
-		<link rel="stylesheet" type="text/css" href="../syntax-highlight/shCore.css" />
-        <link rel="stylesheet" type="text/css" href="../syntax-highlight/shCoreDefault.css" />
-        <link rel="stylesheet" type="text/css" href="../syntax-highlight/shThemeEclipse.css" />
+		<link rel="stylesheet" type="text/css" href="syntax-highlight/shCore.css" />
+        <link rel="stylesheet" type="text/css" href="syntax-highlight/shCoreDefault.css" />
+        <link rel="stylesheet" type="text/css" href="syntax-highlight/shThemeEclipse.css" />
         
-        <script type="text/javascript" src="../syntax-highlight/shCore.js"></script>
-        <script type="text/javascript" src="../syntax-highlight/shBrushJava.js"></script>
-        <script type="text/javascript" src="../syntax-highlight/shBrushXml.js"></script>
+        <script type="text/javascript" src="syntax-highlight/shCore.js"></script>
+        <script type="text/javascript" src="syntax-highlight/shBrushJava.js"></script>
+        <script type="text/javascript" src="syntax-highlight/shBrushXml.js"></script>
     
         <script type="text/javascript">
             function doHighlight()
