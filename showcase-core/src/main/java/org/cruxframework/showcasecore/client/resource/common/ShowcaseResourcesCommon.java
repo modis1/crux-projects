@@ -13,30 +13,36 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.cruxframework.showcasecore.client.resource.large;
+package org.cruxframework.showcasecore.client.resource.common;
 
 import org.cruxframework.crux.core.client.resources.Resource;
 import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 
 import com.google.gwt.resources.client.ClientBundle;
-import com.google.gwt.resources.client.DataResource;
+import com.google.gwt.resources.client.TextResource;
 
 /**
- * @author Gesse Dafe
+ * @author @author Samuel Almeida Cardoso (samuel@cruxframework.org)
  *
  */
-@Resource(value="showcaseCoreResources", supportedDevices={Device.largeDisplayArrows, Device.largeDisplayMouse, Device.largeDisplayTouch})
-public interface ShowcaseResourcesLarge extends ClientBundle
+@Resource(value="showcaseCoreResourcesCommon", supportedDevices={Device.all})
+public interface ShowcaseResourcesCommon extends ClientBundle
 {
-	@Source("cssShowcaseLarge.css")
-	CssShowcaseLarge css();
+	@Source("shCore.css")
+	CssShCore cssShCore();
 	
-	@Source("icon-layout.png")
-	DataResource layoutSectionIcon();
+	@Source("shCoreDefault.css")
+	CssShCoreDefault cssShCoreDefault();
 	
-	@Source("icon-site.png")
-	DataResource siteIcon();
+	@Source("shThemeEclipse.css")
+	CssShThemeEclipse cssShThemeEclipse();
 	
-	@Source("icon-project.png")
-	DataResource projectIcon();
+	@Source("shBrushJava.js")
+	TextResource jsShBrushJava();
+	
+	@Source("shBrushXml.js")
+	TextResource jsShBrushXml();
+	
+	@Source("shCore.js")
+	TextResource jsShCore();
 }

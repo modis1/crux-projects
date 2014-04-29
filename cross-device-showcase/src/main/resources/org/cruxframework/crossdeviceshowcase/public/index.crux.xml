@@ -14,27 +14,10 @@
 	<body>
 		<script type="text/javascript" src="crossdeviceshowcase.nocache.js"></script>
 		
-		<link rel="stylesheet" type="text/css" href="../syntax-highlight/shCore.css" />
-		<link rel="stylesheet" type="text/css" href="../syntax-highlight/shCoreDefault.css" />
-		<link rel="stylesheet" type="text/css" href="../syntax-highlight/shThemeEclipse.css" />
-		
-		<script type="text/javascript" src="../syntax-highlight/shCore.js"></script>
-		<script type="text/javascript" src="../syntax-highlight/shBrushJava.js"></script>
-		<script type="text/javascript" src="../syntax-highlight/shBrushXml.js"></script>
-	
-		<script type="text/javascript">
-			function doHighlight()
-			{
-				SyntaxHighlighter.defaults['auto-links'] = false;
-				SyntaxHighlighter.defaults['quick-code'] = false;
-				SyntaxHighlighter.highlight();
-			}
-		</script>
-
 		<c:screen useController="mainController" useView="*" 
 				  smallViewport="user-scalable=no, width=320" 
 				  largeViewport="user-scalable=no, width=device-width, height=device-height" 
-				  useResource="xStandardResources,showcaseResources" height="100%"
+				  useResource="xStandardResources,showcaseCoreResources,showcaseCoreResourcesCommon" height="100%"
 				  onLoad="mainController.wellcome"/>
 
 		<crux:menuTabsDisposal id="menuDisposal">
