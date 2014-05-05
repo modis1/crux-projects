@@ -6,7 +6,7 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt">
 	
 	<head>
-		<title>Crux Framework - Test Features</title>
+		<title>Crux Framework - Test Features - Widgets</title>
 	</head>
 	
 	<body>
@@ -16,11 +16,11 @@
 			largeViewport="user-scalable=no, width=device-width, height=device-height"
 			useResource="testWidgetsResources"
 			height="100%"/>
-        <crux:horizontalSwapViewContainer id="views"/>
-        
-		<gwt:flowPanel id="features_options">
-	        <gwt:button id="button_database" onClick="homeController.showViewDatabase" text="Database"/>
-	        <gwt:button id="button_inputs" onClick="homeController.showViewInputs" text="Inputs"/>
-	    </gwt:flowPanel>
-	</body>
+			
+        <crux:simpleViewContainer id="views">
+            <crux:view name="menu"/>
+        </crux:simpleViewContainer>
+
+    </body>
+
 </html>
