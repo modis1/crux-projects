@@ -7,15 +7,18 @@ import java.util.logging.Logger;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
+import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.plugin.google.analytics.client.GoogleAnalytics;
+import org.cruxframework.crux.widgets.client.rss.RssPanel;
 import org.cruxframework.crux.widgets.client.rss.feed.Error;
 import org.cruxframework.crux.widgets.client.rss.feed.Feed;
 import org.cruxframework.crux.widgets.client.rss.feed.FeedApi;
 import org.cruxframework.crux.widgets.client.rss.feed.FeedCallback;
 import org.cruxframework.crux.widgets.client.rss.feed.Loader;
-import org.cruxframework.cruxsite.client.accessor.IndexAccessor;
 import org.cruxframework.cruxsite.client.accessor.ManualAccessor;
 
+import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.logging.client.LogConfiguration;
 import com.google.gwt.user.client.Window;
@@ -23,10 +26,6 @@ import com.google.gwt.user.client.Window;
 @Controller("mainController")
 public class MainController 
 {
-
-	@Inject
-	private IndexAccessor screen;
-	
 	@Inject
 	private ManualAccessor manual;
 	
@@ -49,7 +48,6 @@ public class MainController
 	@Expose
 	public void onLoad()
 	{
-		
 		// Código do "Mapa Termico de Cliques" 
 		String scriptURL = Window.Location.getProtocol()+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/5757.js?"+Math.floor(new Date().getTime()/3600000);
 		ScriptInjector.fromUrl(scriptURL).setRemoveTag(false).setWindow(ScriptInjector.TOP_WINDOW).inject();
@@ -57,6 +55,19 @@ public class MainController
 		// Inicia Analytics
 		GoogleAnalytics.init("UA-7689544-6"); 
 		
+		//Inicia Post do Blog
+		Scheduler.get().scheduleDeferred(new ScheduledCommand() 
+		{
+			@Override
+			public void execute() 
+			{
+				loadFeedAPI();	
+			}
+		});
+	}
+
+	private void loadFeedAPI() 
+	{
 		Loader.init("ABQIAAAArGIZjhmsan61DtT58_d6cRQNU4gAv_Jc96TUa1T-tg6v_fuASxRtwAMNaJHgnp12SaDI9Cs17oKAzw", new Loader.LoaderCallback()
 		{
 			public void onError(Throwable t)
@@ -80,25 +91,20 @@ public class MainController
 					@Override
 					public void onLoad(Feed feed)
 					{
-						screen.lastBlogEntries().setFeed(feed);
-						//screen.lastBlogEntries().
+						((RssPanel)View.getView("home").getWidget("lastBlogEntries")).setFeed(feed);
 					}
 
 					@Override
 					public void onError(Error error) {
-						// TODO Auto-generated method stub
-						
+						Window.alert(error.getMessage());
 					}
 				});
 			}
 		});
 	}
 	
-	public void setScreen(IndexAccessor screen) {
-		this.screen = screen;
-	}
-
-	public void setManual(ManualAccessor manual) {
+	public void setManual(ManualAccessor manual) 
+	{
 		this.manual = manual;
 	}
 	
