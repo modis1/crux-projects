@@ -16,7 +16,9 @@
 	
 		<div class="container">
 			<h2>Aplicações exemplo com o Crux Framework</h2>	
-			<p>Encontre aqui aplicações exemplo construídas com o Crux Framework. Aprenda gradativamente, lendo o código, executando as aplicações e modificando sua aparência e comportamento.</p>
+			<p>Encontre aqui aplicações exemplo construídas com o Crux Framework. 
+            Aprenda gradativamente, lendo o código, executando as aplicações 
+            e modificando sua aparência e comportamento.</p>
 			<ul class="examplesList">
 				
 				<li>
@@ -59,16 +61,16 @@
 			
 			<ol class="quickstartList">
 				<li>
-					<p>Adicione, no seu Eclipse, o repositório SVN do Crux: <b>https://crux-framework.googlecode.com/svn/trunk/"NOME-PROJETO"</b></p>
+					<p>Adicione, no seu Eclipse, o repositório SVN do Crux: <b>http://crux-projects.googlecode.com/svn/trunk/"NOME-PROJETO"</b></p>
 				</li>
 				<li>
 					<p>Em seguida, faça checkout do projeto que você escolheu dentre os exemplos acima.</p>
 				</li>
 				<li>
-					<p>Compile normalmente com o Maven</p>
+					<p>Compile com o Maven</p>
 				</li>
 				<li>
-					<p>Clique com o botão direito no arquivo <i>.launch</i> existente na raiz do projeto e execute.</p>
+					<p>Clique com o botão direito no arquivo <i>"NOME-PROJETO".launch</i> existente na raiz do projeto e execute o mesmo.</p>
 				</li>
 			</ol>
 		</div>
