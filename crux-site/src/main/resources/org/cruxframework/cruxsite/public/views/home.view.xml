@@ -7,9 +7,7 @@
 	useController="mainController, viewsController,"
     onActivate="viewsController.onActivate" 
     title="Home"
-	useResource="siteDeviceResources,siteCommonResources"
-
-	> 
+	useResource="siteDeviceResources,siteCommonResources"> 
 	
 		<div class="container containerBanner">
 			<crux:promoBanner id="promoBanner" largeBannersHeight="312px" smallBannersHeight="312px" 
