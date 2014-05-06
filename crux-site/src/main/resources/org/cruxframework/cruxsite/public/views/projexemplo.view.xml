@@ -53,6 +53,22 @@
                     <p>O próprio site do Crux é um projeto de exemplo para familiarização com o framework.</p>
                 </li>
                 
+                <li>
+                    <div class="exampleCall">
+                        <div class="exampleText">
+                            <h3>Media Manager</h3>
+                            <div class="svnName">
+                                Acessar:<br />
+                                <b><a href="#">Hotsite</a></b>
+                            </div>
+                        </div>
+                        <div class="exampleImg">
+                            <crux:image id="bgMediaManager" url="${siteCommonResources.bgMediaManager}" />
+                        </div>
+                    </div>
+                    <p>O Media Manager foi desenvolvido para que lorem ipsum dolor...</p>
+                </li>
+                
 			</ul>
 		</div>
 		<div class="separator"></div>

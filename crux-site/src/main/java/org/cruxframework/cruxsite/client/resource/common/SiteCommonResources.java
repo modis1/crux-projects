@@ -47,5 +47,8 @@ public interface SiteCommonResources extends ClientBundle
 	@Source("arquitetura1.png")
 	ImageResource architectureCrux();
 	
+	@Source("bg-mediamanager.png")
+	ImageResource bgMediaManager();
+	
 	
 }
