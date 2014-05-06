@@ -41,7 +41,8 @@
 			<crux:menuEntry label="Progress Box" targetView="progressBox"/>
 			<crux:menuEntry label="Dialog Box" targetView="dialogBox"/>
 			<crux:menuEntry label="Message Box" targetView="messageBox"/>
-			
+			<crux:menuSection label="Elementos de dados" additionalStyleName="layoutSectionIcon"/>
+			<crux:menuEntry label="Adaptive Grid" targetView="adaptivegrid"/>
 			<!-- 
 			<crux:menuSection label="Elementos de Imagem"/>
 			<crux:menuEntry label="Slide Show" targetView="slideshow"/>
