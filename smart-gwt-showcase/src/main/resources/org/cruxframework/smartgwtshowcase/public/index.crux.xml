@@ -7,7 +7,7 @@
 	xmlns:smart="http://www.cruxframework.org/crux/smartgwt">
 	
 	<head>
-		<title>Crux Framework - Hello World</title>
+		<title>ShowCase SmartGWT</title>
 	</head>
 	
 	<body>
@@ -29,6 +29,8 @@
             </crux:header>
             <crux:menuSection label="Elementos de Árvores"/>
             <crux:menuEntry label="Árvore básica" targetView="tree"/>
+            <crux:menuSection label="Calendário"/>
+            <crux:menuEntry label="Calendário Simples" targetView="simpleCalendar"/>
         </crux:menuTabsDisposal>
 	</body>
 </html>
