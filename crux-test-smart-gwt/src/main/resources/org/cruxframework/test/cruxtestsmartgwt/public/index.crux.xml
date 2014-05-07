@@ -15,54 +15,31 @@
 			largeViewport="user-scalable=no, width=device-width, height=device-height"
 			height="100%" onLoad="homeController.onLoad" />
 
+<!--
 <!-- testes até 11/04 -->
 
-				<smart:tileGrid id="tileGrid"/>
-				<smart:listGrid id="listGrid" />
-				<smart:hLayout id="hLayout"/>
-				
-
-				<smart:hStack id="hStack"/>
-
-				<smart:vLayout id="layout" />
-
-				<smart:dynamicForm id="form" tooltip="dynimicForm"/>
-
-<!-- 			<smart:HTMLFlow id="painel2" width="400" height="400"/> -->
-			
-<!-- 			<smart:HTMLFlow id="painel" width="200" height="200"/> -->
-<!-- 			<smart:button id="button1" title="button1" width="50" height="20" style="margin-top:-20px"/> -->
-<!-- 			<smart:button id="button2" title="button2" width="50" height="20"/> -->
-
-			
-<!-- 			<smart:tabSet id="topTabSet" width="400" height="200"/> -->
-<!-- 			<smart:img id="tImg1" src="https://code.google.com/p/crux-framework/logo?cct=1397219537" height="48" width="48"/> -->
-<!-- 			<smart:img id="tImg2" src="https://cba.domains.live.com/cdn2/fd/0b/04/brctrl/01fd0b04.png" height="48" width="48"/> -->
-			
-
-			<smart:HTMLFlow id="testeHTMLFlow" loadingMessage="Olá, Triggo" contents="Eu sou um HTMLFlow - Eu sou um HTMLFlow - Eu sou um HTMLFlow" tooltip="testeHTMLFlow" height="400" width="400" visible="true"/>
+<!-- 			<smart:HTMLFlow id="testeHTMLFlow" loadingMessage="Olá, Triggo" contents="Eu sou um HTMLFlow - Eu sou um HTMLFlow - Eu sou um HTMLFlow" tooltip="testeHTMLFlow" height="400" width="400" visible="true"/> -->
 			<!--OK -->
 			
-			<smart:button id="testeButton" title="Botão Smart" tooltip="testeButton" width="100px" height="50px" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" iconOrientation="right" />
-			<!-- Ok -->testeButton
-			
-			<smart:iButton id="testeIButton" title="Botão IButton" tooltip="testeIButoon"/>
+<!-- 			<smart:button id="testeButton" title="Botão Smart" tooltip="testeButton" width="100px" height="50px" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" iconOrientation="right" /> -->
+			<!-- Ok -->testeButton 		
+<!-- 			<smart:iButton id="testeIButton" title="Botão IButton" tooltip="testeIButoon"/> -->
 			<!-- Ok -->testeIButton
-			<smart:imgButton id="testeImgButton" title="Botão ImgButton" tooltip="testeImgButton" iconOrientation="left" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:imgButton id="testeImgButton" title="Botão ImgButton" tooltip="testeImgButton" iconOrientation="left" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!-- Ok -->testeImgButton
-			<smart:dialog id="testeDialog"  tooltip="testeDialog" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" message="Olá, Flávia Yeshua!!!" />
+<!-- 			<smart:dialog id="testeDialog"  tooltip="testeDialog" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" message="Olá, Flávia Yeshua!!!" /> -->
 			<!-- Ok -->testeDialog
-			<smart:slider id="testeSlider" tooltip="testeSlider" maxValueLabel="7" minValueLabel="2"/>
+<!-- 			<smart:slider id="testeSlider" tooltip="testeSlider" maxValueLabel="7" minValueLabel="2"/> -->
 			<!-- Ok -->testeSlider
-			<smart:label id="testeLabel" tooltip="testeLabel" contents="Label Triggo" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:label id="testeLabel" tooltip="testeLabel" contents="Label Triggo" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!-- Ok -->testeLabel
-			<smart:imgTab id="testeImgTab" tooltip="testeImgTab" />
+<!-- 			<smart:imgTab id="testeImgTab" tooltip="testeImgTab" /> -->
 			<!-- Ok -->testeImgTab
-			<smart:progressbar id="testeProgressbar" tooltip="testeProgressbar" src="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>     
+<!-- 			<smart:progressbar id="testeProgressbar" tooltip="testeProgressbar" src="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>      -->
             <!-- Ok -->testeProgressbar
-            <smart:tabSet id="testeTabSet"  tooltip="testeTabSet" pickerButtonSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!--             <smart:tabSet id="testeTabSet"  tooltip="testeTabSet" pickerButtonSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!-- Ok -->testeTabSet
-			<smart:iconButton id="testeIconButton" title="iconButton" tooltip="testeIconButton" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:iconButton id="testeIconButton" title="iconButton" tooltip="testeIconButton" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!-- Ok -->testeIconButton
 				
 <!-- 			NOVOS COMPONENTES -->
@@ -70,112 +47,112 @@
 <!-- 			<smart:batchUploader id="testeBatchUploader" uploadButtonTitle="BatchUploader" visible="true"/> -->
 			<!--Attempt to create BatchUploader. This class requires Smart GWT Enterprise or Eval. -->
 
-			<smart:dateRangeDialog id="testeDateRangeDialog" tooltip="testeDateRangeDialog" height="50" width="50" okButtonTitle="OkTriggo" />
+<!-- 			<smart:dateRangeDialog id="testeDateRangeDialog" tooltip="testeDateRangeDialog" height="50" width="50" okButtonTitle="OkTriggo" /> -->
 			<!-- Ok -->testeDateRangeDialog
 			
 <!-- 			<smart:fieldPickerWindow id="testeFieldPickerWindow" title="testeFieldPickerWindow" /> -->
 			<!--NÃO TEM ESTE - FieldPickerWindow::create()([]): Cannot read property 'canAddFormulaFields' of null -->
 		    
-			<smart:HTMLPane id="testeHTMLPane" tooltip="testeHTMLPane" height="200" width="50" visible="true" style="background-color:blue"/>
+<!-- 			<smart:HTMLPane id="testeHTMLPane" tooltip="testeHTMLPane" height="200" width="50" visible="true" style="background-color:blue"/> -->
 			<!-- Ok -->testeHTMLPane
-			<smart:img id="testeImg" tooltip="testeImg" altText="teste Img" src="https://code.google.com/p/crux-framework/logo?cct=1397219537" />
+<!-- 			<smart:img id="testeImg" tooltip="testeImg" altText="teste Img" src="https://code.google.com/p/crux-framework/logo?cct=1397219537" /> -->
 			<!-- Ok -->testeImg
-			<smart:imgSplitbar id="testeImgSplitbar" tooltip="testeImgSplitbar" hSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537" />
+<!-- 			<smart:imgSplitbar id="testeImgSplitbar" tooltip="testeImgSplitbar" hSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537" /> -->
 			<!-- Ok -->testeImgSplitbar
-			<smart:stretchImgButton id="testeStretchImgButton" title="testeStretchImgButton" tooltip="testeStretchImgButton" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" iconAlign="right" style="background-color:yellow" width="100"/>
+<!-- 			<smart:stretchImgButton id="testeStretchImgButton" title="testeStretchImgButton" tooltip="testeStretchImgButton" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" iconAlign="right" style="background-color:yellow" width="100"/> -->
 			<!-- Ok -->testeStretchImgButton
 			
 <!-- 			NOVOS COMPONENTES -->	
-			<smart:multiFilePicker id="testeMultiFilePicker" tooltip="testeMultiFilePicker"></smart:multiFilePicker>
+<!-- 			<smart:multiFilePicker id="testeMultiFilePicker" tooltip="testeMultiFilePicker"></smart:multiFilePicker> -->
 			<!-- Ok -->testeMultiFilePicker
-			<smart:dateChooser id="testeDateChooser" tooltip="testeDateChooser" applyButtonTitle="testeDateChooser" prevMonthIcon="https://code.google.com/p/crux-framework/logo?cct=1397219537" nextMonthIcon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:dateChooser id="testeDateChooser" tooltip="testeDateChooser" applyButtonTitle="testeDateChooser" prevMonthIcon="https://code.google.com/p/crux-framework/logo?cct=1397219537" nextMonthIcon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!--OK-->testeDateChooser
 			
 <!-- 			<smart:multiGroupDialog id="testeMultiGroupDialog" addLevelButtonTitle="TE" propertyFieldTitle="TE"/> -->
 			<!--MultiGroupDialog::create()([]): Cannot read property '0' of undefined-->testeMultiGroupDialog
 			
-			<smart:navigationButton id="testeNavigationButton" tooltip="testeNavigationButton" style="background-color:blue" height="50" width="50" />
+<!-- 			<smart:navigationButton id="testeNavigationButton" tooltip="testeNavigationButton" style="background-color:blue" height="50" width="50" /> -->
 			<!--OK-->navigationButton
-			<smart:edgedCanvas id="testeEdgedCanvas" tooltip="testeEdgedCanvas" centerBackgroundColor="pink"/>
+<!-- 			<smart:edgedCanvas id="testeEdgedCanvas" tooltip="testeEdgedCanvas" centerBackgroundColor="pink"/> -->
 			<!--OK-->edgedCanvas
-			<smart:rangeSlider id="testeRangeSlider" tooltip="testeRangeSlider"/>
+<!-- 			<smart:rangeSlider id="testeRangeSlider" tooltip="testeRangeSlider"/> -->
 			<!--OK-->rangeSlider
-			<smart:richTextEditor id="testeRichTextEditor" tooltip="testeRichTextEditor" visible="true" toolbarBackgroundColor="pink" />
+<!-- 			<smart:richTextEditor id="testeRichTextEditor" tooltip="testeRichTextEditor" visible="true" toolbarBackgroundColor="pink" /> -->
 			<!--OK-->richText
 			
-			<smart:scrollbar id="testeScrollbar" tooltip="testeScrollbar" vSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:scrollbar id="testeScrollbar" tooltip="testeScrollbar" vSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!-- OK-->testeScrollbar
-			<smart:statefulCanvas id="testeStatefulCanvas" tooltip="testeStatefulCanvas" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:statefulCanvas id="testeStatefulCanvas" tooltip="testeStatefulCanvas" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!-- OK-->testeStatefulCanvas
-			<smart:viewLoader id="testeViewLoader" tooltip="testeViewLoader" loadingMessage="TriggoLabs, aguardando..." />
+<!-- 			<smart:viewLoader id="testeViewLoader" tooltip="testeViewLoader" loadingMessage="TriggoLabs, aguardando..." /> -->
 			<!--OK-->testeViewLoader
 			
 <!-- 		<smart:cubeGrid id="testeCubeGrid" /> -->
 			<!--This class requires the optional Analytics module which is not present in this build-->
 			
-			<smart:colorPicker id="testeColorPicker" tooltip="testeColorPicker" defaultColor="blue" okButtonTitle="botao de ok" width="200"/>
+<!-- 			<smart:colorPicker id="testeColorPicker" tooltip="testeColorPicker" defaultColor="blue" okButtonTitle="botao de ok" width="200"/> -->
 			<!--OK-->testeColorPicker
-			<smart:dynamicForm id="testeDynamicForm" tooltip="testeDynamicForm" TitleField="fieldTriggo" />
+<!-- 			<smart:dynamicForm id="testeDynamicForm" tooltip="testeDynamicForm" TitleField="fieldTriggo" /> -->
 			<!--OK-->testeDynamicForm
 
 			Testes 15/04
 <!-- 			Testes 15/04/14 -->
 
-			<smart:filterClause id="testeFilterClause" tooltip="testeFilterClause" fieldPickerTitle="testeFilterClause"/>
+<!-- 			<smart:filterClause id="testeFilterClause" tooltip="testeFilterClause" fieldPickerTitle="testeFilterClause"/> -->
 			<!--Ok - usa com FilterBuilder-->
-			<smart:propertySheet id="testePropertySheet" tooltip="testePropertySheet" visible="true"/>
+<!-- 			<smart:propertySheet id="testePropertySheet" tooltip="testePropertySheet" visible="true"/> -->
 			<!--Ok-->testePropertySheet
-			<smart:searchForm id="testeSearchForm" tooltip="testeSearchForm" visible="true"/>
+<!-- 			<smart:searchForm id="testeSearchForm" tooltip="testeSearchForm" visible="true"/> -->
 			<!--OK-->testeSearchForm
-			<smart:iconMenuButton  id="testeIconMenuButton" visible="true" tooltip="testeIconMenuButton"/>
+<!-- 			<smart:iconMenuButton  id="testeIconMenuButton" visible="true" tooltip="testeIconMenuButton"/> -->
 			<!--OK-->testeIconMenuButton
-			<smart:iMenuButton id="testeIMenuButton" tooltip="testeIMenuButton" menuButtonImageUp="https://code.google.com/p/crux-framework/logo?cct=1397219537" />
+<!-- 			<smart:iMenuButton id="testeIMenuButton" tooltip="testeIMenuButton" menuButtonImageUp="https://code.google.com/p/crux-framework/logo?cct=1397219537" /> -->
 			<!--OK-->testeIMenuButton
-			<smart:menu id="testeMenu" title="testeMenu" tooltip="testeMenu" visible="true"/>
+<!-- 			<smart:menu id="testeMenu" title="testeMenu" tooltip="testeMenu" visible="true"/> -->
 			<!--OK-->testeMenu
-			<smart:menuBar id="testeMenuBar" tooltip="testeMenuBar" height="70" width="70" visible="true"/>
+<!-- 			<smart:menuBar id="testeMenuBar" tooltip="testeMenuBar" height="70" width="70" visible="true"/> -->
 			<!--OK-->testeMenuBar
-			<smart:menuButton id="testeMenuButton" tooltip="testeMenuButton" menuButtonImage="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>
+<!-- 			<smart:menuButton id="testeMenuButton" tooltip="testeMenuButton" menuButtonImage="https://code.google.com/p/crux-framework/logo?cct=1397219537"/> -->
 			<!--OK-->testeMenuButton
-			<smart:treeMenuButton id="testeTreeMenuButton" emptyMenuMessage="TriggoLabs, menuVazio!" tooltip="testeTreeMenuButton"/>
+<!-- 			<smart:treeMenuButton id="testeTreeMenuButton" emptyMenuMessage="TriggoLabs, menuVazio!" tooltip="testeTreeMenuButton"/> -->
 			<!--OK-->testeTreeMenuButton
-			<smart:detailViewer id="testeDetailViewer" addFormulaFieldText="Triggo" addSummaryFieldText="Triggo" emptyMessage="Triggo, tá vazio!" tooltip="testeDetailViewer"/>
+<!-- 			<smart:detailViewer id="testeDetailViewer" addFormulaFieldText="Triggo" addSummaryFieldText="Triggo" emptyMessage="Triggo, tá vazio!" tooltip="testeDetailViewer"/> -->
 			<!--OK-->testeDetailViewer
-			<smart:treeGrid  id="testeTreeGrid" tooltip="testeTreeGrid" cantDragIntoChildMessage="TriggoChildMessage" cantDragIntoSelfMessage="TriggoSelgMessage"/>
+<!-- 			<smart:treeGrid  id="testeTreeGrid" tooltip="testeTreeGrid" cantDragIntoChildMessage="TriggoChildMessage" cantDragIntoSelfMessage="TriggoSelgMessage"/> -->
 			<!--OK-->testeTreeGrid
-			<smart:ribbonBar id="testeRibbonBar" visible="true" tooltip="testeRibbonBar"/>
+<!-- 			<smart:ribbonBar id="testeRibbonBar" visible="true" tooltip="testeRibbonBar"/> -->
 			<!--OK-->testeRibbonBar
-			<smart:ribbonGroup id="testeRibbonGroup" tooltip="testeRibbonGroup"/>
+<!-- 			<smart:ribbonGroup id="testeRibbonGroup" tooltip="testeRibbonGroup"/> -->
 			<!--OK-->testeRibbonGroup
-			<smart:toolbar id="testeToolbar" tooltip="testeToolbar" visible="true" />
+<!-- 			<smart:toolbar id="testeToolbar" tooltip="testeToolbar" visible="true" /> -->
 			<!--OK-->testeToolbar
-			<smart:toolStrip id="testeToolStrip" tooltip="testeToolStrip" />
+<!-- 			<smart:toolStrip id="testeToolStrip" tooltip="testeToolStrip" /> -->
 			<!--OK-->testeToolStrip
-			<smart:toolStripButton id="testeToolStripButton" tooltip="testeToolStripButton" />
+<!-- 			<smart:toolStripButton id="testeToolStripButton" tooltip="testeToolStripButton" /> -->
 			<!--OK-->testeToolStripButton
-			<smart:toolStripGroup id="testeToolStripGroup" tooltip="testeToolStripGroup" title="testeToolStripGroup"/>
+<!-- 			<smart:toolStripGroup id="testeToolStripGroup" tooltip="testeToolStripGroup" title="testeToolStripGroup"/> -->
 			<!--OK-->testeToolStripGroup
-			<smart:toolStripMenuButton id="testeToolStripMenuButton" tooltip="testeToolStripMenuButton" />
+<!-- 			<smart:toolStripMenuButton id="testeToolStripMenuButton" tooltip="testeToolStripMenuButton" /> -->
 			<!--OK-->testeToolStripMenuButton
-			<smart:toolStripResizer id="testeToolStripResizer" tooltip="testeToolStripResizer" hSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537" />
+<!-- 			<smart:toolStripResizer id="testeToolStripResizer" tooltip="testeToolStripResizer" hSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537" /> -->
 			<!--OK-->testeToolStripResizer						
-			<smart:toolStripSeparator id="testeToolStripSeparator" tooltip="testeToolStripSeparator" hSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537" />
+<!-- 			<smart:toolStripSeparator id="testeToolStripSeparator" tooltip="testeToolStripSeparator" hSrc="https://code.google.com/p/crux-framework/logo?cct=1397219537" /> -->
 			<!--OK-->testeToolStripSeparator			
 			
 <!-- 		<smart:simpleTile id="testeSimpleTile" tooltip="testeTileGrid"/> -->
 			<!--widgets.tile.SimpleTile::create()([]): Cannot read property 'valuesShowDown' of undefined
 			PARECE QUE PRECISA DE UM TILEGRID PARA SER USADO. NÃO SE DEVE USÁ-LO DIRETAMENTE-->
 			
-			<smart:tileGrid id="testeTileGrid" tooltip="testeTileGrid" titleField="testeTileGrid"/>
+<!-- 			<smart:tileGrid id="testeTileGrid" tooltip="testeTileGrid" titleField="testeTileGrid"/> -->
 			<!--OK-->testeTileGrid
-			<smart:tileLayout id="testeTileLayout" tooltip="testeTileLayout"/>
+<!-- 			<smart:tileLayout id="testeTileLayout" tooltip="testeTileLayout"/> -->
 			<!--OK-->testeTileLayout			
 
-			<smart:tableView id="testeTableView" tooltip="testeTableView" titleField="tableViewFild" />
+<!-- 			<smart:tableView id="testeTableView" tooltip="testeTableView" titleField="tableViewFild" /> -->
 			<!--OK-->testeTableView
-			<smart:listPropertiesDialog id="testeListPropertiesDialog" tooltip="testeListPropertiesDialog"/>
+<!-- 			<smart:listPropertiesDialog id="testeListPropertiesDialog" tooltip="testeListPropertiesDialog"/> -->
 			<!--OK-->testeListPropertiesDialog
-			<smart:listPropertiesPane id="testeListPropertiesPane" tooltip="testeListPropertiesPane"/>
+<!-- 			<smart:listPropertiesPane id="testeListPropertiesPane" tooltip="testeListPropertiesPane"/> -->
 			<!--OK-->testeListPropertiesPane	
 					
 <!-- 			<smart:activeXControl id="testeActiveXControl" tooltip="testeActiveXControl" /> -->
@@ -189,36 +166,36 @@
 <!-- 			<smart:sVG id="testeSVG" tooltip="testeSVG" src="https://www.google.com.br/"/> -->
 			<!--SVG::create()([]): Cannot read property 'create' of undefined-->					
 			
-			<smart:flowLayout id="testeFlowLayout" tooltip="testeFlowLayout" height="50" width="300"/>
+<!-- 			<smart:flowLayout id="testeFlowLayout" tooltip="testeFlowLayout" height="50" width="300"/> -->
 			<!--OK-->testeFlowLayout	
-			<smart:hLayout id="testeHLayout" tooltip="testeHLayout" height="50" width="270"/>
+<!-- 			<smart:hLayout id="testeHLayout" tooltip="testeHLayout" height="50" width="270"/> -->
 			<!--OK-->testeHLayout	
-			<smart:hStack id="testeHStack" tooltip="testeHStack" height="50" width="240" />
+<!-- 			<smart:hStack id="testeHStack" tooltip="testeHStack" height="50" width="240" /> -->
 			<!--OK-->testeHStack
-			<smart:imgSectionHeader id="testeImgSectionHeader" tooltip="testeImgSectionHeader" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" />
+<!-- 			<smart:imgSectionHeader id="testeImgSectionHeader" tooltip="testeImgSectionHeader" icon="https://code.google.com/p/crux-framework/logo?cct=1397219537" /> -->
 			<!--OK-->testeImgSectionHeader	
-			<smart:layout id="testeLayout" tooltip="testeLayout" height="50" width="300"/>
+<!-- 			<smart:layout id="testeLayout" tooltip="testeLayout" height="50" width="300"/> -->
 			<!--OK-->testeLayout	
 			
-			<smart:layoutSpacer id="testeLayoutSpacer" tooltip="testeLayoutSpacer" height="200" width="200" visible="true" />
+<!-- 			<smart:layoutSpacer id="testeLayoutSpacer" tooltip="testeLayoutSpacer" height="200" width="200" visible="true" /> -->
 			<!--RENDERIZA, MAS NÃO APARECE-->testeLayoutSpacer		
-			<smart:navigationBar id="testeNavigationBar" tooltip="testeNavigationBar" width="500" leftButtonIcon="http://www.criarsites.com/wp-content/uploads/2012/07/bot%C3%A3o-player-de-m%C3%BAsica.jpg" leftButtonTitle="botao"/>
+<!-- 			<smart:navigationBar id="testeNavigationBar" tooltip="testeNavigationBar" width="500" leftButtonIcon="http://www.criarsites.com/wp-content/uploads/2012/07/bot%C3%A3o-player-de-m%C3%BAsica.jpg" leftButtonTitle="botao"/> -->
 			<!--OK-->testeNavigationBar	
-			<smart:portalLayout id="testePortalLayout" tooltip="testePortalLayout" columnBorder="20" />
+<!-- 			<smart:portalLayout id="testePortalLayout" tooltip="testePortalLayout" columnBorder="20" /> -->
 			<!--OK-->testePortalLayout
-			<smart:portlet id="testePortlet" tooltip="testePortlet" closeConfirmationMessage="Fechar mesmo, TriggoLabs?"/>
+<!-- 			<smart:portlet id="testePortlet" tooltip="testePortlet" closeConfirmationMessage="Fechar mesmo, TriggoLabs?"/> -->
 			<!--OK-->testePortlet		
-			<smart:sectionHeader id="testeSectionHeader" tooltip="testeSectionHeader" />
+<!-- 			<smart:sectionHeader id="testeSectionHeader" tooltip="testeSectionHeader" /> -->
 			<!--OK-->testeSectionHeader	
-			<smart:sectionStack id="testeSectionStack" tooltip="testeSectionStack" height="50" width="350"/>
+<!-- 			<smart:sectionStack id="testeSectionStack" tooltip="testeSectionStack" height="50" width="350"/> -->
 			<!--OK-->testeSectionStack
 			
 <!-- 			<smart:splitPane id="testeSplitPane" tooltip="testeSplitPane" navigationTitle="testeSplitPane"/> -->
 			<!--OK, mas aparecem algumas informações na tela e atrasa o processo-->	
 						
-			<smart:vLayout id="testeVLayout" tooltip="testeVLayout" width="300"/>
+<!-- 			<smart:vLayout id="testeVLayout" tooltip="testeVLayout" width="300"/> -->
 			<!--OK-->testeVLayout				
-			<smart:vStack id="testeVStack" tooltip="testeVStack" height="100" width="400" />
+<!-- 			<smart:vStack id="testeVStack" tooltip="testeVStack" height="100" width="400" /> -->
 			<!--OK-->testeVStack
 			
 <!-- 		Testes 17/04/14 -->	
@@ -227,10 +204,10 @@
 			<!--AdvancedHiliteEditor::create()([]): Cannot read property 'getFieldNames' of undefined
 			this class should not be used directly - it is exposed purely for i18n reasons-->
 			
-			<smart:columnTree id="testeColumnTree" tooltip="testeColumnTree" visible="true" /> 
+<!-- 			<smart:columnTree id="testeColumnTree" tooltip="testeColumnTree" visible="true" />  -->
 			<!--OK-->testeColumnTree
 			
-			<smart:dateGrid id="testeDateGrid" tooltip="testeDateGrid" />
+<!-- 			<smart:dateGrid id="testeDateGrid" tooltip="testeDateGrid" /> -->
 			<!--OK-->testeDateGrid
 				
 <!-- 		<smart:gridRenderer id="testeGridRenderer" tooltip="testeGridRenderer" /> -->
@@ -242,7 +219,7 @@
 <!-- 			<smart:hiliteRule id="testeHiliteRule" tooltip="testeHiliteRule" /> -->
 			<!--Cannot read property 'getField' of undefined-->	
 					
-			<smart:listGrid id="testeListGrid" tooltip="testeListGrid" bodyBackgroundColor="gray" emptyMessage="Triggo, GridVazio"/>
+<!-- 			<smart:listGrid id="testeListGrid" tooltip="testeListGrid" bodyBackgroundColor="gray" emptyMessage="Triggo, GridVazio"/> -->
 			<!--OK-->testeListGrid			
 <!-- 			<smart:recordEditor id="testeRecordEditor" tooltip="testeRecordEditor"/> -->
 			<!--NÃO DEU Cannot read property 'getInnerContentWidth' of undefined-->	
@@ -250,20 +227,20 @@
 <!-- 			<smart:facetChart id="testeFacetChart" tooltip="testeFacetChart"/> -->
 			<!--FacetChart is a part the Charts Module which comes with Pro Edition or better.-->		
 				
-			<smart:calendar id="testeCalendar" tooltip="testeCalendar" height="300" width="600" canEditField="true" dayViewTitle="DiaTriggo" weekViewTitle="SemanaTriggo" todayBackgroundColor="pink"/>
+<!-- 			<smart:calendar id="testeCalendar" tooltip="testeCalendar" height="300" width="600" canEditField="true" dayViewTitle="DiaTriggo" weekViewTitle="SemanaTriggo" todayBackgroundColor="pink"/> -->
 			<!--OK-->testeCalendar
 						
 <!-- 			<smart:eventWindow id="testeEventWindow" tooltip="testeEventWindow"/> -->
 			<!--Cannot read property 'showEventDescriptions' of undefined-->
 						
-			<smart:timeline id="testeTimeline" tooltip="testeTimeline" width="600" height="200"/>
+<!-- 			<smart:timeline id="testeTimeline" tooltip="testeTimeline" width="600" height="200"/> -->
 			<!--OK-->testeTimeline	
 			
 				
 			
 			<!--TESTES 23-04-->		
 			
-			<smart:canvas id="testeCanvas" backgroundColor="blue" visible="true" tooltip="testeCanvas" backgroundImage="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>	
+<!-- 			<smart:canvas id="testeCanvas" backgroundColor="blue" visible="true" tooltip="testeCanvas" backgroundImage="https://code.google.com/p/crux-framework/logo?cct=1397219537"/>	 -->
 			<!--OK-->testeCanvas	
 			
 <!-- 			<smart:printCanvas id="testePrintCanvas" tooltip="testePrintCanvas" /> -->
@@ -272,16 +249,16 @@
 <!-- 			<smart:printWindow id="testePrintWindow" tooltip="testePrintWindow" /> -->
 			<!--OK-->testePrintWindow				
 						
-			<smart:snapbar id="testeSnapbar" tooltip="testeSnapbar" />
+<!-- 			<smart:snapbar id="testeSnapbar" tooltip="testeSnapbar" /> -->
 			<!--OK-->testeSnapbar	
 			
-			<smart:splitbar id="testeSplitbar" tooltip="testeSplitbar" />
+<!-- 			<smart:splitbar id="testeSplitbar" tooltip="testeSplitbar" /> -->
 			<!--OK-->testeSplitbar
 						
-			<smart:stretchImg id="testeStretchImg" tooltip="testeStretchImg" />
+<!-- 			<smart:stretchImg id="testeStretchImg" tooltip="testeStretchImg" /> -->
 			<!--OK-->testeStretchImg			
 			
-			<smart:window id="testeWindow" tooltip="testeWindow"/>
+<!-- 			<smart:window id="testeWindow" tooltip="testeWindow"/> -->
 			<!--OK-->testeWindow										
 						
 	</body>
