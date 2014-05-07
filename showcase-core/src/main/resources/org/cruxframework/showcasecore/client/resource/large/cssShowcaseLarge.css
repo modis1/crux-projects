@@ -383,3 +383,38 @@ body
 .clear{
 	clear:both;
 }
+
+.grid tr:hover{
+	background: #E4F6F1 !important;
+}
+
+.grid tr
+{
+	height: 31px;
+}
+
+.grid td
+{
+	border: 1px solid #D4D4D4;
+	min-width: 100px;
+	background: #FFF !important;
+}
+
+.grid th
+{
+	background: #E4F6F1 !important;
+}
+
+.textboxSimple
+{
+	padding: 0px;
+	height: 30px;
+}
+
+.grid tr:first-child tr:first-child:HOVER
+{
+	background: #4294C4 !important;
+}
+
+
+
