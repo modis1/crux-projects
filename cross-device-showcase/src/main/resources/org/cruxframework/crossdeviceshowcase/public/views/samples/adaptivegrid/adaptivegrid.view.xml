@@ -5,35 +5,12 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useDataSource="personDS" title="Adaptive Grid" onLoad="adaptivegridController.onLoad">
 	<center>
-		<crux:adaptiveGrid id="gridSample" width="100%"
-			dataSource="personDS" styleName="grid">
+		<crux:adaptiveGrid id="gridSample" width="100%"	dataSource="personDS" styleName="grid">
 			<crux:largeColumns>
-				<crux:dataColumn key="name" label="Name" width="110px">
-					<crux:editor>
-						<gwt:textBox id="textEditor" width="100px" styleName="textboxSimple" />
-					</crux:editor>
-				</crux:dataColumn>
-				<crux:dataColumn key="age" label="Age" width="110px">
-					<crux:editor>
-						<crux:numberTextBox id="textBoxEditor" width="100px"
-							styleName="textboxSimple" />
-					</crux:editor>
-				</crux:dataColumn>
-				<crux:dataColumn key="status" label="Status" width="150px">
-					<crux:editor>
-						<gwt:listBox id="statusList">
-							<gwt:item value="Active" label="Active" />
-							<gwt:item value="Inactive" label="Inactive" />
-						</gwt:listBox>
-					</crux:editor>
-				</crux:dataColumn>
-				<crux:dataColumn key="birthday" label="Day of birth"
-					width="310px">
-					<crux:editor>
-						<crux:dateBox id="dateEditor" width="300px"
-							styleName="calendar" />
-					</crux:editor>
-				</crux:dataColumn>
+				<crux:dataColumn key="name" label="Name" width="110px" />
+				<crux:dataColumn key="age" label="Age" width="110px" />
+				<crux:dataColumn key="status" label="Status" width="150px" />
+				<crux:dataColumn key="birthday" label="Day of birth" width="310px" />
 			</crux:largeColumns>
 			<crux:smallColumns>
 				<crux:dataColumn key="name" label="Name" width="110px" />

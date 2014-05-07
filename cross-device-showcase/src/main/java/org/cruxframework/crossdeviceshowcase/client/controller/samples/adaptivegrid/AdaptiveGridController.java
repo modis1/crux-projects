@@ -10,7 +10,6 @@ import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.deviceadaptivegrid.DeviceAdaptiveGrid;
-import org.cruxframework.crux.widgets.client.grid.ColumnEditorValidator;
 
 import com.google.gwt.user.client.ui.Label;
 
@@ -26,6 +25,7 @@ public class AdaptiveGridController
 		loadData();
 	}
 	
+	@SuppressWarnings("unused")
 	private void loadData(){
 		final DeviceAdaptiveGrid grid = gridView.gridSample();
 		PersonDS personDS = (PersonDS) grid.getDataSource();
@@ -46,19 +46,6 @@ public class AdaptiveGridController
 		personDS.setPersons(personList);
 		grid.loadData();
 		grid.refresh();
-		grid.addColumnEditorValidator("age",new ColumnEditorValidator() {
-			@Override
-			public boolean validate(Object value)
-			{
-				Integer val = (Integer)value;
-				if(val > 99)
-				{
-					grid.setErrorMessage("Invalid age value");
-					return false;
-				}
-				return true;
-			}
-		});
 	}
 	
 	@BindView("adaptivegrid")
