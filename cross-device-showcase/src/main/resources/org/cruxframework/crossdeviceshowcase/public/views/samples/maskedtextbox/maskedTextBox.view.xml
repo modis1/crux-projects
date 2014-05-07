@@ -26,7 +26,7 @@
 					em dados tipados a serem consumidos pela aplicação. 
 				</p>
 				<p> 
-					Neste exemplo associamos o MaskedTextBox para ler uma data digtada pelo usuário.
+					Neste exemplo associamos o MaskedTextBox para ler uma data digitada pelo usuário.
 				</p> 
 			</showcase:description>
 		</showcase:info>
