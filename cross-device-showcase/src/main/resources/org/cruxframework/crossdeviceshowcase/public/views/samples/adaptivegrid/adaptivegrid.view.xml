@@ -17,10 +17,13 @@
 			</crux:smallColumns>
 		</crux:adaptiveGrid>
 
-		<showcase:info title="AdaptiveGrid">
+		<showcase:info title="DeviceAdaptiveGrid">
 			<showcase:description>
 				<p>
-					Crux grid
+					O componente DeviceAdaptiveGrid permite exibir as colunas de acordo com o tipo de dispositivo 
+					que o está visualizado. Para dispositivos com display grande (PC, tablet etc.), o grid exibirá 
+					as colunas definidas na tag &lt;largeColumns>, já para dispositivos pequenos, ele exibirá as 
+					colunas definidas na tag &lt;smallColumns>
 				</p>
 			</showcase:description>
 		</showcase:info>
