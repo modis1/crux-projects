@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="../cruxtestsmartgwt/cruxtestsmartgwt.nocache.js"></script>
 		<c:screen useController="homeController" useView="**/views/*"
 			smallViewport="user-scalable=no, width=320"
-			largeViewport="user-scalable=no, width=device-width, height=device-height"
+			largeViewport="user-scalable=no"
 			height="100%" onLoad="homeController.onLoad" />
 
 <!--
