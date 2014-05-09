@@ -21,6 +21,26 @@
             e modificando sua aparência e comportamento.</p>
 			<ul class="examplesList">
 				
+                <li>
+                    <div class="exampleCall">
+                        <div class="exampleText">
+                            <h3>Media Manager</h3>
+                            <div class="svnName">
+                                Acessar:<br />
+                                <b><a href="#">Hotsite</a></b>
+                            </div>
+                        </div>
+                        <div class="exampleImg">
+                            <crux:image id="bgMediaManager" url="${siteCommonResources.bgMediaManager}" />
+                        </div>
+                    </div>
+                    <p> O Media Manager é uma aplicação web/mobile desenvolvida com o Crux Framework. 
+                    O Media Manager foi desenvolvido com o objetivo de ser um exemplo de aplicação real. 
+                    Neste aplicação são exploradas vários opções de integração de backend.
+                    </p>
+                    
+                </li>
+                
 				<li>
 					<div class="exampleCall">
 						<div class="exampleText">
@@ -51,22 +71,6 @@
                         </div>
                     </div>
                     <p>O próprio site do Crux é um projeto de exemplo para familiarização com o framework.</p>
-                </li>
-                
-                <li>
-                    <div class="exampleCall">
-                        <div class="exampleText">
-                            <h3>Media Manager</h3>
-                            <div class="svnName">
-                                Acessar:<br />
-                                <b><a href="#">Hotsite</a></b>
-                            </div>
-                        </div>
-                        <div class="exampleImg">
-                            <crux:image id="bgMediaManager" url="${siteCommonResources.bgMediaManager}" />
-                        </div>
-                    </div>
-                    <p>O Media Manager foi desenvolvido para que lorem ipsum dolor...</p>
                 </li>
                 
 			</ul>
