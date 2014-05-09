@@ -28,7 +28,7 @@
 			useResource="siteDeviceResources,siteCommonResources"
             useController="mainController" 
             onLoad="mainController.onLoad"
-                />
+        />
 			 
 		<gwt:simplePanel id="siteHeader" styleName="siteHeader">
 			<gwt:HTMLPanel id="headerContent">

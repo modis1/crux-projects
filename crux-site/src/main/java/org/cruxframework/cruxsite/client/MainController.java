@@ -7,18 +7,10 @@ import java.util.logging.Logger;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
-import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.plugin.google.analytics.client.GoogleAnalytics;
-import org.cruxframework.crux.widgets.client.rss.RssPanel;
-import org.cruxframework.crux.widgets.client.rss.feed.Error;
-import org.cruxframework.crux.widgets.client.rss.feed.Feed;
-import org.cruxframework.crux.widgets.client.rss.feed.FeedApi;
-import org.cruxframework.crux.widgets.client.rss.feed.FeedCallback;
 import org.cruxframework.crux.widgets.client.rss.feed.Loader;
 import org.cruxframework.cruxsite.client.accessor.ManualAccessor;
 
-import com.google.gwt.core.client.Scheduler;
-import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.logging.client.LogConfiguration;
 import com.google.gwt.user.client.Window;
@@ -26,11 +18,13 @@ import com.google.gwt.user.client.Window;
 @Controller("mainController")
 public class MainController 
 {
+	private static Logger logger = Logger.getLogger(MainController.class.getName());
+	
 	@Inject
 	private ManualAccessor manual;
 	
-	private static Logger logger = Logger.getLogger(MainController.class.getName());
-
+	public static boolean isFeedAPILoaded = false;
+	
 	@Expose
 	public void manualOnLoad()
 	{
@@ -56,17 +50,10 @@ public class MainController
 		GoogleAnalytics.init("UA-7689544-6"); 
 		
 		//Inicia Post do Blog
-		Scheduler.get().scheduleDeferred(new ScheduledCommand() 
-		{
-			@Override
-			public void execute() 
-			{
-				loadFeedAPI();	
-			}
-		});
+		loadFeedAPI();
 	}
-
-	private void loadFeedAPI() 
+	
+	private static void loadFeedAPI() 
 	{
 		Loader.init("ABQIAAAArGIZjhmsan61DtT58_d6cRQNU4gAv_Jc96TUa1T-tg6v_fuASxRtwAMNaJHgnp12SaDI9Cs17oKAzw", new Loader.LoaderCallback()
 		{
@@ -81,24 +68,7 @@ public class MainController
 
 			public void onLoad()
 			{
-				FeedApi feedLastBlogEntries = FeedApi.create("http://feeds.feedburner.com/cruxframework");
-				//this will only get feeds from cache.
-				//feedLastBlogEntries.includeHistoricalEntries();
-				feedLastBlogEntries.setNumEntries(3);
-
-				feedLastBlogEntries.load(new FeedCallback()
-				{
-					@Override
-					public void onLoad(Feed feed)
-					{
-						((RssPanel)View.getView("home").getWidget("lastBlogEntries")).setFeed(feed);
-					}
-
-					@Override
-					public void onError(Error error) {
-						Window.alert(error.getMessage());
-					}
-				});
+				isFeedAPILoaded = true;
 			}
 		});
 	}
