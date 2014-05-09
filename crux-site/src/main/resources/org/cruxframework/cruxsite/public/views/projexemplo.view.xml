@@ -24,10 +24,14 @@
                 <li>
                     <div class="exampleCall">
                         <div class="exampleText">
-                            <h3>Media Manager</h3>
+                            <h3>Media Manager</h3>                                         
                             <div class="svnName">
                                 Acessar:<br />
-                                <b><a href="#">Hotsite</a></b>
+                                <b><a href="http://halley.sysmap.com.br:8081/mediamanagersite/" target="_blank">Hotsite</a></b>
+                            </div>
+                            <div class="svnName">
+                                Projeto SVN:<br />
+                                <b>mediamanager</b>
                             </div>
                         </div>
                         <div class="exampleImg">
