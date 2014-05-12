@@ -923,3 +923,91 @@ border-bottom:1px solid #658B00;
 	margin-top:-10px;
 	margin-bottom:10px;
 }
+@external downloadCurrent;
+.downloadCurrent, .downloadCurrent ul{
+	padding:0;
+}
+.downloadCurrent li h5{
+	font-size:15px;
+	color:#444;
+	font-weight:normal;
+	margin:8px 0 0 0;
+	text-align:center;
+}
+.downloadCurrent li h2{
+	font-weight:bold;
+	color:#17373e;
+	font-size:30px;
+	margin:0;
+	text-align:center;
+}
+
+@external btnGroup;
+.btnGroup{
+	margin-top:10px;
+}
+.btnGroup li{
+	background:#0e6073;
+	box-shadow:0 -2px 0 #0b4d5c inset;
+	margin-top:10px;
+	border-radius:4px;
+}
+.btnGroup li a{
+	display:block;
+	color:#fff;
+	padding:13px 20px;
+	font-size:15px;
+}
+
+@external brighter;
+.brighter{
+	background:#4394a8 !important;
+	box-shadow:0 -2px 0 #367787 inset !important;
+}
+
+@external gridList;
+.gridList{
+	margin:10px 0;
+	width:100%;
+	padding:0;
+	border:0;
+	border-spacing: 0;
+    border-collapse: collapse;
+    font-size:11px;
+}
+.gridList thead tr td{
+	background:#444;
+	color:#fff;
+	font-weight:bold;
+	text-align:left;
+	padding:10px;
+}
+.gridList tbody tr td{
+	background:rgba(0,0,0,0.02);
+	color:#222;
+	font-size:14px;
+	padding:10px;
+	box-shadow:0 -1px 0 rgba(0,0,0,0.15) inset;
+}
+.gridList tbody tr:hover td{
+	background:rgba(0,0,0,0.08);
+}
+.gridList tbody tr td:last-child{
+	text-align:right;	
+}
+
+@external btnMini;
+.btnMini{
+	border-radius:3px;
+	background:#0e6073;
+	font-size:12px;
+	color:#fff;
+	border:0;
+	padding:6px 0;
+	width:100%;
+	cursor:pointer;
+	margin-bottom:5px;
+}
+.btnMini:hover{
+	background:#063c49;
+}

@@ -1217,3 +1217,108 @@ pre.programlisting{
 	display:inline-block;
 	margin-top:10px;
 }
+
+@external downloadCurrent;
+.downloadCurrent > li:first-child
+{
+	float:left;
+}
+.downloadCurrent > li:last-child
+{
+	float:right;
+}
+.downloadCurrent li h5{
+	font-size:15px;
+	color:#444;
+	font-weight:normal;
+	margin:20px 0 0 0;
+}
+.downloadCurrent li h2{
+	font-weight:bold;
+	color:#17373e;
+	font-size:30px;
+	margin:0;
+}
+
+@external btnGroup;
+.btnGroup{
+	margin-top:30px;
+	float:right;
+}
+.btnGroup li{
+	background:#0e6073;
+	border-left:1px solid #0b4755;
+	box-shadow:0 -2px 0 #0b4d5c inset;
+	float:left;
+}
+.btnGroup li:first-child{
+	border-radius:4px 0 0 4px;
+	border-left:none;
+}
+.btnGroup li:last-child{
+	border-radius:0 4px 4px 0;
+}
+.btnGroup li a{
+	display:block;
+	color:#fff;
+	padding:13px 20px;
+	font-size:15px;
+}
+
+@external end;
+.btnGroup li.end{
+	border-radius:0 4px 4px 0 !important;
+}
+
+@external brighter;
+.brighter{
+	background:#4394a8 !important;
+	box-shadow:0 -2px 0 #367787 inset !important;
+	border-radius:4px !important;
+	margin-left:10px;
+	border-left:none !important;
+}
+
+@external gridList;
+.gridList{
+	margin:10px 0;
+	width:100%;
+	padding:0;
+	border:0;
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+.gridList thead tr td{
+	background:#444;
+	color:#fff;
+	font-weight:bold;
+	text-align:left;
+	padding:10px;
+}
+.gridList tbody tr td{
+	background:rgba(0,0,0,0.02);
+	color:#222;
+	font-size:14px;
+	padding:10px;
+	box-shadow:0 -1px 0 rgba(0,0,0,0.15) inset;
+}
+.gridList tbody tr:hover td{
+	background:rgba(0,0,0,0.08);
+}
+.gridList tbody tr td:last-child{
+	text-align:right;	
+}
+
+@external btnMini;
+.btnMini{
+	border-radius:3px;
+	background:#0e6073;
+	font-size:12px;
+	color:#fff;
+	border:0;
+	padding:6px 8px;
+	cursor:pointer;
+}
+.btnMini:hover{
+	background:#063c49;
+}

@@ -16,36 +16,66 @@
 		
  	      <div class="bigText">
 			<div class="container">
-				<ul>
+				<ul class="downloadCurrent">
 					<li>
-						<h2>Manual Crux 5.0</h2>
-						<crux:anchor href="#/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePageBtn" styleName="btn btn-bigblue"></crux:anchor> 
-						<crux:anchor href="#/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePageBtn" styleName="btn btn-bigblue"></crux:anchor>
-                        <crux:anchor href="#/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdfBtn" styleName="btn btn-bigblue"></crux:anchor>
+						<h5>Versão Atual:</h5>
+						<h2>Crux 5 Manual</h2>
+					</li>
+					<li style="overflow:hidden">
+						<ul class="btnGroup">
+							<li><crux:anchor href="#/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePageBtn"></crux:anchor></li>
+							<li><crux:anchor href="#/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePageBtn"></crux:anchor></li>
+							<li class="end"><crux:anchor href="#/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdfBtn"></crux:anchor></li>
+							<li class="brighter"><crux:anchor href="#/javadoc/index.html" text="Javadoc" target="_blank" id="javadocBtn"></crux:anchor></li>
+						</ul>
 					</li>
 					<div class="clear"></div>
-				</ul>	
-			</div>
-			<div class="separator"></div>
-			<div class="container">
-				<ul>
-					<li>
-						<h2>Javadoc Crux 5</h2>
-						<crux:anchor href="#/javadoc/index.html" text="Javadoc" target="_blank" id="javadocBtn" styleName="btn btn-bigblue"></crux:anchor> 
-					</li>
-					<div class="clear"></div>
+
 				</ul>
 			</div>
             <div class="separator"></div>
             <div class="container">
-                <ul>
-                    <li>
-                        <h2>Versões Anteriores</h2>
-                        <crux:anchor href="http://code.google.com/p/crux-framework/wiki/UserManual" target="_blank" text="Manual Crux 4" id="manualCrux4Btn" styleName="btn btn-bigblue"></crux:anchor>
-                    </li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
+				<h2>Versões Anteriores</h2>
+				<table class="gridList">
+					<thead>
+						<tr>
+							<td>Versão</td>
+							<td>Data da Última atualização</td>
+							<td>Opções</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Crux v5.0.4-RC</td>
+							<td>12/01/2014</td>
+							<td>
+								<button class="btnMini">Página Única</button>
+								<button class="btnMini">Multiplas Páginas</button>
+								<button class="btnMini">Versão PDF</button>
+								<button class="btnMini brighter">Javadoc</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Crux v4.0</td>
+							<td>12/01/2014</td>
+							<td>
+								<button class="btnMini">Página Única</button>
+								<button class="btnMini">Multiplas Páginas</button>
+								<button class="btnMini">Versão PDF</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Crux v3.0</td>
+							<td>12/01/2014</td>
+							<td>
+								<button class="btnMini">Página Única</button>
+								<button class="btnMini">Multiplas Páginas</button>
+								<button class="btnMini">Versão PDF</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
          
 	</gwt:HTMLPanel>
