@@ -7,6 +7,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.RepeatingCommand;
 import com.google.gwt.core.client.ScriptInjector;
+import com.google.gwt.dom.client.StyleInjector;
 
 public class ShowcaseCore implements EntryPoint 
 {
@@ -15,23 +16,16 @@ public class ShowcaseCore implements EntryPoint
 	{
 		final ShowcaseResourcesCommon bundle = GWT.create(ShowcaseResourcesCommon.class);
 		
-		Scheduler.get().scheduleFixedDelay(new RepeatingCommand() {
-			
+		Scheduler.get().scheduleFixedDelay(new RepeatingCommand() 
+		{
 			@Override
-			public boolean execute() {
-				ScriptInjector.fromString(bundle.jsShBrushJava().getText()).inject();
-				ScriptInjector.fromString(bundle.jsShBrushXml().getText()).inject();
-				ScriptInjector.fromString(bundle.jsShCore().getText()).inject();
-				initBrushFunction();
+			public boolean execute() 
+			{
+				ScriptInjector.fromString(bundle.jsPrism().getText()).setRemoveTag(false).setWindow(ScriptInjector.TOP_WINDOW).inject();
+				StyleInjector.injectStylesheet(bundle.cssPrism().getText());
 				return false;
 			}
-
-			private native void initBrushFunction() /*-{
-			    SyntaxHighlighter.defaults['auto-links'] = false;
-				SyntaxHighlighter.defaults['quick-code'] = false;
-				SyntaxHighlighter.highlight();
-			  }-*/;
-		}, 1000);
+		}, 500);
 		
 	}
 }

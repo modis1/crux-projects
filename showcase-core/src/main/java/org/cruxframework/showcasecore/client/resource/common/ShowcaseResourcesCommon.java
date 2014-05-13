@@ -19,6 +19,7 @@ import org.cruxframework.crux.core.client.resources.Resource;
 import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 
 import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.resources.client.TextResource;
 
 /**
@@ -28,21 +29,9 @@ import com.google.gwt.resources.client.TextResource;
 @Resource(value="showcaseCoreResourcesCommon", supportedDevices={Device.all})
 public interface ShowcaseResourcesCommon extends ClientBundle
 {
-	@Source("shCore.css")
-	CssShCore cssShCore();
+	@Source("prism.js")
+	TextResource jsPrism();
 	
-	@Source("shCoreDefault.css")
-	CssShCoreDefault cssShCoreDefault();
-	
-	@Source("shThemeEclipse.css")
-	CssShThemeEclipse cssShThemeEclipse();
-	
-	@Source("shBrushJava.js")
-	TextResource jsShBrushJava();
-	
-	@Source("shBrushXml.js")
-	TextResource jsShBrushXml();
-	
-	@Source("shCore.js")
-	TextResource jsShCore();
+	@Source("prism.css")
+	CssResource cssPrism();
 }

@@ -14,7 +14,9 @@ import org.cruxframework.crux.widgets.client.disposal.menutabsdisposal.MenuTabsD
 import org.cruxframework.crux.widgets.client.disposal.panelchoicedisposal.PanelChoiceDisposal;
 import org.cruxframework.crux.widgets.client.swappanel.HorizontalSwapPanel.Direction;
 import org.cruxframework.showcasecore.client.remote.showcase.SVNServiceAsync;
+import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.ScheduledCommand;
 import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
@@ -25,6 +27,8 @@ import com.google.gwt.user.client.ui.Widget;
 @Controller("mainController")
 public class MainController 
 {
+	final ShowcaseResourcesCommon bundle = GWT.create(ShowcaseResourcesCommon.class);
+	
 	@Inject
 	public SVNServiceAsync service;
 	
@@ -132,9 +136,9 @@ public class MainController
 							View view = View.getView(fileName);
 							Widget sourceEditor = view.getWidget("sourceEditor");
 							Element editor = sourceEditor.getElement();
-							String brush = "class=\"brush:" + (fileName.endsWith("java") ? "java": "xml") + "\"";
+							String brush = "class=\"language-" + (fileName.endsWith("java") ? "java": "markup") + "\"";
 							source = new SafeHtmlBuilder().appendEscaped(source).toSafeHtml().asString();
-							editor.setInnerHTML("<pre " + brush + ">" + source + "</pre>");
+							editor.setInnerHTML("<pre class=\"line-numbers\"><code " + brush + ">" + source + "</code></pre>");
 							syntaxHighlight();
 						}
 					});
@@ -153,6 +157,6 @@ public class MainController
 	}
 	
 	public native void syntaxHighlight()/*-{
-		$wnd.doHighlight();
+		$wnd.Prism.highlightAll();
 	}-*/;
 }
