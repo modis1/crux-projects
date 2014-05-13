@@ -8,12 +8,12 @@
 
 	<!-- To enable super dev mode -->
 	<!--
-     -->
+     
 	<add-linker name="xsiframe"/>
 	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
 	<set-property name="compiler.useSourceMaps" value="true" />
-    
-<!--     <set-property name="device.features" value="largeDisplayMouse"/> -->
+    -->
+    <set-property name="device.features" value="largeDisplayMouse"/>
       
     <!-- 
     <set-property name="user.agent" value="safari" />
