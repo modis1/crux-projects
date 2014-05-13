@@ -15,6 +15,34 @@ body
 	background-image:linear-gradient(#eee,#ccc);
 }
 
+
+/**** Sintax Highlighter ****/
+pre, code{
+	box-shadow:none !important;
+	color:#1A1A1A !important;
+}
+pre code *, pre code span
+{
+	font-family:Consolas, Lucida Console, monospace !important;
+	font-size: 13px !important;
+	font-weight:normal;
+}
+.token.keyword
+{
+	color:#AA006D !important;
+	font-weight:bold;
+}
+.token.string
+{
+	color:#0040B1 !important;
+}
+.token a
+{
+	text-decoration:none;
+}
+
+/*****************/
+
 .rs-left
 {
 	float:left;
