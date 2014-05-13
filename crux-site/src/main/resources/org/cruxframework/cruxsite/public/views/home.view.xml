@@ -17,7 +17,7 @@
 				<crux:banner image="${siteDeviceResources.bannerCrossDevice}" buttonLabel="" title="Multi-Dispositivo!" 
 				             text="Uma única aplicação que se adequa automaticamente a qualquer tipo de dispositivo: smartphone, tablet, desktop ou TV."/>
 				<crux:banner image="${siteDeviceResources.bannerProductivity}" buttonLabel="" title="Produtividade" 
-				             text="Codifique em Java com o poder do GWT, mas, em uma API de alto nível provida pelo Crux."/>
+				             text="Codifique em Java com o poder do GWT, mas em uma API de alto nível provida pelo Crux."/>
 			</crux:promoBanner>
 		</div>
 		
