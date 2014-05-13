@@ -25,7 +25,7 @@ import com.google.gwt.resources.client.DataResource;
  * @author Gesse Dafe
  *
  */
-@Resource(value="showcaseCoreResources", supportedDevices={Device.largeDisplayArrows, Device.largeDisplayMouse, Device.largeDisplayTouch})
+@Resource(value="showcaseCoreResources", supportedDevices={Device.all})
 public interface ShowcaseResourcesLarge extends ClientBundle
 {
 	@Source("cssShowcaseLarge.css")
