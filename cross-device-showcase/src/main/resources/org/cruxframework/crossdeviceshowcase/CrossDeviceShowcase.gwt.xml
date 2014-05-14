@@ -8,17 +8,16 @@
 
 	<!-- To enable super dev mode -->
 	<!--
-     
 	<add-linker name="xsiframe"/>
 	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
 	<set-property name="compiler.useSourceMaps" value="true" />
-    -->
+    --> 
+    
+    <!-- Compilations -->
+	<!--   
     <set-property name="device.features" value="largeDisplayMouse"/>
-      
-    <!-- 
-    <set-property name="user.agent" value="safari" />
- 	-->
- 	
+	-->
+	
 	<!-- To enable logging -->
 	<inherits name="com.google.gwt.logging.Logging" />
 	<set-property name="gwt.logging.logLevel" value="FINE" />
@@ -30,6 +29,6 @@
 	<set-property name="gwt.logging.hasWidgetsHandler" value="DISABLED" />
 	<set-property name="gwt.logging.systemHandler" value="DISABLED" />
 	<set-property name="gwt.logging.simpleRemoteHandler" value="DISABLED" />
-	<!--
-     -->
+    <!--
+    -->
 </module>

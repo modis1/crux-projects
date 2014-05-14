@@ -159,7 +159,7 @@
 									<arg value="-localWorkers" />
 									<arg value="2" />
 									
-									<arg value="-strict" />
+<!-- 									<arg value="-strict" /> -->
 									
 									<!-- use these parameters if you want to modify GWT output settings
 									<arg value="-style"/>
