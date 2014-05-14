@@ -29,6 +29,9 @@ import com.google.gwt.resources.client.TextResource;
 @Resource(value="showcaseCoreResourcesCommon", supportedDevices={Device.all})
 public interface ShowcaseResourcesCommon extends ClientBundle
 {
+	@Source("cssShowcaseCommon.css")
+	CssResource cssShowcaseCommon();
+	
 	@Source("prism.js")
 	TextResource jsPrism();
 	
