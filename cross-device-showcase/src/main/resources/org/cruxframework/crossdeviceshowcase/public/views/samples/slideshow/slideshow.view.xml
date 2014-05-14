@@ -8,13 +8,12 @@
 	useController="mainController" title="Slide Show"> 
 	
 	<center>
-		
 		<crux:slideshow id="slideshow" layout="classic" width="100%" height="750px" loadOnStartup="true" >
 			<crux:service name="picasa">
 				<crux:param name="userID" value="114650528804514463329" />
 				<crux:param name="albumID" value="5951409748461918465" />
-				<crux:param name="imagesSize" value="600" />
-				<crux:param name="thumbnailsSize" value="48" />
+				<crux:param name="imagesSize" value="400" />
+				<crux:param name="thumbnailsSize" value="48"/>
 			</crux:service>
 		</crux:slideshow>
 		
@@ -26,7 +25,7 @@
 					de imagens visualizadas, redimensionamento automático de imagens, agrupamento em álbuns, etc.
 				</p>
 				<p>
-					Possui um modelo flexível que permite ao esenvolvedor adaptar praticamente qualquer modelo de layout desejado, 
+					Possui um modelo flexível que permite ao desenvolvedor adaptar praticamente qualquer modelo de layout desejado, 
 					além de realizar integração com APIs externas de serviços de imagens, como o Picasa.
 				</p> 
 			</showcase:description>

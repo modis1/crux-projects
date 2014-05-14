@@ -16,7 +16,7 @@
 		
 		<c:screen useController="mainController" useView="*" 
 				  smallViewport="user-scalable=no, width=320" 
-				  largeViewport="user-scalable=no" 
+				  largeViewport="user-scalable=no, width=device-width, height=device-height" 
 				  useResource="xStandardResources,showcaseCoreResources,showcaseCoreResourcesCommon" height="100%"
 				  onLoad="mainController.wellcome"/>
 
@@ -43,9 +43,12 @@
 			<crux:menuEntry label="Message Box" targetView="messageBox"/>
 			<crux:menuSection label="Elementos de dados" additionalStyleName="layoutSectionIcon"/>
 			<crux:menuEntry label="Device Adaptive Grid" targetView="adaptivegrid"/>
-			<!-- 
 			<crux:menuSection label="Elementos de Imagem"/>
 			<crux:menuEntry label="Slide Show" targetView="slideshow"/>
+			<crux:menuEntry label="Story Board" targetView="storyBoard"/>
+			<crux:menuSection label="testes"/>
+			<crux:menuEntry label="PromoBanner" targetView="promobanner"/>
+			<!-- 
 			<crux:menuSection label="Banco de Dados"/>
 			<crux:menuEntry label="CRUD Simples" targetView="simpleDatabase"/>
 			-->
