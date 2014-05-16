@@ -17,7 +17,7 @@
 <!-- 			<crux:anchor id="linkCase" href="#topMenuDisposal:cases" text="Cases"></crux:anchor> -->
 <!-- 		</li> -->
 		<li>
-			<crux:anchor id="linkShowcase" target="_blank" href="http://showcase5.cruxframework.org/" text="Showcase 5"></crux:anchor>
+			<crux:anchor id="linkShowcase" target="_blank" href="http://showcase.cruxframework.org/" text="Showcase 5"></crux:anchor>
 		</li>
 	</ul>
 </gwt:HTMLPanel> 

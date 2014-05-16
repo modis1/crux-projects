@@ -26,20 +26,6 @@ public class MainController
 	public static boolean isFeedAPILoaded = false;
 	
 	@Expose
-	public void manualOnLoad()
-	{
-		String versionManual = new String();
-		String urlBaseManual = new String();
-		versionManual = "crux50";
-		urlBaseManual = "http://files.cruxframework.org/documentation/"+ versionManual +"/";
-		// urlBaseManual = "http://cruxfile.appspot.com/documentation/"+ versionManual +"/";
-		manual.manualSinglePageBtn().setHref(urlBaseManual + "single-page/index.html");
-		manual.manualMultiplePageBtn().setHref(urlBaseManual + "multiple-pages/index.html");
-		manual.manualPdfBtn().setHref(urlBaseManual + "pdf/manual-crux-5.0.pdf");
-		manual.javadocBtn().setHref(urlBaseManual + "javadoc/index.html");
-	}
-	
-	@Expose
 	public void onLoad()
 	{
 		// Código do "Mapa Termico de Cliques" 

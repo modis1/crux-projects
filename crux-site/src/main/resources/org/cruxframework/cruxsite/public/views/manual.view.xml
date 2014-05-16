@@ -7,8 +7,7 @@
 	xmlns:t="http://www.cruxframework.org/templates/menus"
 	useController="mainController, viewsController,"
     onActivate="viewsController.onActivate" 
-    title="Documentação"
-    onLoad="mainController.manualOnLoad"> 
+    title="Documentação" > 
 	
 	<gwt:HTMLPanel id="infoContainer">
 		
@@ -19,14 +18,14 @@
 				<ul class="downloadCurrent">
 					<li>
 						<h5>Versão Atual:</h5>
-						<h2>Crux 5 Manual</h2>
+						<h2>Crux 5.1 Manual</h2>
 					</li>
 					<li style="overflow:hidden">
 						<ul class="btnGroup">
 							<li><crux:anchor href="http://files.cruxframework.org/documentation/crux51/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePageLastBtn"></crux:anchor></li>
 							<li><crux:anchor href="http://files.cruxframework.org/documentation/crux51/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePageLastBtnL"></crux:anchor></li>
 							<li class="end"><crux:anchor href="http://files.cruxframework.org/documentation/crux51/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdfLastBtn"></crux:anchor></li>
-							<li class="brighter"><crux:anchor href="#/javadoc/index.html" text="Javadoc" target="_blank" id="javadocLastBtn"></crux:anchor></li>
+							<li class="brighter"><crux:anchor href="http://files.cruxframework.org/documentation/crux51/javadoc/index.html" text="Javadoc" target="_blank" id="javadocLastBtn"></crux:anchor></li>
 						</ul>
 					</li>
 					<div class="clear"></div>
@@ -47,47 +46,29 @@
 					<tbody>
 						<tr>
 							<td>Manual Crux 5.1</td>
-							<td>13/05/2014</td>
-							<td>
-								<button class="btnMini">
-                                    <crux:anchor href="http://files.cruxframework.org/documentation/crux51/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePage51Btn"></crux:anchor>
-                                </button>
-								<button class="btnMini">
-                                    <crux:anchor href="http://files.cruxframework.org/documentation/crux51/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePage51Btn"></crux:anchor>
-                                </button>
-								<button class="btnMini">
-                                    <crux:anchor href="http://files.cruxframework.org/documentation/crux51/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdf51Btn"></crux:anchor>
-                                </button>
-								<button class="btnMini brighter">
-                                    <crux:anchor href="#/javadoc/index.html" text="Javadoc" target="_blank" id="javadoc51Btn"></crux:anchor>
-                                </button>
+							<td>14/05/2014</td>
+							<td>                                
+								<crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux51/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePage51Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux51/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePage51Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux51/pdf/manual-crux-5.1.pdf" text="Versão PDF" target="_blank" id="manualPdf51Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux51/javadoc/index.html" text="Javadoc" target="_blank" id="javadoc51Btn"></crux:anchor>
 							</td>
 						</tr>
                         <tr>
                             <td>Manual Crux 5.0</td>
-                            <td>xx/01/2014</td>
+                            <td>24/04/2014</td>
                             <td>
-                                <button class="btnMini">
-                                    <crux:anchor href="http://files.cruxframework.org/documentation/crux51/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePage50Btn"></crux:anchor>
-                                </button>
-                                <button class="btnMini">
-                                    <crux:anchor href="http://files.cruxframework.org/documentation/crux51/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePage50Btn"></crux:anchor>
-                                </button>
-                                <button class="btnMini">
-                                    <crux:anchor href="http://files.cruxframework.org/documentation/crux51/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdf50Btn"></crux:anchor>
-                                </button>
-                                <button class="btnMini brighter">
-                                    <crux:anchor href="#/javadoc/index.html" text="Javadoc" target="_blank" id="javadoc50Btn"></crux:anchor>
-                                </button>
+								<crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux50/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePage50Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux50/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePage50Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux50/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdf50Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/documentation/crux50/javadoc/index.html" text="Javadoc" target="_blank" id="javadoc50Btn"></crux:anchor>
                             </td>
                         </tr>
 						<tr>
-							<td>Crux v4.0</td>
-							<td>12/01/2014</td>
+							<td>Manual Crux 4.0</td>
+							<td>01/01/2014</td>
 							<td>
-								<button class="btnMini"><crux:anchor href="http://files.cruxframework.org/documentation/crux/single-page/index.html" target="_blank" text="Página Única" id="manualSinglePage40Btn"></crux:anchor></button>
-								<button class="btnMini">-</button>
-								<button class="btnMini">-</button>
+                                <crux:anchor styleName="btnMini" href="http://code.google.com/p/crux-framework/wiki/UserManual" target="_blank" text="Página Única" id="manualSinglePage40Btn"></crux:anchor>
 							</td>
 						</tr>
 						

@@ -22,11 +22,11 @@
 					</li>
 					<li style="overflow:hidden">
 						<ul class="btnGroup">
-							<li><crux:anchor href="../downloads/crux-pom-51.txt" target="_blank" text="Dependências Maven (XML)" 
+							<li><crux:anchor href="../downloads/crux-pom-510.txt" target="_blank" text="Dependências Maven (XML)" 
                                      id="mavenDepLastBtn" onSelect="downloadController.mavenCrux"></crux:anchor></li>
 							<li><crux:anchor href="https://www.dropbox.com/s/fppjxadj3waodn1/crux-5.1.0.zip" target="_blank" text="Download .JAR" 
                                      id="downloadJarLastBtn" onSelect="downloadController.downloadCrux"></crux:anchor></li>
-                            <li><crux:anchor href="https://crux-framework.googlecode.com/svn/tags/5.1.0/" target="_blank" text="Acessar SVN (tag)" 
+                            <li><crux:anchor href="http://crux-framework.googlecode.com/svn/tags/crux/5.1.0/" target="_blank" text="Acessar SVN (tag)" 
                                      id="sourceCodeLastBtn" onSelect="downloadController.sourceCrux"></crux:anchor> </li>
 						</ul>
 					</li>
@@ -47,45 +47,49 @@
 					<tbody>
                         <tr>
                             <td>Crux 5.1.0</td>
-                            <td>15/04/2014</td>
+                            <td>14/05/2014</td>
                             <td>                                
-                                <button class="btnMini">
-                                    <crux:anchor href="../downloads/crux-pom.txt" target="_blank" text="Dep. Maven" 
-                                     id="mavenDep51Btn" onSelect="downloadController.mavenCrux"></crux:anchor>
-                                </button>
-                                <button class="btnMini" >
-                                    <crux:anchor href="https://www.dropbox.com/s/fppjxadj3waodn1/crux-5.1.0.zip" target="_blank" text=".JAR" 
-                                     id="downloadJar51Btn" onSelect="downloadController.downloadCrux"></crux:anchor>
-                                </button>
-                                <button class="btnMini"><crux:anchor href="https://crux-framework.googlecode.com/svn/tags/5.1.0/" target="_blank" text="SVN Tag" 
-                                     id="sourceCode51Btn" onSelect="downloadController.sourceCrux"></crux:anchor> 
-                                </button>
+                                <crux:anchor styleName="btnMini" href="../downloads/crux-pom-510.txt" target="_blank" text="Dep. Maven" 
+                                     id="mavenDep510Btn" onSelect="downloadController.mavenCrux"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="https://www.dropbox.com/s/fppjxadj3waodn1/crux-5.1.0.zip" target="_blank" text=".JAR" 
+                                     id="downloadJar510Btn" onSelect="downloadController.downloadCrux"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://crux-framework.googlecode.com/svn/tags/crux/5.1.0/" target="_blank" text="SVN Tag" 
+                                     id="sourceCode510Btn" onSelect="downloadController.sourceCrux"></crux:anchor>
                             </td>
                         </tr>
 						<tr>
 							<td>Crux 5.0.4</td>
 							<td>12/01/2014</td>
 							<td>								
-								<button class="btnMini">
-                                    <crux:anchor href="../downloads/crux-pom.txt" target="_blank" text="Dep. Maven"  
-                                     id="mavenDep50Btn" onSelect="downloadController.mavenCrux"></crux:anchor>
-                                </button>
-								<button class="btnMini">
-                                    <crux:anchor href="https://www.dropbox.com/s/fppjxadj3waodn1/crux-5.0.4.zip" target="_blank" text="JAR" 
-                                     id="downloadJar50Btn" onSelect="downloadController.downloadCrux"></crux:anchor>
-                                </button>
-                                <button class="btnMini"><crux:anchor href="https://crux-framework.googlecode.com/svn/tags/5.0.4/" target="_blank" text="SVN Tag" 
-                                     id="sourceCode50Btn" onSelect="downloadController.sourceCrux"></crux:anchor> 
-                                </button>
+								<crux:anchor styleName="btnMini" href="../downloads/crux-pom-504.txt" target="_blank" text="Dep. Maven" 
+                                     id="mavenDep504Btn" onSelect="downloadController.mavenCrux"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="https://www.dropbox.com/s/fppjxadj3waodn1/crux-5.0.4.zip" target="_blank" text=".JAR" 
+                                     id="downloadJar504Btn" onSelect="downloadController.downloadCrux"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="https://crux-framework.googlecode.com/svn/tags/5.0.4/" target="_blank" text="SVN Tag" 
+                                     id="sourceCode504Btn" onSelect="downloadController.sourceCrux"></crux:anchor>
 							</td>
 						</tr>
+                        <tr>
+                            <td>Crux 5.0.0</td>
+                            <td>24/08/2013</td>
+                            <td>                                
+                                <crux:anchor styleName="btnMini" href="../downloads/crux-pom-500.txt" target="_blank" text="Dep. Maven" 
+                                     id="mavenDep500Btn" onSelect="downloadController.mavenCrux"></crux:anchor>
+                                <!--      
+                                <crux:anchor styleName="btnMini" href="https://www.dropbox.com/s/fppjxadj3waodn1/crux-5.0.0.zip" target="_blank" text=".JAR" 
+                                     id="downloadJar500Btn" onSelect="downloadController.downloadCrux"></crux:anchor>                                     
+                                <crux:anchor styleName="btnMini" href="https://crux-framework.googlecode.com/svn/tags/5.0.0/" target="_blank" text="SVN Tag" 
+                                     id="sourceCode500Btn" onSelect="downloadController.sourceCrux"></crux:anchor>
+                                -->      
+                            </td>
+                        </tr>
+
 						<tr>
-							<td>Crux 4.1.0</td>
-							<td>12/01/2014</td>
-							<td>								
-								<button class="btnMini">Dep. Maven</button>
-                                <button class="btnMini">.JAR</button>
-								<button class="btnMini">SVN Tag</button>
+							<td>Crux Versões Anteriores</td>
+							<td>01/01/2013</td>
+							<td>
+                                <crux:anchor styleName="btnMini" href="https://code.google.com/p/crux-framework/downloads/" target="_blank" text="Google Code" 
+                                     id="sourceCode40Btn" onSelect="downloadController.sourceCrux"></crux:anchor>
 							</td>
 						</tr>
 					</tbody>
