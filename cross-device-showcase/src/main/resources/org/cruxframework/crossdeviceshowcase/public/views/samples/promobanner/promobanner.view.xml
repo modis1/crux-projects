@@ -5,15 +5,15 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	useController="mainController"
-	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
+	useResource="showcaseCoreResources"
 	title="PromoBanner"> 
 
-	<center>
-			<crux:promoBanner id="promobanner" largeBannersHeight="312px" smallBannersHeight="150px" autoTransitionInterval="5000" >
-			<crux:banner buttonLabel="2" title="2" text="2" image="img/banner2.jpg"/>
-			<crux:banner buttonLabel="1" title="1" text="1" image="img/banner1.jpg"/>
-			<crux:banner buttonLabel="3" title="3" text="3" image="img/banner3.jpg"/>
-			</crux:promoBanner>
+		<crux:promoBanner id="promobanner" largeBannersHeight="312px" smallBannersHeight="200px" autoTransitionInterval="2500" transitionDuration="450">			
+			<crux:banner buttonLabel="1" title="Banner 1" text="Hello, I'm the first banner." image="null" styleName="banner1" />
+			<crux:banner buttonLabel="2" title="Banner 2" text="And I'm the second!" image="null" styleName="banner2" />
+			<crux:banner buttonLabel="3" title="Banner 3" text="...Guess what." image="null" styleName="banner3"/>
+		</crux:promoBanner>
 
 		<showcase:info title="PromoBanner">
 			<showcase:description>
@@ -25,8 +25,6 @@
 				transição automática de uma imagem para outra com determinação de intervalo, programação do tempo de transição, botão para eventos e muito mais.
 				</p> 			
 			</showcase:description>
-		</showcase:info>
-		
-	</center>		
+		</showcase:info>	
 	
 </v:view>

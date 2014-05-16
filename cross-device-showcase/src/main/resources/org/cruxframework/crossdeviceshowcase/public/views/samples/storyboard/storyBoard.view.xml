@@ -9,12 +9,72 @@
 	onLoad="storyboardController.onLoad"
 	 title="StoryBoard"> 
 	
-	<center>
-	<crux:styledPanel id="topo" width="100%" style="background-color:red">
-	<gwt:label id="labelTopo" text="Ofertas do Dia" style="color:white; font-size:30px;"/>
-	</crux:styledPanel>	
-		
-	<crux:storyboard id="storyboard" height="100%" width="100%" horizontalAlignment="center" /> 
+	<crux:storyboard id="storyboard" height="100%" width="100%">
+		<crux:styledPanel id="Item1" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem1" styleName="cf">
+				<gwt:simplePanel id="productImage1" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName1" text="Product 1" styleName="productName" />
+				<gwt:label id="productPrice1" text="$ 899.00" styleName="productPrice" />
+				<crux:button id="cartProduct1" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item2" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem2" styleName="cf">
+				<gwt:simplePanel id="productImage2" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName2" text="Product 2" styleName="productName" />
+				<gwt:label id="productPrice2" text="$ 569.00" styleName="productPrice" />
+				<crux:button id="cartProduct2" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item3" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem3" styleName="cf">
+				<gwt:simplePanel id="productImage3" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName3" text="Product 3" styleName="productName" />
+				<gwt:label id="productPrice3" text="$ 329.00" styleName="productPrice" />
+				<crux:button id="cartProduct3" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item4" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem4" styleName="cf">
+				<gwt:simplePanel id="productImage4" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName4" text="Product 4" styleName="productName" />
+				<gwt:label id="productPrice4" text="$ 759.00" styleName="productPrice" />
+				<crux:button id="cartProduct4" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item5" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem5" styleName="cf">
+				<gwt:simplePanel id="productImage5" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName5" text="Product 5" styleName="productName" />
+				<gwt:label id="productPrice5" text="$ 899.00" styleName="productPrice" />
+				<crux:button id="cartProduct5" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item6" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem6" styleName="cf">
+				<gwt:simplePanel id="productImage6" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName6" text="Product 6" styleName="productName" />
+				<gwt:label id="productPrice6" text="$ 1,899.00" styleName="productPrice" />
+				<crux:button id="cartProduct6" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item7" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem7" styleName="cf">
+				<gwt:simplePanel id="productImage7" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName7" text="Product 7" styleName="productName" />
+				<gwt:label id="productPrice7" text="$ 2,599.00" styleName="productPrice" />
+				<crux:button id="cartProduct7" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+		<crux:styledPanel id="Item8" styleName="storeItem">
+			<gwt:HTMLPanel id="wrapperItem8" styleName="cf">
+				<gwt:simplePanel id="productImage8" styleName="productImage"></gwt:simplePanel>
+				<gwt:label id="productName8" text="Product 8" styleName="productName" />
+				<gwt:label id="productPrice8" text="$ 349.00" styleName="productPrice" />
+				<crux:button id="cartProduct8" styleName="productButton">Add to cart</crux:button>
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
+	</crux:storyboard> 
 			
 		<showcase:info title="Storyboard">
 			<showcase:description>
@@ -28,7 +88,5 @@
 				
 			</showcase:description>
 		</showcase:info>
-		
-	</center>		
-	
+
 </v:view>
