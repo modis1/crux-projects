@@ -26,23 +26,20 @@ public class ViewsController
 		// Código de chamada do Analytics
 		GoogleAnalytics.trackPageview(viewName);
 		
-		// Load RSS feeds
-		if(viewName.equals("home"))
+		//Load feed API
+		Scheduler.get().scheduleFixedDelay(new RepeatingCommand() 
 		{
-			Scheduler.get().scheduleFixedDelay(new RepeatingCommand() 
+			@Override
+			public boolean execute() 
 			{
-				@Override
-				public boolean execute() 
+				if(MainController.isFeedAPILoaded)
 				{
-					if(MainController.isFeedAPILoaded)
-					{
-						loadFeeds();
-						return false;
-					}
-					return true;
+					loadFeeds();
+					return false;
 				}
-			}, 100);
-		}
+				return true;
+			}
+		}, 100);
 	}
 
 	private static void loadFeeds() 
