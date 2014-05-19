@@ -38,7 +38,9 @@
 						</div>
 					</li>
 					<li class="liLast">
-						<crux:anchor id="quickstartButton" href="#topMenuDisposal:quickstart" text="Crux Quickstart" styleName="quickstartBannerBtn"></crux:anchor>
+						<!--  <crux:anchor id="quickstartButton" href="#topMenuDisposal:quickstart" text="Crux Quickstart" styleName="quickstartBannerBtn"></crux:anchor>  -->
+                        <crux:anchor id="mediaManagerButton" href="http://mediamanager.cruxframework.org" text="Visite o Media Manager" 
+                                     styleName="quickstartBannerBtn" target="_blank"></crux:anchor>
 						<h2>Posts do Blog do Crux</h2>
 						<div class="greenBlock">
 							<crux:rssPanel id="lastBlogEntries" title="" entryTitleStyleName="box" maxTitleSize="69" />
