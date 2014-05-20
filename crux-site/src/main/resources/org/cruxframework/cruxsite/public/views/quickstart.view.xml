@@ -24,8 +24,8 @@
             
 			<ol class="quickstartList">
                 <li>
-                    <p>Baixar o arquivo XML de catálogo: <crux:anchor href="../downloads/crux-archetypes-5.0.4-catalog.xml" target="_blank" 
-                                                      text="crux-archetypes-5.0.4-catalog.xml" id="catalogBtn"></crux:anchor></p>
+                    <p>Baixar o arquivo XML de catálogo: <crux:anchor href="../downloads/crux-archetypes-5.1.0-catalog.xml" target="_blank" 
+                                                      text="crux-archetypes-5.1.0-catalog.xml" id="catalogBtn"></crux:anchor></p>
                 </li>
 				<li>
 					<p>No menu do Eclipse, localize e selecione a opção <span class="code">File -> New -> Project</span></p>
@@ -46,14 +46,14 @@
                         botão <span class="code">Browse...</span>.</p>
                 </li>
                 <li>        
-                     <p>No campo de descrição digite <span class="code">Catalogo Crux 5.0.4</span>.</p>
+                     <p>No campo de descrição digite <span class="code">Catalogo Crux 5.1.0</span>.</p>
                 </li>
                 <li>
                     <p>Clique em <span class="code">Ok</span> nas duas telas retornando a tela inicial (New Maven Project).</p>
                 </li>
 				<li>
 					<p>No campo <span class="code">Filter</span>, digite: <span class="code">crux</span> e selecione 
-                        a opção <span class="code">crux-module-container-app</span>.</p>
+                        a opção <span class="code">crux-helloworld-war</span>.</p>
 				</li>
 				<li>
 					<p>No próximo diálogo, informe um <span class="code">Group Id</span>, por exemplo: 
