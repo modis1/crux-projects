@@ -10,7 +10,7 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cruxVersion>5.2.0-SNAPSHOT</cruxVersion>
+        <cruxVersion>5.1.0</cruxVersion>
         <webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
         <webinf.folder>${webappDirectory}/WEB-INF/</webinf.folder>
         <webinf.lib.folder>${webinf.folder}/lib/</webinf.lib.folder>
@@ -36,6 +36,32 @@
 			<artifactId>crux-widgets</artifactId>
 			<version>${cruxVersion}</version>
 		</dependency>
+		<dependency>
+	  <groupId>org.testng</groupId>
+	  <artifactId>testng</artifactId>
+	  <version>6.8</version>
+	  <scope>test</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-java</artifactId>
+		<version>2.40.0</version>
+		<scope>test</scope>		
+	</dependency>
+	
+	<dependency>
+  		<groupId>br.ufmg.dcc.saotome</groupId>
+  		<artifactId>beholder</artifactId>
+  		<version>1.1.0</version>
+  	</dependency>  	
+  	<dependency>
+  		<groupId>br.ufmg.dcc.saotome</groupId>
+  		<artifactId>beholder-selenium</artifactId>
+  		<version>1.3.1</version>
+  	</dependency>
+		
+		
+		
 	</dependencies>
 		
 	<build>

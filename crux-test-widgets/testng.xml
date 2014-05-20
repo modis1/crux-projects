@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MasketTextBox">
+
+	
+																
+ <parameter name="parameters" value="browser=firefox;profile=/home/ufmg/icaroclever/.mozilla/firefox/beholder;screenshotFolder=/var/tmp/screenshots" />   
+   
+	<test name="Teste Funcional">
+		<parameter name="url"
+			value="http://localhost:8080/crux-test-widgets/cruxtestwidgets/index.html" />
+		
+		<parameter name="grid"
+			value="/html/body/div[2]/div/div/div/div/div/div[3]/button" />
+		<parameter name="rest"
+			value="/html/body/div[2]/div/div/div/div/div/div[2]/button" />
+		
+		
+		<packages>
+			<package name="br.ufmg.dcc.saotome.beholder.selenium" />
+		</packages>
+		<classes>
+			  <class name="org.cruxframework.test.cruxtestwidgets.client.MaskedTextBoxDataProvider" />  
+			<!--  <class name="org.cruxframework.test.cruxtestwidgets.client.RestService"></class>  -->
+		</classes>
+	</test>
+</suite>
