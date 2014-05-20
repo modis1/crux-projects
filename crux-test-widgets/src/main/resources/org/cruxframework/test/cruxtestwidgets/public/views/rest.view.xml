@@ -5,15 +5,53 @@
     xmlns:crux="http://www.cruxframework.org/crux/widgets"
     xmlns:gwt="http://www.cruxframework.org/crux/gwt"
     useResource="xStandardResources"
-    useController="mainController"
+    useController="mainController, myRestController"
     onLoad="mainController.onLoad">
     
-    <crux:storyboard id="mainPanel" style="display:block; margin: 50px">
-    
-    	<gwt:label id="lbTitle" text="Test REST" />
-    
-        <gwt:label id="lbTest_REST_01" text="Fazer chamada REST ..." /> 
-         
-    </crux:storyboard>
+    <center>
+	<crux:styledPanel id="panel">	
+		<gwt:flowPanel id="flowpanel">
+		
+		<!-- Enviar Objetos Simples  -->
+			<gwt:label id="labelTitle1" text="Enviar Objeto Simples" style="margin:10px"/> 			
+			<gwt:textBox id="gwtTxbObjetoSimples" styleName="w200" width="250px" height="30px"/>		
+			
+			<crux:button id="btnInteiro" text="Enviar Inteiro" styleName="crux-Button" onSelect ="myRestController.enviarInteiro"/>		
+			<crux:button id="btnString" text="Enviar String" styleName="crux-Button" onSelect ="myRestController.enviarString"/>		
+			<crux:button id="btnDouble" text="Enviar Double" styleName="crux-Button"  onSelect = "myRestController.enviarDouble"/>		
+			<crux:button id="btnChar" text="Enviar Char" styleName="crux-Button" onSelect = "myRestController.enviarChar"/>		
+			
+		<!-- Enviar ObjetoComplexo  -->	
+			
+			<gwt:label id="labelTitle2" text="Enviar Objeto Complexo - Pessoa" style="margin:10px"/> 			
+			
+			<gwt:label id="labelNome" text="Nome: " style="margin:10px"/> 				
+			<gwt:textBox id="gwtTxbNome" styleName="w200" width="250px" height="30px"/>		
+			
+			<gwt:label id="labelIdade" text="Idade: " style="margin:10px"/> 				
+			<gwt:textBox id="gwtTxbIdade" styleName="w200" width="250px" height="30px"/>
+
+			<gwt:label id="labelCPF" text="CPF: " style="margin:10px"/> 				
+			<gwt:textBox id="gwtTxbCPF" styleName="w200" width="250px" height="30px"/>
+
+			<gwt:label id="labelSexo" text="Sexo: " style="margin:10px"/> 		
+			<crux:formDisplay id="listboxc">
+				<crux:entry>
+					<gwt:listBox id="Sexo">
+						<gwt:item label="[selecione]" />
+						<gwt:item label="Masculino" />
+						<gwt:item label="Feminino" />
+					</gwt:listBox>
+				</crux:entry>
+					<crux:entry>
+						<crux:button id="btnPessoa" text="Enviar Pessoa"
+							styleName="crux-Button" />
+					</crux:entry>
+		
+			</crux:formDisplay>			
+			
+		</gwt:flowPanel>						
+	</crux:styledPanel>
+    </center>
     
 </v:view>

@@ -11,15 +11,13 @@
 	
 	<body>
 		<script type="text/javascript" src="../cruxtestwidgets/cruxtestwidgets.nocache.js"></script>
-		<c:screen useController="homeController" useView="**/views/*" 
+		<c:screen useController="mainController"  onLoad="mainController.onLoad" useView="**/views/*" 
 			smallViewport="user-scalable=no, width=320" 
 			largeViewport="user-scalable=no"
-			useResource="testWidgetsResources"
+			useResource="xStandardResources"
 			height="100%"/>
 			
-        <crux:simpleViewContainer id="views">
-            <crux:view name="menu"/>
-        </crux:simpleViewContainer>
+       <crux:simpleViewContainer id="views"/> 
 
     </body>
 

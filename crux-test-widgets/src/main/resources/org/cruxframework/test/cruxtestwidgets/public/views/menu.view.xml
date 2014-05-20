@@ -11,10 +11,10 @@
     <crux:storyboard id="mainPanel" style="display:block; margin: 50px">
     
     	<gwt:label id="lbTitle" text="Test Crux Widgets" />
-    	<br />
     	
-        <crux:button id="case_01" text="Case - 01 : Test REST" onSelect="mainController.viewRest"/>
-        <crux:button id="case_02" text="Case - 02 : Test Grid" onSelect="mainController.viewGrid"/>
+    	
+        <crux:button id="case_01" text="Case-01: REST" onSelect="mainController.viewRest"/>
+        <crux:button id="case_02" text="Case-02: MASKET TB" onSelect="mainController.viewMasketTexBox"/>
          
     </crux:storyboard>
     
