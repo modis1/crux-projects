@@ -4,6 +4,7 @@ import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.screen.Screen;
 import org.cruxframework.crux.widgets.client.simplecontainer.SimpleViewContainer;
+import org.cruxframework.crux.widgets.client.swapcontainer.HorizontalSwapContainer;
 
 @Controller("mainController")
 public class MainController {
@@ -11,7 +12,8 @@ public class MainController {
     @Expose
     public void onLoad()
     {
-        //do something
+    	SimpleViewContainer views = (SimpleViewContainer) Screen.get("views");
+		views.showView("menu");
     }
     
     @Expose   
@@ -22,10 +24,15 @@ public class MainController {
     }
     
     @Expose   
-    public void viewGrid()
+    public void viewMasketTexBox()
     {
     	SimpleViewContainer views = (SimpleViewContainer) Screen.get("views");
-        views.showView("grid");
+        views.showView("maskedTextBox");
     }
+    
+    
+    
+    
+    
     
 }
