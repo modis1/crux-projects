@@ -1,0 +1,40 @@
+<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="textAreaController" onLoad="textAreaController.onLoad"
+	title="Text Area">
+
+	<center>
+		<crux:styledPanel id="painel" width="50%">
+			<crux:formDisplay id="form" width="50%">
+				<crux:entry>
+					<gwt:label id="label" text="Text Area com maxlength dinâmico" />
+				</crux:entry>
+				<crux:entry>
+					<crux:textArea id="textArea" width="400px" visibleLines="8" focus="true" >
+					Insira um novo número para redefinir o valor do maxLength deste text área e clique em Aplicar.
+ 					</crux:textArea>
+				</crux:entry>
+				<crux:entry>
+					<gwt:textBox id="textBox" width="50px" value="150" />
+				</crux:entry>				
+				<crux:entry>
+					<crux:button id="button" text="Aplicar" onSelect="textAreaController.applyMaxLength" />
+				</crux:entry>
+			</crux:formDisplay>
+		</crux:styledPanel>
+
+		<showcase:info title="Text Area">
+			<showcase:description>
+				<p>
+					Text Area é um campo de texto multi-linha, que poder ser definido por número de linhas e número máximo de caracteres (maxLength). 
+				</p>
+				<p>
+					Neste exemplo o número máximo de caracteres se inicia em 150, insira um novo número, clique em aplicar e faça o teste.
+				</p>
+			</showcase:description>
+		</showcase:info>
+
+	</center>
+
+</v:view>

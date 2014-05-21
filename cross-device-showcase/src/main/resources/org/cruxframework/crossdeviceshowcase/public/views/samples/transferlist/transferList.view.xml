@@ -1,0 +1,37 @@
+<v:view xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="transferListController"
+	onLoad="transferListController.onLoad" 
+	title="TransferList">
+
+	<center>
+		<crux:styledPanel id="painel" width="50%">
+			<crux:transferList id="transferList" leftListLabel="Jogadores disponíveis" rightListLabel="Jogadores Selecionados" 
+			visibleItemCount="8" leftToRightButtonText="Selecionar" rightToLeftButtonText="Remover" showAllTransferButtons="true"
+			multiTransferFromLeft="true" multiTransferFromRight="true" allLeftToRightButtonText="Selecionar todos" 
+			allRightToLeftButtonText="Remover todos" onBeforeMoveItems="transferListController.onBeforeMoveItems">
+            </crux:transferList>
+		</crux:styledPanel>
+
+		<showcase:info title="TranferList">
+			<showcase:description>
+				<p>
+					O TransferList é um componente que possibilita a transferência de itens de uma lista para outra. 
+					É possível transferir um, vários ou todos os elementos de uma só vez.
+				</p>
+				<p>
+					No exemplo apresentado os itens das listas (jogadores) foram adicionados através de uma controller, 
+					possibilitando buscar estes itens de uma fonte de dados, 
+					porém também é possível adicioná-los de forma declarativa utilizando o atributo &lt;item>.
+					Também foi validada a ação do usuário através do evento onBeforeMoveItems.
+				</p>
+			</showcase:description>
+		</showcase:info>
+
+	</center>
+
+</v:view>

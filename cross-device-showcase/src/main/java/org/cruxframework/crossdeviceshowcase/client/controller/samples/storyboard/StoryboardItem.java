@@ -35,9 +35,9 @@ public class StoryboardItem extends Composite{
 		imagem.setSize("200px", "200px");
 		imagem.setUrl(url);
 		labelDescricao.setText(descricao);
-		labelDescricao.setStyleName("storyboardDescricao");
+		//labelDescricao.setStyleName("storyboardDescricao");
 		labelPreco.setText(preco);
-		labelPreco.setStyleName("storyboardPreco");
+		//labelPreco.setStyleName("storyboardPreco");
 		button.setText(textButton);
 		
 		button.addClickHandler(new ClickHandler(){

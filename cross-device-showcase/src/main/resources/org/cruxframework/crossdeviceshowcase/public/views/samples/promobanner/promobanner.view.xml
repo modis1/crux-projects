@@ -10,9 +10,12 @@
 	title="PromoBanner"> 
 
 		<crux:promoBanner id="promobanner" largeBannersHeight="312px" smallBannersHeight="200px" autoTransitionInterval="2500" transitionDuration="450">			
-			<crux:banner buttonLabel="1" title="Banner 1" text="Hello, I'm the first banner." image="null" styleName="banner1" />
-			<crux:banner buttonLabel="2" title="Banner 2" text="And I'm the second!" image="null" styleName="banner2" />
-			<crux:banner buttonLabel="3" title="Banner 3" text="...Guess what." image="null" styleName="banner3"/>
+			<crux:banner buttonLabel="" title="Banner 1" text="Aprenda como se você fosse viver para sempre. Viva como se você fosse morrer amanhã.
+(Mahatma Gandhi)" image="${showcaseCoreResources.firstBannerPromo}"  />
+			<crux:banner buttonLabel="" title="Banner 2" text="Sonhe como se fosse viver para sempre, viva como se fosse morrer amanhã.
+(James Dean)" image="null" styleName="banner2" />
+			<crux:banner buttonLabel="" title="Banner 3" text="Viver é a coisa mais rara do mundo. A maioria das pessoas apenas existe.
+(Oscar Wilde)" image="null" styleName="banner3"/>
 		</crux:promoBanner>
 
 		<showcase:info title="PromoBanner">
