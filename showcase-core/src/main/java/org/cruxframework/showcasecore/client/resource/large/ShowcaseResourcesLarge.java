@@ -46,4 +46,7 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	
 	@Source("svg-icon-arrow.svg")
 	DataResource svgIconArrow();
+	
+	@Source("first-banner-promo.jpg")
+	DataResource firstBannerPromo();
 }

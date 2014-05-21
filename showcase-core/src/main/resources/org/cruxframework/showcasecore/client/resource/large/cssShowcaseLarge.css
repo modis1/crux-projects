@@ -5,6 +5,7 @@
 @url projectIconUrl projectIcon;
 @url svgIconPresent svgIconPresent;
 @url svgIconArrow svgIconArrow;
+@url firstBannerPromoUrl firstBannerPromo;
 
 body
 {
@@ -428,7 +429,8 @@ body
 
 .banner1
 {
-	background:#acdf53;
+/* 	background:#acdf53; */
+	background:firstBannerPromo no-repeat center ;
 }
 .banner2
 {
