@@ -5,7 +5,8 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="mainController" title="Slide Show"> 
+	useController="slideshowController" title="Slide Show"
+	onLoad="slideshowController.onLoad"> 
 	
 	<center>
 		<crux:slideshow id="slideshow" layout="classic" width="100%" height="750px" loadOnStartup="true" >
