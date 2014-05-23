@@ -7,6 +7,9 @@
         <dependent-module archiveName="showcase-core-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/showcase-core/showcase-core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="crux-runtime-5.2.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/crux-runtime/crux-runtime">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="cross-device-showcase"/>
         <property name="java-output-path" value="/cross-device-showcase/target/classes"/>
         <property name="component.exclusion.patterns" value="WEB-INF/web.xml,**/gwt-dev*.jar,**/gwt-codeserver*.jar,**/gwt-user*.jar,**/validation-api*.jar,**/crux-dev*.jar,**/crux-widgets*.jar,**/crux-themes*.jar,**/*.view.xml,**/*.crux.xml,**/*.template.xml,**/*.offline.xml,**/*.xdevice.xml"/>

@@ -48,6 +48,7 @@
 			<crux:menuEntry label="Story Board" targetView="storyBoard"/>
 			<crux:menuSection label="testes"/>
 			<crux:menuEntry label="PromoBanner" targetView="promobanner"/>
+			<crux:menuEntry label="Rest Call" targetView="rest"/>
 			<!-- 
 			<crux:menuSection label="Banco de Dados"/>
 			<crux:menuEntry label="CRUD Simples" targetView="simpleDatabase"/>

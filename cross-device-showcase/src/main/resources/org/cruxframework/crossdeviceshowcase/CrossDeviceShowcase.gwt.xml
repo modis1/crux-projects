@@ -6,6 +6,9 @@
 <!-- 	<super-source path="org.cruxframework.showcasecore.client" /> -->
 	<public path="public" excludes="**/*.crux.xml,**/*.view.xml,**/*.template.xml,**/*.offline.xml" />
 
+    <source path="shared"/>
+    <source path="client"/>
+
 	<!-- To enable super dev mode -->
 	<!--
 	<add-linker name="xsiframe"/>
