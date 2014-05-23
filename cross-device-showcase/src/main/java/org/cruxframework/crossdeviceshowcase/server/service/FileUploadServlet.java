@@ -1,4 +1,4 @@
-package org.cruxframework.crossdeviceshowcase.server.showcase;
+package org.cruxframework.crossdeviceshowcase.server.service;
 
 import java.io.IOException;
 
