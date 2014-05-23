@@ -14,7 +14,7 @@
 			<t:section name="description"/>
 		</gwt:HTMLPanel>
 		<center>
-			<crux:button id="buttonShowCode" onSelect="mainController.exibirCodigoFonte" text="Ver Código Fonte" style="margin:10px"/>
+			<crux:button id="buttonShowCode" onSelect="mainController.exibirCodigoFonte" text="View Source Code" style="margin:10px"/>
 		</center>
 	</div>
 </t:template>
