@@ -12,7 +12,6 @@ public class SlideshowController
 	public void onLoad()
 	{
 		Slideshow slideshow = (Slideshow) View.of(this).getWidget("slideshow");
-		slideshow.setScaleImages(false);
 	}
 	
 }
