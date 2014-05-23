@@ -7,19 +7,19 @@
 	<name>CruxTestWidgets</name>
 	<packaging>war</packaging>
 	<description>Crux Test Widgets</description>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cruxVersion>5.1.0</cruxVersion>
-        <webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
-        <webinf.folder>${webappDirectory}/WEB-INF/</webinf.folder>
-        <webinf.lib.folder>${webinf.folder}/lib/</webinf.lib.folder>
-        <webinf.classes.folder>${webinf.folder}/classes/</webinf.classes.folder>
+		<cruxVersion>5.1.0</cruxVersion>
+		<webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
+		<webinf.folder>${webappDirectory}/WEB-INF/</webinf.folder>
+		<webinf.lib.folder>${webinf.folder}/lib/</webinf.lib.folder>
+		<webinf.classes.folder>${webinf.folder}/classes/</webinf.classes.folder>
 		<webappSourceDir>${basedir}/src/main/webapp</webappSourceDir>
 		<sourceDir>${project.build.sourceDirectory}</sourceDir>
-        <xsd.dir>${basedir}/xsd</xsd.dir>
+		<xsd.dir>${basedir}/xsd</xsd.dir>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.cruxframework</groupId>
@@ -37,33 +37,29 @@
 			<version>${cruxVersion}</version>
 		</dependency>
 		<dependency>
-	  <groupId>org.testng</groupId>
-	  <artifactId>testng</artifactId>
-	  <version>6.8</version>
-	  <scope>test</scope>
-	</dependency>
-	<dependency>
-		<groupId>org.seleniumhq.selenium</groupId>
-		<artifactId>selenium-java</artifactId>
-		<version>2.40.0</version>
-		<scope>test</scope>		
-	</dependency>
-	
-	<dependency>
-  		<groupId>br.ufmg.dcc.saotome</groupId>
-  		<artifactId>beholder</artifactId>
-  		<version>1.1.1</version>
-  	</dependency>  	
-  	<dependency>
-  		<groupId>br.ufmg.dcc.saotome</groupId>
-  		<artifactId>beholder-selenium</artifactId>
-  		<version>1.3.3</version>
-  	</dependency>
-		
-		
-		
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.40.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.ufmg.dcc.saotome</groupId>
+			<artifactId>beholder</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>br.ufmg.dcc.saotome</groupId>
+			<artifactId>beholder-selenium</artifactId>
+			<version>1.3.3</version>
+		</dependency>
 	</dependencies>
-		
+
 	<build>
 		<plugins>
 			<!-- Compile -->
@@ -96,7 +92,7 @@
 								</resource>
 							</resources>
 						</configuration>
-			          </execution>
+					</execution>
 					<execution>
 						<id>copy-classes</id>
 						<phase>process-classes</phase>
@@ -140,7 +136,7 @@
 					<warSourceExcludes>WEB-INF/web.xml</warSourceExcludes>
 					<packagingExcludes>
 						**/gwt-dev*.jar,
-                        **/gwt-codeserver*.jar,
+						**/gwt-codeserver*.jar,
 						**/gwt-user*.jar,
 						**/validation-api*.jar,
 						**/crux-dev*.jar,
@@ -149,30 +145,30 @@
 						**/*.view.xml,
 						**/*.crux.xml,
 						**/*.template.xml,
-                        **/*.offline.xml,
-                        **/*.xdevice.xml
+						**/*.offline.xml,
+						**/*.xdevice.xml
 					</packagingExcludes>
 				</configuration>
 			</plugin>
 			<!-- Run Crux Compiler -->
 			<plugin>
-			    <artifactId>maven-antrun-plugin</artifactId>
-			    <version>1.6</version>
-			    <executions>
-			        <execution>
-				    	<id>crux-compiler</id>
-			            <phase>prepare-package</phase>
-			            <configuration>
-				    		<target>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>crux-compiler</id>
+						<phase>prepare-package</phase>
+						<configuration>
+							<target>
 								<taskdef resource="org/cruxframework/crux/tools/crux-module-tools.xml">
 									<classpath>
 										<path refid="maven.compile.classpath" />
 									</classpath>
 								</taskdef>
-								
-								<blockremove beginmarker="&lt;!--antReplacementBlockBegin--&gt;" 
-											 endmarker="&lt;!--antReplacementBlockEnd--&gt;" file="${webinf.folder}/web.xml" />
-											 
+
+								<blockremove beginmarker="&lt;!--antReplacementBlockBegin--&gt;"
+									endmarker="&lt;!--antReplacementBlockEnd--&gt;" file="${webinf.folder}/web.xml" />
+
 								<serviceMapper projectDir="${webappDirectory}">
 									<classpath>
 										<path refid="maven.compile.classpath" />
@@ -180,34 +176,33 @@
 									</classpath>
 								</serviceMapper>
 
-								<cruxmodulecompiler srcDir="${sourceDir}" keepPagesGeneratedFiles="true" outputDir="${webappDirectory}" 
-									          webDir="${webappDirectory}" pagesOutputDir="${webappDirectory}" outputCharset="UTF-8" 
-									          doNotPreCompileJavaSource="true" pageFileExtension="html">
+								<cruxmodulecompiler srcDir="${sourceDir}"
+									keepPagesGeneratedFiles="true" outputDir="${webappDirectory}"
+									webDir="${webappDirectory}" pagesOutputDir="${webappDirectory}"
+									outputCharset="UTF-8" doNotPreCompileJavaSource="true"
+									pageFileExtension="html">
 									<classpath>
 										<path refid="maven.compile.classpath" />
 									</classpath>
-						
+
 									<!-- change these two parameters if you need to modify memory settings -->
 									<jvmarg value="-Xmx768M" />
 									<jvmarg value="-Xms256M" />
-						
+
 									<arg value="-localWorkers" />
 									<arg value="2" />
-						
-									<!-- use these parameters if you want to modify GWT output settings
-									<arg value="-style"/>
-									<arg value="DETAILED"/>
-									<arg value="-logLevel"/>
-									<arg value="DEBUG"/>
-									-->
+
+									<!-- use these parameters if you want to modify GWT output settings 
+										<arg value="-style"/> <arg value="DETAILED"/> <arg value="-logLevel"/> <arg 
+										value="DEBUG"/> -->
 								</cruxmodulecompiler>
-				    		</target>
-			            </configuration>
-			            <goals>
-			                <goal>run</goal>
-			            </goals>
-			       </execution>
-			   </executions>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -230,7 +225,8 @@
 										<path refid="maven.compile.classpath" />
 									</classpath>
 								</taskdef>
-								<generateSchemas outputDir="${xsd.dir}" inputCharset="UTF-8">
+								<generateSchemas outputDir="${xsd.dir}"
+									inputCharset="UTF-8">
 									<classpath>
 										<path refid="maven.compile.classpath" />
 										<pathelement location="${sourceDir}" />
@@ -251,32 +247,32 @@
 			<build>
 				<plugins>
 					<plugin>
-					    <artifactId>maven-antrun-plugin</artifactId>
-					    <version>1.6</version>
-			            <configuration>
-				    		<target>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.6</version>
+						<configuration>
+							<target>
 								<echo message="Starting Code server..." />
 								<java classname="org.cruxframework.crux.tools.codeserver.CodeServer"
 									fork="true">
 									<classpath>
 										<path refid="maven.compile.classpath" />
-						                <pathelement location="${webinf.classes.folder}" />
+										<pathelement location="${webinf.classes.folder}" />
 									</classpath>
 									<arg value="-sourceDir" />
 									<arg value="${sourceDir}" />
-							
+
 									<arg value="-moduleName" />
 									<arg value="cruxtestwidgets" />
-							
+
 									<jvmarg value="-Xmx768M" />
 									<jvmarg value="-Xms256M" />
 								</java>
-				    		</target>
-			            </configuration>
+							</target>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
-		</profile>		
+		</profile>
 	</profiles>
 </project>
 		
