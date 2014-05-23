@@ -14,10 +14,10 @@
 		<crux:styledPanel id="panel">
 			<gwt:flowPanel id="imgPanel" styleName="guilePanel">
 				<crux:formDisplay id="form">
-					<crux:entry label="Personagem:">
+					<crux:entry label="Character:">
 						<gwt:label id="nameLabel" text="Guile" styleName="gwt-Label valueLabel"/>
 					</crux:entry>
-					<crux:entry label="Data de Nascimento:">
+					<crux:entry label="Date of Birth:">
 						<crux:maskedLabel id="birthDate" formatter="dateFormatter" styleName="crux-MaskedLabel valueLabel"/>
 					</crux:entry>
 				</crux:formDisplay>

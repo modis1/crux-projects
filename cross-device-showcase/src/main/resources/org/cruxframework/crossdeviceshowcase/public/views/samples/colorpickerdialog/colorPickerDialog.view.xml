@@ -12,7 +12,7 @@
 		<crux:textArea id="pannelColor" width="50px"/>
 		<crux:styledPanel id="panel1">
 		
-		<crux:colorPickerDialog id="colorPickerDialog" animationEnabled="true" text="Escolha uma cor"/>
+		<crux:colorPickerDialog id="colorPickerDialog" animationEnabled="true" text="Choose a color."/>
 		</crux:styledPanel>
 		
 		<showcase:info title="ColorPicker">

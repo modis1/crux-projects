@@ -4,16 +4,21 @@ import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
+import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.textarea.TextArea;
 
 import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Widget;
 
 @Controller("textAreaController")
 public class TextAreaController 
 {
+	
+	private String MESSAGE_INVALID_NUMBER = "Please insert a valid integer.";
+	private String MESSAGE_NEGATIVE_NUMBER = "Please insert positive value.";
 
 	@Inject
 	public TextAreaView textareaview;
@@ -33,11 +38,11 @@ public class TextAreaController
 		}
 		catch (NumberFormatException e)
 		{
-			FlatMessageBox.show("Por favor, insira um número inteiro válido.", MessageType.ERROR);
+			FlatMessageBox.show(MESSAGE_INVALID_NUMBER, MessageType.ERROR);
 		}
 		catch (IllegalArgumentException e1)
 		{
-			FlatMessageBox.show("Por favor, insira um valor positivo.", MessageType.ERROR);
+			FlatMessageBox.show(MESSAGE_NEGATIVE_NUMBER, MessageType.ERROR);
 		}
 
 	}
@@ -52,5 +57,41 @@ public class TextAreaController
 	{
 		TextArea textArea();
 		TextBox textBox();
-	}    
+	}
+	
+	private void setState(String state)
+	{
+		
+		Widget textarea = textareaview.textArea();
+		
+		textarea.removeStyleName("success");
+		textarea.removeStyleName("warn");
+		textarea.removeStyleName("error");
+		textarea.setStyleName("gwt-TextArea " + state);
+	}
+	
+	
+	@Expose
+	public void handleDefault()
+	{
+		this.setState("");
+	}
+	
+	@Expose
+	public void handleSuccess()
+	{
+		this.setState("success");
+	}
+	
+	@Expose
+	public void handleWarning()
+	{
+		this.setState("warn");
+	}
+	
+	@Expose
+	public void handleError()
+	{
+		this.setState("error");
+	}
 }

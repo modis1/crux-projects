@@ -10,7 +10,7 @@
 	<center>
 		
 		<crux:styledPanel id="panel1">
-			<crux:button id="showProgressBtn" text="Exibir Progress Box" onSelect="progressBoxController.showProgress"/>
+			<crux:button id="showProgressBtn" text="Show Progress Box" onSelect="progressBoxController.showProgress"/>
 		</crux:styledPanel>
 		
 		<showcase:info title="ProgressBox">

@@ -11,10 +11,10 @@
 		
 		<crux:styledPanel id="styled">
 			<gwt:flowPanel id="flow" width="100%">
-				<crux:button id="showMessageBtnInfo" text="Exibir Informação" onSelect="messageBoxController.showInfo"/>
-				<crux:button id="showMessageBtnSuccess" text="Exibir Sucesso" onSelect="messageBoxController.showSuccess"/>
-				<crux:button id="showMessageBtnWarn" text="Exibir Aviso" onSelect="messageBoxController.showWarn"/>
-				<crux:button id="showMessageBtnError" text="Exibir Erro" onSelect="messageBoxController.showError"/>
+				<crux:button id="showMessageBtnInfo" text="Show Info" onSelect="messageBoxController.showInfo"/>
+				<crux:button id="showMessageBtnSuccess" text="Show Success" onSelect="messageBoxController.showSuccess"/>
+				<crux:button id="showMessageBtnWarn" text="Show Warning" onSelect="messageBoxController.showWarn"/>
+				<crux:button id="showMessageBtnError" text="Show Error" onSelect="messageBoxController.showError"/>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 		

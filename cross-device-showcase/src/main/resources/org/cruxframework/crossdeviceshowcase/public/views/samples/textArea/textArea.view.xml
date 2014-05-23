@@ -5,23 +5,33 @@
 	title="Text Area">
 
 	<center>
-		<crux:styledPanel id="painel" width="50%">
-			<crux:formDisplay id="form" width="50%">
-				<crux:entry>
-					<gwt:label id="label" text="Text Area com maxlength dinâmico" />
-				</crux:entry>
-				<crux:entry>
-					<crux:textArea id="textArea" width="400px" visibleLines="8" focus="true" >
-					Insira um novo número para redefinir o valor do maxLength deste text área e clique em Aplicar.
- 					</crux:textArea>
-				</crux:entry>
-				<crux:entry>
-					<gwt:textBox id="textBox" width="50px" value="150" />
-				</crux:entry>				
-				<crux:entry>
-					<crux:button id="button" text="Aplicar" onSelect="textAreaController.applyMaxLength" />
-				</crux:entry>
-			</crux:formDisplay>
+		<crux:styledPanel id="painel">
+			<gwt:HTMLPanel id="StatesWrapper">
+				<crux:formDisplay id="form">
+					<crux:entry>
+						<gwt:label id="label" text="Text Area with dynamic value length:" />
+					</crux:entry>
+					<crux:entry>
+						<crux:textArea id="textArea" width="400px" visibleLines="8" focus="true" >
+						Insert a new number on the input bellow and click 'Apply' to change my max-length.
+	 					</crux:textArea>
+					</crux:entry>
+					<crux:entry>
+						<gwt:HTMLPanel id="limitLengthWrapper" styleName="cf">
+							<gwt:textBox id="textBox" width="50px" value="150" />
+							<crux:button id="applyButton" text="Apply" onSelect="textAreaController.applyMaxLength" styleName="crux-Button rs-right" />
+						</gwt:HTMLPanel>
+					</crux:entry>		
+				</crux:formDisplay>
+				<hr />
+				<h4>States:</h4>
+				<div class="btn-Group">
+					<gwt:radioButton name="color" onChange="textAreaController.handleDefault" id="default" text="Default" checked="true"></gwt:radioButton>
+					<gwt:radioButton name="color" onChange="textAreaController.handleSuccess" id="success" text="Success"></gwt:radioButton>
+					<gwt:radioButton name="color" onChange="textAreaController.handleWarning" id="warning" text="Warning"></gwt:radioButton>
+					<gwt:radioButton name="color" onChange="textAreaController.handleError" id="error" text="Error"></gwt:radioButton>
+				</div>
+			</gwt:HTMLPanel>
 		</crux:styledPanel>
 
 		<showcase:info title="Text Area">

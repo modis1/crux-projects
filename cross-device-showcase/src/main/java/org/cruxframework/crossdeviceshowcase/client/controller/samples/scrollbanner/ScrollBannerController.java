@@ -22,8 +22,7 @@ public class ScrollBannerController
 	
 	private void addMessages()
 	{
-		scrollbannerview.scrollBanner().addMessage("Lavando louças: ensaboe a louça com a torneira fechada.");
-		scrollbannerview.scrollBanner().addMessage("Escovando os dentes: feche a torneira enquanto escova os dentes. Use um copo d´água para enxaguar a boca.");
+		scrollbannerview.scrollBanner().addMessage("This message was added from controller.");
 	}
 	
 	@BindView("scrollBanner")

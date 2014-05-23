@@ -11,9 +11,9 @@
 		
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html">
-				<crux:button id="cruxBtn" text="Eu sou um button!" />
+				<crux:button id="cruxBtn" text="I'm a button!" />
 				<hr />
-				<h4>Estados:</h4>
+				<h4>States:</h4>
 				<div class="btn-Group">
 					<gwt:radioButton name="color" onChange="cruxButtonController.handleDefault" id="radioDefault" text="Default" checked="true"></gwt:radioButton>
 					<gwt:radioButton name="color" onChange="cruxButtonController.handleSuccess" id="radioSuccess" text="Success"></gwt:radioButton>

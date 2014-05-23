@@ -11,7 +11,7 @@
 	<center>
 		
 		<crux:styledPanel id="mainPanel">
-			<crux:fileUploader id="fileUploader" multiple="true" fileInputText="Escolher Arquivos" autoUploadFiles="true" url="/upload-endpoint"/>
+			<crux:fileUploader id="fileUploader" multiple="true" fileInputText="Choose Files" autoUploadFiles="true" url="/upload-endpoint"/>
 		</crux:styledPanel>
 		
 		<showcase:info title="FileUploader">

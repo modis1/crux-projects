@@ -13,13 +13,13 @@
 				<crux:entry label="Framework:">
 					<gwt:textBox id="frameworkTextBox" value="Crux Framework"/>
 				</crux:entry>
-				<crux:entry label="Versão:">
+				<crux:entry label="Version:">
 					<gwt:textBox id="versionTextBox" value="5.0"/>
 				</crux:entry>
-				<crux:entry label="Assunto:">
-					<gwt:textBox id="subjectTextBox" value="Exemplos Cross-Device"/>
+				<crux:entry label="Subject:">
+					<gwt:textBox id="subjectTextBox" value="Cross-Device Examples"/>
 				</crux:entry>
-				<crux:entry label="Suporte:">
+				<crux:entry label="Support:">
 					<gwt:horizontalPanel id="supportPanel" spacing="3">
 						<gwt:checkBox id="desktopCheckBox" text="Desktop" checked="true"/>
 						<gwt:checkBox id="smartPhoneCheckBox" text="Smart Phone" checked="true"/>
@@ -27,7 +27,7 @@
 					</gwt:horizontalPanel>
 				</crux:entry>			
 				<crux:entry horizontalAlignment="center">
-					<crux:button id="btn" text="Limpar" onSelect="formDisplayController.clearFields"/>	
+					<crux:button id="btn" text="Clear fields" onSelect="formDisplayController.clearFields"/>	
 				</crux:entry>
 			</crux:formDisplay>	
 		</crux:styledPanel>

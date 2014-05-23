@@ -11,10 +11,10 @@
 		
 		<gwt:HTMLPanel id="styledWrap" styleName="styledWrap">
 			<crux:styledPanel id="panel1" height="110px" width="200px" styleName="rs-left">
-				<crux:button id="btnSample" text="Eu sou um botão" />
+				<crux:button id="btnSample" text="I'm a button" />
 			</crux:styledPanel>
 			<crux:styledPanel id="panel2" height="110px" width="200px" styleName="rs-left">
-				<gwt:label id="txtSample" text="E eu sou um texto." />
+				<gwt:label id="txtSample" text="And I'm a label." />
 			</crux:styledPanel>
 			<gwt:simplePanel id="clear" styleName="clear"></gwt:simplePanel>
 		</gwt:HTMLPanel>

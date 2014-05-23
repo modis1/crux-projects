@@ -11,9 +11,10 @@
 	<center>
 		<gwt:verticalPanel id="panel" width="50%">
 			<crux:scrollBanner id="scrollBanner" messageScrollingPeriod="5000000" width="50%" >
-			<crux:message>NÃO CONSEGUI FAZER APARECER OS BOTÕES</crux:message>
-			<crux:message>No banho: feche o chuveiro enquanto se ensaboa.</crux:message>
-			<crux:message>Na torneira: feche bem as torneiras.</crux:message>
+			<crux:message>Asimov's Three Laws</crux:message>
+			<crux:message>1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.</crux:message>
+			<crux:message>2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.</crux:message>
+			<crux:message>3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</crux:message>
 			</crux:scrollBanner>
 		</gwt:verticalPanel>
 

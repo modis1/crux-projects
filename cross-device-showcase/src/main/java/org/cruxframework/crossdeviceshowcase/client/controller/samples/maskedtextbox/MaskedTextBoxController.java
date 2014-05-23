@@ -15,6 +15,11 @@ import com.google.gwt.user.client.ui.Widget;
 public class MaskedTextBoxController 
 {
 	
+	private String MESSAGE_EMPTY_FIELD = "Empty field. Please fill it.";
+	private String MESSAGE_WRONG_FORMAT = "Please inform a valid date value as: \"dd/mm/aaaa\".";
+	private String MESSAGE_DATE = "The date you informed was: ";
+	private String MESSAGE_INVALID_DATE = "The date you informed is invalid, please try again.";
+	
 	private MaskedTextBox getDateInput()
 	{
 		return View.of(this).getWidget("dateInput", MaskedTextBox.class);
@@ -32,7 +37,7 @@ public class MaskedTextBoxController
 		
         if(widget.getValue().isEmpty())
         {
-        	FlatMessageBox.show("Campo vazio. Por favor preencha o campo.", MessageType.WARN);
+        	FlatMessageBox.show(MESSAGE_EMPTY_FIELD, MessageType.WARN);
         }
         /*
          * This is a poor date format validation, just as an example, feel free to update it
@@ -41,17 +46,17 @@ public class MaskedTextBoxController
         else if(!widget.getValue().matches("[0-1][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]"))
         {
         	this.changeState("warn");
-        	FlatMessageBox.show("Favor informar um valor válido no formato: \"dd/mm/aaaa\".", MessageType.WARN);
+        	FlatMessageBox.show(MESSAGE_WRONG_FORMAT, MessageType.WARN);
         }
         else
         {
 			try{
 				Date date = (Date) widget.getUnformattedValue();
 				this.changeState(null);
-				FlatMessageBox.show("A data que você informou: " + date, MessageType.INFO);
+				FlatMessageBox.show(MESSAGE_DATE + date, MessageType.INFO);
 			}catch(Exception e){
 				this.changeState("warn");
-				FlatMessageBox.show("A data que você informou é inválida, tente novamente. ", MessageType.WARN);
+				FlatMessageBox.show(MESSAGE_INVALID_DATE, MessageType.WARN);
 			}
         	
         }

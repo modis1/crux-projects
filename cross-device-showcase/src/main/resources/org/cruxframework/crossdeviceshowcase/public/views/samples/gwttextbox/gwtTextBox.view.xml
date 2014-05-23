@@ -12,9 +12,9 @@
 		
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html">
-				<gwt:textBox id="gwtTxtBox" text="Eu sou um campo!" styleName="w200" />
+				<gwt:textBox id="gwtTxtBox" text="Edit me." styleName="w200" />
 				<hr />
-				<h4>Estado:</h4>
+				<h4>States:</h4>
 				<div class="btn-Group">
 					<gwt:radioButton name="color" onChange="gwtTextBoxController.handleDefault" id="default" text="Default" checked="true"></gwt:radioButton>
 					<gwt:radioButton name="color" onChange="gwtTextBoxController.handleSuccess" id="success" text="Success"></gwt:radioButton>

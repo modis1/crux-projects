@@ -28,29 +28,32 @@
 					<crux:button id="projectButton" text="projeto" onSelect="mainController.navigateToProject" styleName="topBarIcon projectIcon"/>
 				</gwt:flowPanel>
 			</crux:header>
-			<crux:menuSection label="Elementos de Formulário"/>
+			<crux:menuSection label="Form Elements"/>
 			<crux:menuEntry label="File Uploader" targetView="fileUploader"/>
 			<crux:menuEntry label="Masked Label" targetView="maskedLabel"/>
 			<crux:menuEntry label="Masked Text Box" targetView="maskedTextBox"/>
 			<crux:menuEntry label="Button" targetView="cruxButton"/>
 			<crux:menuEntry label="Textbox" targetView="gwtTextBox"/>
-			<crux:menuSection label="Elementos de Layout" additionalStyleName="layoutSectionIcon"/>
+			<crux:menuEntry label="Text Area" targetView="textArea"/>
+			<crux:menuSection label="Layout Elements"/>
 			<crux:menuEntry label="Styled Panel" targetView="styledPanel"/>
 			<crux:menuEntry label="Form Display" targetView="formDisplay"/>
-			<crux:menuSection label="Caixas de Diálogo"/>
+			<crux:menuSection label="Dialog Boxes"/>
 			<crux:menuEntry label="Progress Box" targetView="progressBox"/>
 			<crux:menuEntry label="Dialog Box" targetView="dialogBox"/>
 			<crux:menuEntry label="Message Box" targetView="messageBox"/>
-			<crux:menuSection label="Elementos de dados" additionalStyleName="layoutSectionIcon"/>
+			<crux:menuSection label="Data Elements" />
 			<crux:menuEntry label="Device Adaptive Grid" targetView="adaptivegrid"/>
-			<crux:menuSection label="Elementos de Imagem"/>
+			<crux:menuSection label="Image Elements"/>
 			<crux:menuEntry label="Slide Show" targetView="slideshow"/>
 			<crux:menuEntry label="Story Board" targetView="storyBoard"/>
 			<crux:menuSection label="testes"/>
 			<crux:menuEntry label="PromoBanner" targetView="promobanner"/>
-			<crux:menuEntry label="Rest Call" targetView="rest"/>
+			<crux:menuEntry label="TransferList" targetView="transferlist"/>
+			<crux:menuEntry label="ScrollBanner" targetView="scrollBanner"/>
+			
 			<!-- 
-			<crux:menuSection label="Banco de Dados"/>
+			<crux:menuSection label="Database"/>
 			<crux:menuEntry label="CRUD Simples" targetView="simpleDatabase"/>
 			-->
 		</crux:menuTabsDisposal>

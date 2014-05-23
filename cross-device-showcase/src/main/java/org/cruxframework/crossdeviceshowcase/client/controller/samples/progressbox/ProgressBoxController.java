@@ -43,7 +43,7 @@ public class ProgressBoxController
 
 	private void updateTitle()
 	{
-		progress.setMessage("Aguarde " + timeLeftToHide + " segundos...");
+		progress.setMessage("Please wait for " + timeLeftToHide + " seconds...");
 	}
 	
 	private void hideProgress()

@@ -8,6 +8,9 @@ import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 @Controller("messageBoxController")
 public class MessageBoxController 
 {
+	
+	private String MESSAGE_TYPE = "This is a message from kind: ";
+	
 	@Expose
 	public void showInfo()
 	{
@@ -34,6 +37,6 @@ public class MessageBoxController
 	
 	private void showMessage(MessageType type)
 	{
-		FlatMessageBox.show("Esta é uma mensagem do tipo "+ type.name(), type);
+		FlatMessageBox.show(MESSAGE_TYPE + type.name(), type);
 	}
 }

@@ -12,9 +12,9 @@
 	<center>
 		<crux:styledPanel id="panel">
 			<gwt:flowPanel id="flowPanel">
-				<gwt:label id="ipLabel" text="Informe uma data:" style="margin:10px"/>
+				<gwt:label id="ipLabel" text="Insert a date:" style="margin:10px"/>
 				<crux:maskedTextBox id="dateInput" formatter="maskedDateFormatter" styleName="gwt-TextBox crux-MaskedTextBox dateInput smallWidthInput"/>
-				<crux:button id="btnParseDate" onSelect="maskedTextBoxController.readDate" text="Verificar" styleName="crux-Button"/>
+				<crux:button id="btnParseDate" onSelect="maskedTextBoxController.readDate" text="Check" styleName="crux-Button"/>
 			</gwt:flowPanel>			
 		</crux:styledPanel>
 		
