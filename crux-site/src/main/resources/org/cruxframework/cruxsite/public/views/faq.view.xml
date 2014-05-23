@@ -173,8 +173,8 @@
                                 Além do que foi citado anteriormente, ainda há mais uma classe comum de problemas que surgem quando trabalhamos com Maven. Por definição, o Crux lê
                                 os seus recursos da pasta target do projeto e esta deve estar em perfeita sincronia com os recursos presentes na pasta source. Esta sincronização é 
                                 garantida por diretivas declaradas no arquivo pom.xml da aplicação. Algumas vezes, o Maven não atualiza corretamente os recursos da pasta target, ocasionando
-                                erros durante a compilação do Crux. Para resolvê-los, apague manualmente a pasta target e faça um refresh no projeto (basta apertar F5 sobre o projeto, caso
-                                o Eclipse seja utilizado como IDE), além disso, rode a diretiva mvn clean.
+                                erros durante a compilação do Crux. Para resolvê-los, apague manualmente a pasta target, rode a diretiva mvn clean e faça um refresh no projeto (basta apertar F5 sobre o projeto, caso
+                                o Eclipse seja utilizado como IDE).
                             </p>
                         </div>
                     </gwt:HTMLPanel>
