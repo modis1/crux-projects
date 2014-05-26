@@ -34,7 +34,7 @@
 			<crux:menuEntry label="Masked Text Box" targetView="maskedTextBox"/>
 			<crux:menuEntry label="Button" targetView="cruxButton"/>
 			<crux:menuEntry label="Textbox" targetView="gwtTextBox"/>
-			<crux:menuEntry label="Text Area" targetView="textArea"/>
+			<crux:menuEntry label="Textarea" targetView="textArea"/>
 			<crux:menuSection label="Layout Elements"/>
 			<crux:menuEntry label="Styled Panel" targetView="styledPanel"/>
 			<crux:menuEntry label="Form Display" targetView="formDisplay"/>
@@ -43,14 +43,17 @@
 			<crux:menuEntry label="Dialog Box" targetView="dialogBox"/>
 			<crux:menuEntry label="Message Box" targetView="messageBox"/>
 			<crux:menuSection label="Data Elements" />
-			<crux:menuEntry label="Device Adaptive Grid" targetView="adaptivegrid"/>
+			<crux:menuEntry label="Device Adaptive Grid" targetView="adaptiveGrid"/>
 			<crux:menuSection label="Image Elements"/>
+			<crux:menuEntry label="PromoBanner" targetView="promoBanner"/>
 			<crux:menuEntry label="Slide Show" targetView="slideshow"/>
 			<crux:menuEntry label="Story Board" targetView="storyBoard"/>
-			<crux:menuSection label="testes"/>
-			<crux:menuEntry label="PromoBanner" targetView="promobanner"/>
-			<crux:menuEntry label="TransferList" targetView="transferlist"/>
-			<crux:menuEntry label="ScrollBanner" targetView="scrollBanner"/>
+			<crux:menuSection label="Info elements"/>
+			<crux:menuEntry label="Scroll Banner" targetView="scrollBanner"/>
+<!-- 			<crux:menuSection label="Testes"/> -->
+<!-- 			<crux:menuEntry label="List Shuttle" targetView="listShuttle"/> -->
+<!-- 			<crux:menuEntry label="Color Picker" targetView="colorPickerDialog"/> -->
+<!-- 			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/> -->
 			
 			<!-- 
 			<crux:menuSection label="Database"/>

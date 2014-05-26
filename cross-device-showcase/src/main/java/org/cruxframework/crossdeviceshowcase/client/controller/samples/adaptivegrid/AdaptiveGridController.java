@@ -48,7 +48,7 @@ public class AdaptiveGridController
 		grid.refresh();
 	}
 	
-	@BindView("adaptivegrid")
+	@BindView("adaptiveGrid")
 	public static interface GridView extends WidgetAccessor
 	{
 		DeviceAdaptiveGrid gridSample();

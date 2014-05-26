@@ -10,7 +10,7 @@
 
 	<center>
 		<gwt:verticalPanel id="panel" width="50%">
-			<crux:scrollBanner id="scrollBanner" messageScrollingPeriod="5000000" width="50%" >
+			<crux:scrollBanner id="scrollBanner" messageScrollingPeriod="5000" width="50%" >
 			<crux:message>Asimov's Three Laws</crux:message>
 			<crux:message>1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.</crux:message>
 			<crux:message>2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.</crux:message>
@@ -18,7 +18,7 @@
 			</crux:scrollBanner>
 		</gwt:verticalPanel>
 
-		<showcase:info title="Scroll Banner">
+		<showcase:info title="ScrollBanner">
 			<showcase:description>
 				<p>
 					O ScrollBanner é um componente para mostrar várias mensagens de texto, uma de cada vez, apresentadas de forma periódica e sequencial. 
