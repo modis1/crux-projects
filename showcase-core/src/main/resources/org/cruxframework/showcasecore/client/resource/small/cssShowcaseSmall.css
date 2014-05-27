@@ -5,6 +5,9 @@
 @url svgIconMenu svgIconMenu;
 @url svgIconArrow svgIconArrow;
 @url svgIconPresent svgIconPresent;
+@url banner1promoUrl banner1promo;
+@url banner1promoUr2 banner1promo;
+@url banner1promoUr3 banner1promo;
 
 /*
 * Modern clearfix (IE9+)
@@ -373,15 +376,45 @@ body
 	margin-bottom:10px;
 }
 
-.banner1
+/****************
+    PromoBanner
+****************/
+
+.promoBannerImage
 {
-	background:#acdf53;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color:#acdf53;
+	color:white;
 }
-.banner2
+.messagePanel
 {
-	background:#dfc053;
+	width:100%;
+	height:100%;
+	background-size:100% !important;
 }
-.banner3
+.messagePanel td
 {
-	background:#bb596c;
+	vertical-align:middle !important;
+}
+.messagePanel .title
+{
+	text-align:center;
+	font-size:30px;
+	text-shadow:-2px 1px 0 rgba(0,0,0,0.5), 2px 2px 1px rgba(0,0,0,0.5), 3px 3px 2px rgba(0,0,0,0.5), 0 4px 3px rgba(0,0,0,0.5), 6px 6px 3px rgba(0,0,0,0.5) !important;
+	color:#fff;
+}
+.messagePanel .text
+{
+	text-align:center;
+	color:#fff;
+	font-size:17px;
+	text-shadow:0 1px 0 rgba(0,0,0,0.5), 0 2px 1px rgba(0,0,0,0.5), 0 3px 2px rgba(0,0,0,0.5), 0 4px 3px rgba(0,0,0,0.5)!important;
+	
+}
+.bannersArea
+{
+	margin:10px;
+	border-radius:5px;
+	overflow:hidden;
 }
