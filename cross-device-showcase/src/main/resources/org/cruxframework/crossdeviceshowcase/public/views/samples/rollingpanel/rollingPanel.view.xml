@@ -6,7 +6,7 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	useController="mainController"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	title="Rolling Panel"> 
+	title="RollingPanel"> 
 
 	<center>
 	
