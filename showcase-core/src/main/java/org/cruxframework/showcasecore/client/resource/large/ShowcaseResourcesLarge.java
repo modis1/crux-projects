@@ -20,6 +20,7 @@ import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.DataResource;
+import com.google.gwt.resources.client.ClientBundle.Source;
 import com.google.gwt.resources.client.ImageResource;
 
 /**
@@ -47,6 +48,12 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	@Source("svg-icon-arrow.svg")
 	DataResource svgIconArrow();
 	
-	@Source("first-banner-promo.jpg")
-	ImageResource firstBannerPromo();
+	@Source("banner1.jpg")
+	ImageResource banner1promo();
+	
+	@Source("banner2.jpg")
+	ImageResource banner2promo();
+	
+	@Source("banner3.jpg")
+	ImageResource banner3promo();
 }
