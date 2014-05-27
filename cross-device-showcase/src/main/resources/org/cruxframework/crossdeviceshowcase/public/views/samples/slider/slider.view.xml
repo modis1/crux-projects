@@ -1,0 +1,31 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view" 
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="sliderController" 
+	onLoad="sliderController.onLoad"
+	title="Slider"> 
+
+	<center>
+		<crux:slider id="slider" />
+		
+		<gwt:label id="labelCount"/>
+		<gwt:label id="widgetNumber"/>
+		
+		<showcase:info title="Slider">
+			<showcase:description>
+				<p>
+					O componente Slider é um painel que realiza troca de conteúdo usando animações com efeito de slide.
+				</p>
+				<p>
+					
+				</p> 
+			</showcase:description>
+		</showcase:info>
+
+	</center>		
+	
+</v:view>

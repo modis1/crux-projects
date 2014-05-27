@@ -50,9 +50,11 @@
 			<crux:menuEntry label="Story Board" targetView="storyBoard"/>
 			<crux:menuSection label="Info elements"/>
 			<crux:menuEntry label="Scroll Banner" targetView="scrollBanner"/>
-<!-- 			<crux:menuSection label="Testes"/> -->
-<!-- 			<crux:menuEntry label="List Shuttle" targetView="listShuttle"/> -->
-<!-- 			<crux:menuEntry label="Color Picker" targetView="colorPickerDialog"/> -->
+			<crux:menuSection label="Testes"/>
+			<crux:menuEntry label="Slider" targetView="slider"/>
+			
+			<crux:menuEntry label="List Shuttle" targetView="listShuttle"/>
+			<crux:menuEntry label="Color Picker" targetView="colorPickerDialog"/>
 <!-- 			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/> -->
 			
 			<!-- 

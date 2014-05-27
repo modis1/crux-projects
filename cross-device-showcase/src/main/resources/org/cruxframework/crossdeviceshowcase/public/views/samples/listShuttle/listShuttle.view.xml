@@ -1,0 +1,34 @@
+<v:view xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:faces="http://www.cruxframework.org/crux/faces"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="listShuttleController"
+	onLoad="listShuttleController.onLoad" 
+	title="List Shuttle">
+
+	<center>
+
+		<gwt:verticalPanel id="panel">
+		<gwt:label id="label" text="Choose available players and mount your team"/>
+		<crux:listShuttle id="listShuttle" availableHeader="Available Players" selectedHeader="Selected players" />
+		</gwt:verticalPanel>
+
+		<showcase:info title="ListShutlle">
+			<showcase:description>
+				<p>
+					O ListShuttle é um componente que possibilita a transferência de itens de uma lista para outra. 
+					É possível transferir um, ***vários ou todos os elementos de uma só vez.
+				</p>
+				<p>
+					No exemplo apresentado os itens das listas (jogadores) foram adicionados através de uma controller, 
+					possibilitando buscar estes itens de uma fonte de dados.
+				</p>
+			</showcase:description>
+		</showcase:info>
+
+	</center>
+
+</v:view>
