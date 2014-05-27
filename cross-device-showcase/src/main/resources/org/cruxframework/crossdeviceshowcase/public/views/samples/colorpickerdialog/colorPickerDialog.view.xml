@@ -5,20 +5,22 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="colorPickerDialogController" onLoad="colorPickerDialogController.readColor"
+	useController="colorPickerDialogController" 
+	onLoad="colorPickerDialogController.onLoad"
 	title="Color Picker Dialog"> 
 	
 	<center>
-		<crux:textArea id="pannelColor" width="50px"/>
-		<crux:styledPanel id="panel1">
+		<gwt:verticalPanel id="panel">
+			<gwt:label id="labelText" text="Click in button and change text color"/>
+			<gwt:label id="labelColor" text="Choosed color:"/>
+			<crux:button id="button" text="Mudar Cor" onSelect="colorPickerDialogController.callColorPicker"/>
+		</gwt:verticalPanel>	
+			<crux:colorPickerDialog id="colorPickerDialog" text="Choosed color" onClose="colorPickerDialogController.changeColor"/>		
 		
-		<crux:colorPickerDialog id="colorPickerDialog" animationEnabled="true" text="Choose a color."/>
-		</crux:styledPanel>
-		
-		<showcase:info title="ColorPicker">
+		<showcase:info title="ColorPickerDialog">
 			<showcase:description>
 				<p>
-					O Color Picker é um componente.
+					O Color Picker é um componente que permite que o usuário selecione uma cor do espectro de cores. A funcionalidade é semelhante selecionadores de cores encontrados em softwares desktop.
 				</p>
 			</showcase:description>
 		</showcase:info>
