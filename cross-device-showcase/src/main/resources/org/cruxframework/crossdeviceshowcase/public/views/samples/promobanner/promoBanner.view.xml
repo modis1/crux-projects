@@ -10,7 +10,7 @@
 	title="PromoBanner"> 
 	
 	<center>
-		<crux:promoBanner id="promobanner" largeBannersHeight="312px" smallBannersHeight="200px" autoTransitionInterval="500000" transitionDuration="450" width="1024px" >			
+		<crux:promoBanner id="promobanner" largeBannersHeight="312px" smallBannersHeight="200px" autoTransitionInterval="500000" transitionDuration="450" styleName="promoBannerWidth">			
 			<crux:banner buttonLabel="" title="Vida" text="Apressa-te a viver bem e pensa que cada dia é, por si só, uma vida. (Sêneca)" image="${showcaseCoreResources.banner1promo}" styleName="messagePanel"/>
 			<crux:banner buttonLabel="" title="Sonhe e viva" text="Sonhe como se fosse viver para sempre, viva como se fosse morrer amanhã. (James Dean)"
  				image="${showcaseCoreResources.banner2promo}" />
