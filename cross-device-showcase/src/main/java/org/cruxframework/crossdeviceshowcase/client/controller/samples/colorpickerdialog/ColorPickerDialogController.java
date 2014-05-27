@@ -7,37 +7,52 @@ import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.button.Button;
 import org.cruxframework.crux.widgets.client.colorpicker.ColorPickerDialog;
-import org.cruxframework.crux.widgets.client.styledpanel.StyledPanel;
-import org.cruxframework.crux.widgets.client.textarea.TextArea;
 
-import com.google.gwt.canvas.client.Canvas;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.DecoratorPanel;
-import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.UIObject;
 
 @Controller("colorPickerDialogController")
 public class ColorPickerDialogController 
 {
 	@Inject
-	public ViewColorPicker viewcolorpicker;
+	public ColorPickerView colorpickerview;
 	
 	@Expose
-	public void readColor()
+	public void onLoad()
 	{
-		//viewcolorpicker.pannelColor().
-		
-		//viewcolorpicker.colorPickerDialog().setColor("yellow");
-		//String teste = viewcolorpicker.colorPickerDialog().getColor();
-		//viewcolorpicker.colorPickerDialog().
-	   // Window.alert(teste);
-	    //viewcolorpicker.pannelColor().setText(teste);
+
+	}
+	
+//	private void clearColorPicker()
+//	{
+//		colorpickerview.colorPickerDialog().hide();
+//	}
+	
+	
+	@Expose
+	public void changeColor()
+	{
+		if (colorpickerview.colorPickerDialog().getColor() != null)
+		{
+			colorpickerview.labelText().getElement().getStyle().setColor("#"+colorpickerview.colorPickerDialog().getColor());
+			colorpickerview.labelColor().setText("Choosed color: #"+colorpickerview.colorPickerDialog().getColor());
+			
+		}
+	}
+	
+	@Expose
+	public void callColorPicker()
+	{
+		colorpickerview.colorPickerDialog().show();
+		colorpickerview.colorPickerDialog().setPopupPosition(700, 200);
 	}
 	
 	@BindView("colorPickerDialog")
-	public static interface ViewColorPicker extends WidgetAccessor
+	public static interface ColorPickerView extends WidgetAccessor
 	{
 		ColorPickerDialog colorPickerDialog();
-		TextArea pannelColor();
+		Button button();
+		Label labelText();
+		Label labelColor();
 	}    
 }
