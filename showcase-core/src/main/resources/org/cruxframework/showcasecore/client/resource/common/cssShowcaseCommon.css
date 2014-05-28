@@ -24,3 +24,13 @@ pre code *, pre code span
 {
     text-decoration:none;
 }
+
+/**** Layout ****/
+
+.textDescTitle
+{
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 0 20px;
+    
+}

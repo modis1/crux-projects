@@ -9,7 +9,7 @@
 	useController="mainController"> 
 	
 	<div class="speechBubble">
-		<h1>#{title}</h1>
+	   <gwt:label id="labelTitle" text="#{title}" styleName="textDescTitle"/>
 		<gwt:HTMLPanel id="descriptionCointainer">
 			<t:section name="description"/>
 		</gwt:HTMLPanel>
