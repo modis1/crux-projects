@@ -20,6 +20,7 @@
 	<!--   
     <set-property name="device.features" value="largeDisplayMouse"/>
 	-->
+	<set-property name="device.features" value="largeDisplayMouse"/>
 	
 	<!-- To enable logging -->
 	<inherits name="com.google.gwt.logging.Logging" />

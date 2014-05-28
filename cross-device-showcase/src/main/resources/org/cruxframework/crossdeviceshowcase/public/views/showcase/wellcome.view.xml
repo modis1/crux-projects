@@ -5,22 +5,17 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	title="Welcome"> 
+	title="${messages_showcase.welcome}"> 
 	
 	<center>
 		<div class="wellcomeText">
-			<h1>Welcome to Crux 5 Showcase!</h1>
-			<p>
-				O Crux Framework 5 provê uma série de componentes cross-device para aplicações Web. 
-				Neste showcase são apresentados exemplos de uso dos componentes oferecidos pelo Crux. 
-			</p>
-			<p>
-				Em cada exemplo é apresentado o componente, como é o seu funcionamento e sua apresentação na tela. 
-				Também está disponível para consulta o código fonte de cada exemplo.
-			</p>	
-			<p>	
-	 			Este site está em construção, a cada dia novos exemplos são elaborados e adicionados ao showcase.
-			</p>
+		  <gwt:label id="welcome" text="${messages_showcase.welcome}" styleName="textWelcome"/>
+		  
+		  <gwt:label id="info1" text="${messages_showcase.info1}" styleName="textInfo"/>
+		  
+		  <gwt:label id="info2" text="${messages_showcase.info2}" styleName="textInfo"/>
+		  
+		  <gwt:label id="info3" text="${messages_showcase.info3}" styleName="textInfo"/>
 		</div>
 	</center>		
 	

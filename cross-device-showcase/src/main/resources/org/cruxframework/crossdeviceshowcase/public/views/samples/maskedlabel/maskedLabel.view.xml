@@ -4,7 +4,6 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	
 	useController="maskedLabelController"
 	onActivate="maskedLabelController.setDate" 
 	useFormatter="dateFormatter" 
