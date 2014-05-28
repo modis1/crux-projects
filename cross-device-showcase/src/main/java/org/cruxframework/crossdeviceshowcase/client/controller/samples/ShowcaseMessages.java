@@ -61,7 +61,7 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Form Display")
 	String formDisplay();
 	
-	@DefaultMessage("Dialog Boxes")
+	@DefaultMessage("Caixas de Diálogo")
 	String dialogBoxes();
 	
 	@DefaultMessage("Progress Box")
