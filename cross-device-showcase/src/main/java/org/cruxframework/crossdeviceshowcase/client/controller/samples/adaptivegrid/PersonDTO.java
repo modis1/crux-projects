@@ -1,6 +1,5 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.adaptivegrid;
 
-
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -8,10 +7,36 @@ import java.util.List;
 public class PersonDTO implements Serializable
 {
 	private static final long serialVersionUID = 3877579684349043370L;
+	
 	private String name;
 	private int age;
 	private Date birthday;
 	private String status;
+	
+	public PersonDTO(String name, int age, Date birthday,List<PersonDTO> personList)
+	{
+		super();
+		this.name = name;
+		this.age = age;
+		this.birthday = birthday;
+		if(personList != null)
+		{
+			personList.add(this);
+		}
+	}
+	
+	public PersonDTO(String name, int age, Date birthday,List<PersonDTO> personList,String status)
+	{
+		super();
+		this.name = name;
+		this.age = age;
+		this.birthday = birthday;
+		this.status = status;
+		if(personList != null)
+		{
+			personList.add(this);
+		}
+	}
 	
 	public String getStatus()
 	{
@@ -45,30 +70,4 @@ public class PersonDTO implements Serializable
 	{
 		this.birthday = birthday;
 	}
-	public PersonDTO(String name, int age, Date birthday,List<PersonDTO> personList)
-	{
-		super();
-		this.name = name;
-		this.age = age;
-		this.birthday = birthday;
-		if(personList != null)
-		{
-			personList.add(this);
-		}
-	}
-	
-	public PersonDTO(String name, int age, Date birthday,List<PersonDTO> personList,String status)
-	{
-		super();
-		this.name = name;
-		this.age = age;
-		this.birthday = birthday;
-		this.status = status;
-		if(personList != null)
-		{
-			personList.add(this);
-		}
-	}
-	
-	
 }

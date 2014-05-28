@@ -3,8 +3,6 @@
  */
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.simpledatabase;
 
-import org.cruxframework.crossdeviceshowcase.client.ShowcaseMessages;
-import org.cruxframework.crossdeviceshowcase.client.Views;
 import org.cruxframework.crux.core.client.Crux;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
@@ -17,12 +15,15 @@ import org.cruxframework.crux.core.client.db.Transaction.Mode;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.ioc.Inject.Scope;
 import org.cruxframework.crux.core.client.screen.views.BindView;
+import org.cruxframework.crux.core.client.screen.views.BindableView;
+import org.cruxframework.crux.core.client.screen.views.ViewAccessor;
 import org.cruxframework.crux.core.client.screen.views.ViewActivateEvent;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.dialog.MessageDialog;
 import org.cruxframework.crux.widgets.client.dialogcontainer.DialogViewContainer;
 import org.cruxframework.crux.widgets.client.event.row.RowDoubleClickEvent;
 import org.cruxframework.crux.widgets.client.grid.Grid;
+import org.cruxframework.showcasecore.client.resource.ShowcaseCoreMessages;
 
 /**
  * @author Thiago da Rosa de Bustamante
@@ -35,7 +36,7 @@ public class SimpleDatabaseController
 	private CompanyDatabase database;
 
 	@Inject(scope=Scope.DOCUMENT)
-	private ShowcaseMessages messages;
+	private ShowcaseCoreMessages messages;
 	
 	@Inject
 	private DatabaseWidgets databaseWidgets;
@@ -58,7 +59,7 @@ public class SimpleDatabaseController
 		this.database = database;
 	}
 	
-	public void setMessages(ShowcaseMessages messages) 
+	public void setMessages(ShowcaseCoreMessages messages) 
 	{
 		this.messages = messages;
 	}
@@ -150,5 +151,11 @@ public class SimpleDatabaseController
 	public static interface DatabaseWidgets extends WidgetAccessor
 	{
 		Grid peopleGrid();
+	}
+	
+	@BindView("simpleDatabase")
+	public interface Views extends ViewAccessor
+	{
+		BindableView<Person> person();
 	}
 }

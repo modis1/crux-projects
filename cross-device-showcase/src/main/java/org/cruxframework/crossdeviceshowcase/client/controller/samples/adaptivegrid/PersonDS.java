@@ -1,6 +1,5 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.adaptivegrid;
 
-
 import java.util.List;
 
 import org.cruxframework.crux.core.client.datasource.LocalPagedDataSource;
@@ -12,7 +11,6 @@ import org.cruxframework.crux.core.client.datasource.annotation.DataSourceRecord
 public class PersonDS extends LocalPagedDataSource<PersonDTO>
 {
 	private List<PersonDTO> persons;
-	
 	
 	public List<PersonDTO> getPersons()
 	{
