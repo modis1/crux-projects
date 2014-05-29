@@ -23,7 +23,7 @@ import org.cruxframework.crux.widgets.client.dialog.MessageDialog;
 import org.cruxframework.crux.widgets.client.dialogcontainer.DialogViewContainer;
 import org.cruxframework.crux.widgets.client.event.row.RowDoubleClickEvent;
 import org.cruxframework.crux.widgets.client.grid.Grid;
-import org.cruxframework.showcasecore.client.resource.ShowcaseCoreMessages;
+import org.cruxframework.showcasecore.client.ShowcaseMessages;
 
 /**
  * @author Thiago da Rosa de Bustamante
@@ -36,7 +36,7 @@ public class SimpleDatabaseController
 	private CompanyDatabase database;
 
 	@Inject(scope=Scope.DOCUMENT)
-	private ShowcaseCoreMessages messages;
+	private ShowcaseMessages messages;
 	
 	@Inject
 	private DatabaseWidgets databaseWidgets;
@@ -59,7 +59,7 @@ public class SimpleDatabaseController
 		this.database = database;
 	}
 	
-	public void setMessages(ShowcaseCoreMessages messages) 
+	public void setMessages(ShowcaseMessages messages) 
 	{
 		this.messages = messages;
 	}

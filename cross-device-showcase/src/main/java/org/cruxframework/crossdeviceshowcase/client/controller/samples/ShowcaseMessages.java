@@ -13,7 +13,6 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Site")
 	String site();
 	
-	
 	@DefaultMessage("Projeto")
 	String project();
 	
