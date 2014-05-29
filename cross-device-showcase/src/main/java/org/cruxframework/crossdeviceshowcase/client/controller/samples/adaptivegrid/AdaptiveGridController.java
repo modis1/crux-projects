@@ -62,9 +62,10 @@ public class AdaptiveGridController
 	{
 		this.messages = messages;
 	}
-	
+
 	public void setGridView(GridView gridView) 
 	{
 		this.gridView = gridView;
 	}
+	
 }

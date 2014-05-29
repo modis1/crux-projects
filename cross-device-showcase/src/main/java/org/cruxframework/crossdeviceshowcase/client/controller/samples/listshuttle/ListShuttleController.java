@@ -15,7 +15,7 @@ public class ListShuttleController
 {
 
 	@Inject
-	public ListShuttleView listshuttleView;
+	private ListShuttleView listshuttleView;
 
 	@Expose
 	public void onLoad()
@@ -25,28 +25,33 @@ public class ListShuttleController
 
 	private void loadItems(){
 
-		List<String> items = new ArrayList<String>();
-		items.add("Alexandre");
-		items.add("Bruno");
-		items.add("Cláudio ");
-		items.add("Samuel");
-		items.add("Thiago ");
-		items.add("Wesley");
-		items.add("Ricardo");
-		items.add("Felipe");
+		List<String> itemsA = new ArrayList<String>();
+		itemsA.add("Alexandre");
+		itemsA.add("Bruno");
+		itemsA.add("Cláudio ");
+		itemsA.add("Samuel");
+		itemsA.add("Thiago ");
+		itemsA.add("Wesley");
+		itemsA.add("Ricardo");
+		itemsA.add("Felipe");
+		itemsA.add("Guilherme");
+		itemsA.add("Juliano");
 		
-		List<String> itemsSel = new ArrayList<String>();
-		itemsSel.add("Guilherme");
-		itemsSel.add("Juliano");
-		
-		listshuttleView.listShuttle().setAvailableItems(items);
-		listshuttleView.listShuttle().setSelectedItems(itemsSel);
+		List<String> itemsS = new ArrayList<String>();
+		itemsS.add("Guilherme");
+		itemsS.add("Juliano");
+
+		listshuttleView.listShuttle().setAvailableItems(itemsA);
+		listshuttleView.listShuttle().setSelectedItems(itemsS);
 	}
 	
-
 	@BindView("listShuttle")
 	public static interface ListShuttleView extends WidgetAccessor
 	{
 		ListShuttle<String> listShuttle();
+	}
+
+	public void setListshuttleView(ListShuttleView listshuttleView) {
+		this.listshuttleView = listshuttleView;
 	}    
 }

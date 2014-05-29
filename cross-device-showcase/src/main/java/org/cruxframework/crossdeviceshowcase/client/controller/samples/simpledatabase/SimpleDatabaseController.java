@@ -3,6 +3,7 @@
  */
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.simpledatabase;
 
+import org.cruxframework.crossdeviceshowcase.client.controller.samples.ShowcaseMessages;
 import org.cruxframework.crux.core.client.Crux;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
@@ -23,7 +24,6 @@ import org.cruxframework.crux.widgets.client.dialog.MessageDialog;
 import org.cruxframework.crux.widgets.client.dialogcontainer.DialogViewContainer;
 import org.cruxframework.crux.widgets.client.event.row.RowDoubleClickEvent;
 import org.cruxframework.crux.widgets.client.grid.Grid;
-import org.cruxframework.showcasecore.client.ShowcaseMessages;
 
 /**
  * @author Thiago da Rosa de Bustamante

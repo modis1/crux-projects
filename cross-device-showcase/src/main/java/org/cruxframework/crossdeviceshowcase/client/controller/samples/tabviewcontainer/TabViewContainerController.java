@@ -4,30 +4,44 @@ import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
-import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.widgets.client.button.Button;
 import org.cruxframework.crux.widgets.client.tabcontainer.TabContainer;
+
+import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("tabViewContainerController")
 public class TabViewContainerController 
 {
-	
-//	private String MESSAGE_INVALID_NUMBER = "Please insert a valid integer.";
-//	private String MESSAGE_NEGATIVE_NUMBER = "Please insert positive value.";
-
 	@Inject
 	public TabViewContainerView tabviewcontainerview;
-	private View storyBoard;
 
 	@Expose
 	public void onLoad()
-	{
-		tabviewcontainerview.tabViewContainer().add(storyBoard, false, true);
+	{			
+		//tabviewcontainerview.tabViewContainer().getIndex("tabViewInit");
+		//tabviewcontainerview.viewIndex().setText(Integer.toString(tabviewcontainerview.tabViewContainer().getIndex("tabViewInit")));
 	}
 
-	@BindView("tabViewContainerView")
+	@Expose
+	public void add()
+	{
+		//tabviewcontainerview.tabViewContainer().loadView("teste", true);
+		//como criar uma view?
+	}
+	
+	@Expose
+	public void remove()
+	{
+		//tabviewcontainerview.tabViewContainer().remove(formDisplay);
+		//Não deu
+	}
+	
+	@BindView("tabViewContainer")
 	public static interface TabViewContainerView extends WidgetAccessor
 	{
 		TabContainer tabViewContainer();
+		Button remove();
+		TextBox viewIndex();
 	}
 }

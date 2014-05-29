@@ -28,10 +28,15 @@ public class SliderController
 	{
 		Image image1 = new Image();
 		image1.setUrl("http://3.bp.blogspot.com/-7BkqgCIORRI/UuvYXs1ZiTI/AAAAAAAAAAc/s8AeI16hFoo/s1600/big-transculent-blue.png");
+		
 		Image image2 = new Image();
+		image2.setTitle("Marco");
 		image2.setUrl("http://i.vimeocdn.com/portrait/2026174_300x300.jpg");
+		
 		Image image3 = new Image();
+		image3.setTitle("Jesus");
 		image3.setUrl("http://2.bp.blogspot.com/-m4dNNiZ54fg/Tqgx-IqahzI/AAAAAAAAADM/hXWUerRgjgo/s1600/crux-3-released.png");
+		
 		Image image4 = new Image();
 		image4.setUrl("http://2.bp.blogspot.com/-He-FKvx0gKg/Tqg1o_RbZtI/AAAAAAAAADU/aWPZb9DeHNg/s1600/beta.png");
 
@@ -46,8 +51,7 @@ public class SliderController
 	
 	private void countItems()
 	{
-		sliderView.labelCount().setText("Quantidade de páginas "+Integer.toString(sliderView.slider().getPageCount()));
-		sliderView.widgetNumber().setText("Widget "+Integer.toString(sliderView.slider().getCurrentWidgetIndex()));
+		sliderView.labelCount().setText("Total pages: "+Integer.toString(sliderView.slider().getPageCount()));
 	}
 	
 	@BindView("slider")

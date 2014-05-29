@@ -95,4 +95,7 @@ public interface ShowcaseMessages extends Messages
 	
 	@DefaultMessage("Scroll Banner")
 	String scrollBanner();
+
+	@DefaultMessage("Database não suportada")
+	String databaseNotSupportedError();
 }
