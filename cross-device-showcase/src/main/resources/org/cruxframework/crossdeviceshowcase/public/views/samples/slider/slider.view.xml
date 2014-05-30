@@ -10,8 +10,15 @@
 	title="Slider"> 
 
 	<center>
-		<crux:slider id="slider" />
+		<crux:slider id="slider" circularShowing="true" slideTransitionDuration="500" showFirstWidget="true">
+		  <crux:widget>
+	           <crux:image id="teste1" url="http://t2.gstatic.com/images?q=tbn:ANd9GcT3KAwosCPL5T_AsZm9Si62_hFfkou2BgWLO9o2GjHCAXhfodVh"/>	  
+		  </crux:widget>
 		
+		  <crux:widget>
+               <crux:image id="teste2" url="http://t1.gstatic.com/images?q=tbn:ANd9GcQlqajilmRT_LnaY4L23nmEu6YBjMzVt6-EqN1M5yvEKcHqWcxV"/>    
+          </crux:widget>
+		</crux:slider>
 		<gwt:label id="labelCount"/>
 		<gwt:label id="widgetNumber"/>
 		
