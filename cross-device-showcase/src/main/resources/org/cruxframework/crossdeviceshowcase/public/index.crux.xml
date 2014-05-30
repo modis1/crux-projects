@@ -51,13 +51,18 @@
 			<crux:menuSection label="${messages_showcase.infoElements}"/>
 			<crux:menuEntry label="${messages_showcase.scrollBanner}" targetView="scrollBanner"/>
 			
+			
 			<crux:menuSection label="Testes"/>
-			<crux:menuEntry label="Slider" targetView="slider"/>
-			<crux:menuEntry label="Rest" targetView="rest"/>
+<!-- 			<crux:menuEntry label="Slider" targetView="slider"/> -->
+
+<!-- 			<crux:menuEntry label="Rest" targetView="rest"/> -->
 			<crux:menuEntry label="List Shuttle" targetView="listShuttle"/>
 			<crux:menuEntry label="Color Picker" targetView="colorPickerDialog"/>
+<!-- 			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/> -->
+<!-- 			<crux:menuEntry label="Menu Tabs Disposal" targetView="menuTabsDisposal"/> -->
+<!-- 			<crux:menuEntry label="Top Menu Disposal" targetView="topMenuDisposal"/> -->
 			
-			<!--
+			<!-- 
 			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/> 
 			<crux:menuSection label="Database"/>
 			<crux:menuEntry label="CRUD Simples" targetView="simpleDatabase"/>
