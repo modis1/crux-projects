@@ -1,30 +1,28 @@
-<v:view 
-	xmlns="http://www.w3.org/1999/xhtml" 
-	xmlns:v="http://www.cruxframework.org/view" 
-	xmlns:core="http://www.cruxframework.org/crux" 
-	xmlns:crux="http://www.cruxframework.org/crux/widgets"
-	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
-	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="colorPickerDialogController" 
-	onLoad="colorPickerDialogController.onLoad"
-	title="Color Picker Dialog"> 
-	
+<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="colorPickerDialogController" title="${messages_colorPickerDialog.title}">
+
 	<center>
 		<gwt:verticalPanel id="panel">
-			<gwt:label id="labelText" text="Click in button and change text color"/>
-			<gwt:label id="labelColor" text="Choosed color:"/>
-			<crux:button id="button" text="Mudar Cor" onSelect="colorPickerDialogController.callColorPicker"/>
-		</gwt:verticalPanel>	
-			<crux:colorPickerDialog id="colorPickerDialog" text="Choosed color" onClose="colorPickerDialogController.changeColor"/>		
-		
-		<showcase:info title="ColorPickerDialog">
+			<gwt:label id="labelClickButton"
+				text="${messages_colorPickerDialog.labelClickButton}" />
+			<gwt:label id="labelColorValue"
+				text="${messages_colorPickerDialog.labelColorValue}" />
+			<crux:button id="buttonChangeColor"
+				text="${messages_colorPickerDialog.title}"
+				onSelect="colorPickerDialogController.showColorPicker" />
+		</gwt:verticalPanel>
+		<crux:colorPickerDialog id="colorPicker"
+			text="${messages_colorPickerDialog.colorPickerText}" onClose="colorPickerDialogController.changeColor" />
+
+		<showcase:info title="${messages_colorPickerDialog.title}">
 			<showcase:description>
-				<p>
-					O Color Picker é um componente que permite que o usuário selecione uma cor do espectro de cores. A funcionalidade é semelhante selecionadores de cores encontrados em softwares desktop.
-				</p>
+				<gwt:label id="labelDescText"
+					text="${messages_colorPickerDialog.labelDescText}" />
 			</showcase:description>
 		</showcase:info>
-		
-	</center>		
-	
+
+	</center>
+
 </v:view>

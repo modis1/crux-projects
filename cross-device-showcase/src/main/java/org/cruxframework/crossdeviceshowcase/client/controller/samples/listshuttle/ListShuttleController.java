@@ -36,7 +36,7 @@ public class ListShuttleController
 		itemsA.add("Felipe");
 		itemsA.add("Guilherme");
 		itemsA.add("Juliano");
-		
+
 		List<String> itemsS = new ArrayList<String>();
 		itemsS.add("Guilherme");
 		itemsS.add("Juliano");
@@ -44,7 +44,7 @@ public class ListShuttleController
 		listshuttleView.listShuttle().setAvailableItems(itemsA);
 		listshuttleView.listShuttle().setSelectedItems(itemsS);
 	}
-	
+
 	@BindView("listShuttle")
 	public static interface ListShuttleView extends WidgetAccessor
 	{
@@ -53,5 +53,5 @@ public class ListShuttleController
 
 	public void setListshuttleView(ListShuttleView listshuttleView) {
 		this.listshuttleView = listshuttleView;
-	}    
+	}
 }
