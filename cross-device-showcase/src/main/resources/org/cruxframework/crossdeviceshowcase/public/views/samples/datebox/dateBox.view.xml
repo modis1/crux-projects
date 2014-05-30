@@ -6,7 +6,7 @@
 	<center>
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html">
-				<crux:dateBox id="dateBox" pattern="dd/MM/yyyy" mask="dd/MM/yyyy"/>
+				<crux:dateBox id="dateBox" pattern="dd/MM/yyyy"/>
 				<crux:button id="buttonValueDateBox" onSelect="dateBoxController.onClickButtonValueTextBox"  text="print DateBoxValue"></crux:button>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
