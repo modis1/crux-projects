@@ -1,28 +1,30 @@
-<v:view xmlns="http://www.w3.org/1999/xhtml" 
-	xmlns:v="http://www.cruxframework.org/view"
-	xmlns:core="http://www.cruxframework.org/crux" 
-	xmlns:crux="http://www.cruxframework.org/crux/widgets"
-	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
-	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="mainController" 
-	
-	useView="slideshow, textArea"
-	title="Tab View Container">
-<!-- onLoad="tabViewContainerController.onLoad" -->
-	<center>
-<!-- 		</crux:styledPanel> -->
-			<crux:tabViewContainer id="tabViewContainer" height="500px" width="500px" >
-			
-<!-- 			<crux:view name="textArea" closeable="true" id="textArea" /> -->
-<!-- 			<crux:view name="slideshow" closeable="true" id="slideshow" /> -->
-			</crux:tabViewContainer>
+<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="tabViewContainerController" onLoad="tabViewContainerController.onLoad"
+	title="${messages_tabViewContainer.title}">
 
-		<showcase:info title="TabViewContainer">
+	<center>
+		<gwt:HTMLPanel id="panel">
+			<crux:tabViewContainer id="tabView" width="700px">
+				<crux:view name="tabViewInit" lazy="true" closeable="true" />
+				<crux:view name="messageBox" lazy="true" closeable="true" />
+				<crux:view name="dialogBox" lazy="true" closeable="true" />
+				<crux:view name="progressBox" lazy="true" closeable="true" />
+			</crux:tabViewContainer>
+			<gwt:label id="labelText" text="${messages_tabViewContainer.labelText}" />
+			<gwt:label id="labelUrl" text="${messages_tabViewContainer.labelUrl}" />
+			<gwt:textBox id="textBoxUrl" width="300px"
+				text="${messages_tabViewContainer.textBoxUrl}" />
+			<crux:button id="buttonAdd" text="${messages_tabViewContainer.buttonAdd}"
+				onSelect="tabViewContainerController.add" />
+			<crux:button id="buttonRemove"
+				text="${messages_tabViewContainer.buttonRemove}" onSelect="tabViewContainerController.remove" />
+		</gwt:HTMLPanel>
+
+		<showcase:info title="${messages_tabViewContainer.title}">
 			<showcase:description>
-				<p>
-					O TabViewContainer é um elemento. 
-				</p>
-				
+				<gwt:label id="labelDescText" text="${messages_tabViewContainer.labelDescText}" />
 			</showcase:description>
 		</showcase:info>
 
