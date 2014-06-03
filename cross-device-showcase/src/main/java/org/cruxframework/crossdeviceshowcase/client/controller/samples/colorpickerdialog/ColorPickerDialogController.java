@@ -46,6 +46,7 @@ public class ColorPickerDialogController
 		if (colorpickerview.colorPicker().getColor() != null || colorpickerview.colorPicker().getColor().trim().equals(""))
 		{
 			colorpickerview.labelClickButton().getElement().getStyle().setColor("#"+colorpickerview.colorPicker().getColor());
+			colorpickerview.labelColorValue().removeStyleName("hide");
 			colorpickerview.labelColorValue().setText(messages.labelColorValue()+" #"+colorpickerview.colorPicker().getColor());
 		}
 	}

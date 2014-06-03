@@ -25,6 +25,16 @@ pre code *, pre code span
     text-decoration:none;
 }
 
+.choosenColor
+{
+	margin-bottom:10px;
+}
+
+.hide
+{
+	display:none;
+}
+
 /**** Layout ****/
 
 .textDescTitle

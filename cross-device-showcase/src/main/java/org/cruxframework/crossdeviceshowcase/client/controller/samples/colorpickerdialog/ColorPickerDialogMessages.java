@@ -10,7 +10,7 @@ public interface ColorPickerDialogMessages extends Messages
 	@DefaultMessage("Color Picker")
 	String title();
 	 
-	@DefaultMessage("Clique no botão abaixo para mudar a cor do texto")
+	@DefaultMessage("Clique no botão abaixo para mudar a cor deste texto.")
 	String labelClickButton();
 	
 	@DefaultMessage("Cor escolhida:")

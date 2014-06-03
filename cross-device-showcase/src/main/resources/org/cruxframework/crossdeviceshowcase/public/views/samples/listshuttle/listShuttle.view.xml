@@ -7,12 +7,14 @@
 
 	<center>
 
-		<gwt:verticalPanel id="panel">
-			<gwt:label id="labelChoosePlayers" text="${messages_listShuttle.labelChoosePlayers}" />
-			<crux:listShuttle id="listShuttle"
-				availableHeader="${messages_listShuttle.availableHeader}"
-				selectedHeader="${messages_listShuttle.selectedHeader}" />
-		</gwt:verticalPanel>
+		<crux:styledPanel id="panel" styleName="listShuttlePanel">
+			<gwt:HTMLPanel id="wrapper">
+				<gwt:label id="labelChoosePlayers" text="${messages_listShuttle.labelChoosePlayers}" />
+				<crux:listShuttle id="listShuttle"
+					availableHeader="${messages_listShuttle.availableHeader}"
+					selectedHeader="${messages_listShuttle.selectedHeader}" />
+			</gwt:HTMLPanel>
+		</crux:styledPanel>
 
 		<showcase:info title="${messages_listShuttle.title}">
 			<showcase:description>

@@ -5,9 +5,7 @@
 	title="StoryBoard">
 
 	<center>
-		<crux:styledPanel id="panel">
-			<crux:storyboard id="storyboard" height="100%" width="100%"></crux:storyboard>
-		</crux:styledPanel>
+		<crux:storyboard id="storyboard" height="100%" width="100%"></crux:storyboard>
 
 		<showcase:info title="Storyboard">
 			<showcase:description>

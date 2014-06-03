@@ -10,13 +10,13 @@ public interface ListShuttleMessages extends Messages
 	@DefaultMessage("List Shuttle")
 	String title();
 	 
-	@DefaultMessage("Monte seu time com os jogadores disponíveis")
+	@DefaultMessage("Monte seu time com os jogadores disponíveis:")
 	String labelChoosePlayers();
 	
-	@DefaultMessage("Jogadores disponíveis")
+	@DefaultMessage("Disponíveis")
 	String availableHeader();
 	
-	@DefaultMessage("Jogadores selecionados")
+	@DefaultMessage("Escalados")
 	String selectedHeader();
 	
 	@DefaultMessage("O ListShuttle é um componente que possibilita a transferência de itens de uma lista para outra. " 
