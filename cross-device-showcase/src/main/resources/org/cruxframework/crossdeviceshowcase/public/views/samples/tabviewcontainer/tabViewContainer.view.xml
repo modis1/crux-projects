@@ -7,19 +7,26 @@
 	<center>
 		<gwt:HTMLPanel id="panel">
 			<crux:tabViewContainer id="tabView" width="700px">
-				<crux:view name="tabViewInit" lazy="true" closeable="true" />
-				<crux:view name="messageBox" lazy="true" closeable="true" />
-				<crux:view name="dialogBox" lazy="true" closeable="true" />
-				<crux:view name="progressBox" lazy="true" closeable="true" />
+				<crux:view name="messageBox" closeable="true" />
 			</crux:tabViewContainer>
+			
+			<crux:button id="buttonRemove" text="${messages_tabViewContainer.buttonRemove}" onSelect="tabViewContainerController.remove" />
+			
+			<br/>
+			
 			<gwt:label id="labelText" text="${messages_tabViewContainer.labelText}" />
 			<gwt:label id="labelUrl" text="${messages_tabViewContainer.labelUrl}" />
-			<gwt:textBox id="textBoxUrl" width="300px"
-				text="${messages_tabViewContainer.textBoxUrl}" />
-			<crux:button id="buttonAdd" text="${messages_tabViewContainer.buttonAdd}"
-				onSelect="tabViewContainerController.add" />
-			<crux:button id="buttonRemove"
-				text="${messages_tabViewContainer.buttonRemove}" onSelect="tabViewContainerController.remove" />
+			
+			<gwt:textBox id="textBoxUrl" width="300px" text="${messages_tabViewContainer.textBoxUrl}" />
+			
+			<crux:button id="buttonAddURL" text="${messages_tabViewContainer.buttonAddURL}" onSelect="tabViewContainerController.add" />
+			
+			<br/>
+			
+            <crux:button id="buttonAddViewMessageBox" text="${messages_tabViewContainer.buttonAddViewMessageBox}" onSelect="tabViewContainerController.addViewMessageBox" />
+            <crux:button id="buttonAddViewDialogBox" text="${messages_tabViewContainer.buttonAddViewDialogBox}" onSelect="tabViewContainerController.addViewDialogBox" />
+            <crux:button id="buttonAddViewProgressBox" text="${messages_tabViewContainer.buttonAddViewProgressBox}" onSelect="tabViewContainerController.addViewProgressBox" />
+			
 		</gwt:HTMLPanel>
 
 		<showcase:info title="${messages_tabViewContainer.title}">

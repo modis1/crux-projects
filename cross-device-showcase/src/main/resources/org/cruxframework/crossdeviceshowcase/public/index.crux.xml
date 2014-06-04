@@ -28,6 +28,7 @@
 					<crux:button id="projectButton" text="${messages_showcase.project}" onSelect="mainController.navigateToProject" styleName="topBarIcon projectIcon"/>
 				</gwt:flowPanel>
 			</crux:header>
+			
 			<crux:menuSection label="${messages_showcase.formElements}"/>
 			<crux:menuEntry label="${messages_showcase.fileUploader}" targetView="fileUploader"/>
 			<crux:menuEntry label="${messages_showcase.maskedLabel}" targetView="maskedLabel"/>
@@ -35,6 +36,8 @@
 			<crux:menuEntry label="${messages_showcase.button}" targetView="cruxButton"/>
 			<crux:menuEntry label="${messages_showcase.textBox}" targetView="gwtTextBox"/>
 			<crux:menuEntry label="${messages_showcase.textArea}" targetView="textArea"/>
+			<crux:menuEntry label="${messages_showcase.dateBox}" targetView="dateBox"/>
+			
 			<crux:menuSection label="${messages_showcase.layoutElements}"/>
 			<crux:menuEntry label="${messages_showcase.styledPanel}" targetView="styledPanel"/>
 			<crux:menuEntry label="${messages_showcase.formDisplay}" targetView="formDisplay"/>
@@ -42,19 +45,24 @@
 			<crux:menuEntry label="${messages_showcase.progressBox}" targetView="progressBox"/>
 			<crux:menuEntry label="${messages_showcase.dialogBox}" targetView="dialogBox"/>
 			<crux:menuEntry label="${messages_showcase.messageBox}" targetView="messageBox"/>
+			
 			<crux:menuSection label="${messages_showcase.dataElements}" />
 			<crux:menuEntry label="${messages_showcase.deviceAdaptiveGrid}" targetView="adaptiveGrid"/>
+			
 			<crux:menuSection label="${messages_showcase.imageElements}"/>
 			<crux:menuEntry label="${messages_showcase.promoBanner}" targetView="promoBanner"/>
 			<crux:menuEntry label="${messages_showcase.slideShow}" targetView="slideshow"/>
 			<crux:menuEntry label="${messages_showcase.storyBoard}" targetView="storyBoard"/>
+			
 			<crux:menuSection label="${messages_showcase.infoElements}"/>
 			<crux:menuEntry label="${messages_showcase.scrollBanner}" targetView="scrollBanner"/>
 			
 			
 			<crux:menuSection label="Testes"/>
-<!-- 			<crux:menuEntry label="Slider" targetView="slider"/> -->
-
+			<crux:menuEntry label="Slider" targetView="slider"/>
+			<crux:menuEntry label="Menu" targetView="menu"/>
+            <crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/>
+            
 <!-- 			<crux:menuEntry label="Rest" targetView="rest"/> -->
 			<crux:menuEntry label="List Shuttle" targetView="listShuttle"/>
 			<crux:menuEntry label="Color Picker" targetView="colorPickerDialog"/>

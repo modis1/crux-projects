@@ -23,7 +23,7 @@ public class SliderController
 	
 	private void countItems()
 	{
-		sliderView.labelCount().setText("Total pages: "+Integer.toString(sliderView.slider().getPageCount()));
+//		sliderView.labelCount().setText("Total pages: "+Integer.toString(sliderView.slider().getPageCount()));
 	}
 	
 	@BindView("slider")

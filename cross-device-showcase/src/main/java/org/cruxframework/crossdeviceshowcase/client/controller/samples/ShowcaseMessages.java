@@ -51,6 +51,9 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Textarea")
 	String textArea();
 	
+	@DefaultMessage("Datebox")
+	String dateBox();
+	
 	@DefaultMessage("Elementos de Layout")
 	String layoutElements();
 	

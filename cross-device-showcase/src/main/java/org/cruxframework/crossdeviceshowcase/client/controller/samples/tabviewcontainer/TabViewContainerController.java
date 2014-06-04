@@ -9,7 +9,6 @@ import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.tabcontainer.TabContainer;
 
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("tabViewContainerController")
@@ -26,17 +25,37 @@ public class TabViewContainerController
 	@Expose
 	public void onLoad()
 	{			
-		myWidgetAccessor.tabView().focusView("tabViewInit");
 	}
 
+	@Expose
+	public void addViewMessageBox()
+	{
+		myWidgetAccessor.tabView().showView("messageBox");
+		myWidgetAccessor.tabView().focusView("messageBox");
+	}
+	
+	@Expose
+	public void addViewDialogBox()
+	{
+		myWidgetAccessor.tabView().showView("dialogBox");
+		myWidgetAccessor.tabView().focusView("dialogBox");
+	}
+	
+	@Expose
+	public void addViewProgressBox()
+	{
+		myWidgetAccessor.tabView().showView("progressBox");
+		myWidgetAccessor.tabView().focusView("progressBox");
+	}
+	
 	@Expose
 	public void add()
 	{
 		String url = myWidgetAccessor.textBoxUrl().getText();
-
 		if (VIEW_ID>=0)
 		{
-			myWidgetAccessor.tabView().loadView("tabNewView", Integer.toString(VIEW_ID), true, url);
+			myWidgetAccessor.tabView().showView("tabNewView", Integer.toString(VIEW_ID), url);
+			myWidgetAccessor.tabView().focusView(Integer.toString(VIEW_ID));
 			VIEW_ID++;
 		}
 	}
@@ -48,7 +67,8 @@ public class TabViewContainerController
 		{
 			String viewRemove = myWidgetAccessor.tabView().getViewId(myWidgetAccessor.tabView().getFocusedViewIndex());
 			myWidgetAccessor.tabView().remove(myWidgetAccessor.tabView().getView(viewRemove));
-		}else{
+		} else
+		{
 			FlatMessageBox.show(messages.alert(), MessageType.ERROR);
 		}
 	}

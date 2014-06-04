@@ -19,8 +19,17 @@ public interface TabViewContainerMessages extends Messages
 	@DefaultMessage("http://www.cruxframework.org")
 	String textBoxUrl();
 	
-	@DefaultMessage("Adicionar nova aba")
-	String buttonAdd();
+	@DefaultMessage("Adicionar View Message Box")
+	String buttonAddViewMessageBox();
+	
+	@DefaultMessage("Adicionar View Dialog Box")
+	String buttonAddViewDialogBox();
+	
+	@DefaultMessage("Adicionar View Progress Box")
+	String buttonAddViewProgressBox();
+
+	@DefaultMessage("Adicionar URL")
+	String buttonAddURL();
 	
 	@DefaultMessage("Remover aba selecionada")
 	String buttonRemove();

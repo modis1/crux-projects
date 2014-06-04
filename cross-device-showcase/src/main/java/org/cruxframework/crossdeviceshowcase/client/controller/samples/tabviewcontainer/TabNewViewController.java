@@ -4,10 +4,10 @@ import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
+import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.core.client.screen.views.ViewLoadEvent;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Frame;
 
 @Controller("tabNewViewController")
@@ -23,11 +23,11 @@ public class TabNewViewController
 	public void onLoad(ViewLoadEvent event)
 	{			
 		String url = event.getParameterObject();
-		myWidgetAccessor.frameContent().setUrl(url);
+		((Frame )View.of(this).getWidget("frameContent")).setUrl(url);
 	}
 
 	@BindView("tabNewView")
-	public static interface MyWidgetAccessor extends WidgetAccessor
+	public interface MyWidgetAccessor extends WidgetAccessor
 	{
 		Frame frameContent();
 	}
@@ -42,7 +42,4 @@ public class TabNewViewController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 }
-//ViewLoadEvent	
-//String url = event.getParameterObject();
-//myWidgetAccessor.frameContent().setUrl(url);
 

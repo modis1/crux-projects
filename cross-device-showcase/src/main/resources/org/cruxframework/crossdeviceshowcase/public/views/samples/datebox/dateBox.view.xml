@@ -1,25 +1,19 @@
 <v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
 	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="dateBoxController" title="DateBox">
+	useController="dateBoxController" title="${messages_datebox.title}">
 
 	<center>
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html">
 				<crux:dateBox id="dateBox" pattern="dd/MM/yyyy"/>
-				<crux:button id="buttonValueDateBox" onSelect="dateBoxController.onClickButtonValueTextBox"  text="print DateBoxValue"></crux:button>
+				<crux:button id="buttonValueDateBox" onSelect="dateBoxController.onClickButtonValueTextBox"  text="${messages_datebox.printValue}"></crux:button>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 
-		<showcase:info title="Button">
+		<showcase:info title="${messages_datebox.title}">
 			<showcase:description>
-				<p>
-					Buttons são elementos que disparam ações quando clicados, este
-					componente foi feito pensando também em
-					dispositivos de toque, tratando os eventos de forma diferenciada em um
-					smartphone ou tablet, por exemplo.
-
-				</p>
+			     <gwt:label id="descText" text="${messages_datebox.descText}" />
 			</showcase:description>
 		</showcase:info>
 
