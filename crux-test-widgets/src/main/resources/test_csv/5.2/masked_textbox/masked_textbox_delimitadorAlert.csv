@@ -1,0 +1,16 @@
+parametros;campos;3;testes;7
+
+#Teste para o delimitador do maskedTextbox
+#Valor da mascara;Valor Informado;Valor Esperado 
+
+CT001;aa?aaaa?aa;only one character '? ' is allowed without quotes
+CT002;?aaaaaaaa?";only one character '? ' is allowed without quotes
+CT003;?aa?a?aa?aa?a";only one character '? ' is allowed without quotes
+CT004;9999???aaa?a";only one character '? ' is allowed without quotes
+CT005;9999?\"?\"?aaa?a;only one character '? ' is allowed without quotes
+CT006;?????????????";only one character '? ' is allowed without quotes
+CT007;?a?a??9?a?a?9?";only one character '? ' is allowed without quotes
+
+
+#Este testes devem ser executados na versao 5.2 do crux
+#O $ representa significa que o campo será preenchido com string vazia  ("")
