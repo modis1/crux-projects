@@ -13,7 +13,7 @@ public interface TabViewContainerMessages extends Messages
 	@DefaultMessage("Estas views estão sendo carregadas por um TabViewContainer.")
 	String labelText();
 	
-	@DefaultMessage("Insira uma url válida")
+	@DefaultMessage("Insira uma url válida como: http://www.cruxframework.org")
 	String labelUrl();
 	
 	@DefaultMessage("http://www.cruxframework.org")
@@ -34,7 +34,7 @@ public interface TabViewContainerMessages extends Messages
 	@DefaultMessage("Remover aba selecionada")
 	String buttonRemove();
 	
-	@DefaultMessage("Não há view selecionada para ser removida.")
+	@DefaultMessage("Não há view para ser removida.")
 	String alert();
 	
 	@DefaultMessage("O componente TabViewContainer permite que várias views compartilhem o mesmo espaço. "

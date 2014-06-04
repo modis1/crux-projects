@@ -23,11 +23,6 @@ public class TabViewContainerController
 	private MyWidgetAccessor myWidgetAccessor;
 
 	@Expose
-	public void onLoad()
-	{			
-	}
-
-	@Expose
 	public void addViewMessageBox()
 	{
 		myWidgetAccessor.tabView().showView("messageBox");

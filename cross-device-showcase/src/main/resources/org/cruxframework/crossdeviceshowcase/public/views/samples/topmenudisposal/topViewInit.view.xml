@@ -1,0 +1,14 @@
+<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="mainController" 
+	title="${messages_topMenuDisposal.title2}">
+
+	<center>
+		<gwt:HTMLPanel id="panel" height="300px" width="700px">
+			<gwt:label id="labelWelcome" text="${messages_topMenuDisposal.labelWelcome}"/>
+			<gwt:label id="labelText" text="${messages_topMenuDisposal.labelText}"/>
+		</gwt:HTMLPanel>
+	</center>
+
+</v:view>

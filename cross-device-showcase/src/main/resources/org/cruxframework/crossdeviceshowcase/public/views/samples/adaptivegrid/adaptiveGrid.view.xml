@@ -25,7 +25,7 @@
 
 		<showcase:info title="${messages_adaptivegrid.title}">
 			<showcase:description>
-				<gwt:label id="descText" text="${messages_adaptivegrid.descText}" />
+				<gwt:label id="descText" text="${messages_adaptivegrid.descText}"/>
 			</showcase:description>
 		</showcase:info>
 	</center>
