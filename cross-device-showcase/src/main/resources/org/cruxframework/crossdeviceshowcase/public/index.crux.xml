@@ -59,6 +59,7 @@
 			
 			<crux:menuSection label="Testes"/>
 			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/>
+			<crux:menuEntry label="Menu" targetView="menu"/>
 			<crux:menuEntry label="Top Menu Disposal" targetView="topMenuDisposal"/>
 			<crux:menuEntry label="List Shuttle" targetView="listShuttle"/>
 			<crux:menuEntry label="Color Picker" targetView="colorPickerDialog"/>
