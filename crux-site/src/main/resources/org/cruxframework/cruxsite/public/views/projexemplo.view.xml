@@ -42,12 +42,17 @@
                     O Media Manager foi desenvolvido com o objetivo de ser um exemplo de aplicação real. 
                     Neste aplicação são exploradas vários opções de integração de backend.
                     </p>
+                    
                 </li>
                 
 				<li>
 					<div class="exampleCall">
 						<div class="exampleText">
 							<h3>Showcase</h3>
+							<div class="svnName">
+								Acessar:<br />
+								<b><a href="http://http://showcase5.cruxframework.org/" target="_blank">Showcase 5</a></b>
+							</div>
 							<div class="svnName">
 								Projeto SVN:<br />
 								<b>cross-device-showcase</b>
@@ -65,6 +70,10 @@
                         <div class="exampleText">
                             <h3>Crux Site</h3>
                             <div class="svnName">
+								Acessar:<br />
+								<b>Você já está no site.</b>
+							</div>
+                            <div class="svnName">
                                 Projeto SVN:<br />
                                 <b>CruxSite</b>
                             </div>
@@ -77,25 +86,6 @@
                 </li>
                 
 			</ul>
-		</div>
-		<div class="separator"></div>
-		<div class="container">
-			<h2>Como eu uso os exemplos?</h2>	
-			
-			<ol class="quickstartList">
-				<li>
-					<p>Adicione, no seu Eclipse, o repositório SVN do Crux: <b>http://crux-projects.googlecode.com/svn/trunk/"NOME-PROJETO"</b></p>
-				</li>
-				<li>
-					<p>Em seguida, faça checkout do projeto que você escolheu dentre os exemplos acima.</p>
-				</li>
-				<li>
-					<p>Compile com o Maven</p>
-				</li>
-				<li>
-					<p>Clique com o botão direito no arquivo <i>"NOME-PROJETO".launch</i> existente na raiz do projeto e execute o mesmo.</p>
-				</li>
-			</ol>
 		</div>
 	</gwt:HTMLPanel>
 	

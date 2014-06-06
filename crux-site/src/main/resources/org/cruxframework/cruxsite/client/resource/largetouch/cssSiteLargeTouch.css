@@ -1064,6 +1064,11 @@ h2{
 	background:rgba(0,0,0,0.5);
 	text-align:center;
 	margin-top:9px;
+	margin-left:10px;
+}
+
+.examplesList li .exampleCall .exampleText .svnName a{
+	color:#AAFF67;
 }
 
 @external manual, toc, chapter, programlisting, title, navigation, sect2, list-of-figures, list-of-tables, toc-title, table-contents, appendix;

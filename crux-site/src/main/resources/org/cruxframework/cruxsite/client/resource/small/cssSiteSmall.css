@@ -579,10 +579,19 @@ a{
 	text-align:center;
 	margin-top:60px;
 	font-size:14px;
-	width:200px;
+	min-width:200px;
     position:absolute;
      box-shadow:0 0 0 1px rgba(255,255,255,0.1);
 }
+
+.examplesList li .exampleCall .exampleText .svnName:last-child{
+	left:250px;
+}
+
+.examplesList li .exampleCall .exampleText .svnName a{
+	color:#AAFF67;
+}
+
 .examplesList li .exampleCall .exampleText .svnName br{
     display:none;
     visible:none;
