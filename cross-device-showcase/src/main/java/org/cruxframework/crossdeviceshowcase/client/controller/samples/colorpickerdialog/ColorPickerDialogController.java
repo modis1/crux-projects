@@ -43,7 +43,7 @@ public class ColorPickerDialogController
 	@Expose
 	public void changeColor()
 	{
-		if (colorpickerview.colorPicker().getColor() != null || colorpickerview.colorPicker().getColor().trim().equals(""))
+		if (colorpickerview.colorPicker().getColor() != null)
 		{
 			colorpickerview.labelClickButton().getElement().getStyle().setColor("#"+colorpickerview.colorPicker().getColor());
 			colorpickerview.labelColorValue().removeStyleName("hide");

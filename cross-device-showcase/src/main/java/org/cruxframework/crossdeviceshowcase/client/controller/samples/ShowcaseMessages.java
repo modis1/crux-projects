@@ -101,4 +101,19 @@ public interface ShowcaseMessages extends Messages
 
 	@DefaultMessage("Database não suportada")
 	String databaseNotSupportedError();
+	
+	@DefaultMessage("Tab View Container")
+	String tabViewContainer();
+	
+	@DefaultMessage("Top Menu Disposal")
+	String topMenuDisposal();
+	
+	@DefaultMessage("Stack Menu")
+	String stackMenu();
+	
+	@DefaultMessage("List Shuttle")
+	String listShuttle();
+	
+	@DefaultMessage("Color Picker")
+	String colorPicker();
 }
