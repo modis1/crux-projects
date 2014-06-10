@@ -26,5 +26,4 @@ public class FormDisplayController {
 		smartPhoneCheckBox.setValue(false);
 		tabletCheckBox.setValue(false);
 	}
-	
 }

@@ -11,7 +11,7 @@ public class SlideshowController
 	@Expose
 	public void onLoad()
 	{
-		Slideshow slideshow = (Slideshow) View.of(this).getWidget("slideshow");
+		//Slideshow slideshow = (Slideshow) View.of(this).getWidget("slideshow");
 	}
 	
 }

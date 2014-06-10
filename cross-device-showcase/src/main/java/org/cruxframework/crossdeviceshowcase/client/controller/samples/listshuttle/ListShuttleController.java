@@ -13,9 +13,8 @@ import org.cruxframework.crux.widgets.client.listshuttle.ListShuttle;
 @Controller("listShuttleController")
 public class ListShuttleController 
 {
-
 	@Inject
-	private ListShuttleView listshuttleView;
+	private MyWidgetAccessor myWidgetAccessor;
 
 	@Expose
 	public void onLoad()
@@ -41,17 +40,18 @@ public class ListShuttleController
 		itemsS.add("Guilherme");
 		itemsS.add("Juliano");
 
-		listshuttleView.listShuttle().setAvailableItems(itemsA);
-		listshuttleView.listShuttle().setSelectedItems(itemsS);
+		myWidgetAccessor.listShuttle().setAvailableItems(itemsA);
+		myWidgetAccessor.listShuttle().setSelectedItems(itemsS);
 	}
 
 	@BindView("listShuttle")
-	public static interface ListShuttleView extends WidgetAccessor
+	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		ListShuttle<String> listShuttle();
 	}
 
-	public void setListshuttleView(ListShuttleView listshuttleView) {
-		this.listshuttleView = listshuttleView;
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
+	{
+		this.myWidgetAccessor = myWidgetAccessor;
 	}
 }

@@ -13,18 +13,18 @@ public class DateBoxController
 {
 	@Inject
 	private DateBoxWidgets viewWidgets;
-	
+
 	public interface DateBoxWidgets extends WidgetAccessor
 	{
 		DateBox dateBox();
 	}
-	
+
 	@Expose
 	public void onClickButtonValueTextBox()
 	{
 		Window.alert(viewWidgets.dateBox().getValue().toString());
 	}
-	
+
 	public void setViewWidgets(DateBoxWidgets viewWidgets) 
 	{
 		this.viewWidgets = viewWidgets;

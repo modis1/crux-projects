@@ -14,7 +14,10 @@ import org.cruxframework.crux.widgets.client.storyboard.Storyboard;
 public class StoryboardController
 {
 	@Inject
-	public StoryboardView storyboardview;
+	private MyWidgetAccessor myWidgetAccessor;
+
+	@Inject
+	private StoryBoardMessages messages;
 
 	@Expose
 	public void onLoad()
@@ -22,28 +25,37 @@ public class StoryboardController
 		loadItens();
 	}
 
-	public void loadItens()
+	private void loadItens()
 	{
 		List<StoryboardItem> listItem = new ArrayList<StoryboardItem>();
 
-		new StoryboardItem("Product 1", "$ 899.00", "Add to cart",listItem);
-		new StoryboardItem("Product 2", "$ 399.00", "Add to cart",listItem);
-		new StoryboardItem("Product 3", "$ 1,899.00", "Add to cart",listItem);
-		new StoryboardItem("Product 4", "$ 159.00", "Add to cart",listItem);
-		new StoryboardItem("Product 5", "$ 839.00", "Add to cart",listItem);
-		new StoryboardItem("Product 6", "$ 729.00", "Add to cart",listItem);
-		new StoryboardItem("Product 7", "$ 2.199.00", "Add to cart",listItem);
-		new StoryboardItem("Product 8", "$ 599.00", "Add to cart",listItem);
-				
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 1", "$ 899.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 2", "$ 399.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 3", "$ 1,899.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 4", "$ 159.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 5", "$ 839.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 6", "$ 729.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 7", "$ 2.199.00",messages.addCart()));
+		listItem.add(new StoryboardItem(messages.clicked(), messages.product()+" 8", "$ 599.00",messages.addCart()));
+
 		for(StoryboardItem w : listItem){
-			storyboardview.storyboard().add(w);
+			myWidgetAccessor.storyboard().add(w);
 		}
 	}
 
 	@BindView("storyBoard")
-	public static interface StoryboardView extends WidgetAccessor
+	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		Storyboard storyboard();
 	}
 
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
+	{
+		this.myWidgetAccessor = myWidgetAccessor;
+	}
+
+	public void setMessages(StoryBoardMessages messages) 
+	{
+		this.messages = messages;
+	}
 }

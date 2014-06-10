@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
+import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
@@ -14,11 +15,22 @@ import com.google.gwt.user.client.ui.Widget;
 @Controller("maskedTextBoxController")
 public class MaskedTextBoxController 
 {
+	@Inject
+	private MaskedTextBoxMessages messages;
 	
-	private String MESSAGE_EMPTY_FIELD = "Empty field. Please fill it.";
-	private String MESSAGE_WRONG_FORMAT = "Please inform a valid date value as: \"dd/mm/aaaa\".";
-	private String MESSAGE_DATE = "The date you informed was: ";
-	private String MESSAGE_INVALID_DATE = "The date you informed is invalid, please try again.";
+	private String MESSAGE_EMPTY_FIELD;
+	private String MESSAGE_WRONG_FORMAT;
+	private String MESSAGE_DATE;
+	private String MESSAGE_INVALID_DATE;
+	
+	@Expose
+	public void onLoad()
+	{
+		MESSAGE_EMPTY_FIELD = messages.emptyFild();
+		MESSAGE_WRONG_FORMAT = messages.wrongFormat();
+		MESSAGE_DATE = messages.infoDate();
+		MESSAGE_INVALID_DATE = messages.invalidDate();
+	}
 	
 	private MaskedTextBox getDateInput()
 	{
@@ -77,5 +89,10 @@ public class MaskedTextBoxController
 		
 		widget.setStyleName(type, true);
 		button.setStyleName(type, true);
+	}
+
+	public void setMessages(MaskedTextBoxMessages messages) 
+	{
+		this.messages = messages;
 	}
 }

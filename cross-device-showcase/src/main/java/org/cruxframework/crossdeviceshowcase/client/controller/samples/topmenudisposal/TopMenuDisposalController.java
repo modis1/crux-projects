@@ -12,24 +12,24 @@ import org.cruxframework.crux.widgets.client.disposal.topmenudisposal.TopMenuDis
 public class TopMenuDisposalController 
 {
 	@Inject
-	private TopMenuDisposalView topmenudisposalview;
+	private MyWidgetAccessor myWidgetAccessor;
 
 	@Expose
 	public void onLoad()
 	{			
-		topmenudisposalview.menu().addMenuEntry("Form Display", "formDisplay");
-		topmenudisposalview.menu().addMenuEntry("Masked Text Box", "maskedTextBox");
+		myWidgetAccessor.menu().addMenuEntry("Form Display", "formDisplay");
+		myWidgetAccessor.menu().addMenuEntry("Masked Text Box", "maskedTextBox");
 	}
-	
+
 	@BindView("topMenuDisposal")
-	public static interface TopMenuDisposalView extends WidgetAccessor
+	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		TopMenuDisposal menu();
 		Button buttonShow();
 	}
 
-	public void setTopmenudisposalview(TopMenuDisposalView topmenudisposalview) 
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
-		this.topmenudisposalview = topmenudisposalview;
+		this.myWidgetAccessor = myWidgetAccessor;
 	}
 }

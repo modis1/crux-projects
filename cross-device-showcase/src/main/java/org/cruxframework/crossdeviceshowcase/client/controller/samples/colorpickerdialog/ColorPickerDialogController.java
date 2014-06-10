@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.Label;
 public class ColorPickerDialogController 
 {
 	@Inject
-	private ColorPickerView colorpickerview;
+	private MyWidgetAccessor myWidgetAccessor;
 
 	@Inject
 	private ColorPickerDialogMessages messages;
@@ -24,8 +24,8 @@ public class ColorPickerDialogController
 	@Expose
 	public void showColorPicker()
 	{
-		colorpickerview.colorPicker().show();
-		colorpickerview.colorPicker().setPopupPosition(700, 200);
+		myWidgetAccessor.colorPicker().show();
+		myWidgetAccessor.colorPicker().setPopupPosition(700, 200);
 		close();
 	}	
 
@@ -35,7 +35,7 @@ public class ColorPickerDialogController
 				{  
 			public void onValueChange(ValueChangeEvent<String> event)
 			{
-				colorpickerview.colorPicker().hide();
+				myWidgetAccessor.colorPicker().hide();
 			}
 				});
 	}
@@ -43,28 +43,29 @@ public class ColorPickerDialogController
 	@Expose
 	public void changeColor()
 	{
-		if (colorpickerview.colorPicker().getColor() != null)
+		if (myWidgetAccessor.colorPicker().getColor() != null)
 		{
-			colorpickerview.labelClickButton().getElement().getStyle().setColor("#"+colorpickerview.colorPicker().getColor());
-			colorpickerview.labelColorValue().removeStyleName("hide");
-			colorpickerview.labelColorValue().setText(messages.labelColorValue()+" #"+colorpickerview.colorPicker().getColor());
+			myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#"+myWidgetAccessor.colorPicker().getColor());
+			myWidgetAccessor.labelColorValue().removeStyleName("hide");
+			myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #"+myWidgetAccessor.colorPicker().getColor());
 		}
 	}
 
 	@BindView("colorPickerDialog")
-	public static interface ColorPickerView extends WidgetAccessor
+	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		ColorPickerDialog colorPicker();
 		Label labelClickButton();
 		Label labelColorValue();
 	}
 
-	public void setColorpickerview(ColorPickerView colorpickerview) 
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
-		this.colorpickerview = colorpickerview;
+		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(ColorPickerDialogMessages messages) {
+	public void setMessages(ColorPickerDialogMessages messages) 
+	{
 		this.messages = messages;
-	}    
+	}
 }

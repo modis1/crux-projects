@@ -32,5 +32,5 @@ public interface AdaptiveGridMessages extends Messages
 			+ "que o está visualizado. Para dispositivos com display grande (PC, tablet etc.), o grid exibirá "
 			+ "as colunas definidas na tag <largeColumns>, já para dispositivos pequenos, ele exibirá as "
 			+ "colunas definidas na tag <smallColumns>.")
-	String descText();
+	String labelDescText();
 }

@@ -12,27 +12,36 @@ import org.cruxframework.crux.widgets.client.scrollbanner.ScrollBanner;
 public class ScrollBannerController 
 {
 	@Inject
-	public ScrollBannerView scrollbannerview;
-	
+	private MyWidgetAccessor myWidgetAccessor;
+
+	@Inject
+	private ScrollBannerMessages messages;
+
 	@Expose
 	public void onLoad()
 	{
 		addMessages();
 	}
-	
+
 	private void addMessages()
 	{
-		scrollbannerview.scrollBanner().addMessage("This message was added from controller.");
+		myWidgetAccessor.scrollBanner().addMessage(messages.programMessage());
 	}
-	
+
 	@BindView("scrollBanner")
-	public static interface ScrollBannerView extends WidgetAccessor
+	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		ScrollBanner scrollBanner();
 		Button next();
+	}
+
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
+	{
+		this.myWidgetAccessor = myWidgetAccessor;
+	}
+
+	public void setMessages(ScrollBannerMessages messages) 
+	{
+		this.messages = messages;
 	}    
-	
-	
-	
-	
 }

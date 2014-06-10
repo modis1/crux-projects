@@ -2,6 +2,7 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.progress
 
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
+import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.widgets.client.dialog.ProgressBox;
 
 import com.google.gwt.user.client.Timer;
@@ -9,6 +10,9 @@ import com.google.gwt.user.client.Timer;
 @Controller("progressBoxController")
 public class ProgressBoxController 
 {
+	@Inject
+	private ProgressBoxMessages messages;
+
 	private static int DURATION = 5;
 	private ProgressBox progress;
 	private int timeLeftToHide = DURATION;
@@ -19,14 +23,14 @@ public class ProgressBoxController
 	{
 		progress = ProgressBox.show("");		
 		updateTitle();
-		
+
 		timer = new Timer()
 		{
 			@Override
 			public void run()
 			{
 				timeLeftToHide--;
-				
+
 				if(timeLeftToHide == 0)
 				{
 					hideProgress();
@@ -37,19 +41,24 @@ public class ProgressBoxController
 				}
 			}
 		};
-		
+
 		timer.scheduleRepeating(1000);
 	}
 
 	private void updateTitle()
 	{
-		progress.setMessage("Please wait for " + timeLeftToHide + " seconds...");
+		progress.setMessage(messages.pleaseWait() + timeLeftToHide + messages.seconds());
 	}
-	
+
 	private void hideProgress()
 	{
 		progress.hide();
 		timer.cancel();
 		timeLeftToHide = DURATION;
+	}
+
+	public void setMessages(ProgressBoxMessages messages) 
+	{
+		this.messages = messages;
 	}
 }

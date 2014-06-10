@@ -15,24 +15,23 @@ public class GwtTextBoxController
 		Widget textbox = View.of(this).getWidget("gwtTxtBox");
 		return textbox;
 	}
-	
+
 	private void setState(String state)
 	{
 		Widget textbox = this.getGwtTxtBox();
-		
+
 		textbox.removeStyleName("success");
 		textbox.removeStyleName("warn");
 		textbox.removeStyleName("error");
 		textbox.setStyleName("gwt-TextBox w200 " + state);
 	}
-	
-	
+
 	@Expose
 	public void handleDefault()
 	{
 		this.setState("");
 	}
-	
+
 	@Expose
 	public void onLoad()
 	{
@@ -43,19 +42,19 @@ public class GwtTextBoxController
 		 * */
 		textbox.setStyleName("gwt-TextBox w200");
 	}
-	
+
 	@Expose
 	public void handleSuccess()
 	{
 		this.setState("success");
 	}
-	
+
 	@Expose
 	public void handleWarning()
 	{
 		this.setState("warn");
 	}
-	
+
 	@Expose
 	public void handleError()
 	{

@@ -40,13 +40,13 @@ public class StackMenuController
 				{
 					if (listItems.getLabel().equals("Romance"))
 					{
-						listItems.add(new StackMenuItem("orgulhoEPreconceito","Orgulho e Preconceito"));
+						listItems.add(new StackMenuItem("prideAndPrejudice",messages.labelPrideAndPrejudice()));
 						listItems.add(new StackMenuItem("titanic","Titanic"));
 					}
 					else if(listItems.getLabel().equals("Terror"))
 					{
 						listItems.add(new StackMenuItem("constantine","Constantine"));
-						listItems.add(new StackMenuItem("aOrfa","A Órfã"));
+						listItems.add(new StackMenuItem("orphan",messages.labelOrphan()));
 					}
 				}
 			}
@@ -128,7 +128,8 @@ public class StackMenuController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(StackMenuMessages messages) {
+	public void setMessages(StackMenuMessages messages) 
+	{
 		this.messages = messages;
 	}
 }

@@ -28,6 +28,27 @@ public interface StackMenuMessages extends Messages
 	@DefaultMessage("Remover item de menu")
 	String buttonRemoveItem();
 	
+	@DefaultMessage("Lançamentos")
+	String labelReleases();
+	
+	@DefaultMessage("Séries")
+	String labelSeries();
+	
+	@DefaultMessage("Ação")
+	String labelAction();
+	
+	@DefaultMessage("Comédia")
+	String labelComedy();
+	
+	@DefaultMessage("Meu Malvado Favorito")
+	String labelDespicableMe();
+	
+	@DefaultMessage("Orgulho e Preconceito")
+	String labelPrideAndPrejudice();
+	
+	@DefaultMessage("A Orfã")
+	String labelOrphan();
+	
 	@DefaultMessage("O StackMenu é um menu hierárquico e vertical. Cada item em um StackMenu pode "
 			+"ter um ou vários sub-itens. Inseridos de forma declarativa ou programática. "
 			+"Também é possível disparar eventos de seleção neste componente. "
