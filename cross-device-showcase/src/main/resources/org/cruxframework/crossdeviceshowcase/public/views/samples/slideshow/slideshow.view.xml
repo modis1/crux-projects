@@ -5,7 +5,7 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="slideshowController" title="Slide Show"
+	useController="slideshowController" title="${messages_slideshow.title}"
 	onLoad="slideshowController.onLoad"> 
 	
 	<center>
@@ -18,17 +18,9 @@
 			</crux:service>
 		</crux:slideshow>
 		
-		<showcase:info title="Slideshow">
+		<showcase:info title="${messages_slideshow.title}">
 			<showcase:description>
-				<p>
-					O Slideshow é um componente usado para apresentação de imagens, de forma otimizada para cada 
-					tipo de dispositivo. Suporta descrições, miniaturas, pré-carga das próximas imagens, cache local 
-					de imagens visualizadas, redimensionamento automático de imagens, agrupamento em álbuns, etc.
-				</p>
-				<p>
-					Possui um modelo flexível que permite ao desenvolvedor adaptar praticamente qualquer modelo de layout desejado, 
-					além de realizar integração com APIs externas de serviços de imagens, como o Picasa.
-				</p> 
+				<gwt:label id="labelDescText" text="${messages_slideshow.labelDescText}"/>
 			</showcase:description>
 		</showcase:info>
 

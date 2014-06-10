@@ -1,33 +1,20 @@
-<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
-	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
-	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="storyboardController" onLoad="storyboardController.onLoad"
-	title="StoryBoard">
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="storyboardController" 
+	onLoad="storyboardController.onLoad"
+	title="${messages_storyBoard.title}">
 
 	<center>
 		<crux:storyboard id="storyboard" height="100%" width="100%"></crux:storyboard>
 
-		<showcase:info title="Storyboard">
+		<showcase:info title="${messages_storyBoard.title}">
 			<showcase:description>
-				<p>
-					O Storyboard é um painel de distribuição de elementos que se adapta
-					ao tipo de dispositivo.
-				</p>
-				<p>
-					Em dispositivos de tela grande como desktops, os elementos são
-					distribuídos lado a lado até o final da largura determinada,
-					gerando uma quebra de linha automática e continuando o
-					preenchimento com os elementos até o final.
-					Em dispositivos de tela pequena como celulares o processo é o mesmo,
-					porém os elementos são dispostos um abaixo do outro se adequando a
-					visibilidade do celular.
-				</p>
-				<p>
-					Os itens do Storyboard podem ser inseridos de forma declarativa ou
-					programática, possibilitando o uso de uma lista de dados como neste
-					exemplo.
-				</p>
-
+				<gwt:label id="labelDescText" text="${messages_storyBoard.labelDescText}"/> 
 			</showcase:description>
 		</showcase:info>
 	</center>

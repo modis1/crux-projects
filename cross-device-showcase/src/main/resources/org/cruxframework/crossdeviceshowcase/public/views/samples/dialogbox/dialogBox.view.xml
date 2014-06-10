@@ -5,24 +5,21 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="dialogBoxController" title="Dialog Box"> 
-	
+	useController="dialogBoxController" title="${messages_dialogBox.title}"> 
+
 	<center>
-		
+
 		<crux:styledPanel id="panel1">
-			<crux:button id="showDialogBtn" text="Show Dialog" onSelect="dialogBoxController.openDialog" />
+			<crux:button id="showDialogBtn" text="${messages_dialogBox.showDialogBtn}"
+				onSelect="dialogBoxController.openDialog" />
 		</crux:styledPanel>
-		
-		<showcase:info title="DialogBox">
+
+		<showcase:info title="${messages_dialogBox.title}">
 			<showcase:description>
-				<p>
-					DialogBoxes são janelas flutuantes, que se sobrepõem à janela principal para realizar algum tipo 
-					de comunicação adicional com usuário. São bastante úteis para exibir porções de dados que ocupariam 
-					muito espaço na tela ou para tratar fluxos secundários nos casos de uso da aplicação.  					
-				</p>
+				<gwt:label id="labelDescText" text="${messages_dialogBox.labelDescText}" />
 			</showcase:description>
 		</showcase:info>
-		
-	</center>		
-	
+
+	</center>
+
 </v:view>

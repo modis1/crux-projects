@@ -1,18 +1,22 @@
-<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
-	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
-	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="colorPickerDialogController" title="${messages_colorPickerDialog.title}">
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="colorPickerDialogController" 
+	title="${messages_colorPickerDialog.title}">
 
 	<center>
 		<crux:styledPanel id="panel">
 			<gwt:HTMLPanel id="wrapper">
 				<gwt:label id="labelClickButton"
-				text="${messages_colorPickerDialog.labelClickButton}" />
-				<hr/>
+					text="${messages_colorPickerDialog.labelClickButton}" />
+				<hr />
 				<gwt:label id="labelColorValue" styleName="hide choosenColor"
 					text="${messages_colorPickerDialog.labelColorValue}" />
-				<crux:button id="buttonChangeColor"
-					text="${messages_colorPickerDialog.title}"
+				<crux:button id="buttonChangeColor" text="${messages_colorPickerDialog.title}"
 					onSelect="colorPickerDialogController.showColorPicker" />
 			</gwt:HTMLPanel>
 		</crux:styledPanel>

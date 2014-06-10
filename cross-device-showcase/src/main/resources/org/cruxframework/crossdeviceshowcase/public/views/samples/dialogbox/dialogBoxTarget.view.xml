@@ -4,13 +4,14 @@
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
-	useController="dialogBoxController" title="Dialog Box"> 
-	
+	useController="dialogBoxController" title="${messages_dialogBox.title}"> 
+
 	<center>
 		<gwt:flowPanel id="panel">
-			
-			<gwt:label id="label" text="A DialogBox widget can handle from simple widgets to whole views!"/>
-			<crux:button id="btn" text="Close Me" onSelect="dialogBoxController.closeDialog"/>		
+
+			<gwt:label id="label" text="${messages_dialogBoxTarget.label}" />
+			<crux:button id="btn" text="${messages_dialogBoxTarget.btn}"
+				onSelect="dialogBoxController.closeDialog" />
 		</gwt:flowPanel>
-	</center>		
+	</center>
 </v:view>

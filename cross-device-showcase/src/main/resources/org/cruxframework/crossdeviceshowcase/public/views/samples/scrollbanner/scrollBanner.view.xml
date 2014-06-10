@@ -6,27 +6,22 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="scrollBannerController" 
 	onLoad="scrollBannerController.onLoad"
-	title="Scroll Banner">
+	title="${messages_scrollBanner.title}">
 
 	<center>
 		<gwt:verticalPanel id="panel">
-			<crux:scrollBanner id="scrollBanner" messageScrollingPeriod="5000" styleName="crux-ScrollBanner scrollBannerWidth">
-			<crux:message>Asimov's Three Laws</crux:message>
-			<crux:message>1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.</crux:message>
-			<crux:message>2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.</crux:message>
-			<crux:message>3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</crux:message>
+			<crux:scrollBanner id="scrollBanner"
+				messageScrollingPeriod="5000" styleName="crux-ScrollBanner scrollBannerWidth">
+				<crux:message>${messages_scrollBanner.initMessage}</crux:message>
+				<crux:message>${messages_scrollBanner.message1}</crux:message>
+				<crux:message>${messages_scrollBanner.message2}</crux:message>
+				<crux:message>${messages_scrollBanner.message3}</crux:message>
 			</crux:scrollBanner>
 		</gwt:verticalPanel>
 
-		<showcase:info title="ScrollBanner">
+		<showcase:info title="${messages_scrollBanner.title}">
 			<showcase:description>
-				<p>
-					O ScrollBanner é um componente para mostrar várias mensagens de texto, uma de cada vez, apresentadas de forma periódica e sequencial. 
-					As mensagens podem ser adicionadas de forma declarativa ou programática e o tempo de transição entre elas é definido no próprio componente.
-				</p>
-				<p>
-					No exemplo acima as 2 primeiras mensagens foram adicionadas de forma declarativa e as últimas de forma programática através da controller.
-				</p>
+				<gwt:label id="labelDescText" text="${messages_scrollBanner.labelDescText}" />
 			</showcase:description>
 		</showcase:info>
 
