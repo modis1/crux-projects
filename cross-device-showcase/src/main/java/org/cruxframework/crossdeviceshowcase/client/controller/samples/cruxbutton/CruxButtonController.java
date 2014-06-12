@@ -1,42 +1,58 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.cruxbutton;
 
+import org.cruxframework.crossdeviceshowcase.client.util.StyleHelper;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
-import org.cruxframework.crux.core.client.screen.views.View;
-
-import com.google.gwt.user.client.ui.Widget;
+import org.cruxframework.crux.core.client.ioc.Inject;
+import org.cruxframework.crux.core.client.screen.views.BindView;
+import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.widgets.client.button.Button;
 
 @Controller("cruxButtonController")
 public class CruxButtonController
 {
+	
+	public void setMyWidgets(MyWidgets myWidgets) 
+	{
+		this.myWidgets = myWidgets;
+	}
+
+	@Inject
+	private MyWidgets myWidgets;
+	
+	@BindView("cruxButton")
+	public interface MyWidgets extends WidgetAccessor
+	{
+		Button cruxBtn();
+	}
+
 	private void handleStates(String state)
 	{
-		Widget widget = View.of(CruxButtonController.this).getWidget("cruxBtn");
-		widget.setStyleName(state);
+		StyleHelper.getInstance().changeWidgetState(myWidgets.cruxBtn(), state);
 	}
-	
+
 	@Expose
-	public void handleDefault()
+	public void setStateDefault()
 	{	
 		handleStates("default");
 	}
 
 	@Expose
-	public void handleSuccess()
+	public void setStateSuccess()
 	{
 		handleStates("success");
 	}
 
 	@Expose
-	public void handleWarning()
+	public void setStateWarning()
 	{
 		handleStates("warn");
 	}
 
 	@Expose
-	public void handleError()
+	public void setStateError()
 	{
 		handleStates("error");
 	}
-	
+
 }
