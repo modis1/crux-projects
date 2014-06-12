@@ -18,16 +18,16 @@
 				</h4>
 				<div class="btn-Group">
 					<gwt:radioButton name="color"
-						onChange="cruxButtonController.handleDefault" id="radioDefault"
+						onChange="cruxButtonController.setStateDefault" id="radioDefault"
 						text="${messages_cruxButton.radioDefault}" checked="true"></gwt:radioButton>
 					<gwt:radioButton name="color"
-						onChange="cruxButtonController.handleSuccess" id="radioSuccess"
+						onChange="cruxButtonController.setStateSuccess" id="radioSuccess"
 						text="${messages_cruxButton.radioSuccess}"></gwt:radioButton>
 					<gwt:radioButton name="color"
-						onChange="cruxButtonController.handleWarning" id="radioWarning"
+						onChange="cruxButtonController.setStateWarning" id="radioWarning"
 						text="${messages_cruxButton.radioWarning}"></gwt:radioButton>
 					<gwt:radioButton name="color"
-						onChange="cruxButtonController.handleError" id="radioError"
+						onChange="cruxButtonController.setStateError" id="radioError"
 						text="${messages_cruxButton.radioError}"></gwt:radioButton>
 				</div>
 			</gwt:HTMLPanel>
