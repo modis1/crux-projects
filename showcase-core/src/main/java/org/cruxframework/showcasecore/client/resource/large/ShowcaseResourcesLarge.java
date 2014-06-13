@@ -56,4 +56,13 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	
 	@Source("banner3.jpg")
 	ImageResource banner3promo();
+	
+	@Source("coliseu.jpg")
+	DataResource image1Image();
+	
+	@Source("eiffel.jpg")
+	DataResource image2Image();
+	
+	@Source("liberty.jpg")
+	DataResource image3Image();
 }

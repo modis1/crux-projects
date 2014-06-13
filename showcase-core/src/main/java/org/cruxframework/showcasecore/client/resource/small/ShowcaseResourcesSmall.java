@@ -59,4 +59,13 @@ public interface ShowcaseResourcesSmall extends ClientBundle
 	
 	@Source("banner3.jpg")
 	ImageResource banner3promo();
+	
+	@Source("coliseu.jpg")
+	ImageResource image1Image();
+	
+	@Source("eiffel.jpg")
+	ImageResource image2Image();
+	
+	@Source("liberty.jpg")
+	ImageResource image3Image();
 }
