@@ -58,21 +58,27 @@
 			<crux:menuEntry label="${messages_showcase.scrollBanner}" targetView="scrollBanner"/>
 			
 			<crux:menuSection label="Testes"/>
-			<crux:menuEntry label="${messages_showcase.tabViewContainer}" targetView="tabViewContainer"/>
+			<crux:menuEntry label="Image" targetView="image"/>
+			<crux:menuEntry label="Single Select" targetView="singleSelect"/>
+			<crux:menuEntry label="Timer" targetView="timer"/>
 			<crux:menuEntry label="${messages_showcase.topMenuDisposal}" targetView="topMenuDisposal"/>
 			<crux:menuEntry label="${messages_showcase.stackMenu}" targetView="stackMenu"/>
+<!-- 			<crux:menuEntry label="Dialog View Container" targetView="dialogViewContainer"/> -->
+<!-- 			<crux:menuEntry label="${messages_showcase.tabViewContainer}" targetView="tabViewContainer"/> -->
 
-<!--init read -->			
+			
+<!-- 			<crux:menuEntry label="Slider" targetView="slider"/> -->
+<!-- 			<crux:menuEntry label="TopTollbar" targetView="topTollbar"/> BUG-->
+<!-- 			<crux:menuEntry label="Menu Tabs Disposal" targetView="menuTabsDisposal"/> BUG-->
+<!--init ready -->			
 <!-- 			<crux:menuEntry label="${messages_showcase.listShuttle}" targetView="listShuttle"/> -->
 <!-- 			<crux:menuEntry label="${messages_showcase.colorPicker}" targetView="colorPickerDialog"/> -->
 <!--end read -->
 
-<!-- 			<crux:menuEntry label="Slider" targetView="slider"/> -->
+
 <!-- 			<crux:menuEntry label="Rest" targetView="rest"/> -->
-<!-- 			<crux:menuEntry label="Menu Tabs Disposal" targetView="menuTabsDisposal"/> -->
 
 			<!-- 
-			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/> 
 			<crux:menuSection label="Database"/>
 			<crux:menuEntry label="CRUD Simples" targetView="simpleDatabase"/>
 			-->
