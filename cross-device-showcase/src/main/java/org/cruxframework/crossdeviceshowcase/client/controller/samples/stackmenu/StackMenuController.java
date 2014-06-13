@@ -58,7 +58,13 @@ public class StackMenuController
 	{
 		StackMenuItem item = evt.getSelectedItem();
 		String nameItem = item.getLabel();
-		String nameParentItem = item.getParentItem().getLabel();
+		
+		String nameParentItem = null;
+		
+		if(item.getParentItem() != null)
+		{
+			nameParentItem = item.getParentItem().getLabel();
+		}
 
 		if (nameParentItem == null || nameParentItem.equals(""))
 		{
