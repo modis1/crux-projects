@@ -59,9 +59,9 @@
 				 <div class="viewContent">
 					<crux:topMenuDisposal id="menuDisposal" defaultView="home">
 						<crux:menuEntry targetView="home" label="Home"/>
-						<crux:menuEntry targetView="ocrux" label="Crux"/>
-						<crux:menuEntry targetView="saibamais" label="Conheça"/>
+						<crux:menuEntry targetView="ocrux" label="Crux"/>						
 						<crux:menuEntry targetView="manual" label="Aprenda"/>
+                        <crux:menuEntry targetView="quickstart" label="Quickstart"/>
 						<crux:menuEntry targetView="comunidade" label="Comunidade"/>
 					</crux:topMenuDisposal>
 				</div>
@@ -84,28 +84,16 @@
 							<li>
 								<crux:anchor id="link01" href="#topMenuDisposal:ocrux" text="O Crux"></crux:anchor>
 							</li>
+                            <li>
+                                <crux:anchor id="link02" href="#topMenuDisposal:saibamais" text="Saiba Mais"></crux:anchor>
+                            </li>
 							<li>
-								<crux:anchor id="link02" href="#topMenuDisposal:mantenedor" text="Mantenedor"></crux:anchor>
+                                <crux:anchor id="link03" href="#topMenuDisposal:download" text="Download"></crux:anchor>
+                            </li>
+                            <li>
+								<crux:anchor id="link04" href="#topMenuDisposal:mantenedor" text="Mantenedor"></crux:anchor>
 							</li>
-							<li>
-								<crux:anchor id="link03" href="#topMenuDisposal:download" text="Download"></crux:anchor>
-							</li>
-						</ul>
-						
-						<ul class="footerUl">
-							<li class="footerUlTitle">Conheça</li>
-							<li>
-								<crux:anchor id="link11" href="#topMenuDisposal:saibamais" text="Saiba Mais"></crux:anchor>
-							</li>
-							<li>
-								<crux:anchor id="link12" href="#topMenuDisposal:comparativo" text="Comparativo"></crux:anchor>
-							</li>
-<!-- 							<li> -->
-<!-- 								<crux:anchor id="link13" href="#topMenuDisposal:cases" text="Cases"></crux:anchor> -->
-<!-- 							</li> -->
-							<li>
-								<crux:anchor id="link14" target="_blank" href="http://showcase.cruxframework.org/" text="Showcase 5"></crux:anchor>
-							</li>
+							
 						</ul>
 						
 						<ul class="footerUl">
@@ -114,16 +102,23 @@
                                 <crux:anchor id="link23" href="#topMenuDisposal:manual" text="Documentação"></crux:anchor>
                             </li>
 							<li>
-								<crux:anchor id="link21" href="#topMenuDisposal:quickstart" text="Quickstart"></crux:anchor>
-							</li>
-							<li>
 								<crux:anchor id="link22" href="#topMenuDisposal:projexemplo" text="Projetos Exemplo"></crux:anchor>
 							</li>
+                            <li>
+                                <crux:anchor id="link12" href="#topMenuDisposal:comparativo" text="Comparativo"></crux:anchor>
+                            </li>
 							<li>
 								<crux:anchor id="link24" href="#topMenuDisposal:faq" text="FAQ"></crux:anchor>
 							</li>
 						</ul>
-						
+
+                        <!-- 
+                        <ul class="footerUl">
+                            <li class="footerUlTitle"><crux:anchor id="link21" href="#topMenuDisposal:quickstart" text="Quickstart"></crux:anchor>
+                            </li>
+                        </ul>
+                         -->
+                       						
 						<ul class="footerUl">
 							<li class="footerUlTitle">Comunidade</li>
 							<li>

@@ -11,10 +11,10 @@
 	useResource="siteDeviceResources,siteCommonResources"> 
 	
 	<gwt:HTMLPanel id="viewTextPanel">
+	     
+		<t:menuconheca pageTitle="QuickStart" />
 	
-		<t:menuaprenda pageTitle="QuickStart" />
-		
-		<div class="container">
+    	<div class="container">
 		
 			<h2>Criando um projeto Crux em 5 minutos</h2>
 			
@@ -86,7 +86,8 @@
                         em seguida, <span class="code">HelloCrux</span>.</p>
 				</li>
 				<li>
-					<p>O console de depuração do GWT (DevMode) se abrirá. Quando habilitado, clique no botão 
+					<p>O console de depuração do GWT (<a href="http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html#launching_in_dev_mode" title="DevMode" target="_blank" class="defaultLink">DevMode</a>) 
+                    se abrirá.  Quando habilitado, clique no botão 
                     <span class="code">Launch Default Browser</span>. 
                     Sua aplicação será aberta em uma janela do navegador, como essa:</p>
 					<div align="center">

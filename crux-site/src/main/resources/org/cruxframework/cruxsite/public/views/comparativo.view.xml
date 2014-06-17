@@ -11,7 +11,7 @@
     
 	<gwt:HTMLPanel id="infoContainer">
 	
-		<t:menuconheca pageTitle="Comparativo" />
+		<t:menuaprenda pageTitle="Comparativo" />
 	
 		<div class="bigText">
 			<div class="container">

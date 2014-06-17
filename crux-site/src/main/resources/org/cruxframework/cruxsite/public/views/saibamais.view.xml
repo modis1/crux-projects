@@ -11,7 +11,7 @@
 	
 	<gwt:HTMLPanel id="infoContainer">
 		
-		<t:menuconheca pageTitle="Saiba Mais" />
+		<t:menucrux pageTitle="Saiba Mais" />
 		
 		<section class="container">	
 			<h2>Saiba mais sobre o que o Crux tem a oferecer:</h2>	
