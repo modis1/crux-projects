@@ -11,6 +11,7 @@ import org.cruxframework.crux.widgets.client.stackmenu.StackMenu;
 import org.cruxframework.crux.widgets.client.stackmenu.StackMenuItem;
 
 import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("stackMenuController")
@@ -25,6 +26,9 @@ public class StackMenuController
 	@Expose
 	public void onLoad()
 	{	
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		
 		loadItems();
 	}	
 
@@ -58,9 +62,9 @@ public class StackMenuController
 	{
 		StackMenuItem item = evt.getSelectedItem();
 		String nameItem = item.getLabel();
-		
+
 		String nameParentItem = null;
-		
+
 		if(item.getParentItem() != null)
 		{
 			nameParentItem = item.getParentItem().getLabel();
@@ -97,25 +101,32 @@ public class StackMenuController
 	{
 		String label = myWidgetAccessor.textBoxItem().getText();
 
-		for (StackMenuItem listParentItems : myWidgetAccessor.menu().getItems())
+		if(label == null || label.equals(""))
 		{
-			if(listParentItems.getLabel().equals(label))
+			FlatMessageBox.show(messages.errorRemove(), MessageType.ERROR);
+		}
+		else
+		{
+			for (StackMenuItem listParentItems : myWidgetAccessor.menu().getItems())
 			{
-				listParentItems.removeFromParent();
-			}		
-
-			for (StackMenuItem listItems : listParentItems.getSubItems())
-			{
-				if (listItems.getLabel().equals(label))
+				if(listParentItems.getLabel().equals(label))
 				{
-					listItems.removeFromParent();
-				}
+					listParentItems.removeFromParent();
+				}		
 
-				for (StackMenuItem listSubitems : listItems.getSubItems())
+				for (StackMenuItem listItems : listParentItems.getSubItems())
 				{
-					if (listSubitems.getLabel().equals(label))
+					if (listItems.getLabel().equals(label))
 					{
-						listSubitems.removeFromParent();
+						listItems.removeFromParent();
+					}
+
+					for (StackMenuItem listSubitems : listItems.getSubItems())
+					{
+						if (listSubitems.getLabel().equals(label))
+						{
+							listSubitems.removeFromParent();
+						}
 					}
 				}
 			}
@@ -127,6 +138,7 @@ public class StackMenuController
 	{
 		StackMenu menu();
 		TextBox textBoxItem();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

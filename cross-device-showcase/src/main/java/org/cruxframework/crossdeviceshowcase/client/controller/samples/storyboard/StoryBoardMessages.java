@@ -30,6 +30,6 @@ public interface StoryBoardMessages extends Messages
 			+"visibilidade do celular.</p>"
 			+"<p>Os itens do Storyboard podem ser inseridos de forma declarativa ou "
 			+"programática, possibilitando o uso de uma lista de dados como neste exemplo.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 

@@ -26,7 +26,7 @@
 
 		<showcase:info title="${messages_messageBox.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_messageBox.labelDescText}"/>
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

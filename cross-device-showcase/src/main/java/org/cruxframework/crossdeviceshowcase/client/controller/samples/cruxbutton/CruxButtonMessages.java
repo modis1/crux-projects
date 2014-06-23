@@ -30,5 +30,5 @@ public interface CruxButtonMessages extends Messages
 	
 	@DefaultMessage("<p>Buttons são elementos que disparam ações quando clicados, este componente foi feito pensando também em " 
 					+"dispositivos de toque, tratando os eventos de forma diferenciada em um smartphone ou tablet, por exemplo.</p>")
-	String labelDescText();
+	String htmlDescText();
 }

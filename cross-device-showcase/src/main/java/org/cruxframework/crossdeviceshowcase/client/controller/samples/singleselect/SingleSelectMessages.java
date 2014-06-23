@@ -38,5 +38,5 @@ public interface SingleSelectMessages extends Messages
 			+ "Os ítens podem ser adicionados de forma declarativa e programática e também pode-se definir "
 			+"se algum ítem já iniciará selecionado ou não.</p>" 	
 			+"<p>No exemplo apresentado, os ítens de Funcionários somente serão carregados dependendo do ítem escolhido em Departamentos.</p>")
-	String labelDescText();
+	String htmlDescText();
 }

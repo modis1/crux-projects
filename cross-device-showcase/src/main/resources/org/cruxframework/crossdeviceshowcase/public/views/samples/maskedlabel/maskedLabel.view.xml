@@ -7,6 +7,7 @@
 	useController="maskedLabelController"
 	onActivate="maskedLabelController.setDate" 
 	useFormatter="dateFormatter" 
+	onLoad="maskedLabelController.onLoad"
 	title="${messages_maskedLabel.title}" >
 
 	<center>
@@ -27,7 +28,7 @@
 
 		<showcase:info title="${messages_maskedLabel.title}">
 			<showcase:description>
-				<gwt:label id="labelTextDesc" text="${messages_maskedLabel.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 	</center>

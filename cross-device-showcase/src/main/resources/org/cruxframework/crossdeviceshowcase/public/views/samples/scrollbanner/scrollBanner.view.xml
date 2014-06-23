@@ -21,7 +21,7 @@
 
 		<showcase:info title="${messages_scrollBanner.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_scrollBanner.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

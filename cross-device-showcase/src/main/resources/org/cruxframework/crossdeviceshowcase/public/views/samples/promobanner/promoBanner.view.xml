@@ -4,7 +4,8 @@
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
-	useController="mainController"
+	useController="promoBannerController"
+	onLoad="promoBannerController.onLoad"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useResource="showcaseCoreResources"
 	title="${messages_promoBanner.title}"> 
@@ -26,7 +27,7 @@
 
 		<showcase:info title="${messages_promoBanner.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_promoBanner.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

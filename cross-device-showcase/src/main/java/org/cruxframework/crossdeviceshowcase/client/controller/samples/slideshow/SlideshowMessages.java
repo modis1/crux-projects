@@ -17,6 +17,6 @@ public interface SlideshowMessages extends Messages
 			+"<p>Possui um modelo flexível que permite ao desenvolvedor adaptar praticamente qualquer "
 			+"modelo de layout desejado, além de realizar integração com APIs externas de serviços de " 
 			+"imagens, como o Picasa.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 

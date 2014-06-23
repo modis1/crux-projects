@@ -6,7 +6,7 @@
 	title="${messages_stackMenu.title}">
 
 	<center>
-<!-- 		<crux:styledPanel id="panel"> -->
+		<gwt:HTMLPanel id="panel">
 		 	<crux:stackMenu id="menu" onSelection="stackMenuController.selectedItem" >
 		 		<crux:item label="CD" key="cd">
 		 			<crux:item label="Blues" key="blues"></crux:item>
@@ -34,15 +34,17 @@
 			 		</crux:item>
 		 		</crux:item>
 		 	</crux:stackMenu>
+		 	<br />
 		 	<gwt:label id="labelItem" text="${messages_stackMenu.labelItem}"/>
+		 	<br />
 		 	<gwt:textBox id="textBoxItem"/>
 		 	<crux:button id="buttonAddItem" text="${messages_stackMenu.buttonAddItem}" onSelect="stackMenuController.addItemMenu"/>
 		 	<crux:button id="buttonRemoveItem" text="${messages_stackMenu.buttonRemoveItem}" onSelect="stackMenuController.removeItemMenu"/>
-<!-- 		</crux:styledPanel> -->
+		</gwt:HTMLPanel>
 		
 		<showcase:info title="${messages_stackMenu.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText"  text="${messages_stackMenu.labelDescText}"/>
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

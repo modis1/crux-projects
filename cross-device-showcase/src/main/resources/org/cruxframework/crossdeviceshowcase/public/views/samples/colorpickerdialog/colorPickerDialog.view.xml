@@ -6,6 +6,7 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="colorPickerDialogController" 
+	onLoad="colorPickerDialogController.onLoad" 
 	title="${messages_colorPickerDialog.title}">
 
 	<center>
@@ -25,8 +26,7 @@
 
 		<showcase:info title="${messages_colorPickerDialog.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText"
-					text="${messages_colorPickerDialog.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

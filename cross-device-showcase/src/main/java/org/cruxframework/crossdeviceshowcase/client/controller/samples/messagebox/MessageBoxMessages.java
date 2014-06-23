@@ -28,5 +28,5 @@ public interface MessageBoxMessages extends Messages
 	@DefaultMessage("<p>MessageBox é uma janela flutuante usada para exibir informações textuais ao usuário."
 			+"De acordo com a categoria da mensagem exibida ( <code>INFO</code>, <code>SUCCESS</code>, "
 			+"<code>WARN</code> ou <code>ERROR</code>), o MessageBox apresenta um estilo visual específico.</p>")
-	String labelDescText();
+	String htmlDescText();
 }

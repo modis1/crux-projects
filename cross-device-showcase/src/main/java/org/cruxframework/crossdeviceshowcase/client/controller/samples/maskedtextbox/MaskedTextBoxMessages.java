@@ -32,7 +32,7 @@ public interface MaskedTextBoxMessages extends Messages
 			+"a um Formatter para guiar o usuário durante o preenchimento e garantir a conversão dessas informações" 
 			+"em dados tipados a serem consumidos pela aplicação.</p>"
 			+"<p>Neste exemplo associamos o MaskedTextBox para ler uma data digitada pelo usuário.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 
 

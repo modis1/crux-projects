@@ -5,6 +5,7 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	useController="singleSelectController"
+	onLoad="singleSelectController.onLoad"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	title="${messages_singleSelect.title}"> 
 
@@ -30,8 +31,8 @@
 		</crux:styledPanel>
 
 		<showcase:info title="${messages_singleSelect.title}">
-			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_singleSelect.labelDescText}" />
+			<showcase:description>			
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

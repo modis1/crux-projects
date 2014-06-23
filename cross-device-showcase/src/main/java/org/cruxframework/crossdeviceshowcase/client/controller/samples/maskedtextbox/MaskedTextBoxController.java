@@ -10,6 +10,7 @@ import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.maskedtextbox.MaskedTextBox;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Widget;
 
 @Controller("maskedTextBoxController")
@@ -26,6 +27,10 @@ public class MaskedTextBoxController
 	@Expose
 	public void onLoad()
 	{
+		/* Insert the component description*/
+		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
+		widgetHtml.setHTML(messages.htmlDescText());
+		
 		MESSAGE_EMPTY_FIELD = messages.emptyFild();
 		MESSAGE_WRONG_FORMAT = messages.wrongFormat();
 		MESSAGE_DATE = messages.infoDate();
@@ -55,7 +60,7 @@ public class MaskedTextBoxController
          * This is a poor date format validation, just as an example, feel free to update it
          * as you need to.
          */
-        else if(!widget.getValue().matches("[0-1][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]"))
+        else if(!widget.getValue().matches("[0-3][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]"))
         {
         	this.changeState("warn");
         	FlatMessageBox.show(MESSAGE_WRONG_FORMAT, MessageType.WARN);
@@ -69,8 +74,7 @@ public class MaskedTextBoxController
 			}catch(Exception e){
 				this.changeState("warn");
 				FlatMessageBox.show(MESSAGE_INVALID_DATE, MessageType.WARN);
-			}
-        	
+			} 	
         }
 	}
 
@@ -91,8 +95,7 @@ public class MaskedTextBoxController
 		button.setStyleName(type, true);
 	}
 
-	public void setMessages(MaskedTextBoxMessages messages) 
-	{
+	public void setMessages(MaskedTextBoxMessages messages) {
 		this.messages = messages;
 	}
 }

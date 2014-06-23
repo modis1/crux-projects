@@ -6,7 +6,7 @@ import com.google.gwt.i18n.client.Messages;
 
 @MessageName("messages_fileUploader")
 public interface FileUploaderMessages extends Messages
-{
+{	
 	@DefaultMessage("File Uploader")
 	String title();
 	 
@@ -18,5 +18,5 @@ public interface FileUploaderMessages extends Messages
 			+"XMLHttpRequest 2, é capaz de enviar múltiplos arquivos simultaneamente e prover "
 			+"feedback de progresso ao usuário. Além disso, caso um arquivo enviado seja uma imagem, "
 			+"exibe uma miniatura desse arquivo, enriquecendo a usabilidade do sistema.</p>")
-	String labelDescText();
+	String htmlDescText();
 }

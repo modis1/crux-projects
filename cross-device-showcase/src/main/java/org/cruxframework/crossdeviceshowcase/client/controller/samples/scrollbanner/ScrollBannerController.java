@@ -8,6 +8,8 @@ import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.button.Button;
 import org.cruxframework.crux.widgets.client.scrollbanner.ScrollBanner;
 
+import com.google.gwt.user.client.ui.HTML;
+
 @Controller("scrollBannerController")
 public class ScrollBannerController 
 {
@@ -20,6 +22,9 @@ public class ScrollBannerController
 	@Expose
 	public void onLoad()
 	{
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		
 		addMessages();
 	}
 
@@ -33,6 +38,7 @@ public class ScrollBannerController
 	{
 		ScrollBanner scrollBanner();
 		Button next();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

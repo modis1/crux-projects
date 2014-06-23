@@ -7,6 +7,7 @@ import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.image.Image;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 
 @Controller("imageController")
@@ -17,6 +18,13 @@ public class ImageController
 	
 	@Inject
 	private ImageMessages messages;
+	
+	@Expose
+	public void onLoad()
+	{
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+	}
 	
 	@Expose
 	public void image1()
@@ -56,6 +64,7 @@ public class ImageController
 		Image image3();
 		Label labelTitleImage();
 		Label labelInformImage();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {

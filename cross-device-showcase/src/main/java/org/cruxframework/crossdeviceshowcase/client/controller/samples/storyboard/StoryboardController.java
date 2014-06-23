@@ -10,6 +10,8 @@ import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.storyboard.Storyboard;
 
+import com.google.gwt.user.client.ui.HTML;
+
 @Controller("storyboardController")
 public class StoryboardController
 {
@@ -22,6 +24,9 @@ public class StoryboardController
 	@Expose
 	public void onLoad()
 	{
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		
 		loadItens();
 	}
 
@@ -47,6 +52,7 @@ public class StoryboardController
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		Storyboard storyboard();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

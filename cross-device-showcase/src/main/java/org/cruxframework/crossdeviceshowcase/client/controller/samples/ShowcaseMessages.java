@@ -51,9 +51,6 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Textarea")
 	String textArea();
 	
-	@DefaultMessage("Datebox")
-	String dateBox();
-	
 	@DefaultMessage("Elementos de Layout")
 	String layoutElements();
 	
@@ -69,9 +66,6 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Progress Box")
 	String progressBox();
 	
-	@DefaultMessage("Dialog Box")
-	String dialogBox();
-	
 	@DefaultMessage("Message Box")
 	String messageBox();
 	
@@ -81,7 +75,7 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Device Adaptive Grid")
 	String deviceAdaptiveGrid();
 	
-	@DefaultMessage("Elementos de Imagens")
+	@DefaultMessage("Elementos de Imagem")
 	String imageElements();
 	
 	@DefaultMessage("PromoBanner")
@@ -102,18 +96,45 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Database não suportada")
 	String databaseNotSupportedError();
 	
-	@DefaultMessage("Tab View Container")
-	String tabViewContainer();
-	
 	@DefaultMessage("Top Menu Disposal")
 	String topMenuDisposal();
 	
 	@DefaultMessage("Stack Menu")
 	String stackMenu();
 	
+	@DefaultMessage("Color Picker")
+	String colorPicker();
+	
 	@DefaultMessage("List Shuttle")
 	String listShuttle();
 	
-	@DefaultMessage("Color Picker")
-	String colorPicker();
+	@DefaultMessage("Image")
+	String image();
+	
+	@DefaultMessage("Single Select")
+	String singleSelect();
+	
+	@DefaultMessage("Timer")
+	String timer();
+	
+	@DefaultMessage("Dialog View Container")
+	String dialogViewContainer();
+	
+	@DefaultMessage("Elementos de menu")
+	String menuElements();
+	
+	@DefaultMessage("Elementos de lista")
+	String listElements();
+	
+	@DefaultMessage("Elementos de cor")
+	String colorElements();
+	
+	@DefaultMessage("Elementos de tempo")
+	String timerElements();
+	
+	@DefaultMessage("Elementos diversos")
+	String miscellaneousElements();
+	
+	@DefaultMessage("Elementos de aba")
+	String tabElements();
 }

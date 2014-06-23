@@ -6,12 +6,13 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="timerController" 
+	onLoad="timerController.onLoad" 
 	title="${messages_timer.title}">
 
 	<center>
 		<gwt:HTMLPanel id="panel">
 			<crux:styledPanel id="timerPanel">
-				<crux:timer id="timer" initial="0" start="true" onLoadWidget="timerController.warnTime"/>
+				<crux:timer id="timer" initial="0" start="true" onLoadWidget="timerController.warnTime" />
 			</crux:styledPanel>
 			<br />
 			<gwt:horizontalPanel id="buttonsPanel">
@@ -26,7 +27,7 @@
 
 		<showcase:info title="${messages_timer.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_timer.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

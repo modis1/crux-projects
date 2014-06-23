@@ -5,7 +5,8 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
-	useController="mainController" 
+	useController="fileUploaderController" 
+	onLoad="fileUploaderController.onLoad"
 	title="${messages_fileUploader.title}"> 
 
 	<center>
@@ -18,7 +19,7 @@
 
 		<showcase:info title="${messages_fileUploader.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_fileUploader.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

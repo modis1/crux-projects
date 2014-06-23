@@ -16,8 +16,11 @@ public interface StackMenuMessages extends Messages
 	@DefaultMessage("dentro de ")
 	String complementInfo();
 	
-	@DefaultMessage("Insira um nome para o item de menu.")
+	@DefaultMessage("Insira o nome do item a adicionar.")
 	String errorAdd();
+	
+	@DefaultMessage("Insira o nome do item a remover.")
+	String errorRemove();
 	
 	@DefaultMessage("Insira o nome do item a ser adicionado ou removido")
 	String labelItem();
@@ -49,10 +52,10 @@ public interface StackMenuMessages extends Messages
 	@DefaultMessage("A Orfã")
 	String labelOrphan();
 	
-	@DefaultMessage("O StackMenu é um menu hierárquico e vertical. Cada item em um StackMenu pode "
-			+"ter um ou vários sub-itens. Inseridos de forma declarativa ou programática. "
-			+"Também é possível disparar eventos de seleção neste componente. "
-			+"No exemplo apresentado é possível ter a informação de qual ítem final foi seleciondo, assim como "
-			+"adicionar ou remover ítens do menu, basta inserir o nome do ítem e clicar no botão correspondente.")
-	String labelDescText();
+	@DefaultMessage("<p>O StackMenu é um menu hierárquico e vertical. Cada item em um StackMenu pode "
+			+"ter um ou vários sub-itens, inseridos de forma declarativa ou programática. "
+			+"Também é possível disparar eventos de seleção neste componente.</p>"
+			+"<p>No exemplo apresentado é possível ter a informação de qual ítem final foi seleciondo, assim como "
+			+"adicionar ou remover ítens do menu, basta inserir o nome do ítem e clicar no botão correspondente.</p>")
+	String htmlDescText();
 }

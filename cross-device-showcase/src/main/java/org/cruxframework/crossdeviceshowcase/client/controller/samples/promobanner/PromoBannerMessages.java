@@ -32,6 +32,6 @@ public interface PromoBannerMessages extends Messages
 			+"<p>Pode ser adaptado para o uso em dispositivos de tela grande como desktops e pequenos como celulares."
 			+"Possui vários recursos como: transição automática de uma imagem para outra com determinação de intervalo, "
 			+"programação do tempo de transição, botão para controle e entre outros.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 

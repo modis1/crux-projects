@@ -12,6 +12,8 @@ import org.cruxframework.crux.widgets.client.event.timeout.TimeoutEvent;
 import org.cruxframework.crux.widgets.client.event.timeout.TimeoutHandler;
 import org.cruxframework.crux.widgets.client.timer.Timer;
 
+import com.google.gwt.user.client.ui.HTML;
+
 @Controller("timerController")
 public class TimerController
 {
@@ -23,6 +25,13 @@ public class TimerController
 	
 	private static boolean STATUS_STOP = false;
 	
+	@Expose
+	public void onLoad()
+	{
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+	}
+
 	@Expose
 	public void start()
 	{
@@ -74,6 +83,7 @@ public class TimerController
 	{
 		Timer timer();
 		Button buttonStop();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {

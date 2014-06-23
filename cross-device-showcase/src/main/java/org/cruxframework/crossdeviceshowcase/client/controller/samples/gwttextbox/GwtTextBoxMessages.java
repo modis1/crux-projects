@@ -28,9 +28,9 @@ public interface GwtTextBoxMessages extends Messages
 	@DefaultMessage("Erro")
 	String radioError();
 	
-	@DefaultMessage("Textboxes são campos de texto simples fornecidos pelo GWT. Podem ser estilizados dependendo do seu estado, " 
-					+"e mostram de forma visal seu estado atual para o usuário.")
-	String labelDescText();
+	@DefaultMessage("<p>Textboxes são campos de texto simples fornecidos pelo GWT. Podem ser estilizados dependendo do seu estado, " 
+					+"e mostram de forma visal seu estado atual para o usuário.</p>")
+	String htmlDescText();
 }
 
 

@@ -28,9 +28,9 @@ public interface AdaptiveGridMessages extends Messages
 	@DefaultMessage("Dia de Nascimento")
 	String dayOfBirth();
 	
-	@DefaultMessage("O componente DeviceAdaptiveGrid permite exibir as colunas de acordo com o tipo de dispositivo "
+	@DefaultMessage("<p>O componente DeviceAdaptiveGrid permite exibir as colunas de acordo com o tipo de dispositivo "
 			+ "que o está visualizado. Para dispositivos com display grande (PC, tablet etc.), o grid exibirá "
 			+ "as colunas definidas na tag <largeColumns>, já para dispositivos pequenos, ele exibirá as "
-			+ "colunas definidas na tag <smallColumns>.")
-	String labelDescText();
+			+ "colunas definidas na tag <smallColumns>.</p>")
+	String htmlDescText();
 }

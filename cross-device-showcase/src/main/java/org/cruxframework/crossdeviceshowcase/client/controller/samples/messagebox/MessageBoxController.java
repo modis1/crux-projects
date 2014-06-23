@@ -3,8 +3,11 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.messageb
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
+import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
+
+import com.google.gwt.user.client.ui.HTML;
 
 @Controller("messageBoxController")
 public class MessageBoxController 
@@ -17,6 +20,10 @@ public class MessageBoxController
 	@Expose
 	public void onLoad()
 	{
+		/* Insert the component description*/
+		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
+		widgetHtml.setHTML(messages.htmlDescText());
+		
 		MESSAGE_TYPE = messages.messageType();
 	}
 	

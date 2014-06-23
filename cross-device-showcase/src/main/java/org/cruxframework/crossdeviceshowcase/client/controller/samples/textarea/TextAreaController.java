@@ -9,6 +9,7 @@ import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.textarea.TextArea;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -27,6 +28,9 @@ public class TextAreaController
 	@Expose
 	public void onLoad()
 	{
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		
 		MESSAGE_INVALID_NUMBER = messages.invalidNumber();
 		MESSAGE_NEGATIVE_NUMBER = messages.negativeNumber();
 
@@ -60,6 +64,7 @@ public class TextAreaController
 	{
 		TextArea textArea();
 		TextBox textBox();
+		HTML htmlDescText();
 	}
 
 	private void setState(String state)

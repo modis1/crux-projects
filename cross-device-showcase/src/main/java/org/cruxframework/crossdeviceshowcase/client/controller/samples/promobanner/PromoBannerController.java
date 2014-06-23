@@ -1,4 +1,4 @@
-package org.cruxframework.crossdeviceshowcase.client.controller.samples.slideshow;
+package org.cruxframework.crossdeviceshowcase.client.controller.samples.promobanner;
 
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
@@ -7,11 +7,11 @@ import org.cruxframework.crux.core.client.screen.views.View;
 
 import com.google.gwt.user.client.ui.HTML;
 
-@Controller("slideshowController")
-public class SlideshowController 
+@Controller("promoBannerController")
+public class PromoBannerController 
 {
 	@Inject
-	private SlideshowMessages messages;
+	private PromoBannerMessages messages;
 	
 	@Expose
 	public void onLoad()
@@ -21,8 +21,7 @@ public class SlideshowController
 		widgetHtml.setHTML(messages.htmlDescText());
 	}
 
-	public void setMessages(SlideshowMessages messages) {
+	public void setMessages(PromoBannerMessages messages) {
 		this.messages = messages;
 	}
-	
 }

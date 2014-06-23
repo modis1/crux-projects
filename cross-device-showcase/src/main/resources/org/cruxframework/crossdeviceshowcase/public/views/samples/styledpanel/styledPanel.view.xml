@@ -5,7 +5,8 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="mainController" 
+	useController="styledPanelController" 
+	onLoad="styledPanelController.onLoad" 
 	title="${messages_styledPanel.title}"> 
 
 	<center>
@@ -24,7 +25,7 @@
 
 		<showcase:info title="${messages_styledPanel.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_styledPanel.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

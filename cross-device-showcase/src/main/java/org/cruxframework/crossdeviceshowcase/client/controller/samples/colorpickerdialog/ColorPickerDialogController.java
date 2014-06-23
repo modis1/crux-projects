@@ -10,6 +10,7 @@ import org.cruxframework.crux.widgets.client.colorpicker.ColorPickerDialog;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.History;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 
 @Controller("colorPickerDialogController")
@@ -21,6 +22,13 @@ public class ColorPickerDialogController
 	@Inject
 	private ColorPickerDialogMessages messages;
 
+	@Expose
+	public void onLoad()
+	{
+		 /* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+	}
+	
 	@Expose
 	public void showColorPicker()
 	{
@@ -57,6 +65,7 @@ public class ColorPickerDialogController
 		ColorPickerDialog colorPicker();
 		Label labelClickButton();
 		Label labelColorValue();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

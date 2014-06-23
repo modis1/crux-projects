@@ -9,6 +9,8 @@ import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.select.SingleSelect;
 
+import com.google.gwt.user.client.ui.HTML;
+
 @Controller("singleSelectController")
 public class SingleSelectController
 {
@@ -17,6 +19,13 @@ public class SingleSelectController
 	
 	@Inject
 	private SingleSelectMessages messages;
+	
+	@Expose
+	public void onLoad()
+	{
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+	}
 	
 	@Expose
 	public void selectedItemDepartments()
@@ -82,6 +91,8 @@ public class SingleSelectController
 	{
 		SingleSelect singleSelectDepartments();
 		SingleSelect singleSelectEmployees();
+		HTML htmlDescText();
+
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

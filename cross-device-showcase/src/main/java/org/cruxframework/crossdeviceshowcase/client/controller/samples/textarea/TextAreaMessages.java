@@ -42,7 +42,7 @@ public interface TextAreaMessages extends Messages
 	
 	@DefaultMessage("<p>Text Area é um campo de texto multi-linha, que poder ser definido por número de linhas e número máximo de caracteres (maxLength). </p>" 
 					+"<p>Neste exemplo o número máximo de caracteres se inicia em 150, insira um novo número, clique em aplicar e faça o teste.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 
 

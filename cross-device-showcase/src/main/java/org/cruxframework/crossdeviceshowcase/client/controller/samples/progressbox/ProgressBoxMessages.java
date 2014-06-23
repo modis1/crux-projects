@@ -23,6 +23,6 @@ public interface ProgressBoxMessages extends Messages
 			+"processamento interno está ocorrendo e evitar que ele realize outras ações antes que o "
 			+"processamento termine. Pode ser exibido e ocultado programaticamente. É bastante útil nas "
 			+"chamadas a serviços remotos, devido à natureza assíncrona dessa comunicação.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 

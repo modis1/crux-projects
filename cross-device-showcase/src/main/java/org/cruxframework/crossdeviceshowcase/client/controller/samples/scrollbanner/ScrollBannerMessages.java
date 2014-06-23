@@ -31,7 +31,7 @@ public interface ScrollBannerMessages extends Messages
 			+"entre elas é definido no próprio componente.</p>"
 			+"<p>No exemplo acima as 2 primeiras mensagens foram adicionadas de forma declarativa e as últimas "
 			+"de forma programática através da controller.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 
 

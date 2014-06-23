@@ -6,6 +6,7 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="progressBoxController" 
+	onLoad="progressBoxController.onLoad" 
 	title="${messages_progressBox.title}"> 
 
 	<center>
@@ -17,7 +18,7 @@
 
 		<showcase:info title="${messages_progressBox.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_progressBox.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

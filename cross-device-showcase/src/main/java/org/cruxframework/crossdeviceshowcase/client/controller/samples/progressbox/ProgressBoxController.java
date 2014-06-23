@@ -3,9 +3,11 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.progress
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
+import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.widgets.client.dialog.ProgressBox;
 
 import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.HTML;
 
 @Controller("progressBoxController")
 public class ProgressBoxController 
@@ -18,6 +20,14 @@ public class ProgressBoxController
 	private int timeLeftToHide = DURATION;
 	private Timer timer;	
 
+	@Expose
+	public void onLoad()
+	{
+		/* Insert the component description*/
+		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
+		widgetHtml.setHTML(messages.htmlDescText());
+	}
+	
 	@Expose
 	public void showProgress()
 	{

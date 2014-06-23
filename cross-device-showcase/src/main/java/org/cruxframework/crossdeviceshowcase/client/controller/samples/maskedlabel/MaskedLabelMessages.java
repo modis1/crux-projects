@@ -23,7 +23,7 @@ public interface MaskedLabelMessages extends Messages
 			+"associado a um Formatter para exibir dados tipados em formato textual amigável. </p>" 
 			+"<p> Neste exemplo associamos o MaskedLabel a um formatador de data, para exibirmos "
 			+"a data de nascimento do personagem.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 
 

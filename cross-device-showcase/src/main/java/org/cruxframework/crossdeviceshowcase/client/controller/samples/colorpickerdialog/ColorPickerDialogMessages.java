@@ -22,8 +22,8 @@ public interface ColorPickerDialogMessages extends Messages
 	@DefaultMessage("Escolha a cor")
 	String colorPickerText();
 	
-	@DefaultMessage("O Color Picker é um componente que permite que o usuário selecione uma cor do espectro de "
+	@DefaultMessage("<p>O Color Picker é um componente que permite que o usuário selecione uma cor do espectro de "
 			+"cores e aplique esta cor para um elemento determinado. A funcionalidade é semelhante selecionadores " 
-			+"de cores encontrados em softwares desktop.")
-	String labelDescText();
+			+"de cores encontrados em softwares desktop.</p>")
+	String htmlDescText();
 }

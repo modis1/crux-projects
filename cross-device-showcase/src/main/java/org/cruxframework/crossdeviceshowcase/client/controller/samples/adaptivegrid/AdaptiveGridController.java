@@ -11,6 +11,7 @@ import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.deviceadaptivegrid.DeviceAdaptiveGrid;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 
 @Controller("adaptivegridController")
@@ -26,6 +27,9 @@ public class AdaptiveGridController
 	public void onLoad()
 	{
 		loadData();
+
+		 /* Insert the component description*/
+		gridView.htmlDescText().setHTML(messages.htmlDescText());
 	}
 	
 	@SuppressWarnings("unused")
@@ -56,6 +60,7 @@ public class AdaptiveGridController
 	{
 		DeviceAdaptiveGrid gridSample();
 		Label labelInfo();
+		HTML htmlDescText();
 	}
 
 	public void setMessages(AdaptiveGridMessages messages) 

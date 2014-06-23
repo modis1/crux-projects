@@ -34,7 +34,7 @@ public interface FormDisplayMessages extends Messages
 			+"são ordenados de forma vertical, evitando a rolagem horizontal da tela."
 			+"Em dispositivos maiores, labels e componentes são alinhados lado a lado, aproveitando melhor "
 			+"a largura da janela do navegador.</p>")
-	String labelDescText();
+	String htmlDescText();
 }
 
 
