@@ -28,7 +28,7 @@ public class SVNExplorer
 	private static final long TOKEN = new Date().getTime(); 
 	private static final Log log = LogFactory.getLog(SVNExplorer.class);
 	
-	private static final String SVN_PATH = "http://crux-projects.googlecode.com/svn/trunk/cross-device-showcase/src/";
+	private static final String SVN_PATH = "http://crux-projects.googlecode.com/svn/branches/cross-device-showcase/1.0/src/";
 	
 	private static final String MAIN_VIEWS_PATH	 =	SVN_PATH + "main/resources/org/cruxframework/crossdeviceshowcase/public/views/samples/";
 	private static final String CONTROLLERS_PATH = 	SVN_PATH + "main/java/org/cruxframework/crossdeviceshowcase/client/controller/samples/";
