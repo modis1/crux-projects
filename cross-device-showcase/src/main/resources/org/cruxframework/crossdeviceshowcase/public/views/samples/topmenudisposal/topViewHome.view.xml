@@ -6,12 +6,15 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="mainController" 
-	title="${messages_topMenuDisposalViewInit.title}">
+	title="${messages_topMenuDisposalViewHome.title}">
 
 	<center>
 		<gwt:HTMLPanel id="panel" height="300px" width="700px">
-			<gwt:label id="labelWelcome" text="${messages_topMenuDisposalViewInit.labelWelcome}"/>
-			<gwt:label id="labelText" text="${messages_topMenuDisposalViewInit.labelText}"/>
+			<gwt:label id="labelTitle" text="${messages_topMenuDisposalViewHome.title}" styleName="topMenuDisposalTitle"/>
+			<br />
+			<gwt:label id="labelText" text="${messages_topMenuDisposalViewHome.labelText}" styleName="topMenuDisposalText"/>
+			<br />
+			<gwt:label id="labelTextComp" text="${messages_topMenuDisposalViewHome.labelTextComp}" styleName="topMenuDisposalText"/>
 		</gwt:HTMLPanel>
 	</center>
 
