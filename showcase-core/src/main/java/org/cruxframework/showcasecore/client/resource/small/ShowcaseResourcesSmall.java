@@ -21,7 +21,6 @@ import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
-import com.google.gwt.resources.client.ClientBundle.Source;
 
 /**
  * @author Gesse Dafe
@@ -61,11 +60,11 @@ public interface ShowcaseResourcesSmall extends ClientBundle
 	ImageResource banner3promo();
 	
 	@Source("coliseu.jpg")
-	ImageResource image1Image();
+	DataResource image1Image();
 	
 	@Source("eiffel.jpg")
-	ImageResource image2Image();
+	DataResource image2Image();
 	
 	@Source("liberty.jpg")
-	ImageResource image3Image();
+	DataResource image3Image();
 }

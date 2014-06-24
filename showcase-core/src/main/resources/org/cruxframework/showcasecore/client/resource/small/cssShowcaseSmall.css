@@ -479,12 +479,23 @@ body
 .imagelabelInformImage
 {
 	text-align: justify;
+	color:#1c5994;
 }
 
 .imagelabelTitleImage
 {
 	text-align: center;
-	font-size: 18px;
+	font-size: large;
 	font-weight: bold;
-	margin-bottom: 5px;
+	margin-bottom: 1%;
+	color:#1c5994;
+}
+
+.menuEntriesContainer .menuSectionEntries:nth-child\(2\) .menuSectionEntriesContent .menuEntry:nth-child\(5\),
+.menuEntriesContainer .menuSectionEntries:nth-child\(4\) .menuSectionEntriesContent .menuEntry:nth-child\(1\),
+.menuEntriesContainer .menuSectionEntries:nth-child\(10\) .menuSectionEntriesContent .menuEntry:nth-child\(1\),
+.menuEntriesContainer .menuSectionEntries:nth-child\(10\) .menuSectionEntriesContent .menuEntry:nth-child\(3\),
+.menuEntriesContainer .menuSectionEntries:nth-child\(12\) .menuSectionEntriesContent .menuEntry:nth-child\(1\)
+{
+	display:none;
 }

@@ -432,19 +432,31 @@ body
 	border-radius:4px;
 }
 
-.banner1
+/****************
+    PromoBanner
+****************/
+.messagePanel td
 {
-/* 	background:#acdf53; */
-	background:firstBannerPromo no-repeat center ;
+	vertical-align:bottom !important;
 }
-.banner2
+.messagePanel .title
 {
-	background:#dfc053;
+	text-align:center;
+	font-size:30px;
+	text-shadow:0 1px 0 rgba(0,0,0,0.5), 0 2px 1px rgba(0,0,0,0.5), 2px 3px 2px rgba(0,0,0,0.5), 3px 4px 3px rgba(0,0,0,0.5), 0 6px 4px rgba(0,0,0,0.5)!important;
+	color:#fff;
+	margin-top: -30px !important;
 }
-.banner3
+
+.messagePanel .text
 {
-	background:#bb596c;
+	text-align:center;
+	color:#fff;
+	font-size:17px;
+	text-shadow:0 1px 2px rgba(0,0,0,0.8), 0 2px 3px rgba(0,0,0,0.8), 2px 3px 4px rgba(0,0,0,0.8) !important !important;
+	margin-bottom: -20px !important;
 }
+
 .promoBannerWidth
 {
 	max-width:1024px !important;
@@ -534,12 +546,120 @@ body
 .imagelabelInformImage
 {
 	text-align: justify;
+	color:#1c5994;
 }
 
 .imagelabelTitleImage
 {
 	text-align: center;
-	font-size: 18px;
+	font-size: large;
 	font-weight: bold;
-	margin-bottom: 5px;
+	margin-bottom: 1%;
+	color:#1c5994;
+}
+
+.topMenuDisposalTitle
+{
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+	margin: 5%;
+	color:#1c5994;
+}
+
+.topMenuDisposalText
+{
+	text-align: center;
+	vertical-align:middle;
+	font-size: large;
+	color:#1c5994;
+	line-height: 200%;
+}
+
+.tabSimpleView1Title
+{
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+	margin: 5%;
+	color:#1c5994;
+	margin-top: 10%;
+}
+
+.tabSimpleView1Text
+{
+	text-align: center;
+	vertical-align:middle !important;
+	font-size: large;
+	color:#1c5994;
+	line-height: 200%;
+	margin: 15%;
+}
+
+.tabSimpleView1Background
+{
+	background-color: #E6E6FA;
+}
+
+.tabSimpleView2Title
+{
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+	margin: 5%;
+	color:#8B0000;
+	margin-top: 10%;
+}
+
+.tabSimpleView2Text
+{
+	text-align: center;
+	vertical-align:middle !important;
+	font-size: large;
+	color:#8B0000;
+	line-height: 200%;
+	margin: 15%;
+}
+
+.tabSimpleView2Background
+{
+	background-color: #FFFACD;
+}
+
+.dialogSimpleView1Title, .dialogSimpleView2Title
+{
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+	margin: 5%;
+	margin-top: 10%;
+}
+
+.dialogSimpleView1Title
+{
+	color:#1c5994;
+}
+
+.dialogSimpleView2Title
+{
+	color:#8B0000;
+}
+
+.dialogSimpleView1Text, .dialogSimpleView2Text
+{
+	text-align: center;
+	vertical-align:middle !important;
+	font-size: large;
+	line-height: 200%;
+	margin: 7% !important;
+}
+
+.dialogSimpleView1Text
+{
+	color:#1c5994;
+}
+
+.dialogSimpleView2Text
+{
+	color:#8B0000;
 }
