@@ -37,6 +37,6 @@ public interface SingleSelectMessages extends Messages
 	@DefaultMessage("<p>O componente Single Select é uma caixa de listagem de seleção única e simples. "
 			+ "Os ítens podem ser adicionados de forma declarativa e programática e também pode-se definir "
 			+"se algum ítem já iniciará selecionado ou não.</p>" 	
-			+"<p>No exemplo apresentado, os ítens de Funcionários somente serão carregados dependendo do ítem escolhido em Departamentos.</p>")
+			+"<p>No exemplo apresentado, os ítens da caixa à direita somente serão carregados a partir da seleção de um ítem na caixa à esquerda.</p>")
 	String htmlDescText();
 }

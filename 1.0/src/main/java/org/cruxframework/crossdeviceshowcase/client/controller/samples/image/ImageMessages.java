@@ -39,7 +39,7 @@ public interface ImageMessages extends Messages
 			+ "francês Gustave Eiffel para a construção da estrutura metálica interna da estátua.")
 	String informImage3();
 	
-	@DefaultMessage("<p>O componente Image exibe imagens em formatos padrão da web (png, gif, jpg) com ajuste de tamanho (altura e largura)."
-			+ "No exemplo apresentado, ao clicar em uma imagem, suas informações são apresentadas logo abaixo.</p>")
+	@DefaultMessage("<p>O componente Image exibe imagens em formatos padrão da web (png, gif, jpg) com ajuste de tamanho (altura e largura).</p>"
+			+ "<p>No exemplo apresentado, ao clicar em uma imagem, seu tamanho é modificado e suas informações são apresentadas logo abaixo.</p>")
 	String htmlDescText();
 }
