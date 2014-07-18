@@ -743,6 +743,9 @@ body
 	height: 300px;
 	margin: 5%;
 	background-size: 100% 100%;
+	opacity:0.60;
+	-moz-opacity: 0.60;
+	filter: alpha(opacity=60);
 }
 .horizontalSwapViewImage1
 {
