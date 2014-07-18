@@ -92,17 +92,17 @@
                 
 				<p>	Idealizado em 2008 durante o trabalho de
     				<a href="http://www.dcc.ufmg.br/pos/cursos/defesas/980M.PDF" title="PDF"
-    				target="_blank" class="defaultLink">mestrado na Universidade Federal de Minas Gerais
+    				class="defaultLink">mestrado na Universidade Federal de Minas Gerais
     				(UFMG)</a>, o Crux foi sendo evoluído desde então pela
-    				<a href="http://www.sysmap.com.br/" title="Sysmap" target="_blank" class="defaultLink">Sysmap Solutions</a>
+    				<a href="http://www.sysmap.com.br/" title="SysMap" class="defaultLink">SysMap Solutions</a>
     				e é usado em projetos com seus principais clientes.
                     Durante os últimos anos o Crux passou por grandes mudanças, sempre
                     buscando ser o mais eficiente e usual possível.
                     Atualmente pode-se dizer que ele é um framework maduro, que está na sua
                     quinta geração.
     				Em 2013 o Crux, que já era um projeto Open Source, passou a ser
-    				mantido pela <a href="http://www.triggolabs.com/" title="Triggo" target="_blank"
-    				class="defaultLink">Triggo Labs</a>, uma empresa brasileira com foco no 
+    				mantido pela <a href="http://www.triggolabs.com/" title="Triggo" class="defaultLink">Triggo Labs</a>, 
+                    uma empresa brasileira com foco no 
     				desenvolvimento de novas tecnologias e produtos web e mobile baseados no Crux.
 				</p>
                 <p> Atualmente estamos em busca de novos colaboradores independentes e
@@ -115,7 +115,7 @@
 			<div class="container">
 				<h2>Licença</h2>
 				<p style="margin-bottom:0;">O Código-fonte do Crux Framework é aberto, e licenciado sobre a 
-				<a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank" class="defaultLink">Apache License 2.0</a>.</p>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0.html" class="defaultLink">Apache License 2.0</a>.</p>
 			</div>
 		</div>
 	</gwt:HTMLPanel>

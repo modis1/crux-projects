@@ -37,7 +37,7 @@
                 <ul class="communityItens" style="font-size: 15px;">
                     <li>
                         <crux:anchor id="linkNovosIssues" href="http://code.google.com/p/crux-framework/issues/list" 
-                                       target="_blank" styleName="defaultLink" text="Issue (Google Code)"></crux:anchor>
+                                       styleName="defaultLink" text="Issue (Google Code)"></crux:anchor>
                     </li>
                 </ul>
                 <p><b>Lembre-se</b>: antes de criar um novo <i>Issues</i>, verifique se esse mesmo bug ainda não foi reportado. </p>
@@ -62,7 +62,7 @@
                 <ul class="communityItens" style="font-size: 15px;">
                     <li>
                         <crux:anchor id="linkNovosIssues2" href="http://www.cruxframework.org/documentation/single-page/index.html#apd_contrib" 
-                                      target="_blank"  styleName="defaultLink" text="Envio de patchs Crux"></crux:anchor>
+                                       styleName="defaultLink" text="Envio de patchs Crux"></crux:anchor>
                     </li>
                 </ul>
                  -->
@@ -77,7 +77,7 @@
                 <ul class="communityItens" style="font-size: 15px;">
                     <li>
                         <crux:anchor id="linkForum2" href="https://groups.google.com/forum/#!forum/crux-framework" styleName="defaultLink" 
-                                        target="_blank" text="Forum do Crux Framework"></crux:anchor>
+                                        text="Forum do Crux Framework"></crux:anchor>
                     </li>
                 </ul>
             </div>

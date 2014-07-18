@@ -67,7 +67,7 @@
 							o Forum e o próprio FAQ.</p>
 							<p>Empresas que desejam contratar um suporte corporativo para 
 							desenvolvimento usando o Crux Framework podem contactar a 
-							<a href="http://www.triggolabs.com/" title="Triggo" target="_blank" class="defaultLink">Triggo Labs</a>. </p> 
+							<a href="http://www.triggolabs.com/" title="Triggo" class="defaultLink">Triggo Labs</a>. </p> 
 						</div>
 					</gwt:HTMLPanel>
 				</gwt:widget>
@@ -94,7 +94,7 @@
 							<p>O Crux fornece uma grande biblioteca componentes, rica e flexíveis
 								para criação de aplicações voltadas para todos os tipos de
 								dispositivos que podem ser vistos no 
-								<a href="http://showcase5.cruxframework.org/" title="Showcase Crux 5" target="_blank" class="defaultLink">Showcase Crux 5</a>. 
+								<a href="http://showcase5.cruxframework.org/" title="Showcase Crux 5" class="defaultLink">Showcase Crux 5</a>. 
 							</p>	
 							<p>	Caso você precise de um componente específico, ele pode ser criado através da classe 
 							    WidgetCreator (Crux) e da classe Composite (do GWT), que fornecerão ferramentas 
@@ -103,7 +103,7 @@
 							<p>
 								Para contratar suporte corporativo para criação de
 								componentes para sua aplicação, basta entrar em contato com a 
-								<a href="http://www.triggolabs.com/" title="Triggo" target="_blank" class="defaultLink">Triggo Labs</a></p>
+								<a href="http://www.triggolabs.com/" title="Triggo" class="defaultLink">Triggo Labs</a></p>
 						</div>
 					</gwt:HTMLPanel>
 				</gwt:widget>
@@ -164,7 +164,7 @@
                                 O Crux trabalha com arquivos temporários armazenados no disco rígido do computador. Para o perfeito funcionamento
                                 do sistema, o Crux garante a consistência destes arquivos removendo os conteúdos antigos e somente trabalhando com registros atuais.
                                 Em um dado instante, o próprio sistema operacional pode indicar erroneamente que estes arquivos estão referenciados, dado o problema já conhecido
-                                relacionado com os <a href="https://www.google.com.br/search?q=windows+reference+count+problem" title="GWT" target="_blank" class="defaultLink">contadores de referência</a>.
+                                relacionado com os <a href="https://www.google.com.br/search?q=windows+reference+count+problem" title="GWT" class="defaultLink">contadores de referência</a>.
                                 Neste instante, ao tentar remover estes arquivos, o Crux pode apresentar uma mensagem de erro. Para solucionar 
                                 este problema, basta remover manualmente os arquivos temporários do computador, geralmente armazenados na pasta "crux_comp" (note que esta pasta pode ser alterada
                                 através das configurações do Crux). 

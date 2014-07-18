@@ -22,13 +22,13 @@
 					</li>
 					<li style="overflow:hidden">
 						<ul class="btnGroup">
-							<li><crux:anchor href="http://files.cruxframework.org/crux51/single-page/index.html" target="_blank" text="Versão HTML" id="manualSinglePageLastBtn"></crux:anchor></li>
+							<li><crux:anchor href="http://files.cruxframework.org/crux51/single-page/index.html" text="Versão HTML" id="manualSinglePageLastBtn"></crux:anchor></li>
 							<!-- 
-                            <li><crux:anchor href="http://files.cruxframework.org/crux51/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePageLastBtnL"></crux:anchor></li>
+                            <li><crux:anchor href="http://files.cruxframework.org/crux51/multiple-pages/index.html" text="Várias Páginas" id="manualMultiplePageLastBtnL"></crux:anchor></li>
                              -->
-							<li class="end"><crux:anchor href="http://files.cruxframework.org/crux51/pdf/manual-crux-5.1.pdf" text="Versão PDF" target="_blank" id="manualPdfLastBtn"></crux:anchor></li>
-                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux51/crux-runtime/index.html" text="Javadoc Runtime" target="_blank" id="javadocRuntimeLastBtn"></crux:anchor></li>
-                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux51/crux-dev/index.html" text="Javadoc Dev" target="_blank" id="javadocDevLastBtn"></crux:anchor></li>
+							<li class="end"><crux:anchor href="http://files.cruxframework.org/crux51/pdf/manual-crux-5.1.pdf" text="Versão PDF" id="manualPdfLastBtn"></crux:anchor></li>
+                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux51/crux-runtime/index.html" text="Javadoc Runtime"  id="javadocRuntimeLastBtn"></crux:anchor></li>
+                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux51/crux-dev/index.html" text="Javadoc Dev" id="javadocDevLastBtn"></crux:anchor></li>
 						</ul>
 					</li>
                     <div class="clear"></div>
@@ -50,26 +50,31 @@
 							<td>Manual Crux 5.1</td>
 							<td>19/05/2014</td>
 							<td>                                
-								<crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/single-page/index.html" target="_blank" text="Versão HTML" id="manualSinglePage51Btn"></crux:anchor>
+								<crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/single-page/index.html" 
+                                            text="Versão HTML" id="manualSinglePage51Btn"></crux:anchor>
                                 <!--
-                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/multiple-pages/index.html" target="_blank" text="Várias Páginas" id="manualMultiplePage51Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/multiple-pages/index.html" text="Várias Páginas" id="manualMultiplePage51Btn"></crux:anchor>
                                 -->
-                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/pdf/manual-crux-5.1.pdf" text="Versão PDF" target="_blank" id="manualPdf51Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/pdf/manual-crux-5.1.pdf" 
+                                            text="Versão PDF" id="manualPdf51Btn"></crux:anchor>
 							</td>
 						</tr>
                         <tr>
                             <td>Manual Crux 5.0</td>
                             <td>24/04/2014</td>
                             <td>
-								<crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux50/single-page/index.html" target="_blank" text="Versão HTML" id="manualSinglePage50Btn"></crux:anchor>
-                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux50/pdf/manual-crux-5.0.pdf" text="Versão PDF" target="_blank" id="manualPdf50Btn"></crux:anchor>
+								<crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux50/single-page/index.html" 
+                                            text="Versão HTML" id="manualSinglePage50Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux50/pdf/manual-crux-5.0.pdf" 
+                                            text="Versão PDF" id="manualPdf50Btn"></crux:anchor>
                             </td>
                         </tr>
 						<tr>
 							<td>Manual Crux 4.0</td>
 							<td>01/01/2014</td>
 							<td>
-                                <crux:anchor styleName="btnMini" href="http://code.google.com/p/crux-framework/wiki/UserManual" target="_blank" text="Versão HTML" id="manualSinglePage40Btn"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://code.google.com/p/crux-framework/wiki/UserManual" 
+                                            text="Versão HTML" id="manualSinglePage40Btn"></crux:anchor>
 							</td>
 						</tr>
 						

@@ -33,10 +33,10 @@
                         </li>
 					</ul>
                     <p>Caso tenha alguma duvida ou problema ao usar o Crux Framework acesse o <a href="https://groups.google.com/forum/#!forum/crux-framework" 
-                    title="Issue" target="_blank" class="defaultLink">Forum</a> do Crux. Lá você pode pesquisar ou enviar a sua dúvida.
+                    title="Issue" class="defaultLink">Forum</a> do Crux. Lá você pode pesquisar ou enviar a sua dúvida.
                     </p>
                     <p>Caso encontre algum bug no Crux Framework, ajude-nos criando um <a href="http://code.google.com/p/crux-framework/issues/list" 
-                    title="Issue" target="_blank" class="defaultLink">Issue (Google Code)</a>. </p>
+                    title="Issue" class="defaultLink">Issue (Google Code)</a>. </p>
 				</li>
 				<li>
 					<h2>Desenvolvimento do Crux Framework</h2>
@@ -45,7 +45,7 @@
                     <ul class="communityItens" style="font-size: 15px;">
 						<li>
 							<crux:anchor id="linkGoogleCode" href="http://code.google.com/p/crux-framework/source/checkout" styleName="defaultLink" 
-                                        target="_blank" text="Source (Google Code)"></crux:anchor>
+                                        text="Source (Google Code)"></crux:anchor>
 						</li>
                     </ul>
                     <p> Para contribuir com a Comunidade do Crux, acesse:</p>

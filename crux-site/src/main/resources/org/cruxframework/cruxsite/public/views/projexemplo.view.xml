@@ -27,11 +27,11 @@
                             <h3>Media Manager</h3>                                         
                             <div class="svnName">
                                 Acessar:<br />
-                                <b><a href="http://mediamanager.cruxframework.org" target="_blank">Hotsite</a></b>
+                                <b><a href="http://mediamanager.cruxframework.org" >Hotsite</a></b>
                             </div>
                             <div class="svnName">
                                 Projeto:<br />
-                                <b><a href="https://code.google.com/p/crux-projects/wiki/MediaManager" target="_blank">mediamanager</a></b>                                
+                                <b><a href="https://code.google.com/p/crux-projects/wiki/MediaManager" >mediamanager</a></b>                                
                             </div>
                         </div>
                         <div class="exampleImg">
@@ -51,11 +51,11 @@
 							<h3>Showcase</h3>
 							<div class="svnName">
 								Acessar:<br />
-								<b><a href="http://showcase.cruxframework.org/" target="_blank">Showcase 5</a></b>
+								<b><a href="http://showcase.cruxframework.org/" >Showcase 5</a></b>
 							</div>
 							<div class="svnName">
 								Projeto:<br />
-								<b><a href="https://code.google.com/p/crux-projects/wiki/CruxShowcase" target="_blank">cross-device-showcase</a></b>
+								<b><a href="https://code.google.com/p/crux-projects/wiki/CruxShowcase" >cross-device-showcase</a></b>
 							</div>
 						</div>
 						<div class="exampleImg">
@@ -75,7 +75,7 @@
 							</div>
                             <div class="svnName">
                                 Projeto:<br />                                
-                                <b><a href="https://code.google.com/p/crux-projects/source/browse/#svn%2Ftrunk%2Fcrux-site" target="_blank">CruxSite</a></b>
+                                <b><a href="https://code.google.com/p/crux-projects/source/browse/#svn%2Ftrunk%2Fcrux-site">CruxSite</a></b>
                             </div>
                         </div>
                         <div class="exampleImg">
