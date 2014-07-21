@@ -12,6 +12,11 @@ public class PersonResume
 	private Integer id;
 	private String name;
 	
+	public PersonResume()
+	{
+		
+	}
+	
 	public PersonResume(Integer id, String name) 
 	{
 		this.id = id;
