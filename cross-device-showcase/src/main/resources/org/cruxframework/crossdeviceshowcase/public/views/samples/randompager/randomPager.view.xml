@@ -1,0 +1,36 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view" 
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
+	useController="randomPagerController"
+	useDataSource="countryDS"
+	onLoad="randomPagerController.onLoad"
+	title="${messages_randomPager.title}"> 
+
+	<center>
+		<crux:adaptiveGrid id="grid" dataSource="countryDS" pageSize="7" styleName="grid">
+		 <crux:largeColumns>
+		 <crux:widgetColumn key="flag" label="Bandeira"><crux:image id="imageFlag" width="50px"/></crux:widgetColumn>
+		 <crux:dataColumn key="country" label="País" width="110px"/>
+		 <crux:dataColumn key="capital" label="Capital" width="110px"/>
+		  <crux:dataColumn key="continent" label="Continente" width="110px"/>
+ 		</crux:largeColumns>
+		 <crux:smallColumns><crux:dataColumn key="country" label="País"/></crux:smallColumns>
+		</crux:adaptiveGrid>
+		
+		<crux:styledPanel id="panel">
+			<crux:randomPager id="Jesus" pageable="grid"/>
+		</crux:styledPanel>
+
+		<showcase:info title="${messages_randomPager.title}">
+			<showcase:description>
+				<gwt:HTML id="htmlDescText"/>
+			</showcase:description>
+		</showcase:info>
+
+	</center>
+
+</v:view>
