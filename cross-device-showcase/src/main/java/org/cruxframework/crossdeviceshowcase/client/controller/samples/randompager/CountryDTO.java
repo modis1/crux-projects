@@ -12,6 +12,10 @@ public class CountryDTO implements Serializable
 	private String capital;
 	private String continent;
 	
+	public CountryDTO()
+	{
+	}
+			
 	public CountryDTO(String flag, String country, String capital, String continent)
 	{
 		this.flag = flag;

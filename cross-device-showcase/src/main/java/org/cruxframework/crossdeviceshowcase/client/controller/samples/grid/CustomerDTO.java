@@ -11,6 +11,10 @@ public class CustomerDTO implements Serializable
 	private String contactName;
 	private String email;
 	
+	public CustomerDTO()
+	{
+	}
+	
 	public CustomerDTO(String code, String company, String contactName, String email)
 	{
 		this.code = code;

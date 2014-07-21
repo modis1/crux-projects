@@ -12,6 +12,10 @@ public class DiscDTO implements Serializable
 	private int releaseYear;
 	private int stock;
 	
+	public DiscDTO()
+	{
+	}
+	
 	public DiscDTO(String discName, String artistName, int releaseYear, int stock)
 	{
 		this.discName = discName;
@@ -40,7 +44,7 @@ public class DiscDTO implements Serializable
 		return releaseYear;
 	}
 
-	public void setReleaseYear(short releaseYear) {
+	public void setReleaseYear(int releaseYear) {
 		this.releaseYear = releaseYear;
 	}
 
@@ -48,7 +52,7 @@ public class DiscDTO implements Serializable
 		return stock;
 	}
 
-	public void setStock(short stock) {
+	public void setStock(int stock) {
 		this.stock = stock;
 	}
 }
