@@ -1,0 +1,26 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view" 
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="swapViewContainerController"
+	onLoad="swapViewContainerController.onLoad"
+	title="${messages_swapViewContainer.title}"> 
+	
+	<center>
+			<crux:swapViewContainer id="viewContainer" width="600px" height="400px">
+				<crux:view name="swapView1" active="true"/>
+				<crux:view name="swapView2"/>
+			</crux:swapViewContainer>
+			<br />
+			<crux:button id="buttonShowNextView" text="${messages_swapViewContainer.buttonShowNextView}" onSelect="swapViewContainerController.showNextView"/>
+	</center>		
+	
+	<showcase:info title="${messages_swapViewContainer.title}">
+			<showcase:description>
+				<gwt:HTML id="htmlDescText"/>
+			</showcase:description>
+		</showcase:info>
+</v:view>
