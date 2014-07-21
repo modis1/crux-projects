@@ -13,6 +13,11 @@ public class PersonDTO implements Serializable
 	private Date birthday;
 	private String status;
 	
+	public PersonDTO()
+	{
+		
+	}
+	
 	public PersonDTO(String name, int age, Date birthday,List<PersonDTO> personList)
 	{
 		super();
