@@ -40,15 +40,63 @@ public class HorizontalSwapViewContainerController
 			myWidgetAccessor.labelCount().setText(Integer.toString(numberSwap));
 		}
 	}
+	/*
+	private abstract class ShowView
+	{
+		public ShowView()
+		{
+			checkShowView();
+		}
+		
+		private void checkShowView()
+		{
+			Scheduler.get().scheduleFixedDelay(new RepeatingCommand() 
+			{
+				@Override
+				public boolean execute() 
+				{
+					if(myWidgetAccessor.viewContainer().isAnimationRunning())
+					{
+						return true;
+					}
+					doShowView();		
+					return false;
+				}
+			}, 300);
+		}
+		
+		public abstract void doShowView();
+	}
+	*/
 	
 	@Expose
 	public void showView1()
 	{
 		if(myWidgetAccessor.rbDirectionBackward().getValue()==true)
 		{
+			/*
+			new ShowView() 
+			{
+				@Override
+				public void doShowView() 
+				{
+					myWidgetAccessor.viewContainer().showView("horizontalSwapView1", Direction.BACKWARDS);
+				}
+			};
+			*/ 
 			myWidgetAccessor.viewContainer().showView("horizontalSwapView1", Direction.BACKWARDS);
 		}else
 		{
+			/*
+			new ShowView() 
+			{
+				@Override
+				public void doShowView() 
+				{
+					myWidgetAccessor.viewContainer().showView("horizontalSwapView1", Direction.FORWARD);
+				}
+			};
+			*/
 			myWidgetAccessor.viewContainer().showView("horizontalSwapView1", Direction.FORWARD);
 		}
 	}
@@ -58,9 +106,29 @@ public class HorizontalSwapViewContainerController
 	{
 		if(myWidgetAccessor.rbDirectionBackward().getValue())
 		{
+			/*
+			new ShowView() 
+			{
+				@Override
+				public void doShowView() 
+				{
+					myWidgetAccessor.viewContainer().showView("horizontalSwapView2", Direction.BACKWARDS);
+				}
+			};
+			*/
 			myWidgetAccessor.viewContainer().showView("horizontalSwapView2", Direction.BACKWARDS);
 		} else
 		{
+			/*
+			new ShowView() 
+			{
+				@Override
+				public void doShowView() 
+				{
+					myWidgetAccessor.viewContainer().showView("horizontalSwapView2", Direction.FORWARD);
+				}
+			};
+			*/
 			myWidgetAccessor.viewContainer().showView("horizontalSwapView2", Direction.FORWARD);
 		}
 	}
@@ -71,8 +139,28 @@ public class HorizontalSwapViewContainerController
 		if(myWidgetAccessor.rbDirectionBackward().getValue())
 		{
 			myWidgetAccessor.viewContainer().showView("horizontalSwapView3", Direction.BACKWARDS);
+			/*
+			new ShowView() 
+			{
+				@Override
+				public void doShowView() 
+				{
+					myWidgetAccessor.viewContainer().showView("horizontalSwapView3", Direction.BACKWARDS);
+				}
+			};
+			*/
 		} else
 		{
+			/*
+			new ShowView() 
+			{
+				@Override
+				public void doShowView() 
+				{
+					myWidgetAccessor.viewContainer().showView("horizontalSwapView3", Direction.FORWARD);
+				}
+			};
+			*/
 			myWidgetAccessor.viewContainer().showView("horizontalSwapView3", Direction.FORWARD);
 		}
 	}
