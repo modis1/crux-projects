@@ -5,18 +5,21 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="dialogBoxController" title="${messages_dialogBox.title}"> 
+	useController="dialogBoxController" 
+	onLoad="dialogBoxController.onLoad"
+	title="${messages_dialogBox.title}"> 
 
 	<center>
+<!-- 		<crux:dialogBox id="dialogBox"/> Não deu-->
 
 		<crux:styledPanel id="panel1">
-			<crux:button id="showDialogBtn" text="${messages_dialogBox.showDialogBtn}"
+			<crux:button id="btnShowDialog" text="${messages_dialogBox.btnShowDialog}"
 				onSelect="dialogBoxController.openDialog" />
 		</crux:styledPanel>
 
 		<showcase:info title="${messages_dialogBox.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_dialogBox.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 
