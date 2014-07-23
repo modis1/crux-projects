@@ -23,7 +23,7 @@
 
 		<showcase:info title="${messages_dialogViewContainer.title}">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 
