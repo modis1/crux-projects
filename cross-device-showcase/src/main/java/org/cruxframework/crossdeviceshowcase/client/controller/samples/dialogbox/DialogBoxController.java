@@ -2,26 +2,80 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.dialogbo
 
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
-import org.cruxframework.crux.widgets.client.dialogcontainer.DialogViewContainer;
+import org.cruxframework.crux.core.client.ioc.Inject;
+import org.cruxframework.crux.core.client.screen.views.BindView;
+import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.widgets.client.button.Button;
+import org.cruxframework.crux.widgets.client.dialog.DialogBox;
+import org.cruxframework.crux.widgets.client.event.SelectEvent;
+import org.cruxframework.crux.widgets.client.event.SelectHandler;
+
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Label;
 
 @Controller("dialogBoxController")
 public class DialogBoxController 
 {
-	private static DialogViewContainer dialog;
-
+	@Inject
+	private MyWidgetAccessor myWidgetAccessor;
+	
+	@Inject
+	private DialogBoxMessages messages;
+	
+	
+	DialogBox dialogBox = new DialogBox();
+	
 	@Expose
-	public void openDialog()
+	public void onLoad()
 	{
-		dialog = DialogViewContainer.createDialog("dialogBoxTarget");
-		dialog.setTitle("Caixa de Diálogo Contendo uma View");
-		dialog.isModal();
-		dialog.openDialog();
-		dialog.center();
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		FlowPanel panel = new FlowPanel();
+		panel.setStyleName("dialogBoxPanel");
+		
+		Label label = new Label("Um dialogBox pode conter qualquer componente válido.");
+		
+		Button button = new Button("Fechar", new SelectHandler() {
+			
+			@Override
+			public void onSelect(SelectEvent event) {
+				closeDialog();
+			}
+		});
+		button.setStyleName("crux-Button dialogBoxPanelButton");
+		
+		panel.add(label);
+		panel.add(button);
+		
+		dialogBox.add(panel);
 	}
 	
 	@Expose
-	public void closeDialog()
+	public void openDialog()
+	{		
+		dialogBox.setTitle("Dialog Box");
+		dialogBox.setModal(true);
+		dialogBox.show();
+		dialogBox.center();	
+	}
+	
+	private void closeDialog()
 	{
-		dialog.closeDialog();
+		dialogBox.hide();
+	}
+	
+	@BindView("dialogBox")
+	public static interface MyWidgetAccessor extends WidgetAccessor
+	{
+		//DialogBox dialogBox();
+		HTML htmlDescText();
+	}
+
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
+		this.myWidgetAccessor = myWidgetAccessor;
+	}
+
+	public void setMessages(DialogBoxMessages messages) {
+		this.messages = messages;
 	}
 }
