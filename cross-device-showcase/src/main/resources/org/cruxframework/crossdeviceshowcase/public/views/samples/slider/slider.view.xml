@@ -1,73 +1,88 @@
-<v:view xmlns="http://www.w3.org/1999/xhtml" xmlns:v="http://www.cruxframework.org/view"
-	xmlns:core="http://www.cruxframework.org/crux" xmlns:crux="http://www.cruxframework.org/crux/widgets"
-	xmlns:gwt="http://www.cruxframework.org/crux/gwt" xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="sliderController" onLoad="sliderController.onLoad"
-	title="Slider">
-
-
-    <style type="text/css">
-	    .crux-Slider .leftArrow, .crux-Slider .rightArrow 
-		{
-		  visibility: hidden;
-		}
-    </style>
-
-	<gwt:flexTable id="menuMainTable" width="100%" height="100%" cellPadding="0" cellSpacing="0">
-		<gwt:row>
-			<gwt:cell>
-				<gwt:widget>
-					<crux:slider id="dasdasd" width="100%" visible="true" showFirstWidget="true">
-						<crux:widget>
-							<gwt:flexTable id="menuLojaMainTable" width="100%"
-								cellPadding="1" cellSpacing="1" height="100%" styleName="menuTiles">
-								<gwt:row>
-									<gwt:cell width="25%" horizontalAlignment="center">
-										<gwt:widget>
-											<gwt:verticalPanel id="pesquisaClientePanel"
-												spacing="3" style="background-color:rgb(0, 157, 175)" width="100%"
-												height="100%">
-												<gwt:image id="pesquisaClienteImagem"
-													url="http://upload.wikimedia.org/wikipedia/commons/8/81/Sky_over_Washington_Monument.JPG"/>
-												<gwt:label id="pesquisaClienteLabel"
-													text="AAAAAAAAAA"
-													styleName="Label" />
-											</gwt:verticalPanel>
-										</gwt:widget>
-									</gwt:cell>
-								</gwt:row>
-							</gwt:flexTable>
-						</crux:widget>
-					</crux:slider>
-				</gwt:widget>
-			</gwt:cell>
-		</gwt:row>
-	</gwt:flexTable>
-
+<v:view xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="sliderController" 
+	onLoad="sliderController.onLoad"
+	title="${messages_slider.title}">
+	
 	<center>
-		<crux:slider id="slider" circularShowing="true"
-			slideTransitionDuration="500" showFirstWidget="true">
-			<crux:widget>
-				<crux:image id="teste1"
-					url="http://t2.gstatic.com/images?q=tbn:ANd9GcT3KAwosCPL5T_AsZm9Si62_hFfkou2BgWLO9o2GjHCAXhfodVh" />
-			</crux:widget>
+	
+	<crux:styledPanel id="sliderPanel">
+    		<crux:slider id="slider" width="500px" height="250px">
+<!--     		WELCOME -->
+    			<crux:widget>
+    				<gwt:HTMLPanel id="panelWelcome" styleName="sliderPanel">
+    					<gwt:label id="labelWelcome" text="${messages_slider.labelWelcome}"/>
+    					<br />
+    					<gwt:label id="labeNext" text="${messages_slider.labeNext}"/>
+    				</gwt:HTMLPanel>
+    			</crux:widget>
+<!--     			PERSONAL -->
+    			<crux:widget>
+    				<gwt:HTMLPanel id="panelPersonalData">
+	    				<gwt:label id="labelPersonal" text="${messages_slider.labelPersonal}"/>
+	    				 <br />
+		    				<crux:formDisplay id="formPersonalData">
+								<crux:entry label="${messages_slider.personalName}">
+									<gwt:textBox id="textBoxName" width="250px"/>
+								</crux:entry>
+								<crux:entry label="${messages_slider.personalAge}">
+									<crux:numberTextBox id="numberBoxAge" maxLength="2" width="50px"/>
+								</crux:entry>
+								<crux:entry label="${messages_slider.personalPhone}">
+									<gwt:horizontalPanel id="panelPhone">
+										<crux:numberTextBox id="numberCodPhone" maxLength="3" width="50px" style="margin-right:5px;"/>
+										<crux:numberTextBox id="numberInitPhone" width="90px" style="margin-right:5px;"/>
+										<crux:numberTextBox id="numberFinalPhone" width="90px" style="margin-right:5px;"/>
+									</gwt:horizontalPanel>	
+								</crux:entry>
+							</crux:formDisplay>
+					</gwt:HTMLPanel>		
+    			</crux:widget>
+<!--     			PROFESSIONAL -->
+    			<crux:widget>
+    				<gwt:HTMLPanel id="panelProfessionalData" >
+    					<gwt:label id="labelProfessional" text="${messages_slider.labelProfessional}"/>
+    					 <br />
+    						<crux:formDisplay id="formProfessionalData">
+								<crux:entry label="${messages_slider.profession}">
+									<gwt:textBox id="textBoxProfession" width="250px"/>
+								</crux:entry>
+								<crux:entry label="${messages_slider.labelExperience}">
+									<gwt:HTMLPanel id="panelExperience">
+										<crux:numberTextBox id="numberTimeExperience" maxLength="2" width="50px"/>
+										<gwt:radioButton id="radioButtonYears" name="timeExperience" text="${messages_slider.radioYears}" checked="true"/>
+										<gwt:radioButton id="radioButtonMonths" name="timeExperience" text="${messages_slider.radioMonths}"/>
+									</gwt:HTMLPanel>
+								</crux:entry>
+							</crux:formDisplay>
+    				</gwt:HTMLPanel>
+    			</crux:widget>
+<!--     			FINISH -->
+    			<crux:widget>
+    				<gwt:HTMLPanel id="panelFinish" >
+    					<gwt:label id="labelCheckData" text="${messages_slider.labelCheckData}"/>
+    					<gwt:HTML id="htmlResult"/>
+    					<gwt:label id="labelFinish" text="${messages_slider.labelFinish}"/>
+    				</gwt:HTMLPanel>
+    			</crux:widget>
+    			
+			</crux:slider>
+		</crux:styledPanel>
+		
+		<gwt:horizontalPanel id="panelButtons">
+		<crux:button id="btnCancel" text="${messages_slider.btnCancel}" onSelect="sliderController.cancel"/>
+		<crux:button id="btnPrevious" text="${messages_slider.btnPrevious}" onSelect="sliderController.previous"/>
+		<crux:button id="btnNext" text="${messages_slider.btnNext}" onSelect="sliderController.next"/>
+		<crux:button id="btnFinish" text="${messages_slider.btnFinish}" onSelect="sliderController.finish"/>
+		</gwt:horizontalPanel>
 
-			<crux:widget>
-				<crux:image id="teste2"
-					url="http://t1.gstatic.com/images?q=tbn:ANd9GcQlqajilmRT_LnaY4L23nmEu6YBjMzVt6-EqN1M5yvEKcHqWcxV" />
-			</crux:widget>
-		</crux:slider>
-		<gwt:label id="labelCount" />
-		<gwt:label id="widgetNumber" />
-
-		<showcase:info title="Slider">
+		<showcase:info title="${messages_slider.title}">
 			<showcase:description>
-				<p>
-					O componente Slider é um painel que realiza troca de
-					conteúdo usando animações com efeito de slide.
-				</p>
-				<p>
-
-				</p>
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 
