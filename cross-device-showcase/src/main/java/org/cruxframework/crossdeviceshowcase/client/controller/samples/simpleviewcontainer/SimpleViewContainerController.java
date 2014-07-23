@@ -13,7 +13,7 @@ import com.google.gwt.user.client.ui.HTML;
 @Controller("simpleViewContainerController")
 public class SimpleViewContainerController 
 {
-	boolean VIEW1 = true;
+	boolean view1 = true;
 	
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -31,20 +31,20 @@ public class SimpleViewContainerController
 	@Expose
 	public void swapView()
 	{
-		myWidgetAccessor.viewContainer().showView("view2");
-//		myWidgetAccessor.viewContainer().getView().removeFromContainer();
-//		if (VIEW1)
-//		{
-//			myWidgetAccessor.viewContainer().loadView("view2", true);
-//			myWidgetAccessor.buttonChangeView().setText(messages.previousView());
-//			VIEW1 = false;
-//		}
-//		else
-//		{
-//			myWidgetAccessor.viewContainer().loadView("view1", true);
-//			myWidgetAccessor.buttonChangeView().setText(messages.nextView());
-//			VIEW1 = true;
-//		}
+		//myWidgetAccessor.viewContainer().showView("view2");
+		myWidgetAccessor.viewContainer().getView().removeFromContainer();
+		if (view1)
+		{
+			myWidgetAccessor.viewContainer().loadView("view2", true);
+			myWidgetAccessor.buttonChangeView().setText(messages.previousView());
+			view1 = false;
+		}
+		else
+		{
+			myWidgetAccessor.viewContainer().loadView("view1", true);
+			myWidgetAccessor.buttonChangeView().setText(messages.nextView());
+			view1 = true;
+		}
 	}
 
 	@BindView("simpleViewContainer")
