@@ -4,13 +4,12 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="tabNewViewController" 
-	onLoad="tabNewViewController.onLoad"
-	title="${messages_tabNewView.title}">
+	title="${messages_tabView2.title}">
 	
 	<center>
-		<gwt:HTMLPanel id="panel" width="700px" height="400px">
-			<gwt:frame id="frameContent" height="100%" width="100%"/>
+		<gwt:HTMLPanel id="panel" width="700px" height="400px" styleName="tabSimpleView2Background">
+			<gwt:label id="labelTitle" text="${messages_tabView2.title}" styleName="tabSimpleView2Title"/>
+			<gwt:label id="labelText" text="${messages_tabView2.labelText}" styleName="tabSimpleView2Text"/>
 		</gwt:HTMLPanel>
 	</center>
 

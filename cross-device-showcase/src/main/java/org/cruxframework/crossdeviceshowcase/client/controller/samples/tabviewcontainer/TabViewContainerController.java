@@ -9,50 +9,34 @@ import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.tabcontainer.TabContainer;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("tabViewContainerController")
 public class TabViewContainerController 
 {
-	private int VIEW_ID = 0;
-
 	@Inject
 	private TabViewContainerMessages messages;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
-
-	@Expose
-	public void addViewMessageBox()
-	{
-		myWidgetAccessor.tabView().showView("messageBox");
-		myWidgetAccessor.tabView().focusView("messageBox");
-	}
 	
 	@Expose
-	public void addViewDialogBox()
+	public void onLoad()
 	{
-		myWidgetAccessor.tabView().showView("dialogBox");
-		myWidgetAccessor.tabView().focusView("dialogBox");
-	}
-	
-	@Expose
-	public void addViewProgressBox()
-	{
-		myWidgetAccessor.tabView().showView("progressBox");
-		myWidgetAccessor.tabView().focusView("progressBox");
+		/* Insert the component description*/
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		
+		myWidgetAccessor.tabView().showView("simpleViewTab2");
+		myWidgetAccessor.tabView().focusView("simpleViewTab1");
 	}
 	
 	@Expose
 	public void add()
 	{
-		String url = myWidgetAccessor.textBoxUrl().getText();
-		if (VIEW_ID>=0)
-		{
-			myWidgetAccessor.tabView().showView("tabNewView", Integer.toString(VIEW_ID), url);
-			myWidgetAccessor.tabView().focusView(Integer.toString(VIEW_ID));
-			VIEW_ID++;
-		}
+			String url = myWidgetAccessor.textBoxUrl().getText();
+			myWidgetAccessor.tabView().showView("tabNewView", "3", url);
+			myWidgetAccessor.tabView().focusView("3");
 	}
 
 	@Expose
@@ -73,6 +57,7 @@ public class TabViewContainerController
 	{
 		TabContainer tabView();
 		TextBox textBoxUrl();
+		HTML htmlDescText();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

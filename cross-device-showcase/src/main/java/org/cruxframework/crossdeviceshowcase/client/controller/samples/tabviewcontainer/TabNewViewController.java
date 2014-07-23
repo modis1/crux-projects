@@ -14,9 +14,6 @@ import com.google.gwt.user.client.ui.Frame;
 public class TabNewViewController 
 {
 	@Inject
-	private TabViewContainerMessages messages;
-
-	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
 
 	@Expose
@@ -30,11 +27,6 @@ public class TabNewViewController
 	public interface MyWidgetAccessor extends WidgetAccessor
 	{
 		Frame frameContent();
-	}
-
-	public void setMessages(TabViewContainerMessages messages) 
-	{
-		this.messages = messages;
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

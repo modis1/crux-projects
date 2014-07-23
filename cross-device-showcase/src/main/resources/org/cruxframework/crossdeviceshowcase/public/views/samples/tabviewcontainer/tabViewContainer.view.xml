@@ -5,39 +5,28 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	onLoad="tabViewContainerController.onLoad"
 	useController="tabViewContainerController"
 	title="${messages_tabViewContainer.title}">
 
 	<center>
 		<gwt:HTMLPanel id="panel">
-			<crux:tabViewContainer id="tabView" width="700px">
-				<crux:view name="messageBox" closeable="true" />
+			<crux:tabViewContainer id="tabView" width="700px" height="300px">
+				<crux:view name="simpleViewTab1" closeable="true"/>
 			</crux:tabViewContainer>
-			
-			<crux:button id="buttonRemove"
+			<br/>
+			<gwt:horizontalPanel id="buttonPanel">
+				<gwt:textBox id="textBoxUrl" text="http://blog.cruxframework.org" width="250px" readOnly="true"/>
+				<crux:button id="buttonAddUrl"
+				text="${messages_tabViewContainer.buttonAddUrl}" onSelect="tabViewContainerController.add" />
+				<crux:button id="buttonRemove"
 				text="${messages_tabViewContainer.buttonRemove}" onSelect="tabViewContainerController.remove" />
-			<br />
-			<gwt:label id="labelText" text="${messages_tabViewContainer.labelText}" />
-			<gwt:label id="labelUrl" text="${messages_tabViewContainer.labelUrl}" />
-
-			<gwt:textBox id="textBoxUrl" width="300px"
-				text="${messages_tabViewContainer.textBoxUrl}" />
-			<crux:button id="buttonAddURL"
-				text="${messages_tabViewContainer.buttonAddURL}" onSelect="tabViewContainerController.add" />
-			<br />
-			<crux:button id="buttonAddViewMessageBox"
-				text="${messages_tabViewContainer.buttonAddViewMessageBox}"
-				onSelect="tabViewContainerController.addViewMessageBox" />
-			<crux:button id="buttonAddViewDialogBox"
-				text="${messages_tabViewContainer.buttonAddViewDialogBox}" onSelect="tabViewContainerController.addViewDialogBox" />
-			<crux:button id="buttonAddViewProgressBox"
-				text="${messages_tabViewContainer.buttonAddViewProgressBox}"
-				onSelect="tabViewContainerController.addViewProgressBox" />
+			</gwt:horizontalPanel>
 		</gwt:HTMLPanel>
 
 		<showcase:info title="${messages_tabViewContainer.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_tabViewContainer.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 
