@@ -7,7 +7,7 @@
 	<name>cruxsite</name>
 	<packaging>war</packaging>
 	<description>Crux Site</description>
-
+ 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cruxVersion>5.1.1</cruxVersion>
