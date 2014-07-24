@@ -86,7 +86,4 @@ public interface ShowcaseResourcesSmall extends ClientBundle
 	
 	@Source("swapView3.png")
 	ImageResource swapView3();
-	
-	@Source("imageCollor.png")
-	ImageResource imageCollor();
 }
