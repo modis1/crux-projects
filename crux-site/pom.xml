@@ -18,7 +18,7 @@
 		<sourceDir>${project.build.sourceDirectory}</sourceDir>
 		<xsd.dir>${basedir}/xsd</xsd.dir>
 	</properties>
-	<dependencies> <!--  -->
+	<dependencies> <!--dsd -->
 		<dependency>
 			<groupId>org.cruxframework</groupId>
 			<artifactId>crux-dev</artifactId>
