@@ -6,9 +6,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>cruxsite</name>
 	<packaging>war</packaging>
-	
 	<description>Crux Site</description>
-       
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cruxVersion>5.1.1</cruxVersion>
@@ -20,7 +18,6 @@
 		<sourceDir>${project.build.sourceDirectory}</sourceDir>
 		<xsd.dir>${basedir}/xsd</xsd.dir>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.cruxframework</groupId>
