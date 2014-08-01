@@ -71,7 +71,7 @@
                         </tr>
 						<tr>
 							<td>Manual Crux 4.0</td>
-							<td>01/01/2014</td>
+							<td>01/01/2013</td>
 							<td>
                                 <crux:anchor styleName="btnMini" href="http://code.google.com/p/crux-framework/wiki/UserManual" 
                                             text="Versão HTML" id="manualSinglePage40Btn"></crux:anchor>
