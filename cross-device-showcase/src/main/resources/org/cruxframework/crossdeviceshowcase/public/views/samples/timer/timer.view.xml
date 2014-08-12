@@ -12,14 +12,14 @@
 	<center>
 		<gwt:HTMLPanel id="panel">
 			<crux:styledPanel id="timerPanel">
-				<crux:timer id="timer" initial="0" start="true" onLoadWidget="timerController.warnTime" />
+				<crux:timer id="timer" initial="0" start="false" onLoadWidget="timerController.warnTime" />
 			</crux:styledPanel>
 			<br />
 			<gwt:horizontalPanel id="buttonsPanel">
 				<crux:button id="buttonStart" text="${messages_timer.buttonStart}"
 					onSelect="timerController.start" />
 				<crux:button id="buttonStop" text="${messages_timer.buttonStop}"
-					onSelect="timerController.stopAndPlay" />
+					onSelect="timerController.stopAndRestart" />
 				<crux:button id="buttonClear" text="${messages_timer.buttonClear}"
 					onSelect="timerController.clear" />
 			</gwt:horizontalPanel>

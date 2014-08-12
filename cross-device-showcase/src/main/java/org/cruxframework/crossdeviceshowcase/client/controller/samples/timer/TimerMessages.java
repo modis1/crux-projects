@@ -16,8 +16,8 @@ public interface TimerMessages extends Messages
 	@DefaultMessage("Parar")
 	String buttonStop();
 	
-	@DefaultMessage("Recomeçar")
-	String buttonPlay();
+	@DefaultMessage("Reiniciar")
+	String buttonRestart();
 	
 	@DefaultMessage("Zerar")
 	String buttonClear();
