@@ -49,13 +49,13 @@ public class MainController
 	@Expose
 	public void navigateToSite()
 	{
-		Window.open("http://www.cruxframework.org", "cruxSite", null);
+		Window.open("http://www.cruxframework.org", "_self", null);
 	}
 	
 	@Expose
 	public void navigateToProject()
 	{
-		Window.open("https://code.google.com/p/crux-framework", "cruxProject", null);
+		Window.open("https://code.google.com/p/crux-framework", "_self", null);
 	}
 	
 	@Expose
