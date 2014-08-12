@@ -11,7 +11,7 @@
 
 	<center>
 		<crux:styledPanel id="panel">
-			<gwt:HTMLPanel id="wrapper">
+			<gwt:HTMLPanel id="wrapper" styleName="center">
 				<gwt:label id="labelClickButton"
 					text="${messages_colorPickerDialog.labelClickButton}" />
 				<hr />

@@ -13,7 +13,7 @@
 	<center>
 
 		<crux:styledPanel id="panel" styleName="listShuttlePanel">
-			<gwt:HTMLPanel id="wrapper">
+			<gwt:HTMLPanel id="wrapper" styleName="center">
 				<gwt:label id="labelChoosePlayers" text="${messages_listShuttle.labelChoosePlayers}" />
 				<crux:listShuttle id="listShuttle"
 					availableHeader="${messages_listShuttle.availableHeader}"

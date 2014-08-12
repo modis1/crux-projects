@@ -11,7 +11,7 @@
 
 	<center>
 
-		<gwt:HTMLPanel id="styledWrap" styleName="styledWrap">
+		<gwt:HTMLPanel id="styledWrap" styleName="styledWrap center">
 			<crux:styledPanel id="panel1" height="110px" width="200px"
 				styleName="rs-left">
 				<crux:button id="btnSample" text="${messages_styledPanel.btnSample}" />

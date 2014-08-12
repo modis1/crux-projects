@@ -12,7 +12,7 @@
 	<center>
 		
 		<crux:styledPanel id="panel">
-			<gwt:HTMLPanel id="parentPanel">
+			<gwt:HTMLPanel styleName="center" id="parentPanel">
 				<gwt:label id="labelText" text="${messages_singleSelect.labelText}" />
 				<br />
 					<gwt:HTMLPanel id="panelDepartmentsEmployers">
