@@ -15,7 +15,7 @@
 			<gwt:HTMLPanel id="parentPanel">
 				<gwt:label id="labelText" text="${messages_singleSelect.labelText}" />
 				<br />
-					<gwt:HTMLPanel id="panelDepartmentsEmployers">
+					<gwt:HTMLPanel id="panelDepartmentsEmployers" styleName="center">
 						<crux:singleSelect id="singleSelectDepartments"
 							visibleItemCount="3" width="150px"
 							onChange="singleSelectController.selectedItemDepartments">
