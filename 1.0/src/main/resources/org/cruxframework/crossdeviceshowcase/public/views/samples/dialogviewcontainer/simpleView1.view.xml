@@ -10,7 +10,7 @@
 
 	<center>
 		<crux:styledPanel id="parentPanel">
-			<gwt:HTMLPanel id="panel" width="600px" height="300px">
+			<gwt:HTMLPanel id="panel" width="600px" height="300px" styleName="center">
 				<gwt:label id="labelSimpleView" text="${messages_dialogSimpleView1.title}" styleName="dialogSimpleView1Title"/>
 				<br />
 				<gwt:label id="labelSimpleViewText" text="${messages_dialogSimpleView1.labelSimpleViewText}" styleName="dialogSimpleView1Text"/>
