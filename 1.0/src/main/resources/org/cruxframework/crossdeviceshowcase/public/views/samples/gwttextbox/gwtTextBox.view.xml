@@ -11,7 +11,7 @@
 	<center>
 
 		<crux:styledPanel id="panel1">
-			<gwt:HTMLPanel id="html">
+			<gwt:HTMLPanel id="html" styleName="center">
 				<gwt:textBox id="gwtTxtBox" text="${messages_gwtTextBox.gwtTxtBox}"
 					styleName="w200" />
 				<hr />
