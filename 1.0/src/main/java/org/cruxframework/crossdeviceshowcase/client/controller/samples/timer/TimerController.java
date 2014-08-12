@@ -23,7 +23,8 @@ public class TimerController
 	@Inject
 	private TimerMessages messages;
 	
-	private static boolean STATUS_STOP = false;
+	private boolean statusStart = false;
+	private boolean statusStop = false;
 	
 	@Expose
 	public void onLoad()
@@ -37,6 +38,10 @@ public class TimerController
 	{
 		warnTime();
 		myWidgetAccessor.timer().reset();
+		statusStart = false;
+		statusStop = false;
+		stopAndRestart();
+		statusStart = true;
 	}
 	
 	@Expose
@@ -57,18 +62,25 @@ public class TimerController
 	}
 	
 	@Expose
-	public void stopAndPlay()
+	public void stopAndRestart()
 	{
-		if(STATUS_STOP == false)
+		if(statusStart == true && statusStop == false)
 		{
 			myWidgetAccessor.timer().stop();
-			myWidgetAccessor.buttonStop().setText(messages.buttonPlay());
-			STATUS_STOP = true;
-		}else
+			myWidgetAccessor.buttonStop().setText(messages.buttonRestart());
+			statusStart = false;
+			statusStop = true;
+		}else if(statusStart == false && statusStop == true)
 		{
 			myWidgetAccessor.timer().start();
 			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
-			STATUS_STOP = false;
+			statusStart = true;
+			statusStop = false;
+		}else
+		{
+			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
+			statusStart = false;
+			statusStop = false;
 		}
 	}
 	
@@ -76,6 +88,9 @@ public class TimerController
 	public void clear()
 	{
 		myWidgetAccessor.timer().clear();
+		statusStop = false;
+		statusStart = false;
+		stopAndRestart();
 	}
 	
 	@BindView("timer")
