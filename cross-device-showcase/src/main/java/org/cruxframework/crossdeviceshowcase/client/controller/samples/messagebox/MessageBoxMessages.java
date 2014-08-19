@@ -10,7 +10,7 @@ public interface MessageBoxMessages extends Messages
 	@DefaultMessage("Message Box")
 	String title();
 	
-	@DefaultMessage("Mostrar Info")
+	@DefaultMessage("Mostrar Informação")
 	String showMessageBtnInfo();
 	
 	@DefaultMessage("Mostrar Sucesso")
