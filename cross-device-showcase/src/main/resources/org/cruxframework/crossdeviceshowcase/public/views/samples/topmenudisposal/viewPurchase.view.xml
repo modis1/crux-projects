@@ -1,0 +1,40 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="viewPurchaseController" 
+	title="${messages_viewPurchase.title}">
+
+	<center>
+		<gwt:HTMLPanel id="parentPanel" height="300px" width="700px">
+			<gwt:HTMLPanel id="panelLabel" styleName="topMenuDisposalPanelLeft">
+				<gwt:label id="labelTitle" text="${messages_viewPurchase.title}" styleName="topMenuDisposalTitle"/>
+				<gwt:label id="labelInfo" text="${messages_viewPurchase.labelInfo}" styleName="topMenuDisposalInfo"/>
+			</gwt:HTMLPanel>
+			
+			<gwt:HTMLPanel id="panelForm" styleName="topMenuDisposalPanelRight">
+				<br />
+				<crux:formDisplay id="formPurchase">
+				<crux:entry label="${messages_viewPurchase.labelEmail}">
+					<gwt:textBox id="txtEmail"/>
+				</crux:entry>
+				<crux:entry label="${messages_viewPurchase.labelPassword}">
+					<gwt:textBox id="txtPassword"/>
+				</crux:entry>
+				<crux:entry horizontalAlignment="right">
+					<crux:button id="btnPurchase" text="${messages_viewPurchase.viewPurchase}" onSelect="viewPurchaseController.searchPurchase"/>
+				</crux:entry>
+				</crux:formDisplay>
+			</gwt:HTMLPanel>
+			
+			<br />
+			<crux:styledPanel id="panelList" styleName="topMenuDisposalPanelList">
+				<gwt:label id="labelPurchase" text="${messages_viewPurchase.purchaseList}" styleName="topMenuDisposalListInactive"/>
+			</crux:styledPanel>
+		</gwt:HTMLPanel>
+	</center>
+
+</v:view>

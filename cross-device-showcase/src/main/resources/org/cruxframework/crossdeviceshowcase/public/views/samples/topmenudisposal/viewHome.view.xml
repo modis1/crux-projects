@@ -1,0 +1,31 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="mainController" 
+	title="${messages_viewHome.title}">
+
+	<center>
+		<gwt:HTMLPanel id="parentPanel" height="300px" width="700px">
+			<gwt:HTMLPanel id="panelTitle" styleName="topMenuDisposalPanelLeft">
+				<gwt:label id="labelTitle" text="${messages_viewHome.title}" styleName="topMenuDisposalTitle"/>
+			</gwt:HTMLPanel>
+			<br />
+			<gwt:HTMLPanel id="panelButton" styleName="topMenuDisposalPanelRigth">
+				<crux:button id="btnLogin" text="${messages_viewHome.btnLogin}"/>
+				<crux:button id="btnRegister" text="${messages_viewHome.btnRegister}"/>
+			</gwt:HTMLPanel>
+			<br />
+			<gwt:HTMLPanel id="panelLabels" styleName="topMenuDisposalPanelCenter">
+				<gwt:label id="labelText" text="${messages_viewHome.labelText}" styleName="topMenuDisposalText"/>
+				<gwt:label id="labelTextComp" text="${messages_viewHome.labelTextComp}" styleName="topMenuDisposalText"/>
+			</gwt:HTMLPanel>
+			
+			<crux:image id="image" styleName="topMenuDisposalImageHome"/>
+		</gwt:HTMLPanel>
+	</center>
+
+</v:view>

@@ -10,18 +10,18 @@ public interface TopMenuDisposalMessages extends Messages
 	@DefaultMessage("Top Menu Disposal")
 	String title();
 	
-	@DefaultMessage("Início")
+	@DefaultMessage("Home")
 	String labelHome();
 	
-	@DefaultMessage("Ítem 1")
+	@DefaultMessage("Meus Pedidos")
 	String labelItem1();
 	
-	@DefaultMessage("Ítem 2")
+	@DefaultMessage("Buscar Lojas")
 	String labelItem2();
 	
 	@DefaultMessage("<p>Menu interativo cross-device, se adpta a dispositivos de tela grande como desktops e telas pequenas como celulares. "
 			+"Possui definição da página inicial do menu e também possibilita que as páginas possam ser inseridas no menu de forma declarativa e programática.</p>" 
-			+"<p>Neste exemplo a página Ítem 2 foi adicionada programaticamente através de uma controller.</p>")
+			+"<p>Neste exemplo a página <b>Buscar Lojas</b> foi adicionada programaticamente através de uma controller.</p>")
 	String htmlDescText();
 }
   

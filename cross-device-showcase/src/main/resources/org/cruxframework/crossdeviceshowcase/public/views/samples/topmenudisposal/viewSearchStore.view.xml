@@ -1,0 +1,50 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view"
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	useController="viewSearchStoreController" 
+	title="${messages_viewSearchStore.title}">
+
+	<center>
+		<gwt:HTMLPanel id="parentPanel" height="300px" width="700px">
+			<gwt:HTMLPanel id="panelLabel" styleName="topMenuDisposalPanelLeft">
+				<gwt:label id="labelTitle" text="${messages_viewSearchStore.title}" styleName="topMenuDisposalTitle"/>
+			
+				<gwt:HTMLPanel id="panelForm" >
+				<gwt:label id="labelInfo" text="${messages_viewSearchStore.labelInfo}" styleName="topMenuDisposalInfo"/>
+				<br />
+				<crux:formDisplay id="formSearch">
+				<crux:entry label="${messages_viewSearchStore.labelSearch}">
+					<crux:singleSelect id="selectCountries">
+						<crux:item label="${messages_viewSearchStore.brazil}"/>
+						<crux:item label="${messages_viewSearchStore.mexico}"/>
+						<crux:item label="${messages_viewSearchStore.canada}"/>
+						<crux:item label="${messages_viewSearchStore.usa}"/>
+						<crux:item label="${messages_viewSearchStore.france}"/>
+						<crux:item label="${messages_viewSearchStore.italy}"/>
+						<crux:item label="${messages_viewSearchStore.japan}"/>
+					</crux:singleSelect>
+				</crux:entry>
+				<crux:entry horizontalAlignment="right">
+					<crux:button id="btnSearch" text="${messages_viewSearchStore.searchStores}" onSelect="viewSearchStoreController.searchStore"/>
+				</crux:entry>
+				</crux:formDisplay>
+				</gwt:HTMLPanel>
+			</gwt:HTMLPanel>
+
+			<gwt:HTMLPanel id="panelImage" styleName="topMenuDisposalPanelRight">
+				<crux:image id="image" styleName="topMenuDisposalImage"/>
+			</gwt:HTMLPanel>
+			
+			<br />
+			<crux:styledPanel id="panelList" styleName="topMenuDisposalPanelList">
+				<gwt:label id="labelSearch" text="${messages_viewSearchStore.storesFound}" styleName="topMenuDisposalListInactive"/>
+			</crux:styledPanel>
+		</gwt:HTMLPanel>
+
+	</center>
+
+</v:view>

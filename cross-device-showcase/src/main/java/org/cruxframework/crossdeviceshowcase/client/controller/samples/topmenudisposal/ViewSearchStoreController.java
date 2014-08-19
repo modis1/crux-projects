@@ -5,33 +5,33 @@ import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
-import org.cruxframework.crux.widgets.client.disposal.topmenudisposal.TopMenuDisposal;
+import org.cruxframework.crux.widgets.client.select.SingleSelect;
+import org.cruxframework.crux.widgets.client.textbox.NumberTextBox;
 
-import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Label;
 
-@Controller("topMenuDisposalController")
-public class TopMenuDisposalController 
+@Controller("viewSearchStoreController")
+public class ViewSearchStoreController 
 {
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private TopMenuDisposalMessages messages;
+	private ViewSearchStoreMessages messages;
 
 	@Expose
-	public void onLoad()
-	{	
-		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
-		
-		myWidgetAccessor.menu().addMenuEntry(messages.labelItem2(), "viewSearchStore");
+	public void searchStore()
+	{
+		 myWidgetAccessor.labelSearch().setText(messages.notFound());
+		 myWidgetAccessor.labelSearch().setStyleName("topMenuDisposalListActive"); 
 	}
 
-	@BindView("topMenuDisposal")
+	@BindView("viewSearchStore")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		TopMenuDisposal menu();
-		HTML htmlDescText();
+		Label labelSearch();
+		NumberTextBox txtCode();
+		SingleSelect selectCountries();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
@@ -39,7 +39,7 @@ public class TopMenuDisposalController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(TopMenuDisposalMessages messages) {
+	public void setMessages(ViewSearchStoreMessages messages) {
 		this.messages = messages;
 	}
 }

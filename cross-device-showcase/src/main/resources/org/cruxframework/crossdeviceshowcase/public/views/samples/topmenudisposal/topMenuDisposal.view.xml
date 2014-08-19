@@ -11,9 +11,9 @@
 
 	<center>
 		<crux:styledPanel id="panel">
-		 	<crux:topMenuDisposal id="menu" defaultView="topViewHome">
-		 	<crux:menuEntry targetView="topViewHome" label="${messages_topMenuDisposal.labelHome}"/>
-		 	<crux:menuEntry targetView="topViewItem1" label="${messages_topMenuDisposal.labelItem1}"/>
+		 	<crux:topMenuDisposal id="menu" defaultView="viewHome">
+		 	<crux:menuEntry targetView="viewHome" label="${messages_topMenuDisposal.labelHome}"/>
+		 	<crux:menuEntry targetView="viewPurchase" label="${messages_topMenuDisposal.labelItem1}"/>
 		 	</crux:topMenuDisposal>
 		</crux:styledPanel>
 		
