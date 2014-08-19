@@ -12,7 +12,6 @@ import org.cruxframework.crux.widgets.client.stackmenu.StackMenuItem;
 
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("stackMenuController")
 public class StackMenuController 
@@ -26,12 +25,13 @@ public class StackMenuController
 	@Expose
 	public void onLoad()
 	{	
-		/* Insert the component description*/
+		// Insert the component description
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
 		
 		loadItems();
 	}	
 
+	//Add items programmatically.
 	private void loadItems()
 	{
 		for (StackMenuItem listParentItems : myWidgetAccessor.menu().getItems())
@@ -80,64 +80,10 @@ public class StackMenuController
 		}	
 	}
 
-	@Expose
-	public void addItemMenu()
-	{
-		String label = myWidgetAccessor.textBoxItem().getText();
-		String key = myWidgetAccessor.textBoxItem().getText();
-		if(label == null || label.equals(""))
-		{
-			FlatMessageBox.show(messages.errorAdd(), MessageType.ERROR);
-		}
-		else
-		{
-			StackMenuItem addItem = new StackMenuItem(key,label);
-			myWidgetAccessor.menu().add(addItem);
-		}
-	}
-
-	@Expose
-	public void removeItemMenu()
-	{
-		String label = myWidgetAccessor.textBoxItem().getText();
-
-		if(label == null || label.equals(""))
-		{
-			FlatMessageBox.show(messages.errorRemove(), MessageType.ERROR);
-		}
-		else
-		{
-			for (StackMenuItem listParentItems : myWidgetAccessor.menu().getItems())
-			{
-				if(listParentItems.getLabel().equals(label))
-				{
-					listParentItems.removeFromParent();
-				}		
-
-				for (StackMenuItem listItems : listParentItems.getSubItems())
-				{
-					if (listItems.getLabel().equals(label))
-					{
-						listItems.removeFromParent();
-					}
-
-					for (StackMenuItem listSubitems : listItems.getSubItems())
-					{
-						if (listSubitems.getLabel().equals(label))
-						{
-							listSubitems.removeFromParent();
-						}
-					}
-				}
-			}
-		}
-	}
-
 	@BindView("stackMenu")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		StackMenu menu();
-		TextBox textBoxItem();
 		HTML htmlDescText();
 	}
 
