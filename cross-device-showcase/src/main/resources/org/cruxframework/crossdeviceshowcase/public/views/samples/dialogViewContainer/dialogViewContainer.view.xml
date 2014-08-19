@@ -10,10 +10,7 @@
 	title="${messages_dialogViewContainer.title}"> 
 
 	<center>
-		<crux:dialogViewContainer id="dialogViewContainer"
-			animationEnabled="true" width="600px" height="400px"
-			onDettach="dialogViewContainerController.onLoad">
-			<crux:view name="simpleView1" />
+		<crux:dialogViewContainer id="dialogViewContainer" width="500px" height="300px">
 		</crux:dialogViewContainer>
 
 		<crux:styledPanel id="mainPanel">
@@ -23,7 +20,7 @@
 
 		<showcase:info title="${messages_dialogViewContainer.title}">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="htmlDescText" />
 			</showcase:description>
 		</showcase:info>
 
