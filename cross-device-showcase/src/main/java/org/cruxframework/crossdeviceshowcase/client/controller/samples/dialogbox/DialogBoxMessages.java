@@ -10,7 +10,7 @@ public interface DialogBoxMessages extends Messages
 	@DefaultMessage("DialogBox")
 	String title();
 	
-	@DefaultMessage("Mostrar Dialog")
+	@DefaultMessage("Mostrar DialogBox")
 	String btnShowDialog();
 	
 	@DefaultMessage("<p>DialogBoxes são janelas flutuantes, que se sobrepõem à janela principal para realizar"

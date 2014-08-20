@@ -10,13 +10,17 @@
 	title="${messages_filter.title}"> 
 
 	<center>
-		<gwt:label id="labelInsertText" text="${messages_filter.labelText}"/>
-		<br />
-		<crux:styledPanel id="mainPanel">
-			<crux:filter id="filterWidget" text="${messages_filter.caption}" animationEnabled="true" 
-			autoSelectEnabled="true" focus="true" filterable="" width="200px" limit="2"/>
+		<crux:styledPanel id="wrapper">
+			<gwt:HTMLPanel id="wrapperChild">
+				<gwt:label id="labelInsertText" text="${messages_filter.labelText}"/>
+				<br />
+				<crux:styledPanel id="mainPanel">
+					<crux:filter id="filterWidget" text="${messages_filter.caption}" animationEnabled="true" 
+					autoSelectEnabled="true" focus="true" filterable="" width="200px" limit="2"/>
+				</crux:styledPanel>
+			</gwt:HTMLPanel>
 		</crux:styledPanel>
-
+		
 		<showcase:info title="${messages_filter.title}">
 			<showcase:description>
 				<gwt:HTML id="htmlDescText"/>

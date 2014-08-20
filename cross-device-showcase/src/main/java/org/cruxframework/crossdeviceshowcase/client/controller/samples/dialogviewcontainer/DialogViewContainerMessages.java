@@ -10,7 +10,7 @@ public interface DialogViewContainerMessages extends Messages
 	@DefaultMessage("DialogViewContainer")
 	String title();
 	
-	@DefaultMessage("Mostrar Dialog")
+	@DefaultMessage("Mostrar DialogViewContainer")
 	String buttonShowDialog();
 	
 	@DefaultMessage("<p>DialogViewContainer é um container de views que utiliza uma caixa de diálogo "

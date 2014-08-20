@@ -29,8 +29,6 @@ public class FilterController
 	{
 		/* Insert the component description*/
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
-		myWidgetAccessor.filterWidget().setLimit(2); 
-//		Não ta funfando
 		
 		myWidgetAccessor.filterWidget().setFilterable(new Filterable<String>() {
 			
@@ -43,20 +41,21 @@ public class FilterController
 			public List<FilterResult<String>> filter(String query) {
 				
 				List<String> wordList = new ArrayList<String>();
-				wordList.add("Carro"); 
-				wordList.add("Caminhão");
-				wordList.add("Ônibus");
-				wordList.add("Motocicleta");
-				wordList.add("Metrô");
-				wordList.add("Trem");
-				wordList.add("Navio");
-				wordList.add("Barco");
-				wordList.add("Caravela");
-				wordList.add("Barcas");
-				wordList.add("Balsas");
-				wordList.add("Avião");
-				wordList.add("Balão");
-				wordList.add("Dirigível");
+				wordList.add(messages.airplane()); 
+				wordList.add(messages.airship());
+				wordList.add(messages.balloon());
+				wordList.add(messages.barge());
+				wordList.add(messages.bike());
+				wordList.add(messages.boat());
+				wordList.add(messages.bus());
+				wordList.add(messages.caption());
+				wordList.add(messages.car());
+				wordList.add(messages.caravela());
+				wordList.add(messages.raft());
+				wordList.add(messages.ship());
+				wordList.add(messages.subway());
+				wordList.add(messages.train());
+				wordList.add(messages.truck());
 				
 				List<FilterResult<String>> result = new ArrayList<FilterResult<String>>();
 				

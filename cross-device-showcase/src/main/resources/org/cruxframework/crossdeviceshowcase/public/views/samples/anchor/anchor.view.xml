@@ -10,36 +10,37 @@
 	title="${messages_anchor.title}"> 
 	
 	<center>
-		<gwt:HTMLPanel id="panel">
-		
-			<a id="home" style="color:#1c5994"></a>
-			
-			<crux:anchor id="anchorHome" href="#end" onSelect="anchorController.pgEnd" >
-				<h5>Ir para o Fim da página</h5>
-			</crux:anchor>
-				
-			<gwt:HTMLPanel id="wrapper1" styleName="anchorWrapper">
-				<gwt:label id="labelDeclarative" text="${messages_anchor.labelDeclarative}"/>
-				<br />
-				<crux:anchor id="anchor" href="http://www.cruxframework.org"  target="_self">
-					<button>Crux Framework</button>
+		<crux:styledPanel id="wrapper">
+			<gwt:HTMLPanel id="panel">
+				<a id="home" style="color:#1c5994"></a>
+	
+				<crux:anchor id="anchorHome" href="#end" onSelect="anchorController.pgEnd" >
+					<h5>Ir para o Fim da página</h5>
 				</crux:anchor>
-			</gwt:HTMLPanel>
-			
-			<gwt:HTMLPanel id="wrapper2" styleName="anchorWrapper">
-				<gwt:label id="labelProgramatic" text="${messages_anchor.labelProgramatic}"/>
-				<br />
-				<gwt:textBox id="textBoxUrl" text="http://www.cruxframework.org" width="300px" readOnly="true"/>
-				<crux:button id="buttonLink" text="${messages_anchor.buttonLink}" onSelect="anchorController.openUrl"/>
-			</gwt:HTMLPanel>
-			    
-				<a id="end" style="color:#1c5994"></a>
+					
+				<gwt:HTMLPanel id="wrapper1" styleName="anchorWrapper">
+					<gwt:label id="labelDeclarative" text="${messages_anchor.labelDeclarative}"/>
+					<br />
+					<crux:anchor id="anchor" href="http://www.cruxframework.org"  target="_self">
+						<button>Crux Framework</button>
+					</crux:anchor>
+				</gwt:HTMLPanel>
 				
-			<crux:anchor id="anchorEnd" href="#home">
-				<h5>Ir para o Início da página</h5><h2></h2>
-			</crux:anchor>
-			
-		</gwt:HTMLPanel>	
+				<gwt:HTMLPanel id="wrapper2" styleName="anchorWrapper">
+					<gwt:label id="labelProgramatic" text="${messages_anchor.labelProgramatic}"/>
+					<br />
+					<gwt:textBox id="textBoxUrl" text="http://www.cruxframework.org" width="300px" readOnly="true"/>
+					<crux:button id="buttonLink" text="${messages_anchor.buttonLink}" 
+					onSelect="anchorController.openUrl"/>
+				</gwt:HTMLPanel>
+				    
+					<a id="end" style="color:#1c5994"></a>
+					
+				<crux:anchor id="anchorEnd" href="#home">
+					<h5>Ir para o Início da página</h5><h2></h2>
+				</crux:anchor>
+			</gwt:HTMLPanel>	
+		</crux:styledPanel>
 	</center>		
 	
 	<showcase:info title="${messages_anchor.title}">

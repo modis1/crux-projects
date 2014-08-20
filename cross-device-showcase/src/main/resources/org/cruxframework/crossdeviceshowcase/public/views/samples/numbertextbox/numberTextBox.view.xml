@@ -18,10 +18,11 @@
 				<crux:styledPanel id="panel" styleName="center">
 					<crux:numberTextBox id="boxNumber" maxLength="5" value="44"/>
 				</crux:styledPanel>
+				<br />
 				<gwt:label id="labelMaxlength" text="${messages_numberTextBox.labelMaxlength}"/>
 				<br />
 				
-				<crux:storyboard id="radios" height="30px" largeDeviceItemWidth="100px">
+				<crux:storyboard id="radios" height="30px" largeDeviceItemWidth="90px">
 					<gwt:radioButton id="radioButton09" name="value" text="${messages_numberTextBox.radioButton09}" onChange="numberTextBoxController.maxLength"/>
 					<gwt:radioButton id="radioButton099" name="value" text="${messages_numberTextBox.radioButton099}" onChange="numberTextBoxController.maxLength"/>
 					<gwt:radioButton id="radioButton0999" name="value" text="${messages_numberTextBox.radioButton0999}" checked="true" onChange="numberTextBoxController.maxLength"/>
