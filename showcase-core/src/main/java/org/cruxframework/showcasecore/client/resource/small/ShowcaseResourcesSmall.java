@@ -21,6 +21,7 @@ import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.resources.client.ClientBundle.Source;
 
 /**
  * @author Gesse Dafe
@@ -85,4 +86,7 @@ public interface ShowcaseResourcesSmall extends ClientBundle
 	
 	@Source("swapView3.png")
 	ImageResource swapView3();
+	
+	@Source("mundi.jpg")
+	DataResource mundi();
 }

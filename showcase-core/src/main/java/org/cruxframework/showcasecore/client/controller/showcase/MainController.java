@@ -59,7 +59,7 @@ public class MainController
 	}
 	
 	@Expose
-	public void exibirCodigoFonte()
+	public void viewSourceCode()
 	{
 		MenuTabsDisposal menuDisposal = (MenuTabsDisposal) Screen.get("menuDisposal");
 		String viewId = menuDisposal.getCurrentView();

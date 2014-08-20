@@ -85,4 +85,7 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	
 	@Source("countries/argentina.jpg")
 	ImageResource argentina();
+	
+	@Source("mundi.jpg")
+	DataResource mundi();
 }

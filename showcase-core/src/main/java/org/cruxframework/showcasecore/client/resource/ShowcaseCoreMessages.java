@@ -16,4 +16,7 @@ public interface ShowcaseCoreMessages extends Messages
 {
 	@DefaultMessage("O seu navegador não suporta a criação de bancos de dados locais.")
 	String databaseNotSupportedError();
+	
+	@DefaultMessage("Ver Código Fonte")
+	String viewSourceCode();
 }

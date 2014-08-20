@@ -11,6 +11,7 @@
 @url image1ImageUrl image1Image;
 @url image2ImageUrl image2Image;
 @url image3ImageUrl image3Image;
+@url mundiUrl mundi;
 
 /*
 * Modern clearfix (IE9+)
@@ -491,6 +492,99 @@ body
 	color:#1c5994;
 }
 
+.topMenuDisposalTitle
+{
+	text-align: left;
+	font-size: x-large;
+	font-weight: bold;
+	color:#1c5994;
+}
+
+.topMenuDisposalInfo
+{
+	text-align: justify;
+	vertical-align:middle;
+	font-size: 12px;
+	color:#666666;
+	line-height: 200%;
+}
+
+.topMenuDisposalText
+{
+	text-align: center;
+	vertical-align:middle;
+	font-size: large;
+	color:#1c5994;
+	line-height: 200%;
+}
+
+.topMenuDisposalPanelLeft
+{
+	margin-top: 30px;
+	display: table;
+	float: left;
+	width: 350px;
+	border-right:thin;
+	padding-right: 50px;
+}
+
+.topMenuDisposalPanelCenter
+{
+	margin-top: 30px;
+	display: table;
+	float: left;
+	width: 700px;
+	padding-right: 50px;
+}
+
+.topMenuDisposalPanelRight
+{
+	margin-top: 30px;
+	display: table;
+	float: right;
+	width: 320px;
+}
+
+.topMenuDisposalPanelList
+{
+	float:left; 
+	width:700px;
+	height:100px; 
+	margin-top:30px; 
+	padding:80px;
+}
+
+.topMenuDisposalListActive
+{
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.topMenuDisposalListInactive
+{
+	color: #666666;
+	text-align: center;
+}
+
+.topMenuDisposal
+{
+	background-color: #0066CC !important;
+}
+
+.topMenuDisposalImage
+{
+	background-image: mundiUrl;
+	width:300px !important;
+	height:160px !important; 
+	background-size: 100% 100%;
+	border-radius: 100px;
+	opacity:0.75;
+	-moz-opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
 .menuEntriesContainer .menuSectionEntries:nth-child\(2\) .menuSectionEntriesContent .menuEntry:nth-child\(5\),
 .menuEntriesContainer .menuSectionEntries:nth-child\(4\) .menuSectionEntriesContent .menuEntry:nth-child\(1\),
 .menuEntriesContainer .menuSectionEntries:nth-child\(10\) .menuSectionEntriesContent .menuEntry:nth-child\(1\),
@@ -498,4 +592,22 @@ body
 .menuEntriesContainer .menuSectionEntries:nth-child\(12\) .menuSectionEntriesContent .menuEntry:nth-child\(1\)
 {
 	display:none;
+}
+
+.errorMessage
+{
+	color: red;
+	font-weight: bold;
+}
+
+.successMessage
+{
+	color: green;
+	font-weight: bold;
+}
+
+.panelResultData
+{
+	font-weight: bold;
+	margin-top: 3%;
 }
