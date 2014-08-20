@@ -17,14 +17,14 @@
 				<br />
 					<gwt:HTMLPanel id="panelDepartmentsEmployers">
 						<crux:singleSelect id="singleSelectDepartments"
-							visibleItemCount="3" width="150px"
+							visibleItemCount="6" width="150px"
 							onChange="singleSelectController.selectedItemDepartments">
 							<crux:item label="Contabilidade" selected="false" value="accounting" />
 							<crux:item label="Marketing" selected="false" value="marketing" />
 							<crux:item label="Produção" selected="false" value="production" />
 						</crux:singleSelect>
 						<crux:singleSelect id="singleSelectEmployees"
-							visibleItemCount="3" width="150px"
+							visibleItemCount="6" width="150px"
 							onChange="singleSelectController.selectedItemEmployees" />							
 					</gwt:HTMLPanel>
 			</gwt:HTMLPanel>

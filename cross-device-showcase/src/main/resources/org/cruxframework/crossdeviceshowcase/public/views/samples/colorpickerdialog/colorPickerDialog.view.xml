@@ -15,7 +15,7 @@
 				<gwt:label id="labelClickButton"
 					text="${messages_colorPickerDialog.labelClickButton}" />
 				<hr />
-				<gwt:label id="labelColorValue" styleName="hide choosenColor"
+				<gwt:label id="labelColorValue" styleName="choosenColor"
 					text="${messages_colorPickerDialog.labelColorValue}" />
 				<crux:button id="buttonChangeColor" text="${messages_colorPickerDialog.title}"
 					onSelect="colorPickerDialogController.showColorPicker" />

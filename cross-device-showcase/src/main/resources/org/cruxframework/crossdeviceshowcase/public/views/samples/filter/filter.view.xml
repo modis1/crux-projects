@@ -10,9 +10,10 @@
 	title="${messages_filter.title}"> 
 
 	<center>
-		<gwt:label id="labelInsertText" text="Digite um meio de transporte"/>
+		<gwt:label id="labelInsertText" text="${messages_filter.labelText}"/>
+		<br />
 		<crux:styledPanel id="mainPanel">
-			<crux:filter id="filterWidget" text="Meio de transporte" animationEnabled="true" 
+			<crux:filter id="filterWidget" text="${messages_filter.caption}" animationEnabled="true" 
 			autoSelectEnabled="true" focus="true" filterable="" width="200px" limit="2"/>
 		</crux:styledPanel>
 

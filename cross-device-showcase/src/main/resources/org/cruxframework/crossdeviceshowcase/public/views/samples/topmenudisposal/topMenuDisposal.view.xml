@@ -10,7 +10,7 @@
 	title="${messages_topMenuDisposal.title}">
 
 	<center>
-		<crux:styledPanel id="panel">
+		<crux:styledPanel id="panel" styleName="topMenuDisposal">
 		 	<crux:topMenuDisposal id="menu" defaultView="viewHome">
 		 	<crux:menuEntry targetView="viewHome" label="${messages_topMenuDisposal.labelHome}"/>
 		 	<crux:menuEntry targetView="viewPurchase" label="${messages_topMenuDisposal.labelItem1}"/>

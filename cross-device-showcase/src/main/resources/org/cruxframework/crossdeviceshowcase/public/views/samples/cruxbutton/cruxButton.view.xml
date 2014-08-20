@@ -4,6 +4,7 @@
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:smart="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="cruxButtonController" title="${messages_cruxButton.title}"
 	onLoad="cruxButtonController.onLoad" > 

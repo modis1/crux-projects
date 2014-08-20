@@ -12,16 +12,16 @@
 	<center>
 		<gwt:HTMLPanel id="panel">
 		
-			<a id="inicio" style="color:#1c5994"><gwt:label id="labelStart" text="${messages_anchor.labelStart}" styleName="anchorLabel"/></a>
+			<a id="home" style="color:#1c5994"></a>
 			
-			<crux:anchor id="anchorHome" href="#fim" onSelect="anchorController.pgEnd" >
+			<crux:anchor id="anchorHome" href="#end" onSelect="anchorController.pgEnd" >
 				<h5>Ir para o Fim da página</h5>
 			</crux:anchor>
 				
 			<gwt:HTMLPanel id="wrapper1" styleName="anchorWrapper">
 				<gwt:label id="labelDeclarative" text="${messages_anchor.labelDeclarative}"/>
 				<br />
-				<crux:anchor id="anchor" href="http://www.cruxframework.org"  target="_Blank">
+				<crux:anchor id="anchor" href="http://www.cruxframework.org"  target="_self">
 					<button>Crux Framework</button>
 				</crux:anchor>
 			</gwt:HTMLPanel>
@@ -33,9 +33,9 @@
 				<crux:button id="buttonLink" text="${messages_anchor.buttonLink}" onSelect="anchorController.openUrl"/>
 			</gwt:HTMLPanel>
 			    
-				<a id="fim" style="color:#1c5994"><gwt:label id="labelEnd" text="${messages_anchor.labelEnd}" styleName="anchorLabel"/></a>
+				<a id="end" style="color:#1c5994"></a>
 				
-			<crux:anchor id="anchorEnd" href="#inicio" onSelect="anchorController.pgHome" >
+			<crux:anchor id="anchorEnd" href="#home">
 				<h5>Ir para o Início da página</h5><h2></h2>
 			</crux:anchor>
 			

@@ -10,7 +10,6 @@
 	title="${messages_dialogBox.title}"> 
 
 	<center>
-<!-- 		<crux:dialogBox id="dialogBox"/> Não deu-->
 
 		<crux:styledPanel id="panel1">
 			<crux:button id="btnShowDialog" text="${messages_dialogBox.btnShowDialog}"
