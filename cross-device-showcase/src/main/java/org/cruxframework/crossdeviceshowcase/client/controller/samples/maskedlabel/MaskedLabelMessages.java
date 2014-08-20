@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_maskedLabel")
 public interface MaskedLabelMessages extends Messages
 {
-	@DefaultMessage("Masked Label")
+	@DefaultMessage("MaskedLabel")
 	String title();
 	 
 	@DefaultMessage("Caracter:")

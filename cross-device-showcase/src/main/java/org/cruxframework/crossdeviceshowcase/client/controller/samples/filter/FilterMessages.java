@@ -10,9 +10,18 @@ public interface FilterMessages extends Messages
 	@DefaultMessage("Filter")
 	String title();
 	
+	@DefaultMessage("Meios de transporte")
+	String caption();
+	
+	@DefaultMessage("Digite um meio de transporte")
+	String labelText();
+	
+	@DefaultMessage("Palavra sugerida selecionada.")
+	String wordFound();
+	
 	@DefaultMessage("<p>O componente Filter é uma caixa de texto que sugere possíveis resultados a partir "
-			+ "do conteúdo inserido pelo usuário. É um facilitador para o usuário no momento em que necessita"
-			+ "inserir alguma informação ou fazer uma busca por exemplo.</p><p>O Filter ainda permite Habilitar "
+			+ "do conteúdo inserido pelo usuário. É um facilitador para o usuário no momento em que necessita "
+			+ "inserir alguma informação ou fazer uma busca.</p><p>O Filter ainda permite Habilitar "
 			+ "recursos como: animação, selecionar automaticamente e ativar um foco na sequência localizada.</p>"
 			+ "<p>No exemplo acima, quando o usuário começar a digitar, a caixa de texto apresentará possíveis sugestões "
 			+ "de meios de transporte de acordo com o dado inserido.</p>")

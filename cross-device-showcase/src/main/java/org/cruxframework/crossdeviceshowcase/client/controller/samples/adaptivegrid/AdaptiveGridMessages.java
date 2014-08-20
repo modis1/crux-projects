@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_adaptivegrid")
 public interface AdaptiveGridMessages extends Messages
 {
-	@DefaultMessage("Adaptive Grid")
+	@DefaultMessage("DeviceAdaptiveGrid")
 	String title();
 	
 	@DefaultMessage("Ativo")
@@ -29,8 +29,8 @@ public interface AdaptiveGridMessages extends Messages
 	String dayOfBirth();
 	
 	@DefaultMessage("<p>O componente DeviceAdaptiveGrid permite exibir as colunas de acordo com o tipo de dispositivo "
-			+ "que o está visualizado. Para dispositivos com display grande (PC, tablet etc.), o grid exibirá "
-			+ "as colunas definidas na tag <largeColumns>, já para dispositivos pequenos, ele exibirá as "
-			+ "colunas definidas na tag <smallColumns>.</p>")
+			+ "que o está visualizando. Para dispositivos com display grande (PC, tablet etc.), o grid exibirá "
+			+ "as colunas definidas na tag <code>largeColumns</code>, já para dispositivos pequenos, ele exibirá as "
+			+ "colunas definidas na tag <code>smallColumns</code>.</p>")
 	String htmlDescText();
 }

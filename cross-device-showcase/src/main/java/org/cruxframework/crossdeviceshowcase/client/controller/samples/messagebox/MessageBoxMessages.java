@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_messageBox")
 public interface MessageBoxMessages extends Messages
 {
-	@DefaultMessage("Message Box")
+	@DefaultMessage("MessageBox")
 	String title();
 	
 	@DefaultMessage("Mostrar Informação")

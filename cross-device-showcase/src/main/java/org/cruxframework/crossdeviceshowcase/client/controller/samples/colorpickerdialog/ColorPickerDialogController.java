@@ -27,6 +27,9 @@ public class ColorPickerDialogController
 	{
 		 /* Insert the component description*/
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+
+		myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#1c5994");
+		myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #1c5994");
 	}
 	
 	@Expose
@@ -54,7 +57,6 @@ public class ColorPickerDialogController
 		if (myWidgetAccessor.colorPicker().getColor() != null)
 		{
 			myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#"+myWidgetAccessor.colorPicker().getColor());
-			myWidgetAccessor.labelColorValue().removeStyleName("hide");
 			myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #"+myWidgetAccessor.colorPicker().getColor());
 		}
 	}

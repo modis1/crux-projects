@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_dialogBox")
 public interface DialogBoxMessages extends Messages
 {
-	@DefaultMessage("Dialog Box")
+	@DefaultMessage("DialogBox")
 	String title();
 	
 	@DefaultMessage("Mostrar Dialog")
@@ -17,6 +17,6 @@ public interface DialogBoxMessages extends Messages
 			+ "algum tipo de comunicação adicional com usuário. São bastante úteis para exibir porções de dados"
 			+ "que ocupariam muito espaço na tela ou para tratar fluxos secundários nos casos de uso da aplicação.</p>"
 			+ "<p>É possível adicionar apenas um componente ao DialogBox, porém este pode ser qualquer componente válido, "
-			+ "desde um simples botão até um painel (que pode conter vários outros componentes).</p>")
+			+ "desde um simples botão até um painel.</p>")
 	String htmlDescText();
 }

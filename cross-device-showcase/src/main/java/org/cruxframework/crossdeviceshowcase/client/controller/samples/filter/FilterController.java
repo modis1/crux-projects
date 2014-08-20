@@ -29,13 +29,14 @@ public class FilterController
 	{
 		/* Insert the component description*/
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
-//		myWidgetAccessor.filterWidget().setLimit(2); Não ta funfando
+		myWidgetAccessor.filterWidget().setLimit(2); 
+//		Não ta funfando
 		
 		myWidgetAccessor.filterWidget().setFilterable(new Filterable<String>() {
 			
 			@Override
 			public void onSelectItem(String selectedItem) {
-				FlatMessageBox.show("Palavra sugerida", MessageType.SUCCESS);
+				FlatMessageBox.show(messages.wordFound(), MessageType.SUCCESS);
 			}
 			
 			@Override

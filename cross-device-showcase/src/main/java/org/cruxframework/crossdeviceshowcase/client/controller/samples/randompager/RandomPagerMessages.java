@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_randomPager")
 public interface RandomPagerMessages extends Messages
 {
-	@DefaultMessage("Random Pager")
+	@DefaultMessage("RandomPager")
 	String title();
 	
 	@DefaultMessage("América do Sul")
@@ -139,6 +139,6 @@ public interface RandomPagerMessages extends Messages
 	@DefaultMessage("Camberra")
 	String capitalAustralia();
 
-	@DefaultMessage("<p>Random Pager.</p>")
+	@DefaultMessage("<p>RandomPager.</p>")
 	String htmlDescText();
 }

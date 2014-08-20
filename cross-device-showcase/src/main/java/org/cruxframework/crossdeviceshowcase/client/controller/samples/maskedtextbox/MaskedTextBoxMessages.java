@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_maskedTextBox")
 public interface MaskedTextBoxMessages extends Messages
 {
-	@DefaultMessage("Masked TextBox")
+	@DefaultMessage("MaskedTextBox")
 	String title();
 	 
 	@DefaultMessage("Insira uma data:")
@@ -29,7 +29,7 @@ public interface MaskedTextBoxMessages extends Messages
 	String invalidDate();
 	
 	@DefaultMessage("<p>MaskedTextBox é um componente de entrada de informações que tem a capacidade de ser associado "
-			+"a um Formatter para guiar o usuário durante o preenchimento e garantir a conversão dessas informações" 
+			+"a um Formatter para guiar o usuário durante o preenchimento e garantir a conversão dessas informações " 
 			+"em dados tipados a serem consumidos pela aplicação.</p>"
 			+"<p>Neste exemplo associamos o MaskedTextBox para ler uma data digitada pelo usuário.</p>")
 	String htmlDescText();

@@ -36,7 +36,7 @@ public class AnchorController
 		if (url != null)
 		{
 			myWidgetAccessor.anchor().setHref(url);
-			myWidgetAccessor.anchor().setTarget("_Blank");
+			myWidgetAccessor.anchor().setTarget("_self");
 			myWidgetAccessor.anchor().select();
 		}
 	}

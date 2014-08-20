@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_listShuttle")
 public interface ListShuttleMessages extends Messages
 {
-	@DefaultMessage("List Shuttle")
+	@DefaultMessage("ListShuttle")
 	String title();
 	 
 	@DefaultMessage("Monte seu time com os jogadores disponíveis:")

@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_horizontalSwapViewContainer")
 public interface HorizontalSwapViewContainerMessages extends Messages
 {
-	@DefaultMessage("Horizontal Swap View Container")
+	@DefaultMessage("HorizontalSwapViewContainer")
 	String title();
 	
 	@DefaultMessage("Número de trocas efetuadas")
@@ -22,7 +22,7 @@ public interface HorizontalSwapViewContainerMessages extends Messages
 	@DefaultMessage("Para frente")
 	String rbDirectionForward();
 
-	@DefaultMessage("<p>O Horizontal Swap View Container é um container de views (pode conter várias) que utiliza "
+	@DefaultMessage("<p>O HorizontalSwapViewContainer é um container de views (pode conter várias) que utiliza "
 			+ "animações em slide para efetuar a troca das views.</p> "
 			+ "<p>A animação pode ser habilitada em dispositivos de tela grande como desktops, ou pequena como celulares "
 			+ "e ainda é possível definir o tempo de transição, a direção (no exemplo: Para trás ou Para frente) "

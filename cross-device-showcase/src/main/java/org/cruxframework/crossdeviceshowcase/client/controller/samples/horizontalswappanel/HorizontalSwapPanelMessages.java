@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_horizontalSwapPanel")
 public interface HorizontalSwapPanelMessages extends Messages
 {
-	@DefaultMessage("Horizontal Swap Panel")
+	@DefaultMessage("HorizontalSwapPanel")
 	String title();
 	
 	@DefaultMessage("Clique nos botões abaixo para a trocar os componentes no painel")
@@ -22,7 +22,7 @@ public interface HorizontalSwapPanelMessages extends Messages
 	@DefaultMessage("Painel")
 	String buttonPanel();
 	
-	@DefaultMessage("<p>O Horizontal Swap Panel é um painel no qual é possível efetuar a troca de seu conteúdo "
+	@DefaultMessage("<p>O HorizontalSwapPanel é um painel no qual é possível efetuar a troca de seu conteúdo "
 			+ "utilizando animações em slide, podendo-se definir a direção da animação, duração de transição ou ainda disparar "
 			+ "um evento no momento da troca.</p>"
 			+ "<p>O conteúdo do painel pode ser qualquer outro componente válido. No exemplo acima foram "

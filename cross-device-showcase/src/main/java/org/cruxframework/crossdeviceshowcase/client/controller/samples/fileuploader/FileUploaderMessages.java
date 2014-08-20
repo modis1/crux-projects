@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_fileUploader")
 public interface FileUploaderMessages extends Messages
 {	
-	@DefaultMessage("File Uploader")
+	@DefaultMessage("FileUploader")
 	String title();
 	 
 	@DefaultMessage("Escolha os arquivos")

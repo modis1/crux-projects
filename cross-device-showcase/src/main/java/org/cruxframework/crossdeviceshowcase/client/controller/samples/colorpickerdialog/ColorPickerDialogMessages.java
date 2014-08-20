@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_colorPickerDialog")
 public interface ColorPickerDialogMessages extends Messages
 {
-	@DefaultMessage("Color Picker")
+	@DefaultMessage("ColorPicker")
 	String title();
 	 
 	@DefaultMessage("Clique no botão abaixo para mudar a cor deste texto.")
@@ -22,8 +22,8 @@ public interface ColorPickerDialogMessages extends Messages
 	@DefaultMessage("Escolha a cor")
 	String colorPickerText();
 	
-	@DefaultMessage("<p>O Color Picker é um componente que permite que o usuário selecione uma cor do espectro de "
-			+"cores e aplique esta cor para um elemento determinado. A funcionalidade é semelhante selecionadores " 
+	@DefaultMessage("<p>O ColorPicker é um componente que permite que o usuário selecione uma cor do espectro de "
+			+"cores e aplique-a em um determinado elemento. A funcionalidade é semelhante selecionadores " 
 			+"de cores encontrados em softwares desktop.</p>")
 	String htmlDescText();
 }

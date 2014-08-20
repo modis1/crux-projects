@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_showcase")
 public interface ShowcaseMessages extends Messages
 {
-	@DefaultMessage("Bem vindo")
+	@DefaultMessage("Bem-vindo")
 	String shortWelcome();
 	
 	@DefaultMessage("Site")
@@ -16,7 +16,7 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Projeto")
 	String project();
 	
-	@DefaultMessage("Welcome to Crux 5 Showcase!")
+	@DefaultMessage("Bem-vindo ao Crux 5 Showcase!")
 	String welcome();
 	
 	@DefaultMessage("O Crux Framework 5 provê uma série de componentes cross-device para aplicações Web."
@@ -33,46 +33,46 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Elementos de Formulário")
 	String formElements();
 	
-	@DefaultMessage("File Uploader")
+	@DefaultMessage("FileUploader")
 	String fileUploader();
 	
-	@DefaultMessage("Masked Label")
+	@DefaultMessage("MaskedLabel")
 	String maskedLabel();
 	
-	@DefaultMessage("Masked Text Box")
+	@DefaultMessage("MaskedTextBox")
 	String maskedTextbox();
 	
 	@DefaultMessage("Button")
 	String button();
 	
-	@DefaultMessage("Textbox")
+	@DefaultMessage("TextBox")
 	String textBox();
 	
-	@DefaultMessage("Textarea")
+	@DefaultMessage("TextArea")
 	String textArea();
 	
 	@DefaultMessage("Elementos de Layout")
 	String layoutElements();
 	
-	@DefaultMessage("Styled Panel")
+	@DefaultMessage("StyledPanel")
 	String styledPanel();
 	
-	@DefaultMessage("Form Display")
+	@DefaultMessage("FormDisplay")
 	String formDisplay();
 	
 	@DefaultMessage("Caixas de Diálogo")
 	String dialogBoxes();
 	
-	@DefaultMessage("Progress Box")
+	@DefaultMessage("ProgressBox")
 	String progressBox();
 	
-	@DefaultMessage("Message Box")
+	@DefaultMessage("MessageBox")
 	String messageBox();
 	
 	@DefaultMessage("Elementos de Dados")
 	String dataElements();
 	
-	@DefaultMessage("Device Adaptive Grid")
+	@DefaultMessage("DeviceAdaptiveGrid")
 	String deviceAdaptiveGrid();
 	
 	@DefaultMessage("Elementos de Imagem")
@@ -81,60 +81,63 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("PromoBanner")
 	String promoBanner();
 	
-	@DefaultMessage("Slide Show")
+	@DefaultMessage("Slideshow")
 	String slideShow();
 	
-	@DefaultMessage("Story Board")
+	@DefaultMessage("StoryBoard")
 	String storyBoard();
 	
 	@DefaultMessage("Elementos de Informação")
 	String infoElements();
 	
-	@DefaultMessage("Scroll Banner")
+	@DefaultMessage("ScrollBanner")
 	String scrollBanner();
 
 	@DefaultMessage("Database não suportada")
 	String databaseNotSupportedError();
 	
-	@DefaultMessage("Top Menu Disposal")
+	@DefaultMessage("TopMenuDisposal")
 	String topMenuDisposal();
 	
-	@DefaultMessage("Stack Menu")
+	@DefaultMessage("StackMenu")
 	String stackMenu();
 	
-	@DefaultMessage("Color Picker")
+	@DefaultMessage("ColorPicker")
 	String colorPicker();
 	
-	@DefaultMessage("List Shuttle")
+	@DefaultMessage("ListShuttle")
 	String listShuttle();
 	
 	@DefaultMessage("Image")
 	String image();
 	
-	@DefaultMessage("Single Select")
+	@DefaultMessage("SingleSelect")
 	String singleSelect();
 	
 	@DefaultMessage("Timer")
 	String timer();
 	
-	@DefaultMessage("Dialog View Container")
+	@DefaultMessage("DialogViewContainer")
 	String dialogViewContainer();
 	
 	@DefaultMessage("Elementos de menu")
 	String menuElements();
-	
-	@DefaultMessage("Elementos de lista")
-	String listElements();
-	
-	@DefaultMessage("Elementos de cor")
-	String colorElements();
-	
-	@DefaultMessage("Elementos de tempo")
-	String timerElements();
 	
 	@DefaultMessage("Elementos diversos")
 	String miscellaneousElements();
 	
 	@DefaultMessage("Elementos de aba")
 	String tabElements();
+	
+	@DefaultMessage("DialogBox")
+	String dialogBox();
+	
+	@DefaultMessage("Anchor")
+	String anchor();
+	
+	@DefaultMessage("NumberTextBox")
+	String numberTextBox();
+	
+	@DefaultMessage("Filter")
+	String filter();
 }

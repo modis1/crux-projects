@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_scrollBanner")
 public interface ScrollBannerMessages extends Messages
 {
-	@DefaultMessage("Scroll Banner")
+	@DefaultMessage("ScrollBanner")
 	String title();
 	
 	@DefaultMessage("Três Leis de Asimov")

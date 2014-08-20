@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_gwtTextBox")
 public interface GwtTextBoxMessages extends Messages
 {
-	@DefaultMessage("Textbox")
+	@DefaultMessage("TextBox")
 	String title();
 	
 	@DefaultMessage("Edite-me.")

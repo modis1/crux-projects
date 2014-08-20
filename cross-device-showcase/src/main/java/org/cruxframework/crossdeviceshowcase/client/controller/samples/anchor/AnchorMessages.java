@@ -10,12 +10,6 @@ public interface AnchorMessages extends Messages
 	@DefaultMessage("Anchor")
 	String title();
 	
-	@DefaultMessage("Início")
-	String labelStart();
-	
-	@DefaultMessage("Fim da página")
-	String labelEnd();
-	
 	@DefaultMessage("Link implementado de forma declarativa.")
 	String labelDeclarative();
 	
@@ -25,11 +19,14 @@ public interface AnchorMessages extends Messages
 	@DefaultMessage("Abrir página")
 	String buttonLink();
 	
-	@DefaultMessage("Indo para o fim da página.")
+	@DefaultMessage("Fim da página.")
 	String pgEnd();
 	
 	@DefaultMessage("Indo para o início da página")
 	String pgHome();
+	
+	@DefaultMessage("flavia")
+	String flavia();
 	
 	@DefaultMessage("<p>O componente Anchor é uma âncora cross-device. Com este componente é possível criar links "
 			+ "para navegação em uma mesma página (Ir para o fim da página, Ir para o início da página) e também links "

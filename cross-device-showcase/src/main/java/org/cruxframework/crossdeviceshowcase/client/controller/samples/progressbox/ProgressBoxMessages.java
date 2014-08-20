@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_progressBox")
 public interface ProgressBoxMessages extends Messages
 {
-	@DefaultMessage("Progress Box")
+	@DefaultMessage("ProgressBox")
 	String title();
 	
 	@DefaultMessage("Mostrar Progress Box")

@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_rollingTabPanel")
 public interface RollingTabPanelMessages extends Messages
 {
-	@DefaultMessage("Rolling Tab Panel")
+	@DefaultMessage("RollingTabPanel")
 	String title();
 	
 	@DefaultMessage("Esta aba contém apenas o componente botão.")
@@ -43,7 +43,7 @@ public interface RollingTabPanelMessages extends Messages
 	@DefaultMessage("Botão 2")
 	String button2();
 	
-	@DefaultMessage("<p>Rolling Tab Panel é um painel onde é possível apresentar várias páginas no mesmo espaço, "
+	@DefaultMessage("<p>RollingTabPanel é um painel onde é possível apresentar várias páginas no mesmo espaço, "
 			+ "sendo que a troca do conteúdo a ser visualizado é feita através de abas.</p>"
 			+ "<p>Este componente possui uma animação para a transição das páginas que pode ser ativada ou não. "
 			+ "Cada aba do componente pode váriar entre opções de título (da aba) e conteúdo. As abas podem conter "
