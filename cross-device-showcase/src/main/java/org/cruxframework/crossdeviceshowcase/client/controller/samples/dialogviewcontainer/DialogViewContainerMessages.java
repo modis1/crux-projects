@@ -7,14 +7,15 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_dialogViewContainer")
 public interface DialogViewContainerMessages extends Messages
 {
-	@DefaultMessage("Dialog View Container")
+	@DefaultMessage("DialogViewContainer")
 	String title();
 	
 	@DefaultMessage("Mostrar Dialog")
 	String buttonShowDialog();
 	
-	@DefaultMessage("<p>Dialog View Container é um container de views que utiliza uma caixa de diálogo "
-			+ "flutuante para apresentá-las.</p> <p>No exemplo apresentado o container carrega uma view "
+	@DefaultMessage("<p>DialogViewContainer é um container de views que utiliza uma caixa de diálogo "
+			+ "flutuante para apresentá-las, possibilitando utilizar os benefícios de uma janela "
+			+ "flutuante para views completas. </p> <p>No exemplo apresentado o container carrega uma view "
 			+ "simulando uma tela de cadastro.</p>")
 	String htmlDescText();
 }
