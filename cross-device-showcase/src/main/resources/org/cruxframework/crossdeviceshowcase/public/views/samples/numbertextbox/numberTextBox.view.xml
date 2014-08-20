@@ -11,6 +11,7 @@
 	title="${messages_numberTextBox.title}">
 
 	<center>
+		<crux:styledPanel id="wrapper">
 			<gwt:HTMLPanel id="mainPanel">
 				<gwt:label id="labelText" text="${messages_numberTextBox.labelText}" />
 				<br />
@@ -20,14 +21,15 @@
 				<gwt:label id="labelMaxlength" text="${messages_numberTextBox.labelMaxlength}"/>
 				<br />
 				
-				<crux:storyboard id="radios" height="100px" largeDeviceItemWidth="100px">
+				<crux:storyboard id="radios" height="30px" largeDeviceItemWidth="100px">
 					<gwt:radioButton id="radioButton09" name="value" text="${messages_numberTextBox.radioButton09}" onChange="numberTextBoxController.maxLength"/>
 					<gwt:radioButton id="radioButton099" name="value" text="${messages_numberTextBox.radioButton099}" onChange="numberTextBoxController.maxLength"/>
 					<gwt:radioButton id="radioButton0999" name="value" text="${messages_numberTextBox.radioButton0999}" checked="true" onChange="numberTextBoxController.maxLength"/>
 					<gwt:radioButton id="radioButtonFree" name="value" text="${messages_numberTextBox.radioButtonFree}" onChange="numberTextBoxController.maxLength"/>
 				</crux:storyboard>
 			</gwt:HTMLPanel>
-
+		</crux:styledPanel>
+		
 		<showcase:info title="${messages_numberTextBox.title}">
 			<showcase:description>
 				<gwt:HTML id="htmlDescText"/>
