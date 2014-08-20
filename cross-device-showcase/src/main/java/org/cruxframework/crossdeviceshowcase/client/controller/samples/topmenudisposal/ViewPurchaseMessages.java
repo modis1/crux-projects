@@ -24,9 +24,6 @@ public interface ViewPurchaseMessages extends Messages
 	
 	@DefaultMessage("Lista de Pedidos")
 	String purchaseList();
-	
-	@DefaultMessage("Nenhum resultado encontrado.")
-	String notFound();
 }
   
 

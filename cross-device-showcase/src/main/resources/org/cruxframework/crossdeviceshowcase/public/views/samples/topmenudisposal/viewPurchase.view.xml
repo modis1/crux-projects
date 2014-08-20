@@ -5,7 +5,6 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="viewPurchaseController" 
 	title="${messages_viewPurchase.title}">
 
 	<center>
@@ -25,7 +24,7 @@
 					<gwt:textBox id="txtPassword"/>
 				</crux:entry>
 				<crux:entry horizontalAlignment="right">
-					<crux:button id="btnPurchase" text="${messages_viewPurchase.viewPurchase}" onSelect="viewPurchaseController.searchPurchase"/>
+					<crux:button id="btnPurchase" text="${messages_viewPurchase.viewPurchase}"/>
 				</crux:entry>
 				</crux:formDisplay>
 			</gwt:HTMLPanel>

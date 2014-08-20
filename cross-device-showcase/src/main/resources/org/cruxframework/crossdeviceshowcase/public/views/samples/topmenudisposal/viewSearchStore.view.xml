@@ -5,7 +5,6 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="viewSearchStoreController" 
 	title="${messages_viewSearchStore.title}">
 
 	<center>
@@ -29,7 +28,7 @@
 					</crux:singleSelect>
 				</crux:entry>
 				<crux:entry horizontalAlignment="right">
-					<crux:button id="btnSearch" text="${messages_viewSearchStore.searchStores}" onSelect="viewSearchStoreController.searchStore"/>
+					<crux:button id="btnSearch" text="${messages_viewSearchStore.searchStores}"/>
 				</crux:entry>
 				</crux:formDisplay>
 				</gwt:HTMLPanel>

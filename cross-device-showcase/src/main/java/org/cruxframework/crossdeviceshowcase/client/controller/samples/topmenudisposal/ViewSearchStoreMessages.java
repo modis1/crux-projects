@@ -10,9 +10,6 @@ public interface ViewSearchStoreMessages extends Messages
 	@DefaultMessage("Buscar Lojas")
 	String title();
 	
-	@DefaultMessage("Esta é uma view simples que foi inserida ao menu de forma 'Programática' através de uma controller.")
-	String labelText();
-	
 	@DefaultMessage("Encontre uma loja mais perto de você.")
 	String labelInfo();
 	
@@ -45,9 +42,6 @@ public interface ViewSearchStoreMessages extends Messages
 	
 	@DefaultMessage("Lojas Encontradas.")
 	String storesFound();
-	
-	@DefaultMessage("Nenhum resultado encontrado.")
-	String notFound();
 }
   
 
