@@ -54,13 +54,13 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-@url cruxHeaderLogo cruxHeaderLogo; 
+@url cruxLogo cruxLogo; 
 @external crux-TopMenuDisposal, headerPanel, showMenuButton, menuPanel, menuEntry;
 .crux-TopMenuDisposal .headerPanel
 {
 	width:100%;
-	background:cruxHeaderLogo #003C47 right center no-repeat;
-	background-size:35px 36px;
+	background:cruxLogo #003C47 right -77px center no-repeat;
+	background-size:109px 36px;
 	border-top: solid 3px #C0D406;
 	box-shadow: 0px 1px 0px #639700 inset, 0 -2px 0 rgba(0,0,0,0.24) inset;
 	top:0;
@@ -296,18 +296,17 @@ a{
     height:111px
 }
 .footer .footerLogo{
-    float:left;
-    padding:15px 0 0;
+    width:150px;
+    margin:0 auto;
     font-size:12px;
+    text-align:center;
+    margin-top:10px;
 }
 .footer .footerLogo .footerLogoLogo{
-    float:left;
-    margin-right:10px;
-}
-.footer .footerLogo .footerLogoLogo img{
-    width:50px !important;
-    height:72px !important;
-    background-size:100% 100% !important;
+	background:cruxLogo no-repeat;
+	background-size:100% auto;
+	width:150px;
+	height:50px;
 }                        
 .footer .footerLogo .footerLogoEtc{
     float:left;
@@ -1020,3 +1019,16 @@ border-bottom:1px solid #658B00;
 .btnMini:hover{
 	background:#063c49;
 }
+@external whoUses;
+.whoUses
+{
+	padding:0;
+}
+
+.whoUses li
+{
+	text-align:center;
+	margin:20px 0;
+}
+
+

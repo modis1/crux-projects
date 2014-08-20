@@ -59,7 +59,7 @@ public interface SiteResourcesLargeTouch extends ClientBundle
 	@Source("mountain-bg.png")
 	DataResource mountainBg();
 	
-	@Source("crux-header-logo.png")
+	@Source("crux-logo-big.png")
 	DataResource cruxHeaderLogo();
 	
 	@Source("br-flag.png")

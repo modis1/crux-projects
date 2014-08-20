@@ -39,6 +39,9 @@ public interface SiteResourcesSmall extends ClientBundle
 	@Source("noise.png")
 	DataResource noiseBg();
 	
+	@Source("crux-logo-big.png")
+	DataResource cruxLogo();
+	
 	@Source("banner-cross-device@2x.jpg")
 	ImageResource bannerCrossDevice();
 	
