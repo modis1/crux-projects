@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_topMenuDisposal")
 public interface TopMenuDisposalMessages extends Messages
 {
-	@DefaultMessage("Top Menu Disposal")
+	@DefaultMessage("TopMenuDisposal")
 	String title();
 	
 	@DefaultMessage("Home")

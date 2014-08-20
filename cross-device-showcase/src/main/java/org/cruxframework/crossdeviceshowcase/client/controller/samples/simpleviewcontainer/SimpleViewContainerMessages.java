@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_simpleViewContainer")
 public interface SimpleViewContainerMessages extends Messages
 {
-	@DefaultMessage("Simple View Container")
+	@DefaultMessage("SimpleViewContainer")
 	String title();
 	
 	@DefaultMessage("Próxima view")
@@ -16,7 +16,7 @@ public interface SimpleViewContainerMessages extends Messages
 	@DefaultMessage("View anterior")
 	String previousView();
 	
-	@DefaultMessage("<p>O Simple View Container é um componente.</p>")
+	@DefaultMessage("<p>O SimpleViewContainer é um componente.</p>")
 	String htmlDescText();
 }
 

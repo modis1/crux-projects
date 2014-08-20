@@ -7,10 +7,10 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_textArea")
 public interface TextAreaMessages extends Messages
 {
-	@DefaultMessage("Text Area")
+	@DefaultMessage("TextArea")
 	String title();
 	
-	@DefaultMessage("Um Text Area com max-length (comprimento) dinâmico:")
+	@DefaultMessage("Um TextArea com max-length (comprimento) dinâmico:")
 	String labelText();
 	
 	@DefaultMessage("Insira um novo número abaixo e clique em 'Aplicar' para mudar o max-length")
@@ -40,7 +40,7 @@ public interface TextAreaMessages extends Messages
 	@DefaultMessage("Por favor, insira um valor positivo.")
 	String negativeNumber();
 	
-	@DefaultMessage("<p>Text Area é um campo de texto multi-linha, que poder ser definido por número de linhas e número máximo de caracteres (maxLength). </p>" 
+	@DefaultMessage("<p>TextArea é um campo de texto multi-linha, que poder ser definido por número de linhas e número máximo de caracteres (maxLength). </p>" 
 					+"<p>Neste exemplo o número máximo de caracteres se inicia em 150, insira um novo número, clique em aplicar e faça o teste.</p>")
 	String htmlDescText();
 }

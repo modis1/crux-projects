@@ -7,9 +7,9 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_downloadButton")
 public interface DownloadButtonMessages extends Messages
 {
-	@DefaultMessage("Download Button")
+	@DefaultMessage("DownloadButton")
 	String title();
 	
-	@DefaultMessage("<p>O Download Button</p>")
+	@DefaultMessage("<p>O DownloadButton</p>")
 	String htmlDescText();
 }

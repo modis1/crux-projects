@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_tabViewContainer")
 public interface TabViewContainerMessages extends Messages
 {
-	@DefaultMessage("Tab View Container")
+	@DefaultMessage("TabViewContainer")
 	String title();
 	
 	@DefaultMessage("http://www.cruxframework.org")

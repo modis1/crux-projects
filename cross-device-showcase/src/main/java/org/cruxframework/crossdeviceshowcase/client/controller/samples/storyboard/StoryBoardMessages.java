@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_storyBoard")
 public interface StoryBoardMessages extends Messages
 {
-	@DefaultMessage("Story Board")
+	@DefaultMessage("StoryBoard")
 	String title();
 	
 	@DefaultMessage("Você clicou em Adicionar ao carrinho!")
@@ -19,7 +19,7 @@ public interface StoryBoardMessages extends Messages
 	@DefaultMessage("Adicionar ao carrinho")
 	String addCart();
 	
-	@DefaultMessage("<p>O Storyboard é um painel de distribuição de elementos que se adapta "
+	@DefaultMessage("<p>O StoryBoard é um painel de distribuição de elementos que se adapta "
 			+"ao tipo de dispositivo.</p>"
 			+"<p>Em dispositivos de tela grande como desktops, os elementos são "
 			+"distribuídos lado a lado até o final da largura determinada, gerando uma "

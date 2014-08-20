@@ -7,10 +7,10 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_sortableList")
 public interface SortableListMessages extends Messages
 {
-	@DefaultMessage("Sortable List")
+	@DefaultMessage("SortableList")
 	String title();
 	
-	@DefaultMessage("<p>O Sortable List é um componente.</p>")
+	@DefaultMessage("<p>O SortableList é um componente.</p>")
 	String htmlDescText();
 }
 

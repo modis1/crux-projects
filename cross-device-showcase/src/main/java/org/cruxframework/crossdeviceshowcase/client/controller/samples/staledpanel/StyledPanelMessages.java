@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_styledPanel")
 public interface StyledPanelMessages extends Messages
 {
-	@DefaultMessage("Styled Panel")
+	@DefaultMessage("StyledPanel")
 	String title();
 	
 	@DefaultMessage("Eu sou um button")

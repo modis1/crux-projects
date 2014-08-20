@@ -7,7 +7,7 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_stackMenu")
 public interface StackMenuMessages extends Messages
 {
-	@DefaultMessage("Stack Menu")
+	@DefaultMessage("StackMenu")
 	String title();
 	
 	@DefaultMessage("Você selecionou o ítem ")

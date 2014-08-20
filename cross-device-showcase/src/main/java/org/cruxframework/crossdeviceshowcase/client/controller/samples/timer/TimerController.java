@@ -29,7 +29,7 @@ public class TimerController
 	@Expose
 	public void onLoad()
 	{
-		/* Insert the component description*/
+		//Insert the component description
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
 	}
 
@@ -37,6 +37,7 @@ public class TimerController
 	public void start()
 	{
 		warnTime();
+		
 		myWidgetAccessor.timer().reset();
 		statusStart = false;
 		statusStop = false;
@@ -56,7 +57,7 @@ public class TimerController
 			
 			@Override
 			public long getScheduledTime() {
-				return 10;
+				return 5;
 			}
 		});
 	}

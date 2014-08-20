@@ -7,9 +7,9 @@ import com.google.gwt.i18n.client.Messages;
 @MessageName("messages_sequentialPager")
 public interface SequentialPagerMessages extends Messages
 {
-	@DefaultMessage("Sequential Pager")
+	@DefaultMessage("SequentialPager")
 	String title();
 	
-	@DefaultMessage("<p>Sequential Pager é um componente.</p>")
+	@DefaultMessage("<p>SequentialPager é um componente.</p>")
 	String htmlDescText();
 }

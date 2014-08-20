@@ -31,7 +31,7 @@ public class SingleSelectController
 	public void selectedItemDepartments()
 	{
 		int index = myWidgetAccessor.singleSelectDepartments().getSelectedIndex();
-		if (index > -1)
+		if (index >= 0)
 		{
 			String item = myWidgetAccessor.singleSelectDepartments().getValue(index);
 			loadEmployees(item);
@@ -72,13 +72,13 @@ public class SingleSelectController
 	{
 		
 		int indexDepartment = myWidgetAccessor.singleSelectDepartments().getSelectedIndex();
-		if (indexDepartment > -1)
+		if (indexDepartment >= 0)
 		{
 			String itemDepartment = myWidgetAccessor.singleSelectDepartments().getItemText(indexDepartment);
 			
 			int indexEmployee = myWidgetAccessor.singleSelectEmployees().getSelectedIndex();
 			
-			if (indexEmployee > -1)
+			if (indexEmployee >= 0)
 			{
 				String itemEmployee = myWidgetAccessor.singleSelectEmployees().getItemText(indexEmployee);
 				FlatMessageBox.show(messages.messageItemSelectedEmployee()+itemEmployee+messages.messageItemSelectedEmployeeContinue()+itemDepartment+".", MessageType.INFO);

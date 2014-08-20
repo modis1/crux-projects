@@ -22,12 +22,12 @@ public interface TimerMessages extends Messages
 	@DefaultMessage("Zerar")
 	String buttonClear();
 	
-	@DefaultMessage("Chegamos em 10 segundos.")
+	@DefaultMessage("Chegamos em 5 segundos.")
 	String warnTime();
 	
-	@DefaultMessage("<p>O componente timer é um contador de tempo capaz de disparar eventos programados. Este componente "
+	@DefaultMessage("<p>O componente Timer é um contador de tempo capaz de disparar eventos programados. Este componente "
 			+ "Também permite ativar contagem regressiva ou definir um determinado valor para início da contagem.</p>"
-			+ "<p>No exemplo apresentado o Timer realiza as funções de um cronômetro que se inicia automaticamente e dispara "
-			+ "uma mensagem quando alcança a contagem de 10 segundos.</p>")
+			+ "<p>No exemplo apresentado o Timer realiza as funções de um cronômetro e dispara uma mensagem quando "
+			+ "alcança a contagem de 5 segundos.</p>")
 	String htmlDescText();
 }
