@@ -15,9 +15,7 @@
 			<gwt:HTMLPanel id="mainPanel">
 				<gwt:label id="labelText" text="${messages_numberTextBox.labelText}" />
 				<br />
-				<crux:styledPanel id="panel" styleName="center">
-					<crux:numberTextBox id="boxNumber" maxLength="5" value="44"/>
-				</crux:styledPanel>
+				<crux:numberTextBox id="boxNumber" maxLength="5" value="44"/>
 				<br />
 				<gwt:label id="labelMaxlength" text="${messages_numberTextBox.labelMaxlength}"/>
 				<br />

@@ -9,14 +9,9 @@
 	title="${messages_viewHome.title}">
 
 	<center>
-		<gwt:HTMLPanel id="parentPanel" height="300px" width="700px">
+		<gwt:HTMLPanel id="parentPanel" height="200px" width="600px">
 			<gwt:HTMLPanel id="panelTitle" styleName="topMenuDisposalPanelLeft">
 				<gwt:label id="labelTitle" text="${messages_viewHome.title}" styleName="topMenuDisposalTitle"/>
-			</gwt:HTMLPanel>
-			<br />
-			<gwt:HTMLPanel id="panelButton" styleName="topMenuDisposalPanelRigth">
-				<crux:button id="btnLogin" text="${messages_viewHome.btnLogin}" style="margin-left: 30px;"/>
-				<crux:button id="btnRegister" text="${messages_viewHome.btnRegister}"/>
 			</gwt:HTMLPanel>
 			<br />
 			<gwt:HTMLPanel id="panelLabels" styleName="topMenuDisposalPanelCenter">

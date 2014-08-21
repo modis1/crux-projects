@@ -16,11 +16,6 @@ public interface ViewHomeMessages extends Messages
 	@DefaultMessage("Aqui você encontra tudo que precisa.")
 	String labelTextComp();
 	
-	@DefaultMessage("Entrar")
-	String btnLogin();
-	
-	@DefaultMessage("Registrar")
-	String btnRegister();
 }
   
 

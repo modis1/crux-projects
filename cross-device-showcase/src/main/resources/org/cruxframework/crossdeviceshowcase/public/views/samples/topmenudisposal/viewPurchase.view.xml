@@ -8,25 +8,16 @@
 	title="${messages_viewPurchase.title}">
 
 	<center>
-		<gwt:HTMLPanel id="parentPanel" height="300px" width="700px">
+		<gwt:HTMLPanel id="parentPanel" height="200px" width="600px">
 			<gwt:HTMLPanel id="panelLabel" styleName="topMenuDisposalPanelLeft">
 				<gwt:label id="labelTitle" text="${messages_viewPurchase.title}" styleName="topMenuDisposalTitle"/>
 				<gwt:label id="labelInfo" text="${messages_viewPurchase.labelInfo}" styleName="topMenuDisposalInfo"/>
 			</gwt:HTMLPanel>
 			
 			<gwt:HTMLPanel id="panelForm" styleName="topMenuDisposalPanelRight">
-				<br />
-				<crux:formDisplay id="formPurchase">
-				<crux:entry label="${messages_viewPurchase.labelEmail}">
-					<gwt:textBox id="txtEmail"/>
-				</crux:entry>
-				<crux:entry label="${messages_viewPurchase.labelPassword}">
-					<gwt:textBox id="txtPassword"/>
-				</crux:entry>
 				<crux:entry horizontalAlignment="right">
 					<crux:button id="btnPurchase" text="${messages_viewPurchase.viewPurchase}"/>
 				</crux:entry>
-				</crux:formDisplay>
 			</gwt:HTMLPanel>
 			
 			<br />
