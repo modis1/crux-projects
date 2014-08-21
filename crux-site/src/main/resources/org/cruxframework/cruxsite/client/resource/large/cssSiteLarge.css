@@ -493,11 +493,12 @@ h2{
 	margin:0;
 	padding:0;
 	list-style:none;
+	display:flex;
 }
 .whoUses li{
-	float:left;
-	padding:10px 60px 10px 0;
+	text-align:center;
 	color:#7f7f7f;
+	flex:1;
 }
 
 @external communityBlocks;
