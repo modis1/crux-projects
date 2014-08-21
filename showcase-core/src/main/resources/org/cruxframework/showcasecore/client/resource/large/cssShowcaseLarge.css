@@ -613,40 +613,43 @@ body
 	line-height: 200%;
 }
 
-.topMenuDisposalPanelLeft
+.topMenuDisposalPanel
 {
-	margin-top: 30px;
-	display: table;
-	float: left;
-	width: 350px;
-	border-right:thin;
-	padding-right: 50px;
+	width: 600px;
+	height: 200px;
 }
 
-.topMenuDisposalPanelCenter
+.topMenuDisposalPanelLeft
 {
-	margin-top: 30px;
+	margin-top: 5%;
 	display: table;
 	float: left;
-	width: 700px;
+	width: 50%;
 	padding-right: 50px;
 }
 
 .topMenuDisposalPanelRight
 {
-	margin-top: 30px;
+	margin-top: 5%;
 	display: table;
 	float: right;
-	width: 320px;
+	width: 50%;
+}
+
+.topMenuDisposalPanelCenter
+{
+	margin-top: 10%;
+	width: 100%;
+	text-align: center;
 }
 
 .topMenuDisposalPanelList
 {
-	float:left; 
-	width:700px;
-	height:100px; 
-	margin-top:30px; 
-	padding:80px;
+	height:45%; 
+	width:100%;
+	margin-top:15%; 
+	text-align: center;
+	vertical-align: middle;
 }
 
 .topMenuDisposalListActive
@@ -661,11 +664,6 @@ body
 {
 	color: #666666;
 	text-align: center;
-}
-
-.topMenuDisposal
-{
-	background-color: #0066CC !important;
 }
 
 .topMenuDisposalImage
@@ -731,18 +729,15 @@ body
 }
 
 
-
-
 .anchorWrapper
 { 	
-	width: 500px;
-	height: 170px;
-	margin: 30px;
-	padding-top: 8%;
+	margin: 5%;
+	padding: 8%;
 	border-style: dotted !important;
 	border-width: thin;
 	border-color: #1c5994 !important;
 	vertical-align: middle !important;
+	text-align:center;
 }
 .anchorLabel
 {
@@ -848,4 +843,15 @@ body
 {
 	font-weight: bold;
 	margin-top: 3%;
+}
+
+.textBoxSize
+{
+	width: 300px;
+}
+
+.dialogViewContainer
+{
+	width:500px;
+	height:300px;
 }
