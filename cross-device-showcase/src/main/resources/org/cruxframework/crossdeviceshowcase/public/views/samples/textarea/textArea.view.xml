@@ -10,15 +10,15 @@
 	title="${messages_textArea.title}">
 
 	<center>
-		<crux:styledPanel id="painel">
-			<gwt:HTMLPanel id="StatesWrapper">
+		<crux:styledPanel id="painel" styleName="center">
+			<gwt:HTMLPanel id="StatesWrapper" styleName="center">
 				<crux:formDisplay id="form">
 					<crux:entry>
 						<gwt:label id="labelText" text="${messages_textArea.labelText}" />
 					</crux:entry>
 					<crux:entry>
-						<crux:textArea id="textArea" width="400px"
-							visibleLines="8" focus="true" text="${messages_textArea.textArea}" />
+						<crux:textArea id="textArea" visibleLines="6" 
+						focus="true" text="${messages_textArea.textArea}" />
 					</crux:entry>
 					<crux:entry>
 						<gwt:HTMLPanel id="limitLengthWrapper" styleName="cf">

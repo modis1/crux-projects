@@ -10,7 +10,7 @@
 	title="${messages_dialogViewContainer.title}"> 
 
 	<center>
-		<crux:dialogViewContainer id="dialogViewContainer" width="500px" height="300px">
+		<crux:dialogViewContainer id="dialogViewContainer" >
 		</crux:dialogViewContainer>
 
 		<crux:styledPanel id="mainPanel">

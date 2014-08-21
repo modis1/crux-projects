@@ -10,8 +10,8 @@
 	title="${messages_filter.title}"> 
 
 	<center>
-		<crux:styledPanel id="wrapper">
-			<gwt:HTMLPanel id="wrapperChild">
+		<crux:styledPanel id="wrapper" styleName="center">
+			<gwt:HTMLPanel id="wrapperChild" styleName="center">
 				<gwt:label id="labelInsertText" text="${messages_filter.labelText}"/>
 				<br />
 				<crux:filter id="filterWidget" text="${messages_filter.caption}" animationEnabled="true" 

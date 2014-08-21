@@ -9,7 +9,7 @@
 	title="messages_views.homeTitle}">
 
 	<center>
-		<gwt:HTMLPanel id="parentPanel" height="200px" width="600px">
+		<gwt:HTMLPanel id="parentPanel" styleName="topMenuDisposalPanel">
 			<gwt:HTMLPanel id="panelTitle" styleName="topMenuDisposalPanelLeft">
 				<gwt:label id="labelTitle" text="${messages_views.homeTitle}" styleName="topMenuDisposalTitle"/>
 			</gwt:HTMLPanel>

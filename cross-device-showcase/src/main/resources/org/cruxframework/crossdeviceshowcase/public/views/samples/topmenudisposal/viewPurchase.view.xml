@@ -8,7 +8,7 @@
 	title="${messages_views.purchaseTitle}">
 
 	<center>
-		<gwt:HTMLPanel id="parentPanel" height="200px" width="600px">
+		<gwt:HTMLPanel id="parentPanel" styleName="topMenuDisposalPanel">
 			<gwt:HTMLPanel id="panelLabel" styleName="topMenuDisposalPanelLeft">
 				<gwt:label id="labelTitle" text="${messages_views.purchaseTitle}" styleName="topMenuDisposalTitle"/>
 				<gwt:label id="labelInfo" text="${messages_views.purchaseLabelInfo}" styleName="topMenuDisposalInfo"/>

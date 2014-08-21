@@ -9,40 +9,42 @@
 	title="${messages_viewRegister.title}"> 
 
 	<center>
-			<gwt:label id="labelText" text="${messages_viewRegister.labelText}" />
-			<br />
-			<crux:styledPanel id="formPanel">
-				<crux:formDisplay id="formRegister">
-					<crux:entry label="${messages_viewRegister.fieldName}">
-						<gwt:textBox id="txtName" maxLength="40" width="300px"/>
-					</crux:entry>
-					<crux:entry label="${messages_viewRegister.fieldEmail}">
-						<gwt:textBox id="txtEmail" maxLength="20" width="300px"/>
-					</crux:entry>
-					<crux:entry label="${messages_viewRegister.fieldAddress}">
-						<gwt:textBox id="txtAddress" maxLength="60" width="300px"/>
-					</crux:entry>
-					<crux:entry horizontalAlignment="center">
-						<crux:button id="btnRegister" text="${messages_viewRegister.buttonView}"
-							onSelect="viewRegisterController.showResult"/>
-					</crux:entry>
-				</crux:formDisplay>
-			</crux:styledPanel>
-			
-			<gwt:HTMLPanel id="panelError" visible="false">
+			<gwt:HTMLPanel id="parentPanel">
+				<gwt:label id="labelText" text="${messages_viewRegister.labelText}" />
 				<br />
-				<gwt:label id="errorMessage" text="${messages_viewRegister.errorMessage}" styleName="errorMessage"/>
-			</gwt:HTMLPanel>
-
-			<gwt:HTMLPanel id="panelResult" visible="false">
-				<gwt:label id="labelResult" text="${messages_viewRegister.labelResult}" styleName="successMessage"/>
-				<br />
-				<gwt:HTMLPanel id="panelResultData" styleName="panelResultData">
-				<gwt:label id="labelResultName"/>
-				<br />
-				<gwt:label id="labelResultEmail"/>
-				<br />
-				<gwt:label id="labelResultAddress"/>
+				<crux:styledPanel id="formPanel">
+					<crux:formDisplay id="formRegister">
+						<crux:entry label="${messages_viewRegister.fieldName}">
+							<gwt:textBox id="txtName" maxLength="40" styleName="textBoxSize"/>
+						</crux:entry>
+						<crux:entry label="${messages_viewRegister.fieldEmail}">
+							<gwt:textBox id="txtEmail" maxLength="20" styleName="textBoxSize"/>
+						</crux:entry>
+						<crux:entry label="${messages_viewRegister.fieldAddress}">
+							<gwt:textBox id="txtAddress" maxLength="60" styleName="textBoxSize"/>
+						</crux:entry>
+						<crux:entry horizontalAlignment="center">
+							<crux:button id="btnRegister" text="${messages_viewRegister.buttonView}"
+								onSelect="viewRegisterController.showResult"/>
+						</crux:entry>
+					</crux:formDisplay>
+				</crux:styledPanel>
+				
+				<gwt:HTMLPanel id="panelError" visible="false">
+					<br />
+					<gwt:label id="errorMessage" text="${messages_viewRegister.errorMessage}" styleName="errorMessage"/>
+				</gwt:HTMLPanel>
+	
+				<gwt:HTMLPanel id="panelResult" visible="false">
+					<gwt:label id="labelResult" text="${messages_viewRegister.labelResult}" styleName="successMessage"/>
+					<br />
+					<gwt:HTMLPanel id="panelResultData" styleName="panelResultData">
+					<gwt:label id="labelResultName"/>
+					<br />
+					<gwt:label id="labelResultEmail"/>
+					<br />
+					<gwt:label id="labelResultAddress"/>
+					</gwt:HTMLPanel>
 				</gwt:HTMLPanel>
 			</gwt:HTMLPanel>
 	</center>
