@@ -5,24 +5,18 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	title="${messages_viewPurchase.title}">
+	title="${messages_views.purchaseTitle}">
 
 	<center>
 		<gwt:HTMLPanel id="parentPanel" height="200px" width="600px">
 			<gwt:HTMLPanel id="panelLabel" styleName="topMenuDisposalPanelLeft">
-				<gwt:label id="labelTitle" text="${messages_viewPurchase.title}" styleName="topMenuDisposalTitle"/>
-				<gwt:label id="labelInfo" text="${messages_viewPurchase.labelInfo}" styleName="topMenuDisposalInfo"/>
+				<gwt:label id="labelTitle" text="${messages_views.purchaseTitle}" styleName="topMenuDisposalTitle"/>
+				<gwt:label id="labelInfo" text="${messages_views.purchaseLabelInfo}" styleName="topMenuDisposalInfo"/>
 			</gwt:HTMLPanel>
-			
-			<gwt:HTMLPanel id="panelForm" styleName="topMenuDisposalPanelRight">
-				<crux:entry horizontalAlignment="right">
-					<crux:button id="btnPurchase" text="${messages_viewPurchase.viewPurchase}"/>
-				</crux:entry>
-			</gwt:HTMLPanel>
-			
+		
 			<br />
 			<crux:styledPanel id="panelList" styleName="topMenuDisposalPanelList">
-				<gwt:label id="labelPurchase" text="${messages_viewPurchase.purchaseList}" styleName="topMenuDisposalListInactive"/>
+				<gwt:label id="labelPurchase" text="${messages_views.purchaseList}" styleName="topMenuDisposalListInactive"/>
 			</crux:styledPanel>
 		</gwt:HTMLPanel>
 	</center>
