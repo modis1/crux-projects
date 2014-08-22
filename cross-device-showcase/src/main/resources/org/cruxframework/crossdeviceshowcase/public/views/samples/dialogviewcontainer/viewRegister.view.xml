@@ -9,19 +9,19 @@
 	title="${messages_viewRegister.title}"> 
 
 	<center>
-			<gwt:HTMLPanel id="parentPanel">
+			<gwt:HTMLPanel id="parentPanel" styleName="dialogViewContainer">
 				<gwt:label id="labelText" text="${messages_viewRegister.labelText}" />
 				<br />
 				<crux:styledPanel id="formPanel">
 					<crux:formDisplay id="formRegister">
 						<crux:entry label="${messages_viewRegister.fieldName}">
-							<gwt:textBox id="txtName" maxLength="40" styleName="textBoxSize"/>
+							<gwt:textBox id="txtName" maxLength="40"/>
 						</crux:entry>
 						<crux:entry label="${messages_viewRegister.fieldEmail}">
-							<gwt:textBox id="txtEmail" maxLength="20" styleName="textBoxSize"/>
+							<gwt:textBox id="txtEmail" maxLength="20"/>
 						</crux:entry>
 						<crux:entry label="${messages_viewRegister.fieldAddress}">
-							<gwt:textBox id="txtAddress" maxLength="60" styleName="textBoxSize"/>
+							<gwt:textBox id="txtAddress" maxLength="60"/>
 						</crux:entry>
 						<crux:entry horizontalAlignment="center">
 							<crux:button id="btnRegister" text="${messages_viewRegister.buttonView}"
@@ -35,7 +35,7 @@
 					<gwt:label id="errorMessage" text="${messages_viewRegister.errorMessage}" styleName="errorMessage"/>
 				</gwt:HTMLPanel>
 	
-				<gwt:HTMLPanel id="panelResult" visible="false">
+				<gwt:HTMLPanel id="panelResult" visible="false" styleName="dialogViewContainerResult">
 					<gwt:label id="labelResult" text="${messages_viewRegister.labelResult}" styleName="successMessage"/>
 					<br />
 					<gwt:HTMLPanel id="panelResultData" styleName="panelResultData">
@@ -46,6 +46,7 @@
 					<gwt:label id="labelResultAddress"/>
 					</gwt:HTMLPanel>
 				</gwt:HTMLPanel>
+				
 			</gwt:HTMLPanel>
 	</center>
 

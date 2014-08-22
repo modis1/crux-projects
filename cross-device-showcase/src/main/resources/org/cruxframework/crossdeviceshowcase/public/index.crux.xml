@@ -60,6 +60,7 @@
 			<crux:menuEntry label="${messages_showcase.progressBox}" targetView="progressBox"/>
 			
 			<crux:menuSection label="${messages_showcase.imageElements}"/>
+			<crux:menuEntry label="${messages_showcase.image}" targetView="image"/>
 			<crux:menuEntry label="${messages_showcase.promoBanner}" targetView="promoBanner"/>
 			<crux:menuEntry label="${messages_showcase.slideShow}" targetView="slideshow"/>
 			<crux:menuEntry label="${messages_showcase.storyBoard}" targetView="storyBoard"/>
@@ -86,7 +87,6 @@
 <!-- 			<crux:menuEntry label="Swap View Container" targetView="swapViewContainer"/> -->
 <!-- 			<crux:menuEntry label="Horizontal Swap View Container" targetView="horizontalSwapViewContainer"/> -->
 <!-- 			<crux:menuEntry label="Horizontal Swap Panel" targetView="horizontalSwapPanel"/> -->
-<!-- 			<crux:menuEntry label="${messages_showcase.image}" targetView="image"/> -->
 			
 		</crux:menuTabsDisposal>
 		

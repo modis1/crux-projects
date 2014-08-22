@@ -10,12 +10,13 @@
 	title="${messages_timer.title}">
 
 	<center>
-		<crux:styledPanel id="wrapper" styleName="center">
-			<gwt:HTMLPanel id="panel">
-				<crux:styledPanel id="timerPanel" >
-					<crux:timer id="timer" initial="0" start="false" onLoadWidget="timerController.warnTime" />
-				</crux:styledPanel>
+		<crux:styledPanel id="wrapper">
+			<gwt:HTMLPanel id="parentPanel" styleName="center">
+				<gwt:HTMLPanel id="timerPanel" styleName="timerPanel">
+					<crux:timer id="timer" initial="0" start="false"/>
+				</gwt:HTMLPanel>
 				<br />
+				<gwt:HTMLPanel id="panelButtons">
 					<gwt:horizontalPanel id="buttonsPanel">
 						<crux:button id="buttonStart" text="${messages_timer.buttonStart}"
 							onSelect="timerController.start" />
@@ -24,6 +25,7 @@
 						<crux:button id="buttonClear" text="${messages_timer.buttonClear}"
 							onSelect="timerController.clear" />
 					</gwt:horizontalPanel>
+				</gwt:HTMLPanel>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 

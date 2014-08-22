@@ -21,9 +21,9 @@
 						</crux:storyboard>
 				
 				<gwt:HTMLPanel id="labelPanel">
-					<gwt:label id="labelTitleImage" width="900px" styleName="imagelabelTitleImage"/>
+					<gwt:label id="labelTitleImage" styleName="imagelabelTitleImage"/>
 					<br />
-					<gwt:label id="labelInformImage" width="900px" styleName="imagelabelInformImage"/>
+					<gwt:label id="labelInformImage" styleName="imagelabelInformImage"/>
 				</gwt:HTMLPanel>
 			</gwt:HTMLPanel>
 

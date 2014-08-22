@@ -10,7 +10,7 @@
 	title="${messages_anchor.title}"> 
 	
 	<center>
-		<crux:styledPanel id="wrapper" styleName="center">
+		<crux:styledPanel id="wrapper">
 			<gwt:HTMLPanel id="panel" styleName="center">
 				<a id="home" style="color:#1c5994"></a>
 	

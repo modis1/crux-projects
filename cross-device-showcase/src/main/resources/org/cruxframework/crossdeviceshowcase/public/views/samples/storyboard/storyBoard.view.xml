@@ -10,7 +10,8 @@
 	title="${messages_storyBoard.title}">
 
 	<center>
-		<crux:storyboard id="storyboard" height="100%" width="100%"></crux:storyboard>
+		<crux:storyboard id="storyboard" height="100%" width="100%">
+		</crux:storyboard>
 
 		<showcase:info title="${messages_storyBoard.title}">
 			<showcase:description>

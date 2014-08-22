@@ -10,7 +10,7 @@
 	title="${messages_textArea.title}">
 
 	<center>
-		<crux:styledPanel id="painel" styleName="center">
+		<crux:styledPanel id="painel">
 			<gwt:HTMLPanel id="StatesWrapper" styleName="center">
 				<crux:formDisplay id="form">
 					<crux:entry>
