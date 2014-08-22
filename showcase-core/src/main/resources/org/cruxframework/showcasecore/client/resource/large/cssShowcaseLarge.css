@@ -576,6 +576,7 @@ body
 {
 	text-align: justify;
 	color:#1c5994;
+	width: 900px;
 }
 
 .imagelabelTitleImage
@@ -585,6 +586,7 @@ body
 	font-weight: bold;
 	margin-bottom: 1%;
 	color:#1c5994;
+	width: 900px;
 }
 
 .topMenuDisposalTitle
@@ -617,6 +619,7 @@ body
 {
 	width: 600px;
 	height: 200px;
+	text-align: center;
 }
 
 .topMenuDisposalPanelLeft
@@ -731,18 +734,13 @@ body
 
 .anchorWrapper
 { 	
-	margin: 5%;
-	padding: 8%;
+	margin: 6%;
+	padding: 6%;
 	border-style: dotted !important;
 	border-width: thin;
 	border-color: #1c5994 !important;
 	vertical-align: middle !important;
 	text-align:center;
-}
-.anchorLabel
-{
-	font-size: large;
-	font-weight: bold;
 }
 
 .horizontalSwapViewPanel1
@@ -845,13 +843,20 @@ body
 	margin-top: 3%;
 }
 
-.textBoxSize
-{
-	width: 300px;
-}
-
 .dialogViewContainer
 {
 	width:500px;
 	height:300px;
+}
+
+.dialogViewContainerResult
+{
+	margin-top: 12%;
+}
+
+.timerPanel
+{
+	text-align:center;
+	box-shadow: 1px 1px 8px #888888;
+	border-radius: 3px;
 }

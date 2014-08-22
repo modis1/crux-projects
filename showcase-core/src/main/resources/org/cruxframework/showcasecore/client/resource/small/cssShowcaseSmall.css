@@ -407,8 +407,8 @@ body
 
 .imageStyleNormal1, .imageStyleNormal2, .imageStyleNormal3
 {
-	width:280px !important;
-	height:220px !important; 
+	width:150px !important;
+	height:100px !important; 
 	background-size: 100% 100%;
 	margin:5px;
 }
@@ -430,8 +430,8 @@ body
 
 .imageStyleBig1, .imageStyleBig2, .imageStyleBig3
 {
-	width:350px !important;
-	height:270px !important; 
+	width:200px !important;
+	height:156px !important; 
 	background-size: 100% 100%;
 	margin:5px;
 }
@@ -453,8 +453,8 @@ body
 
 .imageStyleSmall1, .imageStyleSmall2, .imageStyleSmall3
 {
-	width:280px !important;
-	height:220px !important; 
+	width:120px !important;
+	height:94px !important; 
 	background-size: 100% 100%;
 	margin:5px;
 	opacity:0.40;
@@ -481,6 +481,7 @@ body
 {
 	text-align: justify;
 	color:#1c5994;
+	width: 95%;
 }
 
 .imagelabelTitleImage
@@ -490,6 +491,7 @@ body
 	font-weight: bold;
 	margin-bottom: 1%;
 	color:#1c5994;
+	width: 100%;
 }
 
 .topMenuDisposalTitle
@@ -613,19 +615,13 @@ body
 
 .anchorWrapper
 { 	
-	margin: 5%;
-	padding: 8%;
+	margin: 4%;
+	padding: 4%;
 	border-style: dotted !important;
 	border-width: thin;
 	border-color: #1c5994 !important;
 	vertical-align: middle !important;
 	text-align:center;
-}
-
-.anchorLabel
-{
-	font-size: large;
-	font-weight: bold;
 }
 
 .topMenuDisposalTitle
@@ -719,26 +715,31 @@ body
 	filter: alpha(opacity=75);
 }
 
-.radioBtn
-{
-	margin: 3%;
-}
-
-.textBoxSize
-{
-	width: 100%;
-}
-
 .dialogViewContainer
 {
 	width:100%;
 	height:100%;
 }
-/* .menuEntriesContainer .menuSectionEntries:nth-child\(2\) .menuSectionEntriesContent .menuEntry:nth-child\(5\), */
-/* .menuEntriesContainer .menuSectionEntries:nth-child\(4\) .menuSectionEntriesContent .menuEntry:nth-child\(1\), */
-/* .menuEntriesContainer .menuSectionEntries:nth-child\(10\) .menuSectionEntriesContent .menuEntry:nth-child\(1\), */
-/* .menuEntriesContainer .menuSectionEntries:nth-child\(10\) .menuSectionEntriesContent .menuEntry:nth-child\(3\), */
-/* .menuEntriesContainer .menuSectionEntries:nth-child\(12\) .menuSectionEntriesContent .menuEntry:nth-child\(1\) */
-/* { */
-/* 	display:none; */
-/* } */
+
+.dialogViewContainerResult
+{
+	margin-top: 12%;
+}
+
+.radioPanel
+{
+	height: 80px;
+}
+
+.timerPanel
+{
+	text-align:center;
+	box-shadow: 1px 1px 8px #888888;
+	border-radius: 3px;
+}
+
+.menuEntriesContainer .menuSectionEntries:nth-child\(12\) .menuSectionEntriesContent .menuEntry:nth-child\(3\)
+/* .menuEntriesContainer .menuSectionEntries:nth-child\(7\) .menuSectionEntriesContent .menuEntry:nth-child\(3\) */
+{
+	display:none;
+}
