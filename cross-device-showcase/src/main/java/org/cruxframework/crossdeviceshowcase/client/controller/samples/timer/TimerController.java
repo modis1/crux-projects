@@ -45,8 +45,7 @@ public class TimerController
 		statusStart = true;
 	}
 	
-	@Expose
-	public void warnTime()
+	private void warnTime()
 	{
 		myWidgetAccessor.timer().addTimeoutHandler(new TimeoutHandler() {
 			

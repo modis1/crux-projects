@@ -23,8 +23,6 @@ public class DialogViewContainerController
 	{
 		// Insert the component description
 		viewDialog.htmlDescText().setHTML(messages.htmlDescText());
-		
-		viewDialog.dialogViewContainer().addStyleName("dialogViewContainer");
 	}
 	
 	@Expose

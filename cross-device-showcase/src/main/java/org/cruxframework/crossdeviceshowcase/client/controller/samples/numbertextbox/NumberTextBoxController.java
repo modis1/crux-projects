@@ -5,6 +5,7 @@ import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.widgets.client.storyboard.Storyboard;
 import org.cruxframework.crux.widgets.client.textbox.NumberTextBox;
 
 import com.google.gwt.user.client.ui.HTML;
@@ -56,6 +57,7 @@ public class NumberTextBoxController
 	@BindView("numberTextBox")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
+		Storyboard radios();
 		NumberTextBox boxNumber();
 		HTML htmlDescText();
 		

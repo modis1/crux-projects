@@ -11,6 +11,9 @@ import org.cruxframework.crux.widgets.client.swappanel.HorizontalSwapPanel;
 import org.cruxframework.crux.widgets.client.swappanel.HorizontalSwapPanel.Direction;
 import org.cruxframework.crux.widgets.client.textarea.TextArea;
 
+import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.resources.client.impl.ImageResourcePrototype;
+import com.google.gwt.resources.rg.ImageResourceGenerator;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
@@ -34,7 +37,11 @@ public class HorizontalSwapPanelController
 	@Expose
 	public void showImage()
 	{
-		myWidgetAccessor.swapPanel().transitTo(myWidgetAccessor.image(), Direction.FORWARD);
+		Image image = new Image();
+		ImageResourceHorizontalSwapPanel imageResource = new ImageResourceHorizontalSwapPanel();
+		image.setResource(imageResource);
+		//image.setUrl("https://www.google.com.br/images/srpr/logo11w.png");
+		myWidgetAccessor.swapPanel().transitTo(image, Direction.FORWARD);
 	}
 	
 	@Expose
