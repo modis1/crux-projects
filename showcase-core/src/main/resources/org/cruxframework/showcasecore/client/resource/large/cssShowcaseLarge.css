@@ -142,6 +142,7 @@ body
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: normal;
 	margin: 2%;
+	text-align: center;
 }
 
 .textInfo
