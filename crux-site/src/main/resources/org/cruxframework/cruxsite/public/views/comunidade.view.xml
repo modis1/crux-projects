@@ -32,7 +32,7 @@
                             <crux:anchor id="linkProjExemplo" href="#topMenuDisposal:projexemplo" styleName="defaultLink" text="Projetos de Exemplo"></crux:anchor>
                         </li>
 					</ul>
-                    <p>Caso tenha alguma duvida ou problema ao usar o Crux Framework acesse o <a href="https://groups.google.com/forum/#!forum/crux-framework" 
+                    <p>Caso tenha alguma duvida ou problema ao usar o Crux Framework acesse o <a href="#topMenuDisposal:forum" 
                     title="Issue" class="defaultLink">Forum</a> do Crux. Lá você pode pesquisar ou enviar a sua dúvida.
                     </p>
                     <p>Caso encontre algum bug no Crux Framework, ajude-nos criando um <a href="http://code.google.com/p/crux-framework/issues/list" 

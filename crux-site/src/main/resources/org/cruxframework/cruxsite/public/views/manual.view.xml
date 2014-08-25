@@ -18,14 +18,14 @@
 				<ul class="downloadCurrent">
 					<li>
 						<h5>Versão Atual:</h5>
-						<h2>Manual Crux 5.2</h2>
+						<h2>Manual Crux 5.1</h2>
 					</li>
 					<li style="overflow:hidden">
 						<ul class="btnGroup">
-							<li><crux:anchor href="http://files.cruxframework.org/crux52/single-page/index.html" text="Versão HTML" id="manualSinglePageLastBtn"></crux:anchor></li>
-							<li class="end"><crux:anchor href="http://files.cruxframework.org/crux52/pdf/manual-crux-5.1.pdf" text="Versão PDF" id="manualPdfLastBtn"></crux:anchor></li>
-                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux52/crux-runtime/index.html" text="Javadoc Runtime"  id="javadocRuntimeLastBtn"></crux:anchor></li>
-                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux52/crux-dev/index.html" text="Javadoc Dev" id="javadocDevLastBtn"></crux:anchor></li>
+							<li><crux:anchor href="http://files.cruxframework.org/crux51/single-page/index.html" text="Versão HTML" id="manualSinglePageLastBtn"></crux:anchor></li>
+							<li class="end"><crux:anchor href="http://files.cruxframework.org/crux51/pdf/manual-crux-5.1.pdf" text="Versão PDF" id="manualPdfLastBtn"></crux:anchor></li>
+                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux51/crux-runtime/index.html" text="Javadoc Runtime"  id="javadocRuntimeLastBtn"></crux:anchor></li>
+                            <li class="brighter"><crux:anchor href="http://javadoc.cruxframework.org/crux51/crux-dev/index.html" text="Javadoc Dev" id="javadocDevLastBtn"></crux:anchor></li>
 						</ul>
 					</li>
                     <div class="clear"></div>
@@ -43,16 +43,6 @@
 						</tr>
 					</thead>
 					<tbody>
-                        <tr>
-                            <td>Manual Crux 5.2</td>
-                            <td>xx/08/2014</td>
-                            <td>                                
-                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux52/single-page/index.html" 
-                                            text="Versão HTML" id="manualSinglePage52Btn"></crux:anchor>
-                                <crux:anchor styleName="btnMini" href="http://files.cruxframework.org/crux51/pdf/manual-crux-5.2.pdf" 
-                                            text="Versão PDF" id="manualPdf52Btn"></crux:anchor>
-                            </td>
-                        </tr>
 						<tr>
 							<td>Manual Crux 5.1</td>
 							<td>19/05/2014</td>

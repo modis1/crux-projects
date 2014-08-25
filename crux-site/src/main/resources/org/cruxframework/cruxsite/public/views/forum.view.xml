@@ -1,0 +1,40 @@
+<v:view 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view" 
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:t="http://www.cruxframework.org/templates/menus"
+	useController="mainController, viewsController,"
+    onActivate="viewsController.onActivate" 
+    title="Forum"> 
+    
+	<gwt:HTMLPanel id="infoContainer">
+		
+		<t:menucomunidade pageTitle="Forum" />
+		
+		<div class="container">
+			
+			<h2>Forum Crux</h2>
+			
+            <p>Temos um canal direto da equipe do Crux Framework com a comunidade de usuários e desenvolvedores do Crux. 
+            Dúvidas, propostas de melhorias, mensagens em geral podem ser envidas pelo Forum.</p>
+            
+            <p>O Forum do Crux Framework é mantido no Google Groups em Inglês, acesse pelo link:
+            <a href="https://groups.google.com/forum/#!forum/crux-framework" title="Crux Forum" class="defaultLink">Crux Forum</a> </p>
+            
+        </div>  
+        <div class="separator"></div>
+        <div class="container">
+        
+        <h2>Dúvidas em Português</h2>    
+
+            <p>Caso tenha alguma duvida sobre o Crux Framework e queira se comunicar em Português, favor enviar sua pergunta pelo 
+            Stackoverflow em Português com a tag  <i>"cruxframework"</i>. </p>
+            <p>A equipe do Crux também irá reponder às duvidas neste link:
+            <a href="http://pt.stackoverflow.com/questions/tagged/" title="Stackoverflow PT" class="defaultLink">Stackoverflow PT</a>.</p>
+    
+		</div>
+		
+	</gwt:HTMLPanel>
+</v:view>

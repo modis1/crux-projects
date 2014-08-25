@@ -11,7 +11,7 @@
 			<crux:anchor id="linkComunity" href="#topMenuDisposal:comunidade" text="Apresentação"></crux:anchor>
 		</li>
 		<li>
-			<crux:anchor id="linkForum" href="https://groups.google.com/forum/#!forum/crux-framework" text="Forum"></crux:anchor>
+            <crux:anchor id="linkForum" href="#topMenuDisposal:forum" text="Forum"></crux:anchor>
 		</li>
 		<li>
 			<crux:anchor id="linkBlog" href="http://blog.cruxframework.org/" text="Blog"></crux:anchor>
