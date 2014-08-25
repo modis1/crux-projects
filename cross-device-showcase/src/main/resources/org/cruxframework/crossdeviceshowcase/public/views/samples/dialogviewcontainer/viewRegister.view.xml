@@ -12,6 +12,10 @@
 			<gwt:HTMLPanel id="parentPanel" styleName="dialogViewContainer">
 				<gwt:label id="labelText" text="${messages_viewRegister.labelText}" />
 				<br />
+				<gwt:HTMLPanel id="panelError" visible="false">
+					<gwt:label id="errorMessage" text="${messages_viewRegister.errorMessage}" styleName="errorMessage"/>
+				</gwt:HTMLPanel>
+				
 				<crux:styledPanel id="formPanel">
 					<crux:formDisplay id="formRegister">
 						<crux:entry label="${messages_viewRegister.fieldName}">
@@ -29,12 +33,7 @@
 						</crux:entry>
 					</crux:formDisplay>
 				</crux:styledPanel>
-				
-				<gwt:HTMLPanel id="panelError" visible="false">
-					<br />
-					<gwt:label id="errorMessage" text="${messages_viewRegister.errorMessage}" styleName="errorMessage"/>
-				</gwt:HTMLPanel>
-	
+
 				<gwt:HTMLPanel id="panelResult" visible="false" styleName="dialogViewContainerResult">
 					<gwt:label id="labelResult" text="${messages_viewRegister.labelResult}" styleName="successMessage"/>
 					<br />

@@ -43,18 +43,23 @@ public class ColorPickerDialogController
 	private void close()
 	{
 		History.addValueChangeHandler(new ValueChangeHandler<String>()
-				{  
+		{
+			ColorPickerDialog colorPicker = myWidgetAccessor.colorPicker();
+			
 			public void onValueChange(ValueChangeEvent<String> event)
 			{
-				myWidgetAccessor.colorPicker().hide();
+				if (colorPicker.isAttached() && colorPicker.isShowing())
+				{
+					colorPicker.hide();						
+				}
 			}
-				});
+		});
 	}
 
 	@Expose
 	public void changeColor()
 	{
-		if (myWidgetAccessor.colorPicker().getColor() != null)
+		if (myWidgetAccessor.colorPicker().isAttached() && myWidgetAccessor.colorPicker().isShowing() && myWidgetAccessor.colorPicker().getColor() != null)
 		{
 			myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#"+myWidgetAccessor.colorPicker().getColor());
 			myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #"+myWidgetAccessor.colorPicker().getColor());
