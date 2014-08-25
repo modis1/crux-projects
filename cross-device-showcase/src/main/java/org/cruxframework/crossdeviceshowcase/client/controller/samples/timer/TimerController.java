@@ -37,15 +37,14 @@ public class TimerController
 	public void start()
 	{
 		warnTime();
-		
 		myWidgetAccessor.timer().reset();
-		statusStart = false;
-		statusStop = false;
-		stopAndRestart();
 		statusStart = true;
+		statusStop = false;
+		changeStatusButton();
 	}
 	
-	private void warnTime()
+	@Expose
+	public void warnTime()
 	{
 		myWidgetAccessor.timer().addTimeoutHandler(new TimeoutHandler() {
 			
@@ -67,20 +66,15 @@ public class TimerController
 		if(statusStart == true && statusStop == false)
 		{
 			myWidgetAccessor.timer().stop();
-			myWidgetAccessor.buttonStop().setText(messages.buttonRestart());
 			statusStart = false;
 			statusStop = true;
+			changeStatusButton();
 		}else if(statusStart == false && statusStop == true)
 		{
 			myWidgetAccessor.timer().start();
-			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
 			statusStart = true;
 			statusStop = false;
-		}else
-		{
-			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
-			statusStart = false;
-			statusStop = false;
+			changeStatusButton();
 		}
 	}
 	
@@ -90,7 +84,21 @@ public class TimerController
 		myWidgetAccessor.timer().clear();
 		statusStop = false;
 		statusStart = false;
-		stopAndRestart();
+		changeStatusButton();
+	}
+	
+	private void changeStatusButton()
+	{
+		if(statusStart == true && statusStop == false)
+		{
+			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
+		}else if(statusStart == false && statusStop == true)
+		{
+			myWidgetAccessor.buttonStop().setText(messages.buttonRestart());
+		}else
+		{
+			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
+		}
 	}
 	
 	@BindView("timer")
