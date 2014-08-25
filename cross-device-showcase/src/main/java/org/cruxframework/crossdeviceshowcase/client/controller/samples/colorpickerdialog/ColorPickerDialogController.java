@@ -74,7 +74,8 @@ public class ColorPickerDialogController
 	@Expose
 	public void changeColor()
 	{
-		if (myWidgetAccessor.colorPicker().isAttached() && myWidgetAccessor.colorPicker().isShowing() && myWidgetAccessor.colorPicker().getColor() != null)
+		if (myWidgetAccessor.colorPicker().isAttached() && myWidgetAccessor.colorPicker().isShowing() && 
+			myWidgetAccessor.colorPicker().getColor() != null)
 		{
 			myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#"+myWidgetAccessor.colorPicker().getColor());
 			myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #"+myWidgetAccessor.colorPicker().getColor());
