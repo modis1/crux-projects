@@ -37,11 +37,11 @@ public class HorizontalSwapPanelController
 	@Expose
 	public void showImage()
 	{
-		Image image = new Image();
-		ImageResourceHorizontalSwapPanel imageResource = new ImageResourceHorizontalSwapPanel();
-		image.setResource(imageResource);
-		//image.setUrl("https://www.google.com.br/images/srpr/logo11w.png");
-		myWidgetAccessor.swapPanel().transitTo(image, Direction.FORWARD);
+//		Image image = new Image();
+//		ImageResourceHorizontalSwapPanel imageResource = new ImageResourceHorizontalSwapPanel();
+//		image.setResource(imageResource);
+//		//image.setUrl("https://www.google.com.br/images/srpr/logo11w.png");
+//		myWidgetAccessor.swapPanel().transitTo(image, Direction.FORWARD);
 	}
 	
 	@Expose
