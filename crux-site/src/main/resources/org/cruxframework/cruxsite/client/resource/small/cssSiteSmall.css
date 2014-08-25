@@ -577,14 +577,17 @@ a{
 	background:rgba(0,0,0,0.5);
 	text-align:center;
 	margin-top:60px;
-	font-size:14px;
+	font-size:11px;
 	min-width:200px;
     position:absolute;
-     box-shadow:0 0 0 1px rgba(255,255,255,0.1);
+    box-shadow:0 0 0 1px rgba(255,255,255,0.1);
+    left:0;
 }
 
 .examplesList li .exampleCall .exampleText .svnName:last-child{
-	left:250px;
+	left:initial;
+	right:0;
+	max-width:140px;
 }
 
 .examplesList li .exampleCall .exampleText .svnName a{
@@ -1015,6 +1018,8 @@ border-bottom:1px solid #658B00;
 	width:100%;
 	cursor:pointer;
 	margin-bottom:5px;
+	display:block;
+	text-align:center;
 }
 .btnMini:hover{
 	background:#063c49;
