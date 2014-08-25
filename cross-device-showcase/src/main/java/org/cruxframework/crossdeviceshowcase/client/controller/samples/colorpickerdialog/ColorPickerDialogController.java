@@ -4,6 +4,9 @@ import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
+import org.cruxframework.crux.core.client.screen.views.View;
+import org.cruxframework.crux.core.client.screen.views.ViewDeactivateEvent;
+import org.cruxframework.crux.core.client.screen.views.ViewDeactivateHandler;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.colorpicker.ColorPickerDialog;
 
@@ -30,6 +33,18 @@ public class ColorPickerDialogController
 
 		myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#1c5994");
 		myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #1c5994");
+		
+		View.of(this).addViewDeactivateHandler(new ViewDeactivateHandler()
+		{
+			@Override
+			public void onDeactivate(ViewDeactivateEvent event)
+			{
+				if (myWidgetAccessor.colorPicker().isAttached() && myWidgetAccessor.colorPicker().isVisible())
+				{ 
+					myWidgetAccessor.colorPicker().hide();
+				}
+			}
+		});
 	}
 	
 	@Expose
