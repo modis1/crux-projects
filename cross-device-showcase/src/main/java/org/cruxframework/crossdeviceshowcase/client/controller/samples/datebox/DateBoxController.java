@@ -3,30 +3,54 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.datebox;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
+import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.datebox.DateBox;
+import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
+import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 
-import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.HTML;
 
 @Controller("dateBoxController")
 public class DateBoxController 
 {
 	@Inject
-	private DateBoxWidgets viewWidgets;
+	private MyWidgetAccessor myWidgetAccessor;
 
-	public interface DateBoxWidgets extends WidgetAccessor
+	@Inject
+	private DateBoxMessages messages;
+	
+	@Expose
+	public void onLoad()
 	{
-		DateBox dateBox();
+		// Insert the component description
+		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
 	}
 
 	@Expose
 	public void onClickButtonValueTextBox()
 	{
-		Window.alert(viewWidgets.dateBox().getValue().toString());
+		if(myWidgetAccessor.dateBox().getValue() == null)
+		{
+			FlatMessageBox.show(messages.warnDate(), MessageType.WARN);
+		}else
+		{
+			FlatMessageBox.show(myWidgetAccessor.dateBox().getValue().toString(), MessageType.INFO);
+		}
+	}
+	
+	@BindView("dateBox")
+	public static interface MyWidgetAccessor extends WidgetAccessor
+	{
+		DateBox dateBox();
+		HTML htmlDescText();
+	}
+	
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
+		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setViewWidgets(DateBoxWidgets viewWidgets) 
-	{
-		this.viewWidgets = viewWidgets;
+	public void setMessages(DateBoxMessages messages) {
+		this.messages = messages;
 	}
 }

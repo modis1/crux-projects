@@ -6,6 +6,7 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="dateBoxController" 
+	onLoad="dateBoxController.onLoad"
 	title="${messages_datebox.title}">
 
 	<center>
@@ -19,7 +20,7 @@
 
 		<showcase:info title="${messages_datebox.title}">
 			<showcase:description>
-				<gwt:label id="labelDescText" text="${messages_datebox.labelDescText}" />
+				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
 		</showcase:info>
 

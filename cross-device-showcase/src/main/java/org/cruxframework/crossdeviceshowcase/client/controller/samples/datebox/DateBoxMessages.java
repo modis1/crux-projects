@@ -13,7 +13,10 @@ public interface DateBoxMessages extends Messages
 	@DefaultMessage("Imprimir o Valor")
 	String printValue();
 	
-	@DefaultMessage("O componente DateBox permite selecionar datas que serão atribuídas para um "
-			+ "textBox. Este componente utiliza o componente DatePicker.")
-	String labelDescText();
+	@DefaultMessage("Insira uma data válida.")
+	String warnDate();
+	
+	@DefaultMessage("<p>O componente DateBox permite selecionar datas que serão atribuídas para um "
+			+ "textBox. Este componente utiliza o componente DatePicker.</p>")
+	String htmlDescText();
 }

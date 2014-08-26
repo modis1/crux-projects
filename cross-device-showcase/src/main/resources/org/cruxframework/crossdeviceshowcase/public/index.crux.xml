@@ -32,6 +32,7 @@
 			<crux:menuSection label="${messages_showcase.formElements}"/>
 			<crux:menuEntry label="${messages_showcase.button}" targetView="cruxButton"/>
 			<crux:menuEntry label="${messages_showcase.colorPicker}" targetView="colorPickerDialog"/>
+			<crux:menuEntry label="${messages_showcase.dateBox}" targetView="dateBox"/>
 			<crux:menuEntry label="${messages_showcase.fileUploader}" targetView="fileUploader"/>
 			<crux:menuEntry label="${messages_showcase.filter}" targetView="filter"/>
 			<crux:menuEntry label="${messages_showcase.listShuttle}" targetView="listShuttle"/>

@@ -140,4 +140,7 @@ public interface ShowcaseMessages extends Messages
 	
 	@DefaultMessage("Filter")
 	String filter();
+	
+	@DefaultMessage("DateBox")
+	String dateBox();
 }
