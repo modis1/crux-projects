@@ -13,7 +13,7 @@
 		<crux:styledPanel id="wrapper">
 			<gwt:HTMLPanel id="parentPanel">
 				<gwt:HTMLPanel id="timerPanel" styleName="timerPanel">
-					<crux:timer id="timer" initial="0" start="false" onLoadWidget="timerController.warnTime"/>
+					<crux:timer id="timer" initial="0" start="false"/>
 				</gwt:HTMLPanel>
 				<br />
 				<gwt:HTMLPanel id="panelButtons">

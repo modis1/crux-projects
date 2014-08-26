@@ -31,13 +31,12 @@ public class TimerController
 	{
 		//Insert the component description
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
-		
-		//warnTime();
 	}
 
 	@Expose
 	public void start()
 	{
+		warnTime();
 		myWidgetAccessor.timer().reset();
 		statusStart = true;
 		statusStop = false;
