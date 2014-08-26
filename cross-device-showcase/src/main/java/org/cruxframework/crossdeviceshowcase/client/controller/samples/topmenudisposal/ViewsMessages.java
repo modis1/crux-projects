@@ -3,7 +3,6 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.topmenud
 import org.cruxframework.crux.core.client.i18n.MessageName;
 
 import com.google.gwt.i18n.client.Messages;
-import com.google.gwt.i18n.client.Messages.DefaultMessage;
 
 @MessageName("messages_views")
 public interface ViewsMessages extends Messages
