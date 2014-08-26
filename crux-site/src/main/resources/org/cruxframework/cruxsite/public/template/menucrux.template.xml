@@ -15,9 +15,6 @@
             <crux:anchor id="linkKnow" href="#topMenuDisposal:saibamais" text="Saiba Mais"></crux:anchor>
         </li>
         <li>
-            <crux:anchor id="linkDownload" href="#topMenuDisposal:download" text="Download"></crux:anchor>
-        </li>
-        <li>
             <crux:anchor id="linkManteiner" href="#topMenuDisposal:mantenedor" text="Mantenedor"></crux:anchor>
         </li>
 	</ul>

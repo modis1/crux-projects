@@ -45,7 +45,7 @@
 					
 					<div class="showcaseButton">
 						<crux:anchor id="showcaseButton" href="http://showcase.cruxframework.org/"  
-						styleName="showcaseBtn" text="Visite o Showcase" tooltip="Visitar o Showcase"></crux:anchor>
+						styleName="showcaseBtn" text="Showcase Crux" tooltip="Visitar o Showcase"></crux:anchor>
 						<crux:anchor id="downloadButton" href="#topMenuDisposal:download"
 						styleName="downloadBtn" text="Download Crux" tooltip="Página de Download do Crux"></crux:anchor>
 					</div>
@@ -77,6 +77,15 @@
 								<div class="clear"></div>
 							</div>
 						</div>
+                        <ul class="footerUl">
+                            <li class="footerUlTitle">Home</li>
+                            <li>
+                                <crux:anchor id="link91" href="#topMenuDisposal:download" text="Download"></crux:anchor>
+                            </li>
+                            <li>
+                                <crux:anchor id="link92" href="http://showcase.cruxframework.org/" text="Showcase"></crux:anchor>
+                            </li>
+                        </ul>
 						<ul class="footerUl">
 							<li class="footerUlTitle">Crux</li>
 							<li>
@@ -85,13 +94,9 @@
                             <li>
                                 <crux:anchor id="link02" href="#topMenuDisposal:saibamais" text="Saiba Mais"></crux:anchor>
                             </li>
-							<li>
-                                <crux:anchor id="link03" href="#topMenuDisposal:download" text="Download"></crux:anchor>
-                            </li>
                             <li>
 								<crux:anchor id="link04" href="#topMenuDisposal:mantenedor" text="Mantenedor"></crux:anchor>
 							</li>
-							
 						</ul>
 						
 						<ul class="footerUl">
@@ -123,7 +128,7 @@
 								<crux:anchor id="link31" href="#topMenuDisposal:comunidade" text="Apresentação"></crux:anchor>
 							</li>
 							<li>
-								<crux:anchor id="link32" href="https://groups.google.com/forum/#!forum/crux-framework" text="Fórum"></crux:anchor>
+								<crux:anchor id="link32" href="#topMenuDisposal:forum" text="Fórum"></crux:anchor>
 							</li>
 							<li>
 								<crux:anchor id="link33" href="http://blog.cruxframework.org/" text="Blog"></crux:anchor>
