@@ -70,3 +70,24 @@
 	margin-left: 5px;
 }
 
+@external post-tag;
+.post-tag
+{
+	color: #3e6d8e;
+	background-color: #e4edf4;
+	padding: .25em .5em;
+	margin: 2px 2px 2px 0;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 1.4;
+	white-space: nowrap;
+	display: inline-block;
+	box-shadow:0 0 0 1px rgba(17, 80, 122, 0.26) inset;
+}
+
+.post-tag:hover
+{
+	text-decoration: none;
+	color: #3e6d8e !important;
+	background-color: #cee3f1;
+}

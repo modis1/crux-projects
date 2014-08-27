@@ -30,9 +30,9 @@
         <h2>Dúvidas em Português</h2>    
 
             <p>Caso tenha alguma duvida sobre o Crux Framework e queira se comunicar em Português, favor enviar sua pergunta pelo 
-            Stackoverflow em Português com a tag  <i>"cruxframework"</i>. </p>
+            Stackoverflow em Português com a tag  <code><a class="post-tag" href="http://pt.stackoverflow.com/questions/tagged/crux-framework">crux-framework</a></code>. </p>
             <p>A equipe do Crux também irá reponder às duvidas neste link:
-            <a href="http://pt.stackoverflow.com/questions/tagged/" title="Stackoverflow PT" class="defaultLink">Stackoverflow PT</a>.</p>
+            <a href="http://pt.stackoverflow.com/questions" title="Stackoverflow PT" class="defaultLink">Stackoverflow PT</a>.</p>
     
 		</div>
 		
