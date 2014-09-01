@@ -13,8 +13,8 @@
 		
 		<!-- beta metatags (for tests) -->
 		<meta name="mobile-web-app-capable" content="yes" />
-		<link rel="apple-touch-icon-precomposed" sizes="196x196" href="http://prototipos.sysmap.com.br/crux/icon-196x196.png" />
-		<link rel="shortcut icon" sizes="196x196" href="http://prototipos.sysmap.com.br/crux/icon-196x196.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="196x196" href="../icon-196x196.png" />
+		<link rel="shortcut icon" sizes="196x196" href="../icon-196x196.png" />
 		<meta name="mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 	</head>
