@@ -22,10 +22,13 @@
                Esse é um projeto base em Crux que já prepara todo o ambiente do Eclipse para desenvolvimento
                usando o Crux.</p>
             
+            <p>Como pré-requisito, deve ser instalado o console de depuração do GWT, o 
+                <a href="http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html#launching_in_dev_mode" title="DevMode" class="defaultLink">DevMode</a></p>
+            
 			<ol class="quickstartList">
                 <li>
-                    <p>Baixar o arquivo XML de catálogo: <crux:anchor href="../downloads/crux-archetypes-5.1.0-catalog.xml"  
-                                                      text="crux-archetypes-5.1.0-catalog.xml" id="catalogBtn"></crux:anchor></p>
+                    <p>Baixar o arquivo XML de catálogo: <crux:anchor href="../downloads/crux-archetypes-5.1-catalog.xml"  
+                                                      text="crux-archetypes-5.1-catalog.xml" id="catalogBtn"></crux:anchor></p>
                 </li>
 				<li>
 					<p>No menu do Eclipse, localize e selecione a opção <span class="code">File -> New -> Project</span></p>
