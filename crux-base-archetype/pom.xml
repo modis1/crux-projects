@@ -127,18 +127,6 @@
 			</build>
 		</profile>
 
-		<!-- Crux (and Sysmap) repository -->
-		<!-- *note: this setting has to be duplicated here (it is also in settings.xml) -->
-		<profile>
-			<id>profile-add-internal-repo-distribution-management</id>
-			<distributionManagement>
-				<repository>
-					<id>crux</id>
-					<name>Crux Internal Repository</name>
-					<url>${internal.repository}</url>
-				</repository>
-			</distributionManagement>
-		</profile>
 	</profiles>
 
 </project>
