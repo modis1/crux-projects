@@ -1,0 +1,132 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cruxframework</groupId>
+	<artifactId>crux-base-archetype</artifactId>
+	<version>5.2.0</version>
+	<packaging>pom</packaging>
+	<name>crux-base-archetype</name>
+	<description>Parent POM for crux archetypes</description>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+		<relativePath>org.sonatype.oss:oss-parent</relativePath>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<javadoc.dir>${basedir}/javadoc</javadoc.dir>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:http://crux-projects.googlecode.com/svn/trunk/archetypes</connection>
+		<developerConnection>scm:svn:https://crux-projects.googlecode.com/svn/trunk/archetypes</developerConnection>
+		<url>https://crux-projects.googlecode.com/svn/trunk/archetypes</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>thiago</id>
+			<name>Thiago da Rosa de Bustamante</name>
+			<email>thiago@cruxframework.org</email>
+		</developer>
+		<developer>
+			<id>gesse</id>
+			<name>Gessé Dafé</name>
+			<email>gesse@cruxframework.org</email>
+		</developer>
+		<developer>
+			<id>samuel</id>
+			<name>Samuel Almeida Cardoso</name>
+			<email>samuel@cruxframework.org</email>
+		</developer>
+		<developer>
+			<id>alexandre.costa</id>
+			<name>Alexandre Augusto de Souza Costa</name>
+			<email>alexandre@triggolabs.org</email>
+		</developer>
+	</developers>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<!-- Deploy at sonatype repository -->
+		<profile>
+			<id>sonatype_stage</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+								<configuration>
+									<docencoding>${project.build.sourceEncoding}</docencoding>
+									<charset>${project.build.sourceEncoding}</charset>
+									<outputDirectory>${javadoc.dir}</outputDirectory>
+									<overview>${javadoc.dir}/overview.html</overview>
+									<source>1.5</source>
+									<destDir></destDir>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.4</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+</project>
