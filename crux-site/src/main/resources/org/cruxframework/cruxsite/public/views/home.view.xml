@@ -66,6 +66,9 @@
                     <li>
                         <crux:image id="logoSysmap" url="${siteDeviceResources.logoSysmap}" />
                     </li>
+                    <li>
+                        <crux:image id="logoRadix" width="141px" url="${siteCommonResources.logoRadix}" styleName="big-logo" />
+                    </li>
 				</ul>
 			</div>
 		</gwt:HTMLPanel>

@@ -91,3 +91,11 @@
 	color: #3e6d8e !important;
 	background-color: #cee3f1;
 }
+
+@external big-logo;
+.big-logo
+{
+	width:141px !important;
+	height:55px !important;
+	background-size:100% auto !important;
+}
