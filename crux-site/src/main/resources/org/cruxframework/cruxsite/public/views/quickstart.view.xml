@@ -22,13 +22,10 @@
                Esse é um projeto base em Crux que já prepara todo o ambiente do Eclipse para desenvolvimento
                usando o Crux.</p>
             
-            <p>Como pré-requisito, deve ser instalado o console de depuração do GWT, o 
-                <a href="http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html#launching_in_dev_mode" title="DevMode" class="defaultLink">DevMode</a></p>
-            
 			<ol class="quickstartList">
                 <li>
-                    <p>Baixar o arquivo XML de catálogo: <crux:anchor href="../downloads/crux-archetypes-5.1-catalog.xml"  
-                                                      text="crux-archetypes-5.1-catalog.xml" id="catalogBtn"></crux:anchor></p>
+                    <p>Baixar o arquivo XML de catálogo: <crux:anchor href="../downloads/crux-archetypes-5.2-catalog.xml"  
+                                                      text="crux-archetypes-5.2-catalog.xml" id="catalogBtn"></crux:anchor></p>
                 </li>
 				<li>
 					<p>No menu do Eclipse, localize e selecione a opção <span class="code">File -> New -> Project</span></p>
@@ -39,8 +36,6 @@
 				<li>
 					<p>Na janela de diálogo que se abrirá (New Maven Project - Select project name and location), 
                        clique no botão <span class="code">Next</span>.</p>
-				</li>
-                <li>
                     <p>Clique no botão <span class="code">Configure...</span> no canto superior direito, e 
                         na tela seguinte no botão <span class="code">Add Local Catalog...</span>.</p>
                 </li>
@@ -49,9 +44,7 @@
                         botão <span class="code">Browse...</span>.</p>
                 </li>
                 <li>        
-                     <p>No campo de descrição digite <span class="code">Catalogo Crux 5.1.0</span>.</p>
-                </li>
-                <li>
+                    <p>No campo de descrição digite <span class="code">Catalogo Crux</span>.</p>
                     <p>Clique em <span class="code">Ok</span> nas duas telas retornando a tela inicial (New Maven Project).</p>
                 </li>
 				<li>
@@ -59,21 +52,19 @@
                         a opção <span class="code">crux-helloworld-war</span>.</p>
 				</li>
 				<li>
-					<p>No próximo diálogo, informe um <span class="code">Group Id</span>, por exemplo: 
-                        <span class="code">meus.testes.crux</span></p>
+					<p>No próximo diálogo, informe os seguintes parametros: 
+                        <span class="code">Group Id</span> = <span class="code">meus.testes.crux</span> ;
+                        <span class="code">Artifact Id</span> = <span class="code">HelloCrux</span> .
+                    </p>    
 				</li>
-				<li>
-					<p>Informe um <span class="code">Artifact Id</span>, por exemplo: 
-                        <span class="code">HelloCrux</span></p>
-				</li>
-				<li>
-					<p>Informe um <span class="code">Package</span>, por exemplo: 
-                        <span class="code">meus.testes.crux</span></p>
-				</li>
-				<li>
-					<p>Altere as propriedades do archetype. 
-                         Em <span class="code">module-name</span> informe <span class="code">HelloCrux</span> 
-                         e em <span class="code">module-short-name</span> altere para <span class="code">hellocrux</span>.</p>
+                <li>	
+                    <p>Altere as seguintes propriedades do archetype: 
+                         <span class="code">module-name</span> = <span class="code">HelloCrux</span> ;  
+                         <span class="code">module-short-name</span> = <span class="code">hellocrux</span>.</p>
+                    <p> A imagem a seguir ilustra os valores no fornulário:</p>     
+                     <div align="center">
+                        <crux:image id="projectCreateImage" url="${siteCommonResources.projectCreate}" />
+                    </div>
 				</li>
 				<li>
 					<p>Pressione o botão <span class="code">Finish</span> e pronto! Um projeto Crux será criado 
@@ -84,15 +75,15 @@
 					</div>
 				</li>
 				<li>
-					<p>Localize o arquivo <span class="code">HelloCrux.launch</span>, na pasta raiz do projeto. 
-                        Clique nele com o botão direito do mouse, selecione <span class="code">Run As</span> e, 
-                        em seguida, <span class="code">HelloCrux</span>.</p>
+					<p>Localize os arquivos <span class="code">Start Jetty.launch</span> e 
+                    <span class="code">Start CodeServer.launch</span>, na pasta raiz do projeto. 
+                    Clique em cada um deles com o botão direito do mouse, selecione <span class="code">Run As</span> e, 
+                    em seguida, <span class="code">Start Jetty</span> e <span class="code">Start CodeServer</span>.</p>
 				</li>
 				<li>
-					<p>O console de depuração do GWT (<a href="http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html#launching_in_dev_mode" title="DevMode" class="defaultLink">DevMode</a>) 
-                    se abrirá.  Quando habilitado, clique no botão 
-                    <span class="code">Launch Default Browser</span>. 
-                    Sua aplicação será aberta em uma janela do navegador, como essa:</p>
+					<p>Quando os dois serviços forem iniciados a aplicação já estará disponível para ser acessada 
+                    no endereço:  <span class="code">http://localhost:8080/hellocrux/index.html</span> com o Chrome. 
+                    Abra esse endereço no navegador e será exibida uma tela como essa:</p>
 					<div align="center">
 						<crux:image id="projectRunningImage" url="${siteCommonResources.projectRunning}" />
 					</div>

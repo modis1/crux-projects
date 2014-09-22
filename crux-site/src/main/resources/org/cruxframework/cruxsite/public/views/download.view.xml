@@ -18,15 +18,15 @@
 				<ul class="downloadCurrent">
 					<li>
 						<h5>Última versão estável:</h5>
-						<h2>Crux 5.1.3</h2>
+						<h2>Crux 5.2.0</h2>
 					</li>
 					<li style="overflow:hidden">
 						<ul class="btnGroup">
-							<li><crux:anchor href="../downloads/crux-pom-513.txt" text="Dependências Maven (XML)" 
+							<li><crux:anchor href="../downloads/crux-pom-520.txt" text="Dependências Maven (XML)" 
                                      id="mavenDepLastBtn" onSelect="downloadController.mavenCrux"></crux:anchor></li>
-							<li><crux:anchor href="https://www.dropbox.com/s/snfqbo8tycq9mhd/crux-5.1.3.zip" text="Download .JAR" 
+							<li><crux:anchor href="https://www.dropbox.com/s/oy7cu5wkd9ahgl4/crux-5.2.0.zip" text="Download .JAR" 
                                      id="downloadJarLastBtn" onSelect="downloadController.downloadCrux"></crux:anchor></li>
-                            <li><crux:anchor href="http://crux-framework.googlecode.com/svn/tags/crux/5.1.3/" text="Acessar SVN (tag)" 
+                            <li><crux:anchor href="http://crux-framework.googlecode.com/svn/tags/crux/5.2.0/" text="Acessar SVN (tag)" 
                                      id="sourceCodeLastBtn" onSelect="downloadController.sourceCrux"></crux:anchor> </li>
 						</ul>
 					</li>
@@ -45,6 +45,18 @@
 						</tr>
 					</thead>
 					<tbody>
+                        <tr>
+                            <td>Crux 5.2.0</td>
+                            <td>18/09/2014</td>
+                            <td>                                
+                                <crux:anchor styleName="btnMini" href="../downloads/crux-pom-520.txt" text="Dep. Maven" 
+                                     id="mavenDep520Btn" onSelect="downloadController.mavenCrux"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="https://www.dropbox.com/s/oy7cu5wkd9ahgl4/crux-5.2.0.zip" text=".JAR" 
+                                     id="downloadJar520Btn" onSelect="downloadController.downloadCrux"></crux:anchor>
+                                <crux:anchor styleName="btnMini" href="http://crux-framework.googlecode.com/svn/tags/crux/5.2.0/" text="SVN Tag" 
+                                     id="sourceCode520Btn" onSelect="downloadController.sourceCrux"></crux:anchor>
+                            </td>
+                        </tr>
                         <tr>
                             <td>Crux 5.1.3</td>
                             <td>29/08/2014</td>

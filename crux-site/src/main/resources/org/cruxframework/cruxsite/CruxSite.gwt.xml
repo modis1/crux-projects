@@ -12,13 +12,18 @@
     <inherits name='org.cruxframework.crux.tools.codeserver.CruxCodeServer' />
     <!-- <set-configuration-property name="devModeUrlWhitelistRegexp" value="http://(10\.1\.2\.156)(:\d+)?/.*" /> -->
 
+
+    <!-- 
+    <set-property name="user.agent" value="safari" />
+    <set-property name="device.features" value="largeDisplayMouse"/>
+     -->
+
+
     <!-- To choose the browser -->
     <!-- <set-property name="user.agent" value="gecko1_8" /> -->
-    <set-property name="user.agent" value="safari" />
     
 	<!-- To choose for who should it compile -->
 	
-	<set-property name="device.features" value="largeDisplayMouse"/>
 	<!-- <set-property name="device.features" value="largeDisplayTouch"/>  -->
 	<!-- <set-property name="device.features" value="largeDisplayArrows"/> -->
 	<!-- <set-property name="device.features" value="smallDisplayTouch"/> -->
