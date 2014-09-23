@@ -11,24 +11,26 @@
 	title="${messages_adaptivegrid.title}">
 
 	<center>
-		<crux:adaptiveGrid id="gridSample" width="100%"
-			dataSource="personDS" styleName="grid">
-			<crux:largeColumns>
-				<crux:dataColumn key="name" label="${messages_adaptivegrid.name}"
-					width="110px" />
-				<crux:dataColumn key="age" label="${messages_adaptivegrid.age}"
-					width="110px" />
-				<crux:dataColumn key="status"
-					label="${messages_adaptivegrid.status}" width="150px" />
-				<crux:dataColumn key="birthday"
-					label="${messages_adaptivegrid.dayOfBirth}" width="310px"
-					formatter="dateFormatter" />
-			</crux:largeColumns>
-			<crux:smallColumns>
-				<crux:dataColumn key="name" label="${messages_adaptivegrid.name}"
-					width="110px" />
-			</crux:smallColumns>
-		</crux:adaptiveGrid>
+		<crux:styledPanel id="panel1">
+			<crux:adaptiveGrid id="gridSample" width="100%"
+				dataSource="personDS" styleName="grid">
+				<crux:largeColumns>
+					<crux:dataColumn key="name" label="${messages_adaptivegrid.name}"
+						width="110px" />
+					<crux:dataColumn key="age" label="${messages_adaptivegrid.age}"
+						width="110px" />
+					<crux:dataColumn key="status"
+						label="${messages_adaptivegrid.status}" width="110px" />
+					<crux:dataColumn key="birthday"
+						label="${messages_adaptivegrid.dayOfBirth}" width="200px"
+						formatter="dateFormatter" />
+				</crux:largeColumns>
+				<crux:smallColumns>
+					<crux:dataColumn key="name" label="${messages_adaptivegrid.name}"
+						width="80px"/>
+				</crux:smallColumns>
+			</crux:adaptiveGrid>
+		</crux:styledPanel>
 
 		<showcase:info title="${messages_adaptivegrid.title}">
 			<showcase:description>
