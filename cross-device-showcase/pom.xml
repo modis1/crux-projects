@@ -35,8 +35,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<!-- Update webapp folders -->
@@ -162,6 +162,9 @@
 
 									<!-- <arg value="-strict" /> -->
 
+<!--                                     <jvmarg value="-Xdebug" /> -->
+<!--                                     <jvmarg value="-Xrunjdwp:transport=dt_socket,address=3331,server=y,suspend=y" /> -->
+
 									<!-- use these parameters if you want to modify GWT output settings 
 										<arg value="-style"/> <arg value="DETAILED"/> <arg value="-logLevel"/> <arg 
 										value="DEBUG"/> -->
@@ -202,44 +205,6 @@
 										<pathelement location="${sourceDir}" />
 									</classpath>
 								</generateSchemas>
-							</target>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<!-- Run Code Server -->
-		<profile>
-			<id>run-codeserver</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<version>1.6</version>
-						<configuration>
-							<target>
-								<echo message="Starting Code server..." />
-								<java classname="org.cruxframework.crux.tools.codeserver.CodeServer"
-									fork="true">
-									<classpath>
-										<path refid="maven.compile.classpath" />
-										<pathelement location="${webinf.classes.folder}" />
-									</classpath>
-									<arg value="-sourceDir" />
-									<arg value="${sourceDir}" />
-
-									<!-- <arg value="-noprecompile" /> -->
-
-									<arg value="-moduleName" />
-									<arg value="crossdeviceshowcase" />
-
-									<jvmarg value="-Xmx768M" />
-									<jvmarg value="-Xms256M" />
-									<jvmarg value="-Xss1M" />
-								</java>
 							</target>
 						</configuration>
 					</plugin>
