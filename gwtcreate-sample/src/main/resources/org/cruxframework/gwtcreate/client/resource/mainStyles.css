@@ -1,0 +1,45 @@
+@external *;
+
+body{
+	padding:0 0.6em !important;
+}
+
+.app-title {
+    font-size:22px;
+    text-align:center;
+    font-weight:normal;
+    padding:1.5em 0;
+}
+
+.app-list-wrapper {
+    max-width:700px;
+    border:1px solid #ccc;
+    margin:1em 0;
+    border-radius:4px;
+    margin:1em auto;
+    box-shadow:0 1px 2px rgba(0,0,0,0.1) inset;
+}
+
+.app-list-wrapper .faces-Label {
+    padding:0.4em 0.6em;
+    border-bottom:1px solid #eee;
+}
+
+.app-list-wrapper .faces-Label:last-child {
+    border-bottom:none
+}
+
+.app-list-wrapper .faces-Label-selected {
+	background: rgb(68, 124, 198);
+	color: #fff;
+}
+
+.app-controls {
+    background:#eee;
+    border:1px solid #ccc;
+    max-width:700px;
+    text-align:center;
+    margin:0 auto;
+    border-radius:4px;
+    padding:1em;
+}

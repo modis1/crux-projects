@@ -15,7 +15,7 @@
 			useView="**/views/*" 
 			smallViewport="user-scalable=no, width=320" 
 			largeViewport="user-scalable=no, width=device-width, height=device-height"
-			useResource="xStandardResources,smartFacesResources" height="100%"/>
+			useResource="xStandardResources, smartFacesResources, sampleResources" height="100%"/>
 			
 		<faces:simpleViewContainer id="views"> 
 			<faces:view name="main"/>

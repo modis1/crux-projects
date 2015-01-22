@@ -19,7 +19,7 @@
 			<gwt:textBox id="txtEmail" value="@{contact.email}" />
 		</crux:entry>
 		<crux:entry>
-			<faces:navPanel id="btnPanel" style="text-align:center;">
+			<faces:navPanel id="btnPanel" style="text-align:center;" styleName="faces--group">
 				<faces:button id="btnSave" text="${messages.save}" onSelect="contactInfoController.saveAddOrUpdate" />
 				<faces:button id="btnCancel" text="${messages.cancel}" onSelect="contactInfoController.cancel" />
 			</faces:navPanel>

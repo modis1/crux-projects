@@ -17,17 +17,16 @@ public class ContactService
 	private static final int DEFAULT_PAGE_SIZE = 10;
 	
 	private static Contact[] CONTACT_DATA = {
-		new Contact("Thiago", "Bustamante", "thiago@cruxframework.org"),
-		new Contact("Samuel", "Cardoso", "samuel@cruxframework.org"),
-		new Contact("Cláudio", "Júnior", "claudio.junior@triggolabs.com"),
-		new Contact("Alexandre", "Costa", "alexandre.costa@triggolabs.com"),
-		new Contact("Wesley", "Diniz", "wesley.diniz@triggolabs.com"),
-		new Contact("Bruno", "Rafael", "bruno.rafael@triggolabs.com"),
-		new Contact("Flavia", "Yeshua", "flavia.yeshua@triggolabs.com"),
-		new Contact("Juliano", "Santos", "juliano@triggolabs.com"),
-		new Contact("Gustavo", "Borja", "gustavo.borja@triggolabs.com"),
-		new Contact("Virgínia", "Bonfante", "virginia.bonfante@triggolabs.com"),
-		new Contact("Gessé", "Dafé", "gessedafe@gmail.com")
+		new Contact("Thiago", "Bustamante", "thiago.bustamente@triggolabs.com"),
+		new Contact("John", "Smith", "jonh.smith@cruxframework.org"),
+		new Contact("Paul", "Brown", "paul.brown@cruxframework.org"),
+		new Contact("Mary", "White", "mary.white@cruxframework.org"),
+		new Contact("Jane", "Smith", "jane.smith@cruxframework.org"),
+		new Contact("Tom", "Wilson", "tom.wilson@cruxframework.org"),
+		new Contact("Peter", "Parkes", "peter.parker@cruxframework.org"),
+		new Contact("Logan", "Smith", "Logan.smith@cruxframework.org"),
+		new Contact("Paul", "White", "paul.white@cruxframework.org"),
+		new Contact("James", "Wester", "james.wester@cruxframework.org")
 	};
 	
 	@GET
