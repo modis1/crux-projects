@@ -7,15 +7,17 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="storyboardController" 
 	onLoad="storyboardController.onLoad"
-	title="${messages_storyBoard.title}">
+	title="StoryBoard">
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:storyboard id="storyboard" height="100%" width="100%">
 		</crux:storyboard>
 
-		<showcase:info title="${messages_storyBoard.title}">
+		<!-- 		Component description -->
+		<showcase:info title="StoryBoard">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 	</center>

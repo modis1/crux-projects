@@ -5,10 +5,11 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="slideshowController" title="${messages_slideshow.title}"
+	useController="slideshowController" title="Slideshow"
 	onLoad="slideshowController.onLoad"> 
 	
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:slideshow id="slideshow" layout="classic" width="100%" height="750px" loadOnStartup="true" >
 			<crux:service name="picasa">
 				<crux:param name="userID" value="114650528804514463329" />
@@ -18,9 +19,10 @@
 			</crux:service>
 		</crux:slideshow>
 		
-		<showcase:info title="${messages_slideshow.title}">
+		<!-- 		Component description -->
+		<showcase:info title="Slideshow">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

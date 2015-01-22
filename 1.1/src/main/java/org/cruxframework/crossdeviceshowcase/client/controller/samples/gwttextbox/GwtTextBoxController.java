@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.gwttextbox;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -13,9 +14,8 @@ import com.google.gwt.user.client.ui.Widget;
 @Controller("gwtTextBoxController")
 public class GwtTextBoxController 
 {
-
 	@Inject
-	private GwtTextBoxMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	@Inject 
 	private MyWidgetAccessor myWidgetAccessor;
@@ -46,7 +46,7 @@ public class GwtTextBoxController
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.textBoxDescription());
 		
 		Widget textbox = this.getGwtTxtBox();
 		/*
@@ -77,14 +77,14 @@ public class GwtTextBoxController
 	@BindView("gwtTextBox")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
-	}
-
-	public void setMessages(GwtTextBoxMessages messages) {
-		this.messages = messages;
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
 		this.myWidgetAccessor = myWidgetAccessor;
+	}
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

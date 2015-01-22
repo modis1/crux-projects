@@ -5,38 +5,39 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="cruxButtonController" title="${messages_cruxButton.title}"
+	useController="cruxButtonController" title="Button"
 	onLoad="cruxButtonController.onLoad" > 
 
 	<center>
-
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html" styleName="center">
-				<crux:button id="cruxBtn" text="${messages_cruxButton.cruxBtn}" />
+				<crux:button id="cruxBtn" text="I am a button" />
 				<hr />
 				<h4>
-					<gwt:label id="h4" text="${messages_cruxButton.h4}" />
+					<gwt:label id="h4" text="States" />
 				</h4>
 				<div class="btn-Group">
 					<gwt:radioButton name="color"
 						onChange="cruxButtonController.setStateDefault" id="radioDefault"
-						text="${messages_cruxButton.radioDefault}" checked="true"></gwt:radioButton>
+						text="Default" checked="true"></gwt:radioButton>
 					<gwt:radioButton name="color"
 						onChange="cruxButtonController.setStateSuccess" id="radioSuccess"
-						text="${messages_cruxButton.radioSuccess}"></gwt:radioButton>
+						text="Success"></gwt:radioButton>
 					<gwt:radioButton name="color"
 						onChange="cruxButtonController.setStateWarning" id="radioWarning"
-						text="${messages_cruxButton.radioWarning}"></gwt:radioButton>
+						text="Warning"></gwt:radioButton>
 					<gwt:radioButton name="color"
 						onChange="cruxButtonController.setStateError" id="radioError"
-						text="${messages_cruxButton.radioError}"></gwt:radioButton>
+						text="Error"></gwt:radioButton>
 				</div>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_cruxButton.title}">
+		<!-- 		Component description -->
+		<showcase:info title="Button">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

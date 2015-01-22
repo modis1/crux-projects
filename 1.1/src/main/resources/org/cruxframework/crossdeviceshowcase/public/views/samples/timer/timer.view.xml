@@ -7,9 +7,10 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="timerController" 
 	onLoad="timerController.onLoad" 
-	title="${messages_timer.title}">
+	title="Timer">
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="wrapper">
 			<gwt:HTMLPanel id="parentPanel">
 				<gwt:HTMLPanel id="timerPanel" styleName="timerPanel">
@@ -18,20 +19,21 @@
 				<br />
 				<gwt:HTMLPanel id="panelButtons">
 					<gwt:horizontalPanel id="buttonsPanel">
-						<crux:button id="buttonStart" text="${messages_timer.buttonStart}"
+						<crux:button id="buttonStart" text="Start"
 							onSelect="timerController.start" />
-						<crux:button id="buttonStop" text="${messages_timer.buttonStop}"
+						<crux:button id="buttonStop" text="Stop"
 							onSelect="timerController.stopAndRestart" />
-						<crux:button id="buttonClear" text="${messages_timer.buttonClear}"
+						<crux:button id="buttonClear" text="Clear"
 							onSelect="timerController.clear" />
 					</gwt:horizontalPanel>
 				</gwt:HTMLPanel>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_timer.title}">
+		<!-- 		Component description -->
+		<showcase:info title="Timer">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

@@ -3,6 +3,7 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.filter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -22,40 +23,40 @@ public class FilterController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private FilterMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.filterDescription());
 		
 		myWidgetAccessor.filterWidget().setFilterable(new Filterable<String>() {
 			
 			@Override
 			public void onSelectItem(String selectedItem) {
-				FlatMessageBox.show(messages.wordFound(), MessageType.SUCCESS);
+				FlatMessageBox.show("Suggested word selected.", MessageType.SUCCESS);
 			}
 			
 			@Override
 			public List<FilterResult<String>> filter(String query) {
 				
 				List<String> wordList = new ArrayList<String>();
-				wordList.add(messages.airplane()); 
-				wordList.add(messages.airship());
-				wordList.add(messages.balloon());
-				wordList.add(messages.barge());
-				wordList.add(messages.bike());
-				wordList.add(messages.boat());
-				wordList.add(messages.bus());
-				wordList.add(messages.caption());
-				wordList.add(messages.car());
-				wordList.add(messages.caravela());
-				wordList.add(messages.raft());
-				wordList.add(messages.ship());
-				wordList.add(messages.subway());
-				wordList.add(messages.train());
-				wordList.add(messages.truck());
+				wordList.add("Airplane"); 
+				wordList.add("Airship");
+				wordList.add("Balloon");
+				wordList.add("Barge");
+				wordList.add("Bike");
+				wordList.add("Boat");
+				wordList.add("Bus");
+				wordList.add("Caption");
+				wordList.add("Car");
+				wordList.add("Caravela");
+				wordList.add("Raft");
+				wordList.add("Ship");
+				wordList.add("Subway");
+				wordList.add("Train");
+				wordList.add("Truck");
 				
 				List<FilterResult<String>> result = new ArrayList<FilterResult<String>>();
 				
@@ -74,7 +75,7 @@ public class FilterController
 	@BindView("filter")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
+		HTML componentDescription();
 		Filter filterWidget();
 	}
 
@@ -82,7 +83,7 @@ public class FilterController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(FilterMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

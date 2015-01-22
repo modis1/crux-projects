@@ -7,19 +7,20 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="fileUploaderController" 
 	onLoad="fileUploaderController.onLoad"
-	title="${messages_fileUploader.title}"> 
+	title="FileUploader"> 
 
 	<center>
-
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="mainPanel">
 			<crux:fileUploader id="fileUploader" multiple="true"
-				fileInputText="${messages_fileUploader.inputText}" autoUploadFiles="true"
+				fileInputText="Choose files" autoUploadFiles="true"
 				url="/upload-endpoint" />
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_fileUploader.title}">
+		<!-- 		Component description -->
+		<showcase:info title="FileUploader">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

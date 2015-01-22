@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.textarea;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -17,7 +18,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class TextAreaController 
 {
 	@Inject
-	private TextAreaMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -29,10 +30,10 @@ public class TextAreaController
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.textAreaDescription());
 		
-		MESSAGE_INVALID_NUMBER = messages.invalidNumber();
-		MESSAGE_NEGATIVE_NUMBER = messages.negativeNumber();
+		MESSAGE_INVALID_NUMBER = "Please enter a valid integer value such as 50, 73, 95 etc.";
+		MESSAGE_NEGATIVE_NUMBER = "Please enter a positive value.";
 
 		applyMaxLength();	
 	}
@@ -64,7 +65,7 @@ public class TextAreaController
 	{
 		TextArea textArea();
 		TextBox textBox();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	private void setState(String state)
@@ -105,9 +106,8 @@ public class TextAreaController
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(TextAreaMessages messages) 
-	{
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

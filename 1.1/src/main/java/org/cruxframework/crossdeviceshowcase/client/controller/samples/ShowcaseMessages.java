@@ -33,114 +33,28 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Elementos de Formulário")
 	String formElements();
 	
-	@DefaultMessage("FileUploader")
-	String fileUploader();
-	
-	@DefaultMessage("MaskedLabel")
-	String maskedLabel();
-	
-	@DefaultMessage("MaskedTextBox")
-	String maskedTextbox();
-	
-	@DefaultMessage("Button")
-	String button();
-	
-	@DefaultMessage("TextBox")
-	String textBox();
-	
-	@DefaultMessage("TextArea")
-	String textArea();
-	
 	@DefaultMessage("Elementos de Layout")
 	String layoutElements();
-	
-	@DefaultMessage("StyledPanel")
-	String styledPanel();
-	
-	@DefaultMessage("FormDisplay")
-	String formDisplay();
 	
 	@DefaultMessage("Caixas de Diálogo")
 	String dialogBoxes();
 	
-	@DefaultMessage("ProgressBox")
-	String progressBox();
-	
-	@DefaultMessage("MessageBox")
-	String messageBox();
-	
 	@DefaultMessage("Elementos de Dados")
 	String dataElements();
-	
-	@DefaultMessage("DeviceAdaptiveGrid")
-	String deviceAdaptiveGrid();
 	
 	@DefaultMessage("Elementos de Imagem")
 	String imageElements();
 	
-	@DefaultMessage("PromoBanner")
-	String promoBanner();
-	
-	@DefaultMessage("Slideshow")
-	String slideShow();
-	
-	@DefaultMessage("StoryBoard")
-	String storyBoard();
-	
 	@DefaultMessage("Elementos de Informação")
 	String infoElements();
 	
-	@DefaultMessage("ScrollBanner")
-	String scrollBanner();
-
 	@DefaultMessage("Database não suportada")
 	String databaseNotSupportedError();
 	
-	@DefaultMessage("TopMenuDisposal")
-	String topMenuDisposal();
-	
-	@DefaultMessage("StackMenu")
-	String stackMenu();
-	
-	@DefaultMessage("ColorPicker")
-	String colorPicker();
-	
-	@DefaultMessage("ListShuttle")
-	String listShuttle();
-	
-	@DefaultMessage("Image")
-	String image();
-	
-	@DefaultMessage("SingleSelect")
-	String singleSelect();
-	
-	@DefaultMessage("Timer")
-	String timer();
-	
-	@DefaultMessage("DialogViewContainer")
-	String dialogViewContainer();
-	
-	@DefaultMessage("Elementos de menu")
+	@DefaultMessage("Elementos de menu e Lista")
 	String menuElements();
 	
 	@DefaultMessage("Elementos diversos")
 	String miscellaneousElements();
 	
-	@DefaultMessage("Elementos de aba")
-	String tabElements();
-	
-	@DefaultMessage("DialogBox")
-	String dialogBox();
-	
-	@DefaultMessage("Anchor")
-	String anchor();
-	
-	@DefaultMessage("NumberTextBox")
-	String numberTextBox();
-	
-	@DefaultMessage("Filter")
-	String filter();
-	
-	@DefaultMessage("DateBox")
-	String dateBox();
 }

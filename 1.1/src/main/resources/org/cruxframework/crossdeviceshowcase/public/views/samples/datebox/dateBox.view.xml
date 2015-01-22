@@ -7,20 +7,22 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="dateBoxController" 
 	onLoad="dateBoxController.onLoad"
-	title="${messages_datebox.title}">
+	title="DateBox">
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html">
 				<crux:dateBox id="dateBox" pattern="dd/MM/yyyy" />
 				<crux:button id="buttonValueDateBox"
-					onSelect="dateBoxController.onClickButtonValueTextBox" text="${messages_datebox.printValue}"></crux:button>
+					onSelect="dateBoxController.onClickButtonValueTextBox" text="Print Value"></crux:button>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_datebox.title}">
+		<!-- 		Component description -->
+		<showcase:info title="DateBox">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

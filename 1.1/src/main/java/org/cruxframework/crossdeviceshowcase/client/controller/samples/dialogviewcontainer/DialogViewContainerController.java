@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.dialogviewcontainer;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -16,13 +17,13 @@ public class DialogViewContainerController
 	private ViewDialog viewDialog;
 	
 	@Inject
-	private DialogViewContainerMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	@Expose
 	public void onLoad()
 	{
 		// Insert the component description
-		viewDialog.htmlDescText().setHTML(messages.htmlDescText());
+		viewDialog.componentDescription().setHTML(componentDescription.dialogViewContainerDescription());
 	}
 	
 	@Expose
@@ -37,14 +38,14 @@ public class DialogViewContainerController
 	public static interface ViewDialog extends WidgetAccessor
 	{
 		DialogViewContainer dialogViewContainer();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setViewDialog(ViewDialog viewDialog) {
 		this.viewDialog = viewDialog;
 	}
-
-	public void setMessages(DialogViewContainerMessages messages) {
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

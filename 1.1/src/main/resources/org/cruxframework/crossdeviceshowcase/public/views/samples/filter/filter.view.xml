@@ -7,21 +7,23 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="filterController" 
 	onLoad="filterController.onLoad"
-	title="${messages_filter.title}"> 
+	title="Filter"> 
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="wrapper">
 			<gwt:HTMLPanel id="wrapperChild" styleName="center">
-				<gwt:label id="labelInsertText" text="${messages_filter.labelText}"/>
+				<gwt:label id="labelInsertText" text="Enter a means of transport"/>
 				<br />
-				<crux:filter id="filterWidget" text="${messages_filter.caption}" animationEnabled="true" 
+				<crux:filter id="filterWidget" text="Means of transport" animationEnabled="true" 
 					autoSelectEnabled="true" focus="true" filterable="" width="200px" limit="2"/>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 		
-		<showcase:info title="${messages_filter.title}">
+		<!-- 		Component description -->
+		<showcase:info title="Filter">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

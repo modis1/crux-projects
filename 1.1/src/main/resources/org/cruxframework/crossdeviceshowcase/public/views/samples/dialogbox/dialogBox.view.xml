@@ -7,18 +7,19 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="dialogBoxController" 
 	onLoad="dialogBoxController.onLoad"
-	title="${messages_dialogBox.title}"> 
+	title="DialogBox"> 
 
 	<center>
-
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
-			<crux:button id="btnShowDialog" text="${messages_dialogBox.btnShowDialog}"
+			<crux:button id="btnShowDialog" text="Show DialogBox"
 				onSelect="dialogBoxController.openDialog" />
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_dialogBox.title}">
+		<!-- 		Component description -->
+		<showcase:info title="DialogBox">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

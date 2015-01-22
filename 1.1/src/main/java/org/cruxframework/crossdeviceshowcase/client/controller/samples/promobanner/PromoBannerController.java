@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.promobanner;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -11,17 +12,17 @@ import com.google.gwt.user.client.ui.HTML;
 public class PromoBannerController 
 {
 	@Inject
-	private PromoBannerMessages messages;
-	
+	private DescriptionMessages componentDescription;
+
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
-		widgetHtml.setHTML(messages.htmlDescText());
+		HTML widgetHtml= View.of(this).getWidget("componentDescription", HTML.class);
+		widgetHtml.setHTML(componentDescription.promoBannerDescription());
 	}
 
-	public void setMessages(PromoBannerMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

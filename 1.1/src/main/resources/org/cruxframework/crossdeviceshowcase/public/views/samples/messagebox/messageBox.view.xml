@@ -7,26 +7,27 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	onLoad="messageBoxController.onLoad"
 	useController="messageBoxController" 
-	title="${messages_messageBox.title}"> 
+	title="MessageBox"> 
 
 	<center>
-
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="styled">
 			<gwt:flowPanel id="flow" width="100%">
 				<crux:button id="showMessageBtnInfo"
-					text="${messages_messageBox.showMessageBtnInfo}" onSelect="messageBoxController.showInfo"/>
+					text="Show Info" onSelect="messageBoxController.showInfo"/>
 				<crux:button id="showMessageBtnSuccess"
-					text="${messages_messageBox.showMessageBtnSuccess}" onSelect="messageBoxController.showSuccess"/>
+					text="Show Success" onSelect="messageBoxController.showSuccess"/>
 				<crux:button id="showMessageBtnWarn"
-					text="${messages_messageBox.showMessageBtnWarn}" onSelect="messageBoxController.showWarn"/>
+					text="Show warn" onSelect="messageBoxController.showWarn"/>
 				<crux:button id="showMessageBtnError"
-					text="${messages_messageBox.showMessageBtnError}" onSelect="messageBoxController.showError"/>
+					text="Show Error" onSelect="messageBoxController.showError"/>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_messageBox.title}">
+		<!-- 		Component description -->
+		<showcase:info title="MessageBox">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

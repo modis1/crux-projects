@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.timer;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -21,7 +22,7 @@ public class TimerController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private TimerMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	private boolean statusStart = false;
 	private boolean statusStop = false;
@@ -30,7 +31,7 @@ public class TimerController
 	public void onLoad()
 	{
 		//Insert the component description
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.timerDescription());
 	}
 
 	@Expose
@@ -50,7 +51,7 @@ public class TimerController
 			
 			@Override
 			public void onTimeout(TimeoutEvent event) {
-				FlatMessageBox.show(messages.warnTime(), MessageType.ERROR);
+				FlatMessageBox.show("We get 5 seconds", MessageType.ERROR);
 			}
 			
 			@Override
@@ -91,13 +92,13 @@ public class TimerController
 	{
 		if(statusStart == true && statusStop == false)
 		{
-			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
+			myWidgetAccessor.buttonStop().setText("Stop");
 		}else if(statusStart == false && statusStop == true)
 		{
-			myWidgetAccessor.buttonStop().setText(messages.buttonRestart());
+			myWidgetAccessor.buttonStop().setText("Restart");
 		}else
 		{
-			myWidgetAccessor.buttonStop().setText(messages.buttonStop());
+			myWidgetAccessor.buttonStop().setText("Stop");
 		}
 	}
 	
@@ -106,14 +107,14 @@ public class TimerController
 	{
 		Timer timer();
 		Button buttonStop();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(TimerMessages messages) {
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }
