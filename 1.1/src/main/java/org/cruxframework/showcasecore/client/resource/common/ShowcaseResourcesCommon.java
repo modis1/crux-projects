@@ -20,6 +20,7 @@ import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.resources.client.TextResource;
 
 /**
@@ -37,4 +38,58 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	
 	@Source("prism.css")
 	CssResource cssPrism();
+	
+	@Source("countries/algeria.jpg")
+	ImageResource algeria();
+	
+	@Source("countries/argentina.jpg")
+	ImageResource argentina();
+	
+	@Source("countries/australia.jpg")
+	ImageResource australia();
+	
+	@Source("countries/brazil.jpg")
+	ImageResource brazil();
+	
+	@Source("countries/canada.jpg")
+	ImageResource canada();
+	
+	@Source("countries/chile.jpg")
+	ImageResource chile();
+	
+	@Source("countries/china.jpg")
+	ImageResource china();
+	
+	@Source("countries/costaRica.jpg")
+	ImageResource costaRica();
+	
+	@Source("countries/france.jpg")
+	ImageResource france();
+	
+	@Source("countries/germany.jpg")
+	ImageResource germany();
+	
+	@Source("countries/italy.jpg")
+	ImageResource italy();
+	
+	@Source("countries/japan.jpg")
+	ImageResource japan();
+	
+	@Source("countries/mexico.jpg")
+	ImageResource mexico();
+	
+	@Source("countries/morocco.jpg")
+	ImageResource morocco();
+	
+	@Source("countries/southAfrica.jpg")
+	ImageResource southAfrica();
+	
+	@Source("countries/southKorea.jpg")
+	ImageResource southKorea();
+	
+	@Source("countries/usa.jpg")
+	ImageResource spain();
+	
+	@Source("countries/usa.jpg")
+	ImageResource usa();
 }

@@ -32,11 +32,76 @@ public class MainController
 	@Inject
 	public SVNServiceAsync service;
 	
+	//toggle language//
+
+	private void verifyAndToggleLanguage()
+	{
+		String uriLocale = Window.Location.getParameter("locale");
+		switchLocaleToggle(uriLocale);
+	}
+
+	private void switchLocaleToggle(String locale)
+	{
+		Widget langToggler = View.of(this).getWidget("langToggler");
+
+		Widget langEn = View.of(this).getWidget("langEn");
+		Widget langPt = View.of(this).getWidget("langPt");
+
+		if(locale.contains("pt_BR"))
+		{
+			langEn.removeStyleName("active");
+			langToggler.addStyleName("active");
+			langPt.addStyleName("active");
+		} else
+		{
+			langPt.removeStyleName("active");
+			langToggler.removeStyleName("active");
+			langEn.addStyleName("active");
+		}
+	}
+
+	private native String getBrowserLocale()/*-{
+	if($wnd.navigator.language == "pt-br")
+	{
+	return "pt_BR";
+	}
+	return "en_US";
+	}-*/;
+
+	@Expose
+	public void switchLocaleUrl()
+	{
+		Widget langEn = View.of(this).getWidget("langEn");
+
+		if(langEn.getStyleName().contains("active"))
+		{
+			switchLocaleUrl("pt_BR");
+		} else
+		{
+			switchLocaleUrl("en_US");
+		}
+	}
+
+	private void switchLocaleUrl(String localeParameter)
+	{
+		Window.Location.replace("index.html?locale=" + localeParameter + Window.Location.getHash());
+	}
+
+	@Expose
+	public void loadShowcaseUrl()
+	{
+		Window.Location.replace("http://showcase.cruxframework.org");
+	}
+
+	//Call start methods
 	@Expose
 	public void wellcome()
 	{
 		MenuTabsDisposal menuDisposal = (MenuTabsDisposal) Screen.get("menuDisposal");
 		menuDisposal.showView("wellcome", Direction.FORWARD);
+		
+		//Call method to verify browser language
+		verifyAndToggleLanguage();
 	}
 	
 	@Expose

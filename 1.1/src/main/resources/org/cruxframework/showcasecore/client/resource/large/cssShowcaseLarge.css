@@ -11,10 +11,9 @@
 @url image1ImageUrl image1Image;
 @url image2ImageUrl image2Image;
 @url image3ImageUrl image3Image;
-@url swapView1Url swapView1;
-@url swapView2Url swapView2;
-@url swapView3Url swapView3;
-@url mundiUrl mundi;
+@url guileUrl guile;
+@url logoLargeUrl logoLarge;
+@url noiseUrl noise;
 
 body
 {
@@ -25,6 +24,18 @@ body
 	*/
 	background-color:#e2e2e2;
 	background-image:linear-gradient(#eee,#ccc);
+}
+
+
+/* header */
+.lang-toggler-wrapper
+{
+	right:200px;
+	top: 5px;
+}
+
+.crux-MenuTabsDisposal .menuTabsHeader{
+	height: 32px !important;
 }
 
 .rs-left
@@ -44,7 +55,8 @@ body
 .speechBubble
 {
 	position: relative;
-	background-image: url(noise.png);
+/* 	background-image: url(noise.png); */
+	background-image: noiseUrl;
 	border: solid 1px #CCCCCC;
 	box-shadow:0px 1px 4px rgba(0, 0, 0, 0.1);
 	margin: 40px;
@@ -106,7 +118,8 @@ body
 	background-repeat: no-repeat;
 	background-position: top;
 	padding-top: 80px;
-	background-image: url(img/logo-large.png);
+/* 	background-image: url(img/logo-large.png); */
+	background-image: logoLargeUrl;
 	background-position: center 10px;
 }
 
@@ -125,7 +138,8 @@ body
 	background-color: rgb(250, 250, 250);
 	padding: 20px;
 	padding-top: 5px;
-	background-image: url(noise.png);
+/* 	background-image: url(noise.png); */
+	background-image: noiseUrl;
 	border-radius: 3px;
 	border: solid 1px rgb(238, 238, 238);
 	margin-top: 20px;
@@ -313,13 +327,15 @@ body
 	height:auto !important;
 	box-shadow:0 -1px 0 rgba(0,0,0,0.05) inset !important;
 }
+
 .activeView
 {
 	display:none;
 }
 .guilePanel
 {
-	background:url(img/guile.png) no-repeat left;
+/* 	background:url(img/guile.png) no-repeat left; */
+	background: guileUrl no-repeat left;
 	background-size: 100px;
 	padding-left: 100px;
 	min-height: 100px;
@@ -860,4 +876,8 @@ body
 	text-align:center;
 	box-shadow: 1px 1px 8px #888888;
 	border-radius: 3px;
+}
+
+.explanationMobile{
+	display:none;
 }

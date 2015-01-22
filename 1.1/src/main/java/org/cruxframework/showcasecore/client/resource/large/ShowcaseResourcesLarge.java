@@ -68,24 +68,15 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	@Source("crux.png")
 	ImageResource crux();
 	
-	@Source("heads.png")
-	ImageResource heads();
+	@Source("guile.png")
+	DataResource guile();
 	
-	@Source("tails.png")
-	ImageResource tails();
+	@Source("logo-large.png")
+	DataResource logoLarge();
 	
-	@Source("swapView1.png")
-	DataResource swapView1();
+	@Source("right-arrow.png")
+	DataResource rightArrow();
 	
-	@Source("swapView2.png")
-	DataResource swapView2();
-	
-	@Source("swapView3.png")
-	DataResource swapView3();
-	
-	@Source("countries/argentina.jpg")
-	ImageResource argentina();
-	
-	@Source("mundi.jpg")
-	DataResource mundi();
+	@Source("noise.png")
+	DataResource noise();
 }

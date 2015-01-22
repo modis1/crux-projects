@@ -14,7 +14,7 @@ public abstract class Callback<T> extends AsyncCallbackAdapter<T>
 
 	public Callback()
 	{
-		this.progress = ProgressBox.show("Processando...");
+		this.progress = ProgressBox.show("Processing...");
 	}
 	
 	@Override

@@ -11,7 +11,9 @@
 @url image1ImageUrl image1Image;
 @url image2ImageUrl image2Image;
 @url image3ImageUrl image3Image;
-@url mundiUrl mundi;
+@url guileUrl guile;
+@url logoSmallUrl logoSmall;
+@url noiseUrl noise;
 
 /*
 * Modern clearfix (IE9+)
@@ -33,6 +35,16 @@ body
 	font-family:OpenSans, Arial, Helvetica Neue, Helvetica, Roboto, Ubuntu, sans-serif;
 }
 
+/* header */
+.lang-toggler-wrapper
+{
+	right: 15px;
+}
+
+.crux-MenuTabsDisposal .menuTabsHeader{
+	height: 62px !important;
+}
+
 .menuEntriesContainer
 {
 	padding: 10px;
@@ -47,7 +59,8 @@ body
 	border: solid 0px;
 	border-bottom: solid 1px #FFFFFF;
 	
-	background-image: url(img/logo-small.png);
+/* 	background-image: url(img/logo-small.png); */
+	background-image: logoSmallUrl;
 	background-repeat: no-repeat;
 	background-position: 40px 0px;
 	background-size: 65%;
@@ -66,7 +79,7 @@ body
 	cursor: pointer;
 	background-repeat: no-repeat;
 	font-size: 0px;
-	margin-top: 19px;
+	margin-top: 21px;
 }
 .topBarIcon:hover
 {
@@ -77,12 +90,14 @@ body
 {
   background:svgIconHouse no-repeat center center;
   background-size:auto 100%;
+  display: none;
 }
 
 .projectIcon 
 {
   background:svgIconCode no-repeat center center;
   background-size:auto 100%;
+  display: none;
 }
 
 .crux-MenuTabsDisposal .menuTabsHeader
@@ -171,7 +186,8 @@ body
 .speechBubble
 {
 	position:relative;
-	background-image:url(noise.png);
+/* 	background-image:url(noise.png); */
+	background-image: noiseUrl;
 	border:solid 1px #ccc;
 	box-shadow:0px 1px 4px rgba(0, 0, 0, 0.1);
 	margin:20px 10px 10px 10px;
@@ -262,7 +278,9 @@ body
 }
 .guilePanel
 {
-	background:url(img/guile.png) no-repeat left;
+/* 	background:url(img/guile.png) no-repeat left; */
+	background: guileUrl no-repeat left;
+	
 	background-size: 100px;
 	padding-left: 100px;
 	min-height: 100px;		
@@ -742,4 +760,21 @@ body
 /* .menuEntriesContainer .menuSectionEntries:nth-child\(7\) .menuSectionEntriesContent .menuEntry:nth-child\(3\) */
 {
 	display:none;
+}
+
+.grid td{
+	min-width: 0px !important;
+}
+
+.topMenuDisposalPanel{
+	display: none !important;
+}
+
+.explanationMobile{
+	display: block;
+	text-align: justify;
+}
+
+.crux-TopMenuDisposal .headerPanel {
+	display: none;
 }
