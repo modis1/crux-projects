@@ -1,0 +1,28 @@
+<v:view 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:v="http://www.cruxframework.org/view" 
+    xmlns:crux="http://www.cruxframework.org/crux/widgets"
+    xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+    xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
+    useController="contactInfoController"
+    onLoad="contactInfoController.onLoad"
+    title="${messages.contactInfo}">
+    
+    <crux:formDisplay id="contactForm">
+		<crux:entry label="${messages.firstName}" horizontalAlignment="right">
+			<gwt:textBox id="txtFirstName" value="@{contact.firstName}" />
+		</crux:entry>
+		<crux:entry label="${messages.lastName}" horizontalAlignment="right">
+			<gwt:textBox id="txtLastName" value="@{contact.lastName}" />
+		</crux:entry>
+		<crux:entry label="${messages.email}" horizontalAlignment="right">
+			<gwt:textBox id="txtEmail" value="@{contact.email}" />
+		</crux:entry>
+		<crux:entry>
+			<faces:navPanel id="btnPanel" style="text-align:center;">
+				<faces:button id="btnSave" text="${messages.save}" onSelect="contactInfoController.saveAddOrUpdate" />
+				<faces:button id="btnCancel" text="${messages.cancel}" onSelect="contactInfoController.cancel" />
+			</faces:navPanel>
+		</crux:entry>
+    </crux:formDisplay>
+</v:view>

@@ -1,0 +1,28 @@
+<v:view 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:v="http://www.cruxframework.org/view" 
+    xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
+    title="${messages.myContacts}"
+    useController="contactsController">
+    
+    <faces:label id="title" text="${messages.myContacts}"/>
+    
+    <faces:scrollablePager id="contactsPager" pageable="contacts" height="100px"/>
+    <faces:widgetList id="contacts" pageSize="25" >
+    	<faces:lazyDataProvider onFetchData="contactsController.onFetchContacts" 
+    							onMeasureData="contactsController.onCountContacts" 
+    							dataObject="contact" autoLoadData="true"/>
+    	<faces:widget>
+	    	<faces:label id="contactLabel" text="@{contact.lastName}, @{contact.firstName}" 
+	    				 onSelect="contactsController.onSelectContact"/>
+    	</faces:widget>
+    </faces:widgetList>
+    
+	<faces:navPanel id="controlPanel">
+		<faces:button id="edit" text="${messages.editContact}" onSelect="contactsController.editContact"/>
+		<faces:button id="remove" text="${messages.removeContact}" onSelect="contactsController.removeContact"/>
+		<faces:button id="new" text="${messages.newContact}" onSelect="contactsController.addContact"/>
+		<faces:button id="save" text="${messages.save}" onSelect="contactsController.commit"/>
+		<faces:button id="undo" text="${messages.undoChanges}" onSelect="contactsController.rollback"/>
+	</faces:navPanel>
+</v:view>
