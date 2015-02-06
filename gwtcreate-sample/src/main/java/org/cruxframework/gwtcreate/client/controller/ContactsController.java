@@ -7,7 +7,6 @@ import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.dataprovider.FetchDataEvent;
 import org.cruxframework.crux.core.client.dataprovider.LazyProvider;
 import org.cruxframework.crux.core.client.dataprovider.MeasureDataEvent;
-import org.cruxframework.crux.core.client.dataprovider.PagedDataProvider;
 import org.cruxframework.crux.core.client.event.SelectEvent;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.rest.Callback;
@@ -30,7 +29,7 @@ public class ContactsController
 	
 	@Inject
 	public MainViewWidgets mainWidgets;
-	
+	 
 	@Inject
 	public ContactsMessages messages;
 
@@ -101,8 +100,9 @@ public class ContactsController
     {
     	if (checkSelectedContact())
     	{
-	    	dialogViewContainer = DialogViewContainer.createDialog("contact", "contact", false, 
-	    			mainWidgets.contacts().getDataObject(selectedContactWidget));
+	    	Contact dataObject = mainWidgets.contacts().getDataObject(selectedContactWidget);
+			dialogViewContainer = DialogViewContainer.createDialog("contact", "contact", false, 
+	    			dataObject.clone());
 	    	
 	    	dialogViewContainer.center();
     	}
@@ -116,11 +116,10 @@ public class ContactsController
     		WidgetList<Contact> contacts = mainWidgets.contacts();
     		Contact contact = contacts.getDataObject(selectedContactWidget);
     		
-    		int index = contacts.getDataProvider().indexOf(contact);
+    		int index = contacts.indexOf(contact);
     		if (index >= 0)
     		{
-    			contacts.getDataProvider().remove(index);
-    			contacts.refresh();
+    			contacts.remove(index);
     		}
     	}
     }  
@@ -135,10 +134,10 @@ public class ContactsController
 	@Expose   
     public void commit()
     {
-    	PagedDataProvider<Contact> dataProvider = mainWidgets.contacts().getDataProvider();
-		if (dataProvider.isDirty())
+    	WidgetList<Contact> contacts = mainWidgets.contacts();
+		if (contacts.isDirty())
 		{
-			dataProvider.commit();
+			contacts.commit();
 		}
     }  
 
@@ -146,21 +145,17 @@ public class ContactsController
     public void rollback()
     {
     	WidgetList<Contact> contacts = mainWidgets.contacts();
-		PagedDataProvider<Contact> dataProvider = contacts.getDataProvider();
-		if (dataProvider.isDirty())
+		if (contacts.isDirty())
 		{
-			dataProvider.rollback();
-			contacts.refresh();
+			contacts.rollback();
 		}
     }
 
 	protected void addNewContact(Contact contact)
 	{
     	WidgetList<Contact> contacts = mainWidgets.contacts();
-    	PagedDataProvider<Contact> dataProvider = contacts.getDataProvider();
-    	dataProvider.add(contact);
+    	contacts.add(contact);
 		dialogViewContainer.hide(true);
-		contacts.refresh();
 	}
 	
 	protected void updateSelectedContact(Contact contact)
@@ -168,10 +163,8 @@ public class ContactsController
 		if (checkSelectedContact())
 		{
 			WidgetList<Contact> contacts = mainWidgets.contacts();
-			PagedDataProvider<Contact> dataProvider = contacts.getDataProvider();
 			int widgetIndex = contacts.getWidgetIndex(selectedContactWidget);
-			dataProvider.set(widgetIndex, contact);
-			contacts.refresh();
+			contacts.set(widgetIndex, contact);
 		}
 		dialogViewContainer.hide(true);
 	}

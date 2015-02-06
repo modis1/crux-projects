@@ -26,7 +26,8 @@ public class ContactService
 		new Contact("Peter", "Parkes", "peter.parker@cruxframework.org"),
 		new Contact("Logan", "Smith", "Logan.smith@cruxframework.org"),
 		new Contact("Paul", "White", "paul.white@cruxframework.org"),
-		new Contact("James", "Wester", "james.wester@cruxframework.org")
+		new Contact("James", "Wester", "james.wester@cruxframework.org"),
+		new Contact("Jan", "Doe", "jon.doe@cruxframework.org")
 	};
 	
 	@GET

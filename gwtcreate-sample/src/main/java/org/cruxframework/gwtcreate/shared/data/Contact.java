@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.cruxframework.crux.core.client.dto.DataObject;
 
 @DataObject("contact")
-public class Contact implements Serializable
+public class Contact implements Serializable, Cloneable
 {
     private static final long serialVersionUID = -848444894214013789L;
  
@@ -47,5 +47,10 @@ public class Contact implements Serializable
 	public void setEmail(String email)
 	{
 		this.email = email;
+	}
+	
+	public Contact clone()
+	{
+		return new Contact(firstName, lastName, email);
 	}
 }

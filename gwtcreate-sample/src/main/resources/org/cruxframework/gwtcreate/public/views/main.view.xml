@@ -7,8 +7,9 @@
     
     <faces:label id="title" text="${messages.myContacts}" styleName="app-title"/>
     
-    <faces:scrollablePager id="contactsPager" pageable="contacts" height="159px" styleName="app-list-wrapper" />
-    <faces:widgetList id="contacts" pageSize="25" styleName="app-list">
+<!--     <faces:scrollablePager id="contactsPager" pageable="contacts" height="95px" styleName="app-list-wrapper" /> -->
+    <faces:predictivePager id="contactsPager" pageable="contacts" height="95px" />
+    <faces:widgetList id="contacts" pageSize="10" styleName="app-list">
     	<faces:lazyDataProvider onFetchData="contactsController.onFetchContacts" 
     							onMeasureData="contactsController.onCountContacts" 
     							dataObject="contact" autoLoadData="true"/>
@@ -17,7 +18,6 @@
 	    				 onSelect="contactsController.onSelectContact"/>
     	</faces:widget>
     </faces:widgetList>
-    
 	<faces:navPanel id="controlPanel" styleName="app-controls faces--group">
 		<faces:button id="edit" text="${messages.editContact}" onSelect="contactsController.editContact"/>
 		<faces:button id="remove" text="${messages.removeContact}" onSelect="contactsController.removeContact"/>
