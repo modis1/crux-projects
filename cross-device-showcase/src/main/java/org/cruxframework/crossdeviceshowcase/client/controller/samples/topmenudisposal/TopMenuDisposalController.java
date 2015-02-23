@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.topmenudisposal;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -16,30 +17,30 @@ public class TopMenuDisposalController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private TopMenuDisposalMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Expose
 	public void onLoad()
 	{	
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.topMenuDisposalDescription());
 		
-		myWidgetAccessor.menu().addMenuEntry(messages.labelItem2(), "viewSearchStore");
+		myWidgetAccessor.menu().addMenuEntry("Store Finder", "viewSearchStore");
 	}
 
 	@BindView("topMenuDisposal")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		TopMenuDisposal menu();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(TopMenuDisposalMessages messages) {
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.datebox;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -16,15 +17,15 @@ public class DateBoxController
 {
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
-
-	@Inject
-	private DateBoxMessages messages;
 	
+	@Inject
+	private DescriptionMessages componentDescription;
+
 	@Expose
 	public void onLoad()
 	{
 		// Insert the component description
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.dateBoxDescription());
 	}
 
 	@Expose
@@ -32,7 +33,7 @@ public class DateBoxController
 	{
 		if(myWidgetAccessor.dateBox().getValue() == null)
 		{
-			FlatMessageBox.show(messages.warnDate(), MessageType.WARN);
+			FlatMessageBox.show("Please enter a valid date.", MessageType.WARN);
 		}else
 		{
 			FlatMessageBox.show(myWidgetAccessor.dateBox().getValue().toString(), MessageType.INFO);
@@ -43,14 +44,14 @@ public class DateBoxController
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		DateBox dateBox();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 	
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(DateBoxMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

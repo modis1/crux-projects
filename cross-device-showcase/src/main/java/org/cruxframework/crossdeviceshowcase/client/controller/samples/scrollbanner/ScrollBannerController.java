@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.scrollbanner;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -15,22 +16,22 @@ public class ScrollBannerController
 {
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
-
+	
 	@Inject
-	private ScrollBannerMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.scrollBannerDescription());
 		
 		addMessages();
 	}
 
 	private void addMessages()
 	{
-		myWidgetAccessor.scrollBanner().addMessage(messages.programMessage());
+		myWidgetAccessor.scrollBanner().addMessage("This post was added via a controller.");
 	}
 
 	@BindView("scrollBanner")
@@ -38,16 +39,15 @@ public class ScrollBannerController
 	{
 		ScrollBanner scrollBanner();
 		Button next();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(ScrollBannerMessages messages) 
-	{
-		this.messages = messages;
-	}    
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
+	}
 }

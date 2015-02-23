@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.dialogbox;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -21,21 +22,20 @@ public class DialogBoxController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private DialogBoxMessages messages;
-	
+	private DescriptionMessages componentDescription;	
 	
 	DialogBox dialogBox = new DialogBox();
 	
 	@Expose
 	public void onLoad()
 	{
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.dialogBoxDescription());
 		FlowPanel panel = new FlowPanel();
 		panel.setStyleName("dialogBoxPanel");
 		
-		Label label = new Label("Um dialogBox pode conter qualquer componente válido.");
+		Label label = new Label("A dialogBox can contain any valid component.");
 		
-		Button button = new Button("Fechar", new SelectHandler() {
+		Button button = new Button("Close", new SelectHandler() {
 			
 			@Override
 			public void onSelect(SelectEvent event) {
@@ -67,15 +67,14 @@ public class DialogBoxController
 	@BindView("dialogBox")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		//DialogBox dialogBox();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(DialogBoxMessages messages) {
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

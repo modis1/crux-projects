@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.stackmenu;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -18,15 +19,15 @@ public class StackMenuController
 {
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
-
+	
 	@Inject
-	private StackMenuMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Expose
 	public void onLoad()
 	{	
 		// Insert the component description
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.stackMenuDescription());
 		
 		loadItems();
 	}	
@@ -44,13 +45,13 @@ public class StackMenuController
 				{
 					if (listItems.getLabel().equals("Romance"))
 					{
-						listItems.add(new StackMenuItem("prideAndPrejudice",messages.labelPrideAndPrejudice()));
+						listItems.add(new StackMenuItem("prideAndPrejudice","Pride And Prejudice"));
 						listItems.add(new StackMenuItem("titanic","Titanic"));
 					}
 					else if(listItems.getLabel().equals("Terror"))
 					{
 						listItems.add(new StackMenuItem("constantine","Constantine"));
-						listItems.add(new StackMenuItem("orphan",messages.labelOrphan()));
+						listItems.add(new StackMenuItem("orphan","Orphan"));
 					}
 				}
 			}
@@ -72,11 +73,11 @@ public class StackMenuController
 
 		if (nameParentItem == null || nameParentItem.equals(""))
 		{
-			FlatMessageBox.show(messages.info()+nameItem, MessageType.INFO);
+			FlatMessageBox.show("You selected " + nameItem + " item", MessageType.INFO);
 		}
 		else
 		{
-			FlatMessageBox.show(messages.info()+nameItem+" "+messages.complementInfo()+" "+nameParentItem, MessageType.INFO);
+			FlatMessageBox.show("You selected " + nameItem + " item in " +nameParentItem, MessageType.INFO);
 		}	
 	}
 
@@ -84,7 +85,7 @@ public class StackMenuController
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		StackMenu menu();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
@@ -92,8 +93,7 @@ public class StackMenuController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(StackMenuMessages messages) 
-	{
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

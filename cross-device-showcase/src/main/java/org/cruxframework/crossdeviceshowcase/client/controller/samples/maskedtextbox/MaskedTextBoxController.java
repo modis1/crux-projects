@@ -2,6 +2,7 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.maskedte
 
 import java.util.Date;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -17,7 +18,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class MaskedTextBoxController 
 {
 	@Inject
-	private MaskedTextBoxMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	private String MESSAGE_EMPTY_FIELD;
 	private String MESSAGE_WRONG_FORMAT;
@@ -28,13 +29,13 @@ public class MaskedTextBoxController
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
-		widgetHtml.setHTML(messages.htmlDescText());
+		HTML widgetHtml= View.of(this).getWidget("componentDescription", HTML.class);
+		widgetHtml.setHTML(componentDescription.maskedTextBoxDescription());
 		
-		MESSAGE_EMPTY_FIELD = messages.emptyFild();
-		MESSAGE_WRONG_FORMAT = messages.wrongFormat();
-		MESSAGE_DATE = messages.infoDate();
-		MESSAGE_INVALID_DATE = messages.invalidDate();
+		MESSAGE_EMPTY_FIELD = "Please fill in the empty field.";
+		MESSAGE_WRONG_FORMAT = "Please enter a valid date as dd / mm / yyyy";
+		MESSAGE_DATE = "The date entered was:";
+		MESSAGE_INVALID_DATE = "You entered an invalid date, please try again.";
 	}
 	
 	private MaskedTextBox getDateInput()
@@ -95,7 +96,7 @@ public class MaskedTextBoxController
 		button.setStyleName(type, true);
 	}
 
-	public void setMessages(MaskedTextBoxMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

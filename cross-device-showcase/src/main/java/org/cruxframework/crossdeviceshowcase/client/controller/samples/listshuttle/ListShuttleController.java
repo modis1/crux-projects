@@ -3,6 +3,7 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.listshut
 import java.util.ArrayList;
 import java.util.List;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -19,13 +20,13 @@ public class ListShuttleController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private ListShuttleMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.listShuttleDescription());
 		
 		loadItems();
 	}
@@ -33,20 +34,20 @@ public class ListShuttleController
 	private void loadItems(){
 
 		List<String> itemsA = new ArrayList<String>();
-		itemsA.add("Alexandre");
+		itemsA.add("Alex");
 		itemsA.add("Bruno");
-		itemsA.add("Cláudio ");
+		itemsA.add("Charlie ");
 		itemsA.add("Samuel");
-		itemsA.add("Thiago ");
+		itemsA.add("Davis ");
 		itemsA.add("Wesley");
-		itemsA.add("Ricardo");
-		itemsA.add("Felipe");
-		itemsA.add("Guilherme");
-		itemsA.add("Juliano");
+		itemsA.add("Richard");
+		itemsA.add("John");
+		itemsA.add("Peter");
+		itemsA.add("Jorge");
 
 		List<String> itemsS = new ArrayList<String>();
-		itemsS.add("Guilherme");
-		itemsS.add("Juliano");
+		itemsS.add("Peter");
+		itemsS.add("Jorge");
 
 		myWidgetAccessor.listShuttle().setAvailableItems(itemsA);
 		myWidgetAccessor.listShuttle().setSelectedItems(itemsS);
@@ -56,7 +57,7 @@ public class ListShuttleController
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
 		ListShuttle<String> listShuttle();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
@@ -64,7 +65,7 @@ public class ListShuttleController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(ListShuttleMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

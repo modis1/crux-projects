@@ -5,7 +5,6 @@ import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.DeviceAdaptive;
-import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 import org.cruxframework.crux.core.client.screen.Screen;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
@@ -13,7 +12,7 @@ import org.cruxframework.crux.smartfaces.client.menu.Menu;
 import org.cruxframework.crux.smartfaces.client.menu.MenuItem;
 import org.cruxframework.crux.smartfaces.client.menu.Type.LargeType;
 import org.cruxframework.crux.smartfaces.client.menu.Type.SmallType;
-import org.cruxframework.showcasecore.client.resource.large.ShowcaseResourcesLarge;
+import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
@@ -28,7 +27,7 @@ public class MenuController {
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private ShowcaseResourcesLarge resources;
+	private ShowcaseResourcesCommon resources;
 
 	@Expose
 	public void onLoad()
@@ -127,7 +126,7 @@ public class MenuController {
 		this.messages = messages;
 	}
 
-	public void setResources(ShowcaseResourcesLarge resources) {
+	public void setResources(ShowcaseResourcesCommon resources) {
 		this.resources = resources;
 	}
 

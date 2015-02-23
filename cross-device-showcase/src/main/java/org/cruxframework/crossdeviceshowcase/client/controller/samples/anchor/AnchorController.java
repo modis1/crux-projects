@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.anchor;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -17,15 +18,15 @@ public class AnchorController
 {
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
-
+	
 	@Inject
-	private AnchorMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Expose
 	public void onLoad()
 	{
 		 /* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.anchorDescription());
 	}
 	
 	@Expose
@@ -44,19 +45,19 @@ public class AnchorController
 	@Expose
 	public void pgEnd()
 	{
-		FlatMessageBox.show(messages.pgEnd(), MessageType.INFO);
+		FlatMessageBox.show("Going to the Bottom of page", MessageType.INFO);
 	}
 	
 	@Expose
 	public void pgHome()
 	{
-		FlatMessageBox.show(messages.pgHome(), MessageType.INFO);
+		FlatMessageBox.show("Going to the Top of page", MessageType.INFO);
 	}
 
 	@BindView("anchor")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
+		HTML componentDescription();
 		Anchor anchor();
 		TextBox textBoxUrl();
 	}
@@ -65,9 +66,9 @@ public class AnchorController
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(AnchorMessages messages) {
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 
 }

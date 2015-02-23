@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.formdisplay;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -14,8 +15,8 @@ import com.google.gwt.user.client.ui.TextBox;
 @Controller("formDisplayController")
 public class FormDisplayController {
 	
-	@Inject 
-	private FormDisplayMessages messages;
+	@Inject
+	private DescriptionMessages componentDescription;
 	
 	@Inject 
 	private MyWidgetAccessor myWidgetAccessor;
@@ -24,7 +25,7 @@ public class FormDisplayController {
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.formDisplayDescription());
 	}
 	
 	@Expose
@@ -47,11 +48,11 @@ public class FormDisplayController {
 	@BindView("formDisplay")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
-	public void setMessages(FormDisplayMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {

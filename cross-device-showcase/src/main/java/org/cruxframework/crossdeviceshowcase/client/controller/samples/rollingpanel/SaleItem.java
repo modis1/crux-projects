@@ -13,17 +13,15 @@ public class SaleItem extends Composite{
 	private FlowPanel wrapper = new FlowPanel();
 	private Label labelText = new Label();
 	private Label labelPrice = new Label();
-	private Image image = new Image();
 
 	public SaleItem(final String text, String price, ImageResource imageResource)
 	{
 		labelText.setText(text);
 		labelPrice.setText(price);
 		labelPrice.addStyleName("label-price");
-		image.setResource(imageResource);
 		wrapper.addStyleName("saleItem-wrapper-panel");
 		wrapper.add(labelText);
-		wrapper.add(image);
+		wrapper.add(new Image(imageResource));
 		wrapper.add(labelPrice);
 		initWidget(wrapper);
 		setStyleName(DEFAULT_STYLE_NAME, true);

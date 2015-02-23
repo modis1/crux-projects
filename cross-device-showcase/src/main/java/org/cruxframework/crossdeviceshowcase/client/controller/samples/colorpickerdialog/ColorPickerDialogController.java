@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.colorpickerdialog;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -21,18 +22,18 @@ public class ColorPickerDialogController
 {
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
-
+	
 	@Inject
-	private ColorPickerDialogMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Expose
 	public void onLoad()
 	{
 		 /* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.colorPickerDialogDescription());
 
 		myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#1c5994");
-		myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #1c5994");
+		myWidgetAccessor.labelColorValue().setText("Chosen color: "+" #1c5994");
 		
 		View.of(this).addViewDeactivateHandler(new ViewDeactivateHandler()
 		{
@@ -77,7 +78,7 @@ public class ColorPickerDialogController
 		if (myWidgetAccessor.colorPicker().getColor() != null)
 		{
 			myWidgetAccessor.labelClickButton().getElement().getStyle().setColor("#"+myWidgetAccessor.colorPicker().getColor());
-			myWidgetAccessor.labelColorValue().setText(messages.labelColorValue()+" #"+myWidgetAccessor.colorPicker().getColor());
+			myWidgetAccessor.labelColorValue().setText("Chosen color: "+" #"+myWidgetAccessor.colorPicker().getColor());
 		}
 	}
 
@@ -87,16 +88,15 @@ public class ColorPickerDialogController
 		ColorPickerDialog colorPicker();
 		Label labelClickButton();
 		Label labelColorValue();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(ColorPickerDialogMessages messages) 
-	{
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

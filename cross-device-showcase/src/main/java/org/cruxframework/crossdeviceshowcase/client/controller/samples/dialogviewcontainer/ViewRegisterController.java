@@ -17,9 +17,6 @@ public class ViewRegisterController
 	@Inject
 	private ViewRegister viewRegister;
 	
-	@Inject
-	private ViewRegisterMessages messages;
-	
 	@Expose
 	public void showResult()
 	{
@@ -31,9 +28,9 @@ public class ViewRegisterController
 			viewRegister.labelText().setVisible(false);
 			viewRegister.panelError().setVisible(false);
 			viewRegister.panelResult().setVisible(true);
-			viewRegister.labelResultName().setText(messages.fieldName()+viewRegister.txtName().getText());
-			viewRegister.labelResultEmail().setText(messages.fieldEmail()+viewRegister.txtEmail().getText());
-			viewRegister.labelResultAddress().setText(messages.fieldAddress()+viewRegister.txtAddress().getText());
+			viewRegister.labelResultName().setText("Name: "+viewRegister.txtName().getText());
+			viewRegister.labelResultEmail().setText("E-mail: "+viewRegister.txtEmail().getText());
+			viewRegister.labelResultAddress().setText("Address: "+viewRegister.txtAddress().getText());
 		}else
 		{
 			viewRegister.panelError().setVisible(true);
@@ -62,7 +59,4 @@ public class ViewRegisterController
 		this.viewRegister = viewRegister;
 	}
 
-	public void setMessages(ViewRegisterMessages messages) {
-		this.messages = messages;
-	}
 }

@@ -1,6 +1,7 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.cruxbutton;
 
 import org.cruxframework.crossdeviceshowcase.client.util.StyleHelper;
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -18,20 +19,20 @@ public class CruxButtonController
 	private MyWidgets myWidgets;
 	
 	@Inject
-	private CruxButtonMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	@Expose
 	public void onLoad()
 	{
 		 /* Insert the component description*/
-		myWidgets.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgets.componentDescription().setHTML(componentDescription.buttonDescription());
 	}
 	
 	@BindView("cruxButton")
 	public interface MyWidgets extends WidgetAccessor
 	{
 		Button cruxBtn();
-		HTML htmlDescText();
+		HTML componentDescription();
 	}
 
 	private void handleStates(String state)
@@ -68,8 +69,8 @@ public class CruxButtonController
 		this.myWidgets = myWidgets;
 	}
 
-	public void setMessages(CruxButtonMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 
 }

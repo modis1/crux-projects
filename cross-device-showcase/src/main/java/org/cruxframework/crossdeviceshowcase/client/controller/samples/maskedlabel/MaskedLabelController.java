@@ -2,6 +2,7 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.maskedla
 
 import java.util.Date;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -14,14 +15,14 @@ import com.google.gwt.user.client.ui.HTML;
 public class MaskedLabelController 
 {
 	@Inject
-	private MaskedLabelMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
-		widgetHtml.setHTML(messages.htmlDescText());
+		HTML widgetHtml= View.of(this).getWidget("componentDescription", HTML.class);
+		widgetHtml.setHTML(componentDescription.maskedTextBoxDescription());
 	}
 	
 	@Expose
@@ -35,7 +36,7 @@ public class MaskedLabelController
 		widget.setUnformattedValue(birth);
 	}
 
-	public void setMessages(MaskedLabelMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

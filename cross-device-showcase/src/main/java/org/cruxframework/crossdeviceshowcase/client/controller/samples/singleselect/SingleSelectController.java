@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.singleselect;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -18,13 +19,13 @@ public class SingleSelectController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private SingleSelectMessages messages;
+	private DescriptionMessages componentDescription;
 	
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.singleSelectDescription());
 	}
 	
 	@Expose
@@ -44,26 +45,26 @@ public class SingleSelectController
 		
 		if(department.equals("accounting"))
 		{
-			myWidgetAccessor.singleSelectEmployees().insertItem("Jorge Henrique", "jorgeHenrique", 0);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Lucas Rodrigues", "lucasRodrigues", 1);			
-			myWidgetAccessor.singleSelectEmployees().insertItem("Marco Aurélio", "marcoAurelio", 2);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Pedro Alcantara", "pedroAlcantara", 3);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Sônia Lima", "soniaLima", 4);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Vera Lúcia", "veraLucia", 5);	
+			myWidgetAccessor.singleSelectEmployees().insertItem("Jorge Smith", "jorgesmith", 0);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Chralie Jones", "chraliejones", 1);			
+			myWidgetAccessor.singleSelectEmployees().insertItem("Jessica Hughes ", "jessicahughes", 2);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Michael Patel", "michaelpatel", 3);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Alice Hill", "alicehill", 4);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Andrea Cooper", "andreacooper", 5);	
 		}else if(department.equals("marketing"))
 		{
-			myWidgetAccessor.singleSelectEmployees().insertItem("Guilherme Martins", "guilhermeMartins", 0);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Henrique locco", "henriquelocco", 1);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Luana Rezende", "luanaRezende", 2);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Marcia da Silva", "marciadaSilva", 3);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Victor Junqueira", "victorJunqueira", 4);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Frank Walker", "frankwalker", 0);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Davi Smith", "davismith", 1);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Brenda Moore", "brendamoore", 2);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Carol Clark", "carolclark", 3);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Victor Hall", "victorhall", 4);
 		}else
 		{
-			myWidgetAccessor.singleSelectEmployees().insertItem("Alexandre Costa", "alexandreCosta", 0);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Antônio Eduardo", "antonioEduardo", 1);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Cláudio Holanda", "claudioHolanda", 2);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Roberta Miranda", "robertaMiranda", 3);
-			myWidgetAccessor.singleSelectEmployees().insertItem("Renaldo Motta", "renaldoMotta", 4);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Alex Johnson", "alexjohnson", 0);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Tony White", "tonywhite", 1);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Mary Green", "marygreen", 2);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Robert Jones", "robertjones", 3);
+			myWidgetAccessor.singleSelectEmployees().insertItem("Peter Lewis", "peterlewis", 4);
 		}
 	}
 	
@@ -81,7 +82,7 @@ public class SingleSelectController
 			if (indexEmployee >= 0)
 			{
 				String itemEmployee = myWidgetAccessor.singleSelectEmployees().getItemText(indexEmployee);
-				FlatMessageBox.show(messages.messageItemSelectedEmployee()+itemEmployee+messages.messageItemSelectedEmployeeContinue()+itemDepartment+".", MessageType.INFO);
+				FlatMessageBox.show("You selected the employee (a) " + itemEmployee + " of the " + itemDepartment+" department.", MessageType.INFO);
 			}
 		}				
 	}
@@ -91,7 +92,7 @@ public class SingleSelectController
 	{
 		SingleSelect singleSelectDepartments();
 		SingleSelect singleSelectEmployees();
-		HTML htmlDescText();
+		HTML componentDescription();
 
 	}
 
@@ -100,9 +101,8 @@ public class SingleSelectController
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(SingleSelectMessages messages) 
-	{
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 	
 }

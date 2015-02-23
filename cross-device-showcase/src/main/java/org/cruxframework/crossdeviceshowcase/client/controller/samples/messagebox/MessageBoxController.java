@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.messagebox;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -13,18 +14,18 @@ import com.google.gwt.user.client.ui.HTML;
 public class MessageBoxController 
 {
 	@Inject
-	private MessageBoxMessages messages;
-	
+	private DescriptionMessages componentDescription;
+
 	private String MESSAGE_TYPE;
 	
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
-		widgetHtml.setHTML(messages.htmlDescText());
+		HTML widgetHtml= View.of(this).getWidget("componentDescription", HTML.class);
+		widgetHtml.setHTML(componentDescription.messageBoxDescription());
 		
-		MESSAGE_TYPE = messages.messageType();
+		MESSAGE_TYPE = "This is a message kind: ";
 	}
 	
 	@Expose
@@ -55,9 +56,8 @@ public class MessageBoxController
 	{
 		FlatMessageBox.show(MESSAGE_TYPE + type.name(), type);
 	}
-
-	public void setMessages(MessageBoxMessages messages) 
-	{
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

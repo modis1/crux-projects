@@ -7,12 +7,10 @@ import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.smartfaces.client.rollingpanel.RollingPanel;
-import org.cruxframework.showcasecore.client.resource.large.ShowcaseResourcesLarge;
+import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.Label;
 
 @Controller("rollingPanelController")
 public class RollingPanelController {
@@ -24,7 +22,7 @@ public class RollingPanelController {
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private ShowcaseResourcesLarge resources;
+	private ShowcaseResourcesCommon resources;
 	
 	@Expose
 	public void onLoad()
@@ -65,7 +63,7 @@ public class RollingPanelController {
 		this.messages = messages;
 	}
 
-	public void setResources(ShowcaseResourcesLarge resources) {
+	public void setResources(ShowcaseResourcesCommon resources) {
 		this.resources = resources;
 	}
 }

@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.progressbox;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -13,7 +14,7 @@ import com.google.gwt.user.client.ui.HTML;
 public class ProgressBoxController 
 {
 	@Inject
-	private ProgressBoxMessages messages;
+	private DescriptionMessages componentDescription;
 
 	private static int DURATION = 5;
 	private ProgressBox progress;
@@ -24,8 +25,8 @@ public class ProgressBoxController
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		HTML widgetHtml= View.of(this).getWidget("htmlDescText", HTML.class);
-		widgetHtml.setHTML(messages.htmlDescText());
+		HTML widgetHtml= View.of(this).getWidget("componentDescription", HTML.class);
+		widgetHtml.setHTML(componentDescription.progressBoxDescription());
 	}
 	
 	@Expose
@@ -57,7 +58,7 @@ public class ProgressBoxController
 
 	private void updateTitle()
 	{
-		progress.setMessage(messages.pleaseWait() + timeLeftToHide + messages.seconds());
+		progress.setMessage("Please wait for " + timeLeftToHide + " seconds...");
 	}
 
 	private void hideProgress()
@@ -66,9 +67,8 @@ public class ProgressBoxController
 		timer.cancel();
 		timeLeftToHide = DURATION;
 	}
-
-	public void setMessages(ProgressBoxMessages messages) 
-	{
-		this.messages = messages;
+	
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

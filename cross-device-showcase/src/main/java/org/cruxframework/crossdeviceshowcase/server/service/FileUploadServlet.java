@@ -38,9 +38,10 @@ public class FileUploadServlet extends HttpServlet
 		response.setContentType("text/html;charset=UTF-8");
 
 		// Create path components to save the file
-//		final String path = request.getParameter("destination");
-		final String path = "c:\\temp\\";
 		final Part filePart = request.getPart("file");
+
+		//Comentar daqui para baixo quando o showcase for para a appengine
+		final String path = "c:\\temp\\";
 		final String fileName = getFileName(filePart);
 
 		OutputStream out = null;
