@@ -54,7 +54,7 @@ body
 .speechBubble
 {
 	position: relative;
-	background-image: url(noise.png);
+	background-image: noiseUrl;
 	border: solid 1px #CCCCCC;
 	box-shadow:0px 1px 4px rgba(0, 0, 0, 0.1);
 	margin: 40px;
@@ -112,12 +112,11 @@ body
  
 .crux-MenuTabsDisposal .menuEntriesContainer
 {
-	padding-top: 90px;
 	background-repeat: no-repeat;
 	background-position: top;
 	padding-top: 80px;
-	background-image: url(img/logo-large.png);
-	background-position: center 10px;
+	background-image: logoLargeUrl;
+	background-position: center 25px;
 }
 
 
@@ -329,7 +328,7 @@ body
 }
 .guilePanel
 {
-	background:url(img/guile.png) no-repeat left;
+	background:guileUrl no-repeat left;
 	background-size: 100px;
 	padding-left: 100px;
 	min-height: 100px;

@@ -108,7 +108,7 @@ body
 	border: solid 0px;
 	border-bottom: solid 1px #FFFFFF;
 	
-	background-image: url(img/logo-small.png);
+	background-image: logoSmallUrl;
 	background-repeat: no-repeat;
 	background-position: 40px 0px;
 	background-size: 65%;
@@ -232,7 +232,7 @@ body
 .speechBubble
 {
 	position:relative;
-	background-image:url(noise.png);
+	background-image:noiseUrl;
 	border:solid 1px #ccc;
 	box-shadow:0px 1px 4px rgba(0, 0, 0, 0.1);
 	margin:20px 10px 10px 10px;
@@ -323,7 +323,7 @@ body
 }
 .guilePanel
 {
-	background:url(img/guile.png) no-repeat left;
+	background:guileUrl no-repeat left;
 	background-size: 100px;
 	padding-left: 100px;
 	min-height: 100px;		
