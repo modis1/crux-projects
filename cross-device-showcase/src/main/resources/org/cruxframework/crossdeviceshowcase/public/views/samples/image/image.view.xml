@@ -8,9 +8,10 @@
 	useResource="showcaseCoreResources"
 	useController="imageController" 
 	onLoad="imageController.onLoad" 
-	title="${messages_image.title}">
+	title="Image">
 
 	<center>
+	<!-- 		Component use sample  -->
 			<gwt:HTMLPanel id="panel">
 				<gwt:label id="labelText" text="Clique sobre as imagens para ter informações"/>
 				<br />
@@ -27,9 +28,10 @@
 				</gwt:HTMLPanel>
 			</gwt:HTMLPanel>
 
-		<showcase:info title="${messages_image.title}">
+		<!-- 		Component description -->
+		<showcase:info title="Image">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

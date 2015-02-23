@@ -8,17 +8,18 @@
 	onActivate="maskedLabelController.setDate" 
 	useFormatter="dateFormatter" 
 	onLoad="maskedLabelController.onLoad"
-	title="${messages_maskedLabel.title}" >
+	title="MaskedLabel" >
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel">
 			<gwt:flowPanel id="imgPanel" styleName="guilePanel">
 				<crux:formDisplay id="form">
-					<crux:entry label="${messages_maskedLabel.entryCaracter}">
-						<gwt:label id="nameLabel" text="${messages_maskedLabel.nameLabel}"
+					<crux:entry label="Caracter:">
+						<gwt:label id="nameLabel" text="Guile"
 							styleName="gwt-Label valueLabel" />
 					</crux:entry>
-					<crux:entry label="${messages_maskedLabel.entryDate}">
+					<crux:entry label="Date of birth:">
 						<crux:maskedLabel id="birthDate" formatter="dateFormatter"
 							styleName="crux-MaskedLabel valueLabel" />
 					</crux:entry>
@@ -26,9 +27,10 @@
 			</gwt:flowPanel>
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_maskedLabel.title}">
+		<!-- 		Component description -->
+		<showcase:info title="MaskedLabel">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 	</center>

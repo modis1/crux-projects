@@ -5,17 +5,17 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
-	useResource="showcaseCoreResources"
+	useResource="showcaseCoreResourcesCommon"
 	title="Product"> 
 	
 	<center>
 		<gwt:HTMLPanel id="topPanel" styleName="swapView-topPanel">
 			<faces:label id="labelStore" text="Shop+" styleName="Faces-label swapView-topPanel-title"/>
-			<faces:image id="image" url="${showcaseCoreResources.shopping}" styleName="faces-Image swapView-topPanel-logo"/>
+			<faces:image id="image" url="${showcaseCoreResourcesCommon.shopping}" styleName="faces-Image swapView-topPanel-logo"/>
 			<faces:label id="labelLogin" text="Hello, user!" styleName="Faces-label swapView-topPanel-login"/>
 		</gwt:HTMLPanel>
 		<gwt:HTMLPanel id="contentPanel">
-			<faces:image id="product" url="${showcaseCoreResources.product}"/>
+			<faces:image id="product" url="${showcaseCoreResourcesCommon.product}"/>
 		</gwt:HTMLPanel>
 	</center>	
 </v:view>

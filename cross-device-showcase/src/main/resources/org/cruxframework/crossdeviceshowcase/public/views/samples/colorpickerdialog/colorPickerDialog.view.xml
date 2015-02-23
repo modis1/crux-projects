@@ -7,26 +7,28 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="colorPickerDialogController" 
 	onLoad="colorPickerDialogController.onLoad" 
-	title="${messages_colorPickerDialog.title}">
+	title="ColorPicker">
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel">
 			<gwt:HTMLPanel id="wrapper" styleName="center">
 				<gwt:label id="labelClickButton"
-					text="${messages_colorPickerDialog.labelClickButton}" />
+					text="Click the button below to change the color of this text." />
 				<hr />
 				<gwt:label id="labelColorValue" styleName="choosenColor"
-					text="${messages_colorPickerDialog.labelColorValue}" />
-				<crux:button id="buttonChangeColor" text="${messages_colorPickerDialog.title}"
+					text="Chosen color:" />
+				<crux:button id="buttonChangeColor" text="ColorPicker"
 					onSelect="colorPickerDialogController.showColorPicker" />
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 		<crux:colorPickerDialog id="colorPicker"
-			text="${messages_colorPickerDialog.colorPickerText}" onClose="colorPickerDialogController.changeColor" />
+			text="Choose color" onClose="colorPickerDialogController.changeColor" />
 
-		<showcase:info title="${messages_colorPickerDialog.title}">
+		<!-- 		Component description -->
+		<showcase:info title="ColorPicker">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

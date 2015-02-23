@@ -7,18 +7,19 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="progressBoxController" 
 	onLoad="progressBoxController.onLoad" 
-	title="${messages_progressBox.title}"> 
+	title="ProgressBox"> 
 
 	<center>
-
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
-			<crux:button id="showProgressBtn" text="${messages_progressBox.showProgressBtn}"
+			<crux:button id="showProgressBtn" text="Show ProgressBox"
 				onSelect="progressBoxController.showProgress" />
 		</crux:styledPanel>
 
-		<showcase:info title="${messages_progressBox.title}">
+		<!-- 		Component description -->
+		<showcase:info title="ProgressBox">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

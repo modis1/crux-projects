@@ -6,7 +6,7 @@
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
-	useResource="showcaseCoreResources"
+	useResource="showcaseCoreResourcesCommon"
 	useController="swapPanelController"
 	onLoad="swapPanelController.onLoad"
 	title="SwapPanel"> 
@@ -20,7 +20,7 @@
 				
 				<!-- 	image widget to swap in panel 	-->		
 				<gwt:flowPanel id="image" visible="false">
-					<crux:image id="imageInner" url="${showcaseCoreResources.crux}"/>
+					<crux:image id="imageInner" url="${showcaseCoreResourcesCommon.crux}"/>
 				</gwt:flowPanel>
 				
 				<!-- 	formDisplay widget to swap in panel 	-->	

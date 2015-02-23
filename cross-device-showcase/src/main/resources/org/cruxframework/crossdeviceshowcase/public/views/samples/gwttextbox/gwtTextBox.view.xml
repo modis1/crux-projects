@@ -5,39 +5,40 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	useController="gwtTextBoxController" title="${messages_gwtTextBox.title}"
+	useController="gwtTextBoxController" title="TextBox"
 	onLoad="gwtTextBoxController.onLoad"> 
 
 	<center>
-
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html" styleName="center">
-				<gwt:textBox id="gwtTxtBox" text="${messages_gwtTextBox.gwtTxtBox}"
+				<gwt:textBox id="gwtTxtBox" text="Edit-me"
 					styleName="w200" />
 				<hr />
 				<h4>
-					<gwt:label id="h4" text="${messages_gwtTextBox.h4}" />
+					<gwt:label id="h4" text="States:" />
 				</h4>
 				<div class="btn-Group">
 					<gwt:radioButton name="color"
 						onChange="gwtTextBoxController.handleDefault" id="radioDefault"
-						text="${messages_gwtTextBox.radioDefault}" checked="true"></gwt:radioButton>
+						text="Default" checked="true"></gwt:radioButton>
 					<gwt:radioButton name="color"
 						onChange="gwtTextBoxController.handleSuccess" id="radioSuccess"
-						text="${messages_gwtTextBox.radioSuccess}"></gwt:radioButton>
+						text="Success"></gwt:radioButton>
 					<gwt:radioButton name="color"
 						onChange="gwtTextBoxController.handleWarning" id="radioWarning"
-						text="${messages_gwtTextBox.radioWarning}"></gwt:radioButton>
+						text="Warning"></gwt:radioButton>
 					<gwt:radioButton name="color"
 						onChange="gwtTextBoxController.handleError" id="radioError"
-						text="${messages_gwtTextBox.radioError}"></gwt:radioButton>
+						text="Error"></gwt:radioButton>
 				</div>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
-
-		<showcase:info title="${messages_gwtTextBox.title}">
+		
+		<!-- 		Component description -->
+		<showcase:info title="TextBox">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

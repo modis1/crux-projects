@@ -6,36 +6,36 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="viewRegisterController" 
-	title="${messages_viewRegister.title}"> 
+	title="Register"> 
 
 	<center>
 			<gwt:HTMLPanel id="parentPanel" styleName="dialogViewContainer">
-				<gwt:label id="labelText" text="${messages_viewRegister.labelText}" />
+				<gwt:label id="labelText" text="Enter the information requested below and click confirm." />
 				<br />
 				<gwt:HTMLPanel id="panelError" visible="false">
-					<gwt:label id="errorMessage" text="${messages_viewRegister.errorMessage}" styleName="errorMessage"/>
+					<gwt:label id="errorMessage" text="Fill out all fields." styleName="errorMessage"/>
 				</gwt:HTMLPanel>
 				
 				<crux:styledPanel id="formPanel">
 					<crux:formDisplay id="formRegister">
-						<crux:entry label="${messages_viewRegister.fieldName}">
+						<crux:entry label="Name:">
 							<gwt:textBox id="txtName" maxLength="40"/>
 						</crux:entry>
-						<crux:entry label="${messages_viewRegister.fieldEmail}">
+						<crux:entry label="E-mail:">
 							<gwt:textBox id="txtEmail" maxLength="20"/>
 						</crux:entry>
-						<crux:entry label="${messages_viewRegister.fieldAddress}">
+						<crux:entry label="Address:">
 							<gwt:textBox id="txtAddress" maxLength="60"/>
 						</crux:entry>
 						<crux:entry horizontalAlignment="center">
-							<crux:button id="btnRegister" text="${messages_viewRegister.buttonView}"
+							<crux:button id="btnRegister" text="Confirm"
 								onSelect="viewRegisterController.showResult"/>
 						</crux:entry>
 					</crux:formDisplay>
 				</crux:styledPanel>
 
 				<gwt:HTMLPanel id="panelResult" visible="false" styleName="dialogViewContainerResult">
-					<gwt:label id="labelResult" text="${messages_viewRegister.labelResult}" styleName="successMessage"/>
+					<gwt:label id="labelResult" text="register completed!" styleName="successMessage"/>
 					<br />
 					<gwt:HTMLPanel id="panelResultData" styleName="panelResultData">
 					<gwt:label id="labelResultName"/>

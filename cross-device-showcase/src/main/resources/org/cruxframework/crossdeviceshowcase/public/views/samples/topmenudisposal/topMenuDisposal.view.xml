@@ -7,19 +7,26 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="topMenuDisposalController" 
 	onLoad="topMenuDisposalController.onLoad"
-	title="${messages_topMenuDisposal.title}">
+	title="TopMenuDisposal">
 
 	<center>
+	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel" >
-		 	<crux:topMenuDisposal id="menu" defaultView="viewHome">
-		 	<crux:menuEntry targetView="viewHome" label="${messages_topMenuDisposal.labelHome}"/>
-		 	<crux:menuEntry targetView="viewPurchase" label="${messages_topMenuDisposal.labelItem1}"/>
-		 	</crux:topMenuDisposal>
+			<gwt:HTMLPanel id="innerPanel">
+			 	<crux:topMenuDisposal id="menu" defaultView="viewHome">
+				 	<crux:menuEntry targetView="viewHome" label="Home"/>
+				 	<crux:menuEntry targetView="viewPurchase" label="My Orders"/>
+			 	</crux:topMenuDisposal>
+		 		<gwt:label id="explanationMobile" 
+			 		text="TopMenuDisposal component is kind of View Container, and should not be applied within another View Container (menu of this application) in the mobile version." 
+			 		styleName="explanationMobile"/>
+		 	</gwt:HTMLPanel>
 		</crux:styledPanel>
 		
-		<showcase:info title="${messages_topMenuDisposal.title}">
+		<!-- 		Component description -->
+		<showcase:info title="TopMenuDisposal">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

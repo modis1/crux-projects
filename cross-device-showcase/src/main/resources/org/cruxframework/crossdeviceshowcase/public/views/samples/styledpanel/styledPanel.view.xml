@@ -7,25 +7,26 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="styledPanelController" 
 	onLoad="styledPanelController.onLoad" 
-	title="${messages_styledPanel.title}"> 
+	title="StyledPanel"> 
 
 	<center>
-
-		<gwt:HTMLPanel id="styledWrap" styleName="styledWrap center">
+	<!-- 		Component use sample  -->
+		<gwt:HTMLPanel id="styledWrap" styleName="styledWrap">
 			<crux:styledPanel id="panel1" height="110px" width="200px"
 				styleName="rs-left">
-				<crux:button id="btnSample" text="${messages_styledPanel.btnSample}" />
+				<crux:button id="btnSample" text="I am a button" />
 			</crux:styledPanel>
 			<crux:styledPanel id="panel2" height="110px" width="200px"
 				styleName="rs-left">
-				<gwt:label id="txtSample" text="${messages_styledPanel.txtSample}" />
+				<gwt:label id="txtSample" text="I am a label" />
 			</crux:styledPanel>
 			<gwt:simplePanel id="clear" styleName="clear"></gwt:simplePanel>
 		</gwt:HTMLPanel>
 
-		<showcase:info title="${messages_styledPanel.title}">
+		<!-- 		Component description -->
+		<showcase:info title="StyledPanel">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription"/>
 			</showcase:description>
 		</showcase:info>
 

@@ -5,18 +5,18 @@
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
-	title="${messages_views.purchaseTitle}">
+	title="My Orders">
 
 	<center>
 		<gwt:HTMLPanel id="parentPanel" styleName="topMenuDisposalPanel">
 			<gwt:HTMLPanel id="panelLabel" styleName="topMenuDisposalPanelLeft">
-				<gwt:label id="labelTitle" text="${messages_views.purchaseTitle}" styleName="topMenuDisposalTitle"/>
-				<gwt:label id="labelInfo" text="${messages_views.purchaseLabelInfo}" styleName="topMenuDisposalInfo"/>
+				<gwt:label id="labelTitle" text="My Orders" styleName="topMenuDisposalTitle"/>
+				<gwt:label id="labelInfo" text="View order details" styleName="topMenuDisposalInfo"/>
 			</gwt:HTMLPanel>
 		
 			<br />
 			<crux:styledPanel id="panelList" styleName="topMenuDisposalPanelList">
-				<gwt:label id="labelPurchase" text="${messages_views.purchaseList}" styleName="topMenuDisposalListInactive"/>
+				<gwt:label id="labelPurchase" text="Wish List" styleName="topMenuDisposalListInactive"/>
 			</crux:styledPanel>
 		</gwt:HTMLPanel>
 	</center>
