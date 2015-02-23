@@ -14,7 +14,6 @@
 @url swapView1Url swapView1;
 @url swapView2Url swapView2;
 @url swapView3Url swapView3;
-@url mundiUrl mundi;
 
 body
 {
@@ -176,7 +175,7 @@ body
 
 .topBarIcon
 {
-	height: 25px;
+	height: 29px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	padding-left: 30px;
@@ -732,7 +731,6 @@ body
 	background-color: #FFFACD;
 }
 
-
 .anchorWrapper
 { 	
 	margin: 6%;
@@ -750,51 +748,60 @@ body
 	height: 400px;
 	background-color: rgb(4,126,5) !important;
 }
+
 .horizontalSwapViewPanel2
 {
 	width: 700px; 
 	height: 400px;
 	background-color: rgb(238,120,3) !important;
 }
+
 .horizontalSwapViewPanel3
 {
 	width: 700px; 
 	height: 400px;
 	background-color: rgb(191,9,8) !important;
 }
+
 .horizontalSwapView1title
 {
 	color: rgb(4,126,5);
 	font-size: large;
 	font-weight: bold;
 }
+
 .horizontalSwapView1text
 {
 	color: rgb(4,126,5);
 	font-size: medium;
 }
+
 .horizontalSwapView2title
 {
 	color: rgb(238,120,3);
 	font-size: large;
 	font-weight: bold;
 }
+
 .horizontalSwapView2text
 {
 	color: rgb(238,120,3);
 	font-size: medium;
 }
+
 .horizontalSwapView3title
 {
 	color: rgb(191,9,8);
 	font-size: large;
 	font-weight: bold;
 }
+
 .horizontalSwapView3text
 {
 	color: rgb(191,9,8);
 	font-size: medium;
 }
+
 .horizontalSwapViewImage1, .horizontalSwapViewImage2, .horizontalSwapViewImage3
 {
 	width: 300px;
@@ -802,14 +809,17 @@ body
 	margin: 5%;
 	background-size: 100% 100%;
 }
+
 .horizontalSwapViewImage1
 {
 	background-image: swapView1Url;
 }
+
 .horizontalSwapViewImage2
 {
 	background-image: swapView2Url;
 }
+
 .horizontalSwapViewImage3
 {
 	background-image: swapView3Url;
@@ -860,4 +870,141 @@ body
 	text-align:center;
 	box-shadow: 1px 1px 8px #888888;
 	border-radius: 3px;
+}
+
+.menuItem-wrapper
+{
+	text-align: left;
+	padding: 10px 20px;
+	border-bottom: 1px solid rgb(205, 205, 219);
+}
+
+.menuItem-label-style
+{
+	display: inline;
+	vertical-align: middle;
+	margin-right: 10px;
+	color: #1c5994 !important;
+}
+
+.menuItem-image-style
+{
+	height: 25px;
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.menu-disposal-views-title
+{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.menu-disposal-views-textPanel
+{
+	width: 800px;
+	text-align: justify;
+	color: rgb(11, 90, 21);
+}
+
+.menu-disposal-title
+{
+	font-size: 26px;
+}
+
+.unselected-button
+{
+	background: gray;
+	border: 1px solid gray;
+}
+
+.confirm-label
+{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.saleItem .faces-Image
+{
+	height: 120px;
+	width: 120px;
+	margin: 5px;
+}
+
+.saleItem .faces-Label
+{
+	font-size: 19px;
+	margin-top: 10px;
+}
+
+.saleItem .label-price
+{
+	font-size: 35px;
+	color: rgb(231, 1, 1);
+	height: 50px;
+	background-color: rgba(255, 255, 255, 5);
+}
+
+.saleItem-wrapper-panel
+{
+	height: 230px;
+	width: 200px;
+	border: solid 3px white;
+	background-color: #F6FBF7;
+	border-radius: 30px;
+	border-bottom: solid 3px rgb(200, 200, 200);
+	border-right: solid 3px rgb(200, 200, 200);
+	overflow: hidden;
+}
+
+.faces-SwapPanel-currentPanel
+{
+	position: relative !important;
+}
+
+.swapView-topPanel
+{
+	background-color: rgb(231, 1, 1);
+	padding: 10px;
+}
+
+.swapView-topPanel-title
+{
+	color: white;
+	font-size: 60px;
+	font-weight: 900;
+	display: inline;
+	vertical-align: middle;
+	margin-right: 50px;
+}
+
+.swapView-topPanel-logo
+{
+	vertical-align: middle;
+}
+
+.swapView-topPanel-login
+{
+	color: white;
+	font-size: 20px;
+	display: inline;
+	vertical-align: middle;
+	margin-left: 50px;
+}
+
+.swapView-buy-button
+{
+	background-color: #e70101 !important;
+	border: 1px solid #bc0505!important;
+	border-radius: 6px !important;
+	font-size: 18px !important;
+	width: 150px;
+}
+
+.swapView-back-button
+{
+	border-radius: 6px !important;
+	font-size: 18px !important;
+	width: 150px;
 }
