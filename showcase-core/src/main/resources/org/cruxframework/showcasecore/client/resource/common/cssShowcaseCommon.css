@@ -41,15 +41,13 @@ pre code *, pre code span
 {
     color: #000000;
     font-size: 20px;
-    padding: 10px 0 20px;
-    
+    padding: 10px 0 20px;   
 }
 
 .center, .buttonsPanel
 {
 	text-align:center;
 }
-
 
 .header-container
 {
@@ -59,10 +57,7 @@ pre code *, pre code span
 .lang-toggler-wrapper
 {
 	position:absolute;
-	right:200px;
-	top:6px;
 	cursor:pointer;
-/* 	display: inline-flex; */
 }
 
 .lang-toggler-label
@@ -70,6 +65,7 @@ pre code *, pre code span
 	color:#fff;
 	opacity:0.4;
 	width:17px;
+	font-size: 12px;
 }
 
 .lang-toggler-label.active
@@ -115,7 +111,7 @@ pre code *, pre code span
 }
 
 .crux-MenuTabsDisposal .menuTabsHeader{
-	height: 32px !important;
+	height: 62px !important;
 }
 
 .flex

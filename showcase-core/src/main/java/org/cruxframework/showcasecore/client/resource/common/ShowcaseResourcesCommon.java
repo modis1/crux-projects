@@ -20,6 +20,7 @@ import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.resources.client.TextResource;
 
 /**
@@ -37,4 +38,194 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	
 	@Source("prism.css")
 	CssResource cssPrism();
+	
+	
+//	RandomPager
+	@Source("countries/algeria.jpg")
+	ImageResource algeria();
+	
+	@Source("countries/argentina.jpg")
+	ImageResource argentina();
+	
+	@Source("countries/australia.jpg")
+	ImageResource australia();
+	
+	@Source("countries/brazil.jpg")
+	ImageResource brazil();
+	
+	@Source("countries/canada.jpg")
+	ImageResource canada();
+	
+	@Source("countries/chile.jpg")
+	ImageResource chile();
+	
+	@Source("countries/china.jpg")
+	ImageResource china();
+	
+	@Source("countries/costaRica.jpg")
+	ImageResource costaRica();
+	
+	@Source("countries/france.jpg")
+	ImageResource france();
+	
+	@Source("countries/germany.jpg")
+	ImageResource germany();
+	
+	@Source("countries/italy.jpg")
+	ImageResource italy();
+	
+	@Source("countries/japan.jpg")
+	ImageResource japan();
+	
+	@Source("countries/mexico.jpg")
+	ImageResource mexico();
+	
+	@Source("countries/morocco.jpg")
+	ImageResource morocco();
+	
+	@Source("countries/southAfrica.jpg")
+	ImageResource southAfrica();
+	
+	@Source("countries/southKorea.jpg")
+	ImageResource southKorea();
+	
+	@Source("countries/usa.jpg")
+	ImageResource spain();
+	
+	@Source("countries/usa.jpg")
+	ImageResource usa();
+	
+//	Menu
+	@Source("logos/audi.png")
+	ImageResource audi();
+	
+	@Source("logos/bmw.png")
+	ImageResource bmw();
+	
+	@Source("logos/chevrolet.png")
+	ImageResource chevrolet();
+	
+	@Source("logos/ford.png")
+	ImageResource ford();
+	
+	@Source("logos/gmc.png")
+	ImageResource gmc();
+	
+	@Source("logos/hondaCar.png")
+	ImageResource hondaCar();
+	
+	@Source("logos/hyundai.png")
+	ImageResource hyundai();
+	
+	@Source("logos/mercedes.png")
+	ImageResource mercedes();
+	
+	@Source("logos/peterbilt.png")
+	ImageResource peterbilt();
+	
+	@Source("logos/scania.png")
+	ImageResource scania();
+	
+	@Source("logos/volkswagen.png")
+	ImageResource volkswagen();
+	
+	@Source("logos/volvo.png")
+	ImageResource volvo();
+	
+	@Source("logos/yamaha.png")
+	ImageResource yamaha();
+	
+	@Source("logos/honda.png")
+	ImageResource honda();
+	
+	@Source("logos/mitsubishi.png")
+	ImageResource mitsubishi();
+	
+
+//	Image RollingPanel
+	@Source("sports/baseball.jpg")
+	ImageResource baseball();	
+	
+	@Source("sports/basketball.jpg")
+	ImageResource basketball();	
+	
+	@Source("sports/canoeing.jpg")
+	ImageResource canoeing();	
+	
+	@Source("sports/football.jpg")
+	ImageResource football();	
+	
+	@Source("sports/motocross.jpg")
+	ImageResource motocross();
+	
+	@Source("sports/running.jpg")
+	ImageResource running();
+	
+	@Source("sports/snowboard.jpg")
+	ImageResource snowboard();
+	
+	@Source("sports/soccerball.jpg")
+	ImageResource soccerball();
+	
+	@Source("sports/swimming.jpg")
+	ImageResource swimming();
+	
+	@Source("sports/volleyball.jpg")
+	ImageResource volleyball();
+	
+	
+//	RollingPanel custom component
+	@Source("sports/backpack.png")
+	ImageResource backpack();
+
+	@Source("sports/baseballbats.png")
+	ImageResource baseballbats();
+	
+	@Source("sports/basketballshoes.png")
+	ImageResource basketballshoes();
+	
+	@Source("sports/footballboots.png")
+	ImageResource footballboots();
+	
+	@Source("sports/gloves.png")
+	ImageResource gloves();
+	
+	@Source("sports/pinkball.png")
+	ImageResource pinkball();
+	
+	@Source("sports/swimshorts.png")
+	ImageResource swimshorts();
+	
+	//Disposals
+	@Source("mammals.jpg")
+	ImageResource mammals();
+	
+	@Source("reptiles.jpg")
+	ImageResource reptiles();
+	
+	@Source("birds.jpg")
+	ImageResource birds();
+	
+	@Source("amphibians.jpg")
+	ImageResource amphibians();	
+	
+	@Source("animals.png")
+	ImageResource animals();	
+	
+	//SwapViewContainer
+	@Source("shopping.png")
+	ImageResource shopping();
+	
+	@Source("product.png")
+	ImageResource product();
+	
+	@Source("addedProduct.png")
+	ImageResource addedProduct();
+	
+	@Source("purchaseCompleted.png")
+	ImageResource purchaseCompleted();
+	
+//	SwapPanel
+	@Source("crux.png")
+	ImageResource crux();
 }

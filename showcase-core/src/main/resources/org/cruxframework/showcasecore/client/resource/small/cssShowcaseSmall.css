@@ -12,6 +12,9 @@
 @url image2ImageUrl image2Image;
 @url image3ImageUrl image3Image;
 @url mundiUrl mundi;
+@url guileUrl guile;
+@url logoSmallUrl logoSmall;
+@url noiseUrl noise;
 
 /*
 * Modern clearfix (IE9+)
@@ -33,9 +36,67 @@ body
 	font-family:OpenSans, Arial, Helvetica Neue, Helvetica, Roboto, Ubuntu, sans-serif;
 }
 
+/* header */
+.lang-toggler-wrapper
+{
+	right: 15px;
+}
+
+.crux-MenuTabsDisposal .menuTabsHeader{
+	height: 62px !important;
+}
+
 .menuEntriesContainer
 {
 	padding: 10px;
+}
+
+.menuTabsHeader
+{
+	background-color: #444949;
+	height: 25px;
+	text-align: right;
+	width: 100%;
+	border: solid 0px;
+	border-bottom: solid 1px #FFFFFF;
+	background-image: logoSmallUrl;
+	background-repeat: no-repeat;
+	background-position: 40px 0px;
+	background-size: 65%;
+}
+
+.topBarIcon
+{
+	height: 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding-left: 30px;
+	border: solid 1px transparent;
+	background-color: transparent;
+	color: #FFFFFF;
+	background-position: 0px center; 
+	cursor: pointer;
+	background-repeat: no-repeat;
+	font-size: 0px;
+	margin-top: 21px;
+}
+.topBarIcon:hover
+{
+	text-decoration: underline;
+}
+
+.siteIcon 
+{
+  background:svgIconHouse no-repeat center center;
+  background-size:auto 100%;
+  display: none;
+}
+
+.projectIcon 
+{
+  background:svgIconCode no-repeat center center;
+  background-size:auto 100%;
+  display: none;
 }
 
 .menuTabsHeader
@@ -742,4 +803,21 @@ body
 /* .menuEntriesContainer .menuSectionEntries:nth-child\(7\) .menuSectionEntriesContent .menuEntry:nth-child\(3\) */
 {
 	display:none;
+}
+
+.grid td{
+	min-width: 0px !important;
+}
+
+.topMenuDisposalPanel{
+	display: none !important;
+}
+
+.explanationMobile{
+	display: block;
+	text-align: justify;
+}
+
+.crux-TopMenuDisposal .headerPanel {
+	display: none;
 }

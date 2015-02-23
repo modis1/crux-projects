@@ -68,6 +68,21 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	@Source("crux.png")
 	ImageResource crux();
 	
+	@Source("guile.png")
+	DataResource guile();
+	
+	@Source("logo-large.png")
+	DataResource logoLarge();
+	
+	@Source("right-arrow.png")
+	DataResource rightArrow();
+	
+	@Source("noise.png")
+	DataResource noise();
+	
+	
+	
+	
 	@Source("heads.png")
 	ImageResource heads();
 	
@@ -87,133 +102,4 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	ImageResource argentina();
 	
 	
-//	Menu
-	@Source("audi.png")
-	ImageResource audi();
-	
-	@Source("bmw.png")
-	ImageResource bmw();
-	
-	@Source("chevrolet.png")
-	ImageResource chevrolet();
-	
-	@Source("ford.png")
-	ImageResource ford();
-	
-	@Source("gmc.png")
-	ImageResource gmc();
-	
-	@Source("hondaCar.png")
-	ImageResource hondaCar();
-	
-	@Source("hyundai.png")
-	ImageResource hyundai();
-	
-	@Source("mercedes.png")
-	ImageResource mercedes();
-	
-	@Source("peterbilt.png")
-	ImageResource peterbilt();
-	
-	@Source("scania.png")
-	ImageResource scania();
-	
-	@Source("volkswagen.png")
-	ImageResource volkswagen();
-	
-	@Source("volvo.png")
-	ImageResource volvo();
-	
-	@Source("yamaha.png")
-	ImageResource yamaha();
-	
-	@Source("honda.png")
-	ImageResource honda();
-	
-	@Source("mitsubishi.png")
-	ImageResource mitsubishi();
-	
-	@Source("mammals.jpg")
-	ImageResource mammals();
-	
-	@Source("reptiles.jpg")
-	ImageResource reptiles();
-	
-	@Source("birds.jpg")
-	ImageResource birds();
-	
-	@Source("amphibians.jpg")
-	ImageResource amphibians();	
-	
-	@Source("animals.png")
-	ImageResource animals();	
-	
-	
-//	Image RollingPanel
-	@Source("sports/baseball.jpg")
-	ImageResource baseball();	
-	
-	@Source("sports/basketball.jpg")
-	ImageResource basketball();	
-	
-	@Source("sports/canoeing.jpg")
-	ImageResource canoeing();	
-	
-	@Source("sports/football.jpg")
-	ImageResource football();	
-	
-	@Source("sports/motocross.jpg")
-	ImageResource motocross();
-	
-	@Source("sports/running.jpg")
-	ImageResource running();
-	
-	@Source("sports/snowboard.jpg")
-	ImageResource snowboard();
-	
-	@Source("sports/soccerball.jpg")
-	ImageResource soccerball();
-	
-	@Source("sports/swimming.jpg")
-	ImageResource swimming();
-	
-	@Source("sports/volleyball.jpg")
-	ImageResource volleyball();
-	
-	
-//	RollingPanel custom component
-	@Source("sports/backpack.png")
-	ImageResource backpack();
-
-	@Source("sports/baseballbats.png")
-	ImageResource baseballbats();
-	
-	@Source("sports/basketballshoes.png")
-	ImageResource basketballshoes();
-	
-	@Source("sports/footballboots.png")
-	ImageResource footballboots();
-	
-	@Source("sports/gloves.png")
-	ImageResource gloves();
-	
-	@Source("sports/pinkball.png")
-	ImageResource pinkball();
-	
-	@Source("sports/swimshorts.png")
-	ImageResource swimshorts();
-	
-	
-//	SwapViewContainer
-	@Source("shopping.png")
-	ImageResource shopping();
-	
-	@Source("product.png")
-	ImageResource product();
-	
-	@Source("addedProduct.png")
-	ImageResource addedProduct();
-	
-	@Source("purchaseCompleted.png")
-	ImageResource purchaseCompleted();
 }

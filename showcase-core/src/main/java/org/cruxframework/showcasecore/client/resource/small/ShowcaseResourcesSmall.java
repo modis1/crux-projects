@@ -71,6 +71,23 @@ public interface ShowcaseResourcesSmall extends ClientBundle
 	@Source("crux.png")
 	ImageResource crux();
 	
+	@Source("guile.png")
+	DataResource guile();
+	
+	@Source("logo-small.png")
+	DataResource logoSmall();
+	
+	@Source("right-arrow.png")
+	DataResource rightArrow();
+	
+	@Source("noise.png")
+	DataResource noise();
+	
+	
+	
+	
+	
+	
 	@Source("heads.png")
 	ImageResource heads();
 	

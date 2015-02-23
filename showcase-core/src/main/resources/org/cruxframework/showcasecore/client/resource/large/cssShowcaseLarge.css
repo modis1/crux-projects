@@ -11,9 +11,9 @@
 @url image1ImageUrl image1Image;
 @url image2ImageUrl image2Image;
 @url image3ImageUrl image3Image;
-@url swapView1Url swapView1;
-@url swapView2Url swapView2;
-@url swapView3Url swapView3;
+@url guileUrl guile;
+@url logoLargeUrl logoLarge;
+@url noiseUrl noise;
 
 body
 {
@@ -24,6 +24,17 @@ body
 	*/
 	background-color:#e2e2e2;
 	background-image:linear-gradient(#eee,#ccc);
+}
+
+/* header */
+.lang-toggler-wrapper
+{
+	right:200px;
+	top: 5px;
+}
+
+.crux-MenuTabsDisposal .menuTabsHeader{
+	height: 32px !important;
 }
 
 .rs-left
@@ -124,7 +135,7 @@ body
 	background-color: rgb(250, 250, 250);
 	padding: 20px;
 	padding-top: 5px;
-	background-image: url(noise.png);
+	background-image: noiseUrl;
 	border-radius: 3px;
 	border: solid 1px rgb(238, 238, 238);
 	margin-top: 20px;
@@ -175,7 +186,7 @@ body
 
 .topBarIcon
 {
-	height: 29px;
+	height: 25px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	padding-left: 30px;
@@ -872,6 +883,10 @@ body
 	border-radius: 3px;
 }
 
+.explanationMobile{
+	display:none;
+}
+
 .menuItem-wrapper
 {
 	text-align: left;
@@ -915,8 +930,9 @@ body
 
 .unselected-button
 {
-	background: gray;
-	border: 1px solid gray;
+	background: gray !important;
+	border: 1px solid gray !important;
+	color: lightgrey !important;
 }
 
 .confirm-label
