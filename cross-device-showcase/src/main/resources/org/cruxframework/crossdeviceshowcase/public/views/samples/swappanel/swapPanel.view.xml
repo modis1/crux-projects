@@ -1,0 +1,71 @@
+<v:view
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:v="http://www.cruxframework.org/view" 
+	xmlns:core="http://www.cruxframework.org/crux" 
+	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
+	useResource="showcaseCoreResources"
+	useController="swapPanelController"
+	onLoad="swapPanelController.onLoad"
+	title="SwapPanel"> 
+
+	<center>
+		<crux:styledPanel id="mainPanel">
+			<gwt:flowPanel id="innerPanel">
+				<faces:swapPanel id="swapPanel" animation="bounce" onSwap="swapPanelController.showMessage">
+					<faces:button id="button" text="I am a Button"/>
+				</faces:swapPanel>
+				
+				<!-- 	image widget to swap in panel 	-->		
+				<gwt:flowPanel id="image" visible="false">
+					<crux:image id="imageInner" url="${showcaseCoreResources.crux}"/>
+				</gwt:flowPanel>
+				
+				<!-- 	formDisplay widget to swap in panel 	-->	
+				<crux:formDisplay id="form" visible="false">
+					<crux:entry label="Name: ">
+						<gwt:textBox id="txtName" width="200px"/>
+					</crux:entry>
+					<crux:entry label="Age: ">
+						<crux:numberTextBox id="numberAge" width="200px"/>
+					</crux:entry>
+					<crux:entry label="Gender: ">
+						<gwt:horizontalPanel id="radios" spacing="3">
+							<gwt:radioButton id="radioFemale" name="gender" text="Female" checked="true" style="margin-right: 20px;"/>
+							<gwt:radioButton id="radioMale" name="gender" text="Male"/>
+						</gwt:horizontalPanel>
+					</crux:entry>
+					<crux:entry label="profession: ">
+						<gwt:textBox id="txtProfession" width="200px"/>
+					</crux:entry>
+				</crux:formDisplay>
+					
+				<!--	 Button to call widget transition method and ListBox to choice animation	-->
+				<hr />
+				<gwt:flowPanel id="actionPanel">
+					<faces:label id="labelList" text="Choose a animation type and swap the widget" style="margin: 30px 0 10px 0;"/>
+					<gwt:listBox id="listAnimation" style="margin-right: 20px;">
+						<gwt:item label="Bounce" selected="true" value="bounce"/>
+						<gwt:item label="Fade" value="fade"/>
+						<gwt:item label="Flip X" value="flipX"/>
+						<gwt:item label="Flip Y" value="flipY"/>
+						<gwt:item label="Light Speed" value="lightSpeed"/>
+						<gwt:item label="Roll" value="roll"/>
+						<gwt:item label="Rotate" value="rotate"/>	
+					</gwt:listBox>
+					<faces:button id="btnSwapWidget" text="Swap Widget" onSelect="swapPanelController.swapPanel"/>
+				</gwt:flowPanel>
+			</gwt:flowPanel>	
+		</crux:styledPanel>	
+
+<!-- 		Component description -->
+		<showcase:info title="SwapPanel">
+			<showcase:description>
+				<gwt:HTML id="componentDescription" />
+			</showcase:description>
+		</showcase:info>
+	</center>
+
+</v:view>
