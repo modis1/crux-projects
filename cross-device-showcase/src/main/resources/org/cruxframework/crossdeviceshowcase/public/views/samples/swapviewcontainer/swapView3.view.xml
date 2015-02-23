@@ -6,7 +6,7 @@
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	useResource="showcaseCoreResources"
-	title="Added Product"> 
+	title="Purchase Completed"> 
 	
 	<center>
 		<gwt:HTMLPanel id="topPanel" styleName="swapView-topPanel">
@@ -15,7 +15,7 @@
 			<faces:label id="labelLogin" text="Hello, user!" styleName="Faces-label swapView-topPanel-login"/>
 		</gwt:HTMLPanel>
 		<gwt:HTMLPanel id="contentPanel">
-			<faces:image id="addedProduct" url="${showcaseCoreResources.addedProduct}"/>
+			<faces:image id="purchaseCompleted" url="${showcaseCoreResources.purchaseCompleted}"/>
 		</gwt:HTMLPanel>
 	</center>	
 </v:view>

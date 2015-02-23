@@ -3,19 +3,19 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	useResource="showcaseCoreResources"
-	title="Simple View 1"> 
+	title="Product"> 
 	
 	<center>
-		<crux:styledPanel id="parentPanel" width="600px" height="400px">
-			<gwt:HTMLPanel id="panel">
-				<gwt:label id="labelViewTitle" text="${messages_swapView1.title}" />
-				<br />
-				<crux:image id="image" url="${showcaseCoreResources.heads}"/>
-				<br />
-				<gwt:label id="labelViewText" text="${messages_swapView1.labelTextView}"/>
-			</gwt:HTMLPanel>
-		</crux:styledPanel>
+		<gwt:HTMLPanel id="topPanel" styleName="swapView-topPanel">
+			<faces:label id="labelStore" text="Shop+" styleName="Faces-label swapView-topPanel-title"/>
+			<faces:image id="image" url="${showcaseCoreResources.shopping}" styleName="faces-Image swapView-topPanel-logo"/>
+			<faces:label id="labelLogin" text="Hello, user!" styleName="Faces-label swapView-topPanel-login"/>
+		</gwt:HTMLPanel>
+		<gwt:HTMLPanel id="contentPanel">
+			<faces:image id="product" url="${showcaseCoreResources.product}"/>
+		</gwt:HTMLPanel>
 	</center>	
 </v:view>

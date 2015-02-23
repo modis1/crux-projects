@@ -1,26 +1,48 @@
-<v:view 
+<v:view
 	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
-	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="swapViewContainerController"
 	onLoad="swapViewContainerController.onLoad"
-	title="${messages_swapViewContainer.title}"> 
-	
+	title="swapViewContainer"> 
+
 	<center>
-			<crux:swapViewContainer id="viewContainer" width="600px" height="400px">
-				<crux:view name="swapView1" active="true"/>
-				<crux:view name="swapView2"/>
-			</crux:swapViewContainer>
-			<br />
-			<crux:button id="buttonShowNextView" text="${messages_swapViewContainer.buttonShowNextView}" onSelect="swapViewContainerController.showNextView"/>
-	</center>		
-	
-	<showcase:info title="${messages_swapViewContainer.title}">
+		<crux:styledPanel id="mainPanel">
+			<gwt:flowPanel id="innerPanel">
+				<faces:swapViewContainer id="viewContainer" width="800px" height="600px">
+					<faces:view name="swapView1" active="true"/>
+					<faces:view name="swapView2"/>
+					<faces:view name="swapView3"/>
+				</faces:swapViewContainer>
+				<hr />
+				<faces:button id="backButton" text="Back" visible="false" style="float:left" styleName="faces-Button swapView-back-button"  onSelect="swapViewContainerController.previousView"/>
+				<faces:button id="buyButton" text="Buy Now" style="float:right" styleName="faces-Button swapView-buy-button" onSelect="swapViewContainerController.nextView"/>
+				<hr />
+				<gwt:flowPanel id="actionPanel">
+					<faces:label id="labelList" text="Choose a animation type for the view transitions" style="margin: 30px 0 10px 0;"/>
+					<gwt:listBox id="listAnimation">
+						<gwt:item label="Bounce" selected="true" value="bounce"/>
+						<gwt:item label="Fade" value="fade"/>
+						<gwt:item label="Flip X" value="flipX"/>
+						<gwt:item label="Flip Y" value="flipY"/>
+						<gwt:item label="Light Speed" value="lightSpeed"/>
+						<gwt:item label="Roll" value="roll"/>
+						<gwt:item label="Rotate" value="rotate"/>	
+					</gwt:listBox>
+				</gwt:flowPanel>
+			</gwt:flowPanel>	
+		</crux:styledPanel>	
+
+<!-- 		Component description -->
+		<showcase:info title="SwapPanel">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
+	</center>
+
 </v:view>
