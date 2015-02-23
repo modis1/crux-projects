@@ -3,12 +3,38 @@
 	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:c="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:show="http://www.cruxframework.org/crux/showcase"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt">
 	
 	<head>
 		<title>Crux Framework - Cross-Device Showcase</title>
 		<meta name="fragment" content="!" />
+		
+		<script type="text/javascript">
+	    if(!hasLocaleURL())
+	    {
+	        window.location.replace("?locale=" + getUserConfigLocale() + window.location.hash);
+	    }
+	        
+	    function hasLocaleURL() 
+	    {
+	       if(document.URL.indexOf("?locale") > -1)
+	       {
+	           return true;
+	       }
+	       return false;
+	    }
+	    
+	    function getUserConfigLocale() 
+	    {
+	        if(window.navigator.language == "pt" || (window.navigator.language.indexOf("pt-") > -1) || (window.navigator.language.indexOf("pt_") > -1))
+	        {
+	            return "pt_BR";
+	        }
+	        return "en_US";
+	    }
+	    </script>
 	</head>
 	
 	<body>
@@ -17,15 +43,25 @@
 		<c:screen useController="mainController" useView="*" 
 				  smallViewport="user-scalable=no, width=320" 
 				  largeViewport="user-scalable=no, width=device-width, height=device-height" 
-				  useResource="xStandardResources,showcaseCoreResources,showcaseCoreResourcesCommon" height="100%"
+				  useResource="xStandardResources,showcaseCoreResources,showcaseCoreResourcesCommon,smartFacesResources" height="100%"
 				  onLoad="mainController.wellcome"/>
 
-		<crux:menuTabsDisposal id="menuDisposal">
+		<crux:menuTabsDisposal id="menuDisposal" >
 			<crux:header>
 				<gwt:flowPanel id="topBarpanel">
 					<gwt:label text="${messages_showcase.shortWelcome}" id="activeViewPage" styleName="activeView"></gwt:label>
+
+					<faces:selectablePanel id="langTogglerSelector" onSelect="mainController.switchLocaleUrl">
+						<gwt:flowPanel id="langTogglerWrapper" styleName="lang-toggler-wrapper flex">
+							<faces:label id="langEn" text="EN" styleName="lang-toggler-label active" />
+								<gwt:flowPanel id="langToggler" styleName="lang-toggler"></gwt:flowPanel>
+							<faces:label id="langPt" text="PT" styleName="lang-toggler-label" />
+						</gwt:flowPanel>
+					</faces:selectablePanel>
+					
 					<crux:button id="siteButton" text="${messages_showcase.site}" onSelect="mainController.navigateToSite" styleName="topBarIcon siteIcon"/>
 					<crux:button id="projectButton" text="${messages_showcase.project}" onSelect="mainController.navigateToProject" styleName="topBarIcon projectIcon"/>
+					
 				</gwt:flowPanel>
 			</crux:header>
 			
@@ -71,8 +107,16 @@
 			<crux:menuEntry label="${messages_showcase.scrollBanner}" targetView="scrollBanner"/>
 			<crux:menuEntry label="${messages_showcase.timer}" targetView="timer"/>
 			
-<!-- 			<crux:menuSection label="Novos" /> -->
-<!-- 			<crux:menuEntry label="Sortable List" targetView="sortableList"/> -->
+			<crux:menuSection label="Novos" />
+			<crux:menuEntry label="Menu" targetView="menu"/>
+			<crux:menuEntry label="Disposal" targetView="disposal"/>
+			<crux:menuEntry label="Confirm" targetView="confirm"/>
+			<crux:menuEntry label="RollingPanel" targetView="rollingPanel"/>
+			<crux:menuEntry label="SwapPanel" targetView="swapPanel"/>
+			<crux:menuEntry label="Swap View Container" targetView="swapViewContainer"/>
+			<crux:menuEntry label="Sortable List" targetView="sortableList"/>
+			<crux:menuEntry label="Slider" targetView="slider"/>
+			
 <!-- 			<crux:menuEntry label="Sequential Pager" targetView="sequentialPager"/> -->
 <!-- 			<crux:menuEntry label="Random Pager" targetView="randomPager"/> -->
 <!-- 			<crux:menuEntry label="Grid" targetView="grid"/> -->
@@ -82,12 +126,10 @@
 
 <!-- 			<crux:menuEntry label="Rolling Tab Panel" targetView="rollingTabPanel"/> -->
 <!-- 			<crux:menuEntry label="Tab View Container" targetView="tabViewContainer"/> -->
-			
-<!-- 			<crux:menuEntry label="Slider" targetView="slider"/> -->
 <!-- 			<crux:menuEntry label="Simple View Container" targetView="simpleViewContainer"/> -->
-<!-- 			<crux:menuEntry label="Swap View Container" targetView="swapViewContainer"/> -->
 <!-- 			<crux:menuEntry label="Horizontal Swap View Container" targetView="horizontalSwapViewContainer"/> -->
 <!-- 			<crux:menuEntry label="Horizontal Swap Panel" targetView="horizontalSwapPanel"/> -->
+<!-- 			<crux:menuEntry label="menuProblema" targetView="menuTabsDisposal"/> -->
 			
 		</crux:menuTabsDisposal>
 		
