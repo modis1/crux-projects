@@ -25,13 +25,6 @@ public class SortableListController
 	{
 		/* Insert the component description*/
 		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
-		
-		myWidgetAccessor.sortableList().addItem(new Label("Entrar em contato com o fornecedor"));
-		myWidgetAccessor.sortableList().addItem(new Label("Verificar e-mails."));
-		myWidgetAccessor.sortableList().addItem(new Label("Agendar reunião para revisão de orçamento."));
-		myWidgetAccessor.sortableList().addItem(new Label("Revisar relatório e encaminhar à contabilidade."));
-		myWidgetAccessor.sortableList().addItem(new Label("Preparar reunião com os ivestidores."));
-		myWidgetAccessor.sortableList().addItem(new Label("Analisar relatório de qualidade."));
 	}
 	
 	@Expose
@@ -41,7 +34,14 @@ public class SortableListController
 		if (!newActivity.equals(""))
 		{
 			myWidgetAccessor.sortableList().addItem(new Label(newActivity));
+			myWidgetAccessor.textBoxActivity().setValue("");
 		}
+	}
+	
+	@Expose
+	public void removeSelectedItem()
+	{
+		myWidgetAccessor.sortableList().removeSelectedItem();
 	}
 	
 	@BindView("sortableList")

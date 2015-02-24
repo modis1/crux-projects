@@ -55,6 +55,7 @@
 			<crux:menuSection label="${messages_showcase.menuElements}" />
 			<crux:menuEntry label="Filter" targetView="filter"/>
 			<crux:menuEntry label="ListShuttle" targetView="listShuttle"/>
+			<crux:menuEntry label="SortableList" targetView="sortableList"/>
 			<crux:menuEntry label="StackMenu" targetView="stackMenu"/>
 			<crux:menuEntry label="TopMenuDisposal" targetView="topMenuDisposal"/>
 			

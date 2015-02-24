@@ -12,12 +12,20 @@
 	<center>
 		<crux:styledPanel id="panle">
 			<crux:sortableList id="sortableList" header="Atividades do dia" width="500px">
-<!-- 			Não está funfando declarativamente -->
+				<crux:itemWidget>
+					<gwt:label id="label1" text="A"/>
+				</crux:itemWidget>
+				<crux:itemWidget>
+					<gwt:label id="labelB" text="B"/>
+				</crux:itemWidget>
+				<crux:itemWidget>
+					<gwt:label id="labelC" text="C"/>
+				</crux:itemWidget>
 			</crux:sortableList>
 		</crux:styledPanel>
 		<gwt:textBox id="textBoxActivity" width="300px"/>
-		<crux:button id="btnAddActivity" text="Adicionar atividade" onSelect="sortableListController.addActivity"/>
-		<crux:button id="btnRemoveActivity" text="Remover atividade"/>
+		<crux:button id="btnAddActivity" text="Adicionar" onSelect="sortableListController.addActivity"/>
+		<crux:button id="btnRemoveActivity" text="Remover" onSelect="sortableListController.removeSelectedItem"/>
 		
 		<showcase:info title="${messages_sortableList.title}">
 			<showcase:description>
