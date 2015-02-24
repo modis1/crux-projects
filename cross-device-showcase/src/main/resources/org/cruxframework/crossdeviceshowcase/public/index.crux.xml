@@ -10,31 +10,6 @@
 	<head>
 		<title>Crux Framework - Cross-Device Showcase</title>
 		<meta name="fragment" content="!" />
-		
-		<script type="text/javascript">
-	    if(!hasLocaleURL())
-	    {
-	        window.location.replace("?locale=" + getUserConfigLocale() + window.location.hash);
-	    }
-	        
-	    function hasLocaleURL() 
-	    {
-	       if(document.URL.indexOf("?locale") > -1)
-	       {
-	           return true;
-	       }
-	       return false;
-	    }
-	    
-	    function getUserConfigLocale() 
-	    {
-	        if(window.navigator.language == "pt" || (window.navigator.language.indexOf("pt-") > -1) || (window.navigator.language.indexOf("pt_") > -1))
-	        {
-	            return "pt_BR";
-	        }
-	        return "en_US";
-	    }
-	    </script>
 	</head>
 	
 	<body>
