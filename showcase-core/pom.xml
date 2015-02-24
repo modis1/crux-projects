@@ -50,7 +50,6 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
-					<overwrite>true</overwrite>
 				</configuration>
 			</plugin>
 			<!-- Update webapp folders -->
