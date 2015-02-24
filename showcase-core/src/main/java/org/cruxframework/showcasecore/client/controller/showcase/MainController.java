@@ -42,6 +42,11 @@ public class MainController
 
 	private void switchLocaleToggle(String locale)
 	{
+		if(locale == null)
+		{
+			return;
+		}
+		
 		Widget langToggler = View.of(this).getWidget("langToggler");
 
 		Widget langEn = View.of(this).getWidget("langEn");
@@ -49,7 +54,6 @@ public class MainController
 
 		if(locale.contains("pt_BR"))
 		{
-			
 			langEn.removeStyleName("active");
 			langToggler.addStyleName("active");
 			langPt.addStyleName("active");
