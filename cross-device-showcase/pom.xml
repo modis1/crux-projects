@@ -160,7 +160,7 @@
 									<arg value="-localWorkers" />
 									<arg value="2" />
 
-									<!-- <arg value="-strict" /> -->
+									<arg value="-strict" />
 
 <!--                                     <jvmarg value="-Xdebug" /> -->
 <!--                                     <jvmarg value="-Xrunjdwp:transport=dt_socket,address=3331,server=y,suspend=y" /> -->
