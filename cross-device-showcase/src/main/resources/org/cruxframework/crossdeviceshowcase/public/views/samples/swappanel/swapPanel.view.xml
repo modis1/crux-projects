@@ -17,12 +17,7 @@
 				<faces:swapPanel id="swapPanel" animation="bounce" onSwap="swapPanelController.showMessage">
 					<faces:button id="button" text="I am a Button"/>
 				</faces:swapPanel>
-				
-				<!-- 	image widget to swap in panel 	-->		
-				<gwt:flowPanel id="image" visible="false">
-					<crux:image id="imageInner" url="${showcaseCoreResourcesCommon.crux}"/>
-				</gwt:flowPanel>
-				
+								
 				<!-- 	formDisplay widget to swap in panel 	-->	
 				<crux:formDisplay id="form" visible="false">
 					<crux:entry label="Name: ">

@@ -12,8 +12,9 @@ import org.cruxframework.crux.smartfaces.client.swappanel.SwapPanel;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
 import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.formdisplay.FormDisplay;
+import org.cruxframework.crux.widgets.client.image.Image;
+import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
 
@@ -28,6 +29,9 @@ public class SwapPanelController
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
 	
+	@Inject
+	private ShowcaseResourcesCommon showcaseResourcesCommon;
+	
 	@Expose
 	public void onLoad()
 	{
@@ -41,8 +45,7 @@ public class SwapPanelController
 	{
 		switch (status) {
 		case 0:
-			myWidgetAccessor.image().setVisible(true);
-			myWidgetAccessor.swapPanel().transitTo(myWidgetAccessor.image(), chooseAnimation());
+			myWidgetAccessor.swapPanel().transitTo(new Image(showcaseResourcesCommon.crux()), chooseAnimation());
 			status = 1;
 			break;
 		case 1:
@@ -106,7 +109,6 @@ public class SwapPanelController
 	{		
 		ListBox listAnimation();
 		Button button();
-		FlowPanel image();
 		FormDisplay form();
 		SwapPanel swapPanel();
 		HTML componentDescription();
@@ -120,5 +122,10 @@ public class SwapPanelController
 	public void setMessages(DescriptionMessages messages) 
 	{
 		this.messages = messages;
+	}
+	
+	public void setShowcaseResourcesCommon(ShowcaseResourcesCommon showcaseResourcesCommon) 
+	{
+		this.showcaseResourcesCommon = showcaseResourcesCommon;
 	}
 }
