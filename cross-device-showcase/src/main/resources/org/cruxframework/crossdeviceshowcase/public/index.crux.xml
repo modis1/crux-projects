@@ -55,7 +55,6 @@
 			<crux:menuSection label="${messages_showcase.menuElements}" />
 			<crux:menuEntry label="Filter" targetView="filter"/>
 			<crux:menuEntry label="ListShuttle" targetView="listShuttle"/>
-			<crux:menuEntry label="SortableList" targetView="sortableList"/>
 			<crux:menuEntry label="StackMenu" targetView="stackMenu"/>
 			<crux:menuEntry label="TopMenuDisposal" targetView="topMenuDisposal"/>
 			
@@ -96,6 +95,7 @@
 			<crux:menuEntry label="Slider" targetView="slider"/>
 			<crux:menuEntry label="Sequential Pager" targetView="sequentialPager"/>
 			<crux:menuEntry label="Random Pager" targetView="randomPager"/>
+			<crux:menuEntry label="SortableList" targetView="sortableList"/>
 <!-- 			<crux:menuEntry label="Grid" targetView="grid"/> -->
 <!-- 			<crux:menuEntry label="Download Button" targetView="downloadButton"/> -->
 <!-- 			<crux:menuEntry label="Date Picker" targetView="datePicker"/> -->

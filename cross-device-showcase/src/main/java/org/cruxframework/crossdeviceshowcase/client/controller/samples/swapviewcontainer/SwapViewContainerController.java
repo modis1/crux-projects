@@ -65,8 +65,7 @@ public class SwapViewContainerController
 	
 	private void setState1()
 	{
-		myWidgetAccessor.viewContainer().setAnimation(SwapAnimation.fade);
-		myWidgetAccessor.viewContainer().setAnimationEnabled(true, Device.all);
+		myWidgetAccessor.viewContainer().setAnimation(chooseAnimation());
 		myWidgetAccessor.viewContainer().showView("swapView1");
 		myWidgetAccessor.backButton().setVisible(false);
 		myWidgetAccessor.buyButton().setText("Buy Now");
@@ -75,8 +74,7 @@ public class SwapViewContainerController
 	
 	private void setState2()
 	{
-		myWidgetAccessor.viewContainer().setAnimation(SwapAnimation.fade);
-		myWidgetAccessor.viewContainer().setAnimationEnabled(true, Device.all);
+		myWidgetAccessor.viewContainer().setAnimation(chooseAnimation());
 		myWidgetAccessor.viewContainer().showView("swapView2");
 		myWidgetAccessor.backButton().setVisible(true);
 		myWidgetAccessor.buyButton().setText("Checkout");
@@ -85,8 +83,7 @@ public class SwapViewContainerController
 	
 	private void setState3()
 	{
-		myWidgetAccessor.viewContainer().setAnimation(SwapAnimation.fade);
-		myWidgetAccessor.viewContainer().setAnimationEnabled(true, Device.all);
+		myWidgetAccessor.viewContainer().setAnimation(chooseAnimation());
 		myWidgetAccessor.viewContainer().showView("swapView3");
 		myWidgetAccessor.backButton().setVisible(true);
 		myWidgetAccessor.buyButton().setText("Back to Start");
