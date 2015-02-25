@@ -3,6 +3,7 @@ package org.cruxframework.crossdeviceshowcase.shared.messages;
 import org.cruxframework.crux.core.client.i18n.MessageName;
 
 import com.google.gwt.i18n.client.Messages;
+import com.google.gwt.i18n.client.Messages.DefaultMessage;
 
 @MessageName("description_messages")
 public interface DescriptionMessages extends Messages
@@ -243,5 +244,5 @@ public interface DescriptionMessages extends Messages
 	String sequentialPagerDescription();	
 	
 	@DefaultMessage("<p>sortableListDescription.</p>")
-	String sortableListDescription();	
+	String sortableListDescription();
 }
