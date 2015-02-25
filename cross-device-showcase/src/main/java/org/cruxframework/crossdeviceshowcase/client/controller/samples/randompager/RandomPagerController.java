@@ -31,6 +31,7 @@ public class RandomPagerController
 	@Inject
 	private ShowcaseResourcesCommon showcaseResourcesCommon;
 	
+	/** Calls methods at randomPager view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
@@ -40,6 +41,7 @@ public class RandomPagerController
 		loadData();
 	}
 	
+//	Method responsible for populating the grid
 	private void loadData(){
 		
 		CountryDS countryDS = (CountryDS) myWidgetAccessor.grid().getDataSource();
@@ -67,8 +69,10 @@ public class RandomPagerController
 		
 		countryList.add(new CountryDTO(showcaseResourcesCommon.morocco().getSafeUri().asString(), "Morocco", "Rabat", "Africa"));
 		countryList.add(new CountryDTO(showcaseResourcesCommon.australia().getSafeUri().asString(), "Australia", "Canberra", "Oceania"));
+		
 		countryDS.setCountries(countryList);
 		
+//		Adds a image in the flag column according to the dataSource datas
 		myWidgetAccessor.grid().addRowRenderHandler(new RowRenderHandler()
 		{
 			@Override
@@ -83,11 +87,14 @@ public class RandomPagerController
 		myWidgetAccessor.grid().refresh();	
 	}
 
+	/**
+	 * Interface that allows to access the widgets of the "randomPager" view.
+	 */
 	@BindView("randomPager")
 	public static interface MyWidgetAccessor extends WidgetAccessor
-	{
-		HTML componentDescription();
+	{	
 		DeviceAdaptiveGrid grid();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
