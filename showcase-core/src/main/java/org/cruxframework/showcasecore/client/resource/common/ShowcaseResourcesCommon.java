@@ -228,4 +228,8 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 //	SwapPanel
 	@Source("crux.png")
 	ImageResource crux();
+	
+//	SequentialPager
+	@Source("cd.jpg")
+	ImageResource cd();
 }

@@ -955,10 +955,11 @@ body
 
 .saleItem .label-price
 {
-	font-size: 35px;
-	color: rgb(231, 1, 1);
+	font-size: 40px;
+	color: #e70101;
 	height: 50px;
-	background-color: rgba(255, 255, 255, 5);
+	background-color: rgba(212, 231, 232, 1);
+	font-family: monospace;
 }
 
 .saleItem-wrapper-panel
@@ -971,11 +972,6 @@ body
 	border-bottom: solid 3px rgb(200, 200, 200);
 	border-right: solid 3px rgb(200, 200, 200);
 	overflow: hidden;
-}
-
-.faces-SwapPanel-currentPanel
-{
-	position: relative !important;
 }
 
 .swapView-topPanel
@@ -1022,4 +1018,14 @@ body
 	border-radius: 6px !important;
 	font-size: 18px !important;
 	width: 150px;
+}
+
+
+.disposal-image
+{
+	width: 700px;
+	height: 530px;
+	border: solid 4px #0b5a15;
+	border-radius: 15px;
+	background-size: 100%;
 }
