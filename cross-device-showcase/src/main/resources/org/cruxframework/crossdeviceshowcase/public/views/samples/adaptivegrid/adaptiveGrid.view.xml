@@ -13,22 +13,20 @@
 	<center>
 <!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
-			<crux:adaptiveGrid id="gridSample" width="100%"
+			<crux:adaptiveGrid id="grid"  width="100%"
 				dataSource="personDS" styleName="grid">
 				<crux:largeColumns>
-					<crux:dataColumn key="name" label="Name"
-						width="110px" />
-					<crux:dataColumn key="age" label="Age"
-						width="110px" />
-					<crux:dataColumn key="status"
-						label="Status" width="110px" />
-					<crux:dataColumn key="birthday"
-						label="Day of Birth" width="200px"
+					<crux:dataColumn key="name" label="Name" width="170px"/>
+					<crux:dataColumn key="age" label="Age" width="70px" />
+					<crux:dataColumn key="status" label="Status" width="90px"/>
+					<crux:dataColumn key="birthday" label="Day of Birth" width="130px"
 						formatter="dateFormatter" />
+					<crux:widgetColumn key="actions" label="E-mail">
+						<crux:button id="btnSendEmail" text="Send e-mail" onSelect="adaptivegridController.sendEmail"/>
+					</crux:widgetColumn>
 				</crux:largeColumns>
 				<crux:smallColumns>
-					<crux:dataColumn key="name" label="Name"
-						width="80px"/>
+					<crux:dataColumn key="name" label="Name" width="80px"/>
 				</crux:smallColumns>
 			</crux:adaptiveGrid>
 		</crux:styledPanel>

@@ -21,7 +21,7 @@ import com.google.gwt.user.client.ui.ListBox;
 public class MenuController {
 	
 	@Inject
-	private DescriptionMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -29,19 +29,19 @@ public class MenuController {
 	@Inject
 	private ShowcaseResourcesCommon resources;
 
+	/** Calls methods at menu view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.componentDescription().setHTML(messages.menuDescription());		
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.menuDescription());		
 		
-		/*Insert the new items in menu*/
 		insertItem();
 		
-		/*Defines menu types according to the device*/
 		defineListBoxItems();
 	}
 	
+	/*Insert the new items in menu*/
 	private void insertItem()
 	{
 		/*Select menu item for insert new subItems*/
@@ -77,7 +77,7 @@ public class MenuController {
 		}	
 	}
 	
-	/*Defines menu type choosed by user*/
+	/**Defines menu type choosed by user*/
 	@Expose
 	public void changeMenuType()
 	{
@@ -108,6 +108,9 @@ public class MenuController {
 		}
 	}
 	
+	/**
+	 * Interface that allows to access the widgets of the "menu" view.
+	 */
 	@BindView("menu")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
@@ -121,13 +124,11 @@ public class MenuController {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(DescriptionMessages messages) 
-	{
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 
 	public void setResources(ShowcaseResourcesCommon resources) {
 		this.resources = resources;
 	}
-
 }

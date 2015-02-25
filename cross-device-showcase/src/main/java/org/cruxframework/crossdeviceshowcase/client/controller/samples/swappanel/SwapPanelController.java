@@ -7,10 +7,10 @@ import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.smartfaces.client.button.Button;
+import org.cruxframework.crux.smartfaces.client.dialog.DialogBox;
+import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.smartfaces.client.swappanel.SwapAnimation;
 import org.cruxframework.crux.smartfaces.client.swappanel.SwapPanel;
-import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox;
-import org.cruxframework.crux.widgets.client.dialog.FlatMessageBox.MessageType;
 import org.cruxframework.crux.widgets.client.formdisplay.FormDisplay;
 import org.cruxframework.crux.widgets.client.image.Image;
 import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
@@ -18,13 +18,18 @@ import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCo
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
 
+/**
+ * @author flavia.jesus
+ *
+ */
 @Controller("swapPanelController")
 public class SwapPanelController 
 {
-	int status = 0;
+	private int status = 0;
+	static final String MESSAGE = "Swaped Widget";
 	
 	@Inject
-	private DescriptionMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -32,14 +37,15 @@ public class SwapPanelController
 	@Inject
 	private ShowcaseResourcesCommon showcaseResourcesCommon;
 	
+	/** Calls methods at swapPanel view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.componentDescription().setHTML(messages.sideMenuDisposal());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.swapPanelDescription());
 	}
 	
-//	Performs swap of the widgets in the panel.
+	/** Performs exchange of widgets on the panel according to the status variable*/
 	@Expose
 	public void swapPanel()
 	{
@@ -95,15 +101,18 @@ public class SwapPanelController
 			break;
 		}
 		return swapAnimation;
-	}
+	}	
 	
-//	Shows message when occurs swap widget
+	/**Shows message when occurs swap widget*/
 	@Expose
 	public void showMessage()
 	{
-		FlatMessageBox.show("Swaped Widget", MessageType.INFO);
+		DialogBox.show(new Label(MESSAGE));
 	}
 	
+	/**
+	 * Interface that allows to access the widgets of the "swapPanel" view.
+	 */
 	@BindView("swapPanel")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{		
@@ -114,16 +123,19 @@ public class SwapPanelController
 		HTML componentDescription();
 	}
 
+	/** @param myWidgetAccessor the myWidgetAccessor to set */
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
-
-	public void setMessages(DescriptionMessages messages) 
+	
+	/** @param componentDescription the componentDescription to set */
+	public void setComponentDescription(DescriptionMessages componentDescription) 
 	{
-		this.messages = messages;
+		this.componentDescription = componentDescription;
 	}
 	
+	/** @param showcaseResourcesCommon the showcaseResourcesCommon to set*/
 	public void setShowcaseResourcesCommon(ShowcaseResourcesCommon showcaseResourcesCommon) 
 	{
 		this.showcaseResourcesCommon = showcaseResourcesCommon;

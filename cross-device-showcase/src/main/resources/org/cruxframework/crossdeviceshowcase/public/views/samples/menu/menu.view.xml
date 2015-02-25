@@ -10,8 +10,7 @@
 	onLoad="menuController.onLoad"
 	title="Menu"> 
 
-	<center>
-		
+	<center>	
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">
 				<faces:menu id="menu" largeType="VerticalAccordion" smallType="VerticalAccordion">
@@ -36,7 +35,7 @@
 					<faces:label id="textMenu" text="Choose the menu type" style="margin: 20px 0 10px 0;"/>
 					<gwt:listBox id="listMenuType" onChange="menuController.changeMenuType">
 						<gwt:item label="Horizontal Accordion" value="horizontalAccordion"/>
-						<gwt:item label="Horizontal Dropdown" selected="true" value="horizontalDropdown"/>
+						<gwt:item label="Horizontal Dropdown" value="horizontalDropdown"/>
 						<gwt:item label="Vertical Accordion" selected="true" value="verticalAccordion"/>
 						<gwt:item label="Vertical Dropdown" value="verticalDropdown"/>
 						<gwt:item label="Vertical Tree" value="verticalTree"/>
@@ -55,5 +54,4 @@
 		</showcase:info>
 
 	</center>
-
 </v:view>

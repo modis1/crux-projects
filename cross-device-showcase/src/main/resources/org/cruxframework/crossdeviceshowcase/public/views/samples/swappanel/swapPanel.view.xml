@@ -14,7 +14,7 @@
 	<center>
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">
-				<faces:swapPanel id="swapPanel" animation="bounce" onSwap="swapPanelController.showMessage">
+				<faces:swapPanel id="swapPanel" width="300px" height="300px" style="text-align:center" animation="bounce" onSwap="swapPanelController.showMessage">
 					<faces:button id="button" text="I am a Button"/>
 				</faces:swapPanel>
 								
@@ -40,7 +40,7 @@
 				<!--	 Button to call widget transition method and ListBox to choice animation	-->
 				<hr />
 				<gwt:flowPanel id="actionPanel">
-					<faces:label id="labelList" text="Choose a animation type and swap the widget" style="margin: 30px 0 10px 0;"/>
+					<faces:label id="labelList" text="Choice a animation type and swap the widget" style="margin: 30px 0 10px 0;"/>
 					<gwt:listBox id="listAnimation" style="margin-right: 20px;">
 						<gwt:item label="Bounce" selected="true" value="bounce"/>
 						<gwt:item label="Fade" value="fade"/>

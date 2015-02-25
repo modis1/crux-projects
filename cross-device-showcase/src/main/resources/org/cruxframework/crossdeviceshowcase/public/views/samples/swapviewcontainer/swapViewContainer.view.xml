@@ -23,7 +23,7 @@
 				<faces:button id="buyButton" text="Buy Now" style="float:right" styleName="faces-Button swapView-buy-button" onSelect="swapViewContainerController.nextView"/>
 				<hr />
 				<gwt:flowPanel id="actionPanel">
-					<faces:label id="labelList" text="Choose a animation type for the view transitions" style="margin: 30px 0 10px 0;"/>
+					<faces:label id="labelList" text="Choice a animation type for the view transitions" style="margin: 30px 0 10px 0;"/>
 					<gwt:listBox id="listAnimation">
 						<gwt:item label="Bounce" selected="true" value="bounce"/>
 						<gwt:item label="Fade" value="fade"/>
@@ -38,7 +38,7 @@
 		</crux:styledPanel>	
 
 <!-- 		Component description -->
-		<showcase:info title="SwapPanel">
+		<showcase:info title="swapViewContainer">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

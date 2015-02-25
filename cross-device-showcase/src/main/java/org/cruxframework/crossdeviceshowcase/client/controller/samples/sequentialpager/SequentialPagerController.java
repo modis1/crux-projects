@@ -3,16 +3,19 @@ package org.cruxframework.crossdeviceshowcase.client.controller.samples.sequenti
 import java.util.ArrayList;
 import java.util.List;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.widgets.client.deviceadaptivegrid.DeviceAdaptiveGrid;
-import org.cruxframework.crux.widgets.client.paging.SequentialPager;
 
 import com.google.gwt.user.client.ui.HTML;
 
+/**
+ * @author flavia.jesus
+ */
 @Controller("sequentialPagerController")
 public class SequentialPagerController
 {
@@ -20,19 +23,21 @@ public class SequentialPagerController
 	private MyWidgetAccessor myWidgetAccessor;
 	
 	@Inject
-	private SequentialPagerMessages messages;
+	private DescriptionMessages componentDescription;
 	
+	/** Calls methods at sequentialPager view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-//		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());	
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.sequentialPagerDescription());
 		
 		loadData();
 	}
 	
-	private void loadData(){
-		
+//	Method responsible for populating the grid
+	private void loadData()
+	{
 		DiscDS discDS = (DiscDS) myWidgetAccessor.grid().getDataSource();
 		List<DiscDTO> discList = new ArrayList<DiscDTO>();
 		
@@ -59,25 +64,30 @@ public class SequentialPagerController
 		discList.add(new DiscDTO("Prism", "Katy Perry", 2013, 16));
 		discList.add(new DiscDTO("Avril Lavigne", "Avril Lavigne", 2013, 11));
 		discList.add(new DiscDTO("The Marshall Mathers LP 2", "Eminem", 2013, 27));
-		
+
 		discDS.setDiscs(discList);
+		
 		myWidgetAccessor.grid().loadData();
-		myWidgetAccessor.grid().refresh();	
+		myWidgetAccessor.grid().refresh();
 	}
 	
+	/**
+	 * Interface that allows to access the widgets of the "sequentialPager" view.
+	 */
 	@BindView("sequentialPager")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
-		SequentialPager sequentialPager();
 		DeviceAdaptiveGrid grid();
+		HTML componentDescription();
 	}
 
+	/** @param myWidgetAccessor the myWidgetAccessor to set */
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(SequentialPagerMessages messages) {
-		this.messages = messages;
+	/** @param componentDescription the componentDescription to set */
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

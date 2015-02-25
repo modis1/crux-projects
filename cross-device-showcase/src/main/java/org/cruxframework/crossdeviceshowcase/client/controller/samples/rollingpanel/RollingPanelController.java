@@ -16,7 +16,7 @@ import com.google.gwt.user.client.ui.HTML;
 public class RollingPanelController {
 	
 	@Inject
-	private DescriptionMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -24,16 +24,17 @@ public class RollingPanelController {
 	@Inject
 	private ShowcaseResourcesCommon resources;
 	
+	/** Calls methods at rollingPanel view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.componentDescription().setHTML(messages.menuDescription());	
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.rollingPanelDescription());	
 		
-		/*Insert list components created to Sport Store*/
 		loadSaleItems();
 	}
 	
+	/*Insert list components created to Sport Store*/
 	private void loadSaleItems()
 	{
 		myWidgetAccessor.rollingPanelCustomizedWidget().add(new SaleItem("Football Boots", "$89,99", resources.footballboots()));
@@ -45,6 +46,9 @@ public class RollingPanelController {
 		myWidgetAccessor.rollingPanelCustomizedWidget().add(new SaleItem("Boxing Gloves", "$49,99", resources.gloves()));
 	}
 
+	/**
+	 * Interface that allows to access the widgets of the "rollingPanel" view.
+	 */
 	@BindView("rollingPanel")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
@@ -58,9 +62,8 @@ public class RollingPanelController {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(DescriptionMessages messages) 
-	{
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 
 	public void setResources(ShowcaseResourcesCommon resources) {

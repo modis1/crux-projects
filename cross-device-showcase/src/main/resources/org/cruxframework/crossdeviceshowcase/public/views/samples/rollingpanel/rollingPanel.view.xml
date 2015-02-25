@@ -17,16 +17,16 @@
 <!-- 				Inserting image widgets to the RollingPanel component -->
 				<faces:label id="label1" text="This is a Image RollingPanel" style="margin-bottom:20px"/>
 				<faces:rollingPanel id="rollingPanelImages"  height="200px" width="900px" tooltip="Sports">
-					<faces:image id="baseball" url="${showcaseCoreResources.baseball}" altText="Baseball" />
-					<faces:image id="basketball" url="${showcaseCoreResources.basketball}"/>
-					<faces:image id="canoeing" url="${showcaseCoreResources.canoeing}"/>
-					<faces:image id="football" url="${showcaseCoreResources.football}"/>
-					<faces:image id="motocross" url="${showcaseCoreResources.motocross}"/>
-					<faces:image id="running" url="${showcaseCoreResources.running}"/>
-					<faces:image id="snowboard" url="${showcaseCoreResources.snowboard}"/>
-					<faces:image id="soccerball" url="${showcaseCoreResources.soccerball}"/>
-					<faces:image id="swimming" url="${showcaseCoreResources.swimming}"/>
-					<faces:image id="volleyball" url="${showcaseCoreResources.volleyball}"/>
+					<faces:image id="baseball" url="${showcaseCoreResourcesCommon.baseball}" altText="Baseball" />
+					<faces:image id="basketball" url="${showcaseCoreResourcesCommon.basketball}"/>
+					<faces:image id="canoeing" url="${showcaseCoreResourcesCommon.canoeing}"/>
+					<faces:image id="football" url="${showcaseCoreResourcesCommon.football}"/>
+					<faces:image id="motocross" url="${showcaseCoreResourcesCommon.motocross}"/>
+					<faces:image id="running" url="${showcaseCoreResourcesCommon.running}"/>
+					<faces:image id="snowboard" url="${showcaseCoreResourcesCommon.snowboard}"/>
+					<faces:image id="soccerball" url="${showcaseCoreResourcesCommon.soccerball}"/>
+					<faces:image id="swimming" url="${showcaseCoreResourcesCommon.swimming}"/>
+					<faces:image id="volleyball" url="${showcaseCoreResourcesCommon.volleyball}"/>
 				</faces:rollingPanel>
 			</gwt:flowPanel>
 		</crux:styledPanel>

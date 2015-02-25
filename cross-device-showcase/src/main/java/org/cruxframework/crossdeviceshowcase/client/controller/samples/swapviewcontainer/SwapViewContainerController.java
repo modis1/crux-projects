@@ -4,7 +4,6 @@ import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
-import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.smartfaces.client.button.Button;
@@ -14,24 +13,29 @@ import org.cruxframework.crux.smartfaces.client.swappanel.SwapViewContainer;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
 
+/**
+ * @author flavia.jesus
+ */
 @Controller("swapViewContainerController")
 public class SwapViewContainerController 
 {	
 	int count = 1;
 	
 	@Inject
-	private DescriptionMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
 
+	/** Calls methods at swapViewContainer view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.componentDescription().setHTML(messages.sideMenuDisposal());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.swapViewContainerDescription());
 	}
 	
+	/** Calls the next view in accordance with the current state*/
 	@Expose
 	public void nextView()
 	{
@@ -49,6 +53,7 @@ public class SwapViewContainerController
 		}
 	}
 	
+	/** Calls the previous view in accordance with the current state*/
 	@Expose
 	public void previousView()
 	{
@@ -126,6 +131,9 @@ public class SwapViewContainerController
 		return swapAnimation;
 	}
 
+	/**
+	 * Interface that allows to access the widgets of the "swapViewContainer" view.
+	 */
 	@BindView("swapViewContainer")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
@@ -136,13 +144,14 @@ public class SwapViewContainerController
 		HTML componentDescription();
 	}
 
+	/** @param myWidgetAccessor the myWidgetAccessor to set */
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
 	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(DescriptionMessages messages) 
-	{
-		this.messages = messages;
+	/** @param componentDescription the componentDescription to set */
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }
