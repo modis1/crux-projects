@@ -25,7 +25,7 @@ import com.google.gwt.user.client.ui.ListBox;
 public class DisposalController {
 	
 	@Inject
-	private DescriptionMessages messages;
+	private DescriptionMessages componentDescription;
 
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -34,7 +34,7 @@ public class DisposalController {
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.componentDescription().setHTML(messages.sideMenuDisposal());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.disposalDescription());
 		
 		defineListBoxItemsMobile();
 	}
@@ -163,9 +163,8 @@ public class DisposalController {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(DescriptionMessages messages) 
-	{
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 
 }
