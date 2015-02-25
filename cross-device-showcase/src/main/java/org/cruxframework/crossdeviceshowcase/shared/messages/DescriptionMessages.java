@@ -187,13 +187,61 @@ public interface DescriptionMessages extends Messages
 			+"<p>Neste exemplo a página <b>Buscar Lojas</b> foi adicionada programaticamente através de uma controller.</p>")
 	String topMenuDisposalDescription();
 	
-	@DefaultMessage("<p>RandomPager é um paginador que tem conhecimento do número total de páginas. Desta forma, o usuário final pode ter um maior controle sobre o material paginado.</p>"
+	@DefaultMessage("<p>RandomPager é um paginador que tem conhecimento do número total de páginas. Desta forma, o usuário final pode ter um maior"
+			+ "controle sobre o material paginado.</p>"
 			+ "<p>No exemplo implementado, o componente faz a páginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
 	String randomPagerDescription();
 	
-	@DefaultMessage("<p>Menu.</p>")
+	@DefaultMessage("<p>O Menu é um componente cross-device baseado nas tags nav, ul e li. Para compor seus ítens e sub-ítens é possível utilizar tags HTML, "
+			+ "Strings e até mesmo outros componentes."
+	        +"Neste exemplo foi utilizado o componente <code>Button</code> como ítem principal e foram criados componentes personalizados <code>MyMenuItem</code> "
+	        + "para preencher os sub-ítens.</p>"
+	        +"<p>O exemplo também demonstra que este Menu tem diferentes formas de apresentação. Através dos atributos <code>largeType</code> e <code>smallType</code>, "
+	        + "pode-se definir como este será apresentado em dispositivos de tela grande como desktops ou pequena como smatphones, proporcionando uma melhor "
+	        + "visualização e usabilidade.</p>")
 	String menuDescription();
 	
-	@DefaultMessage("<p>SideMenuDisposal.</p>")
-	String sideMenuDisposal();
+	@DefaultMessage("<p>Disposals são  componentes que definem o layout de uma página. Para tanto, estes componentes renderizam "
+			+ "automaticamente um menu, um view container, um cabeçalho e um rodapé. Desta forma, basta definir valores para os "
+			+ "atributos do layout e a página estará pronta. Inclusive a ligação entre o menu e as views que serão acionadas por ele.</p>"
+			+"<p>O exemplo apresenta os componentes <code>TopMenuDisposal</code> e <code>SideMenuDisposal</code>. Estes possuem "
+			+ "diferentes formas de disposição do layout e apresentação do menu, o que garante um layout mais adaptável às necessidades.</p>")
+	String disposalDescription();
+	
+	@DefaultMessage("<p>O confirm é uma caixa de diálogo preparada para dar sequência a uma ação, após a confirmação do usuário. "
+			+ "Desta forma, este componente ajuda a evitar que erros de navegação prejudiquem os resultados para os usuários.</p>"
+			+"<p>No exemplo apresentado, os desejos do usuário são confirmados antes das ações de envio e exclusão do nome, sendo "
+			+ "possível escolher sim ou não nestes momentos.</p>")
+	String confirmDescription();
+	
+	@DefaultMessage("<p>SwapPanel é um painel que permite a troca animada entre componentes. Estes podem ser desde um simples botão "
+			+ "até mesmo um formulário completo, dependendo da necessidade do usuário."
+			+"<p>O componente possui uma grande variedade de animações, garantindo diversidade em seu uso. O exemplo acima não apresenta "
+			+ "todas as possibilidades de animação do componente, mas possibilita conferir o funcionamento da troca de animações e também dos componentes. "
+			+ "Outra característica demonstrada no exemplo é o lançamento de evento após o termino da animação, algo bastante útil em diversas aplicações.</p>")
+	String swapPanelDescription();
+	
+	@DefaultMessage("<p>RolligPanel é um painel de rolagem no qual é possível adicionar qualquer componente válido. Pode-se adicionar por exemplo, botões, "
+			+ "labels, um conjunto de imagens, entre outros.</p>"
+			+ "<p>No primeiro exemplo o rollingPanel é composto por um conjunto de imagens. Já no segundo exemplo ele está formado por um "
+			+ "componente personalizado, criado para uma necessidade específica.</p>")
+	String rollingPanelDescription();
+	
+	@DefaultMessage("<p>SwapViewContainer é container de views no qual é possível realizar a troca destas de forma animada. Além de possuir"
+			+ "uma grande variadede de animações, estas são facilmente atribuídas ao componente.</p>")
+	String swapViewContainerDescription();
+	
+	@DefaultMessage("<p>O componente Slider é um painel cross-device que troca seu conteúdo usando animações de slide.</p>"
+			+ "<p>É possível adicionar qualquer componente válido dentro de um Slider, também é possível definir o tempo de duração "
+			+ "das transições, definir a página inicial do painel e ainda se terá um efeito circular para apresentação das páginas "
+			+ "do painel, ou seja, quando chegar na última página, volta para a primeira automaticamente.</p>")
+	String sliderDescription();
+	
+	@DefaultMessage("<p>SequentialPager é um paginador que não prevê o tamanho da fonte de dados para a carga instantânea. Este paginador tem "
+			+ "conhecimento da dimensão da fonte de dados somente após escanear todas as páginas disponíveis. "
+			+ "<p>No exemplo implementado, o componente faz a páginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
+	String sequentialPagerDescription();	
+	
+	@DefaultMessage("<p>sortableListDescription.</p>")
+	String sortableListDescription();	
 }
