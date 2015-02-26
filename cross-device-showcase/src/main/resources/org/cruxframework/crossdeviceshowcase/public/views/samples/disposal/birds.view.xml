@@ -11,9 +11,9 @@
 
 	<center>
 		<gwt:flowPanel id="innerPanel">
-			<faces:label id="title" text="Birds" styleName="faces-Label menu-disposal-views-title"/>
-			<faces:image id="image" url="${showcaseCoreResourcesCommon.birds}"/>
-			<faces:html id="textPpanel" styleName="menu-disposal-views-textPanel">
+			<faces:label id="title" text="Birds" styleName="faces-Label disposal-views-title"/>
+			<faces:image id="image" url="${showcaseCoreResourcesCommon.birds}" styleName="faces-Image disposal-image"/>
+			<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 				<p>
 					Birds (class Aves or clade Avialae) are feathered, winged, two-legged, warm-blooded, egg-laying vertebrates. 
 					Modern birds are characterised by feathers, a beak with no teeth, the laying of hard-shelled eggs, a high 

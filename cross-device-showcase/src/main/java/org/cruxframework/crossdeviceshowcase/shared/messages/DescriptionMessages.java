@@ -3,7 +3,6 @@ package org.cruxframework.crossdeviceshowcase.shared.messages;
 import org.cruxframework.crux.core.client.i18n.MessageName;
 
 import com.google.gwt.i18n.client.Messages;
-import com.google.gwt.i18n.client.Messages.DefaultMessage;
 
 @MessageName("description_messages")
 public interface DescriptionMessages extends Messages
@@ -243,6 +242,10 @@ public interface DescriptionMessages extends Messages
 			+ "<p>No exemplo implementado, o componente faz a páginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
 	String sequentialPagerDescription();	
 	
-	@DefaultMessage("<p>sortableListDescription.</p>")
+	@DefaultMessage("<p>O sortableList é um componente de ordenação. Este permite que seja adicionado qualquer componente "
+			+"válido em seu escopo (<code>Label</code>, <code>Button</code>, <code>Image</code>, entre outros) e realiza a ordenação manual "
+			+ "através de seus botões de controle.</p>"
+			+"<p>Este exemplo apresenta uma lista tarefas que podem ser reordenadas de acordo com sua importância. Também é possível realizar "
+			+ "a adição de uma nova tarefa ou remoção de uma tarefa selecionada.</p>")
 	String sortableListDescription();
 }

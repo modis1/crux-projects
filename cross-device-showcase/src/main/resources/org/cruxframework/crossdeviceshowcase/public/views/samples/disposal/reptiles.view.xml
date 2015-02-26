@@ -11,9 +11,9 @@
 
 	<center>
 		<gwt:flowPanel id="innerPanel">
-			<faces:label id="title" text="Reptiles" styleName="faces-Label menu-disposal-views-title"/>
-			<faces:image id="image" url="${showcaseCoreResourcesCommon.reptiles}"/>
-			<faces:html id="textPpanel" styleName="menu-disposal-views-textPanel">
+			<faces:label id="title" text="Reptiles" styleName="faces-Label disposal-views-title"/>
+			<faces:image id="image" url="${showcaseCoreResourcesCommon.reptiles}" styleName="faces-Image disposal-image"/>
+			<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 				<p>
 					Reptiles, the class Reptilia, are an evolutionary grade of animals, comprising today's turtles, 
 					crocodilians, snakes, lizards and tuatara, their extinct relatives, and some of the extinct ancestors 

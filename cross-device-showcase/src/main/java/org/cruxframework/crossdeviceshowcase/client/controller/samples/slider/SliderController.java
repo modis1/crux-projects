@@ -1,5 +1,6 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.slider;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
@@ -12,30 +13,46 @@ import org.cruxframework.crux.widgets.client.slider.Slider;
 import org.cruxframework.crux.widgets.client.textbox.NumberTextBox;
 
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("sliderController")
 public class SliderController 
 {
+	static final String THANKS_MESSAGE = "Thank you for the informations.";
+	static final String EMPTY_FIELDS_MESSAGE = "Fill in all fields."; 
+	
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
 
 	@Inject
-	private SliderMessages messages;
+	private DescriptionMessages componentDescription;
 
+	/** Calls methods at slider view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.sliderDescription());
 		
 		myWidgetAccessor.slider().changeControlsVisibility(false);
+//		Show first slider widget
 		myWidgetAccessor.slider().showFirstWidget();
 	
 		statusButtons();
 	}
 	
+	/**Cleans data fields and goes to the first step of the wizard.*/
+	@Expose
+	public void cancel()
+	{
+		clearFields();
+		myWidgetAccessor.slider().showFirstWidget();
+		statusButtons();
+	}
+	
+	/**Goes to the previous step of the wizard.*/
 	@Expose
 	public void previous()
 	{
@@ -43,6 +60,8 @@ public class SliderController
 		statusButtons();
 	}
 	
+	/**Identifies which position is the wizard and checks if can move to the next step 
+	 * validating fields completed. If not, shows warning message.*/
 	@Expose
 	public void next()
 	{
@@ -56,18 +75,18 @@ public class SliderController
 				statusButtons();
 			}else
 			{
-				FlatMessageBox.show(messages.emptyFields(), MessageType.WARN);
+				FlatMessageBox.show(EMPTY_FIELDS_MESSAGE, MessageType.WARN);
 			}
 		}else if(currentWidgetIndex == 2)
 		{
 			if(verifyProfessional())
 			{
-				printResult(newPerson());
+				printResult();
 				myWidgetAccessor.slider().next();
 				statusButtons();
 			}else
 			{
-				FlatMessageBox.show(messages.emptyFields(), MessageType.WARN);
+				FlatMessageBox.show(EMPTY_FIELDS_MESSAGE, MessageType.WARN);
 			}
 		}else
 		{
@@ -75,95 +94,74 @@ public class SliderController
 			statusButtons();
 		}			
 	}
-	
-	@Expose
-	public void cancel()
-	{
-		clearFields();
-		myWidgetAccessor.slider().showFirstWidget();
-		statusButtons();
-	}
-	
+		
+	/**Finalizes the wizard and back to the first step*/
 	@Expose
 	public void finish()
 	{
 		if(verifyPersonal() && verifyProfessional())
 		{
 			clearFields();
-			FlatMessageBox.show(messages.thanks(), MessageType.SUCCESS);
+			FlatMessageBox.show(THANKS_MESSAGE, MessageType.SUCCESS);
 			myWidgetAccessor.slider().showFirstWidget();
 			statusButtons();
 		}
 	}
 	
-	private Person newPerson()
+//	Fills the final screen with the data received
+	private void printResult()
 	{
-		Person person = new Person();
-		person.setName(myWidgetAccessor.textBoxName().getText());
-		person.setAge(myWidgetAccessor.numberBoxAge().getValue());
-		person.setPhone(myWidgetAccessor.numberCodPhone().getValue());
-		person.setProfession(myWidgetAccessor.textBoxProfession().getText());
-		person.setExperienceTime(myWidgetAccessor.numberTimeExperience().getValue());
+		String experience = " Month(s)";
 		
-		return person;
-	}
-	
-	private void printResult(Person person)
-	{
-		String experience = "Mês(es)";
 		if (myWidgetAccessor.radioButtonYears().getValue())
 		{
-			experience = "Ano(s)";
+			experience = " Year(s)";
 		}
-		
-		String result = "<p>Nome: " + person.getName() + "</p>"
-		+ "<p>Idade: " + person.getAge() + "</p>"
-		+ "<p>Telefone: " + person.getPhone() + "</p>"
-		+ "<p>Profissão: " + person.getProfession() +"</p>"
-		+ "<p>Tempo de Experiência: " + person.getExperienceTime()+ " "+experience+"</p>";
-		
-//		String result = "<p>Nome: " + myWidgetAccessor.textBoxName().getText() +"</p>"
-//				+ "<p>Idade: " + myWidgetAccessor.numberBoxAge().getValue() +"</p>"
-//				+ "<p>Telefone: (" + myWidgetAccessor.numberCodPhone().getValue()+") "
-//				+myWidgetAccessor.numberInitPhone().getValue()+"-"+myWidgetAccessor.numberFinalPhone().getValue()+"</p>"
-//				+ "<p>Profissão: "+myWidgetAccessor.textBoxProfession().getText() +"</p>"
-//				+ "<p>Tempo de Experiência: "+myWidgetAccessor.numberTimeExperience().getValue()+ " "+experience+"</p>";
-		
-		myWidgetAccessor.htmlResult().setHTML(result);
+		myWidgetAccessor.labelResultName().setText("Name: " + myWidgetAccessor.textBoxName().getText());
+		myWidgetAccessor.labelResultAge().setText("Age: " + myWidgetAccessor.numberBoxAge().getValue());
+		myWidgetAccessor.labelResultPhone().setText("Phone: " + myWidgetAccessor.numberCodPhone().getValue());
+		myWidgetAccessor.labelResultProfession().setText("Profession: " + myWidgetAccessor.textBoxProfession().getText());
+		myWidgetAccessor.labelResultExperience().setText("Length of experience: " + myWidgetAccessor.numberExperience().getValue() + experience);
 	}
 	
+//	Set buttons status
 	private void statusButtons()
 	{
 		int widgetIndex = myWidgetAccessor.slider().getCurrentWidgetIndex();
 		
 		switch (widgetIndex)
 		{
-			case 0: myWidgetAccessor.btnCancel().setEnabled(false);
-			myWidgetAccessor.btnPrevious().setEnabled(false);
-			myWidgetAccessor.btnNext().setEnabled(true);
-			myWidgetAccessor.btnFinish().setEnabled(false);
+			case 0: 
+				myWidgetAccessor.btnCancel().setEnabled(false);
+				myWidgetAccessor.btnPrevious().setEnabled(false);
+				myWidgetAccessor.btnNext().setEnabled(true);
+				myWidgetAccessor.btnFinish().setEnabled(false);
 			break;	
 			
-			case 1: myWidgetAccessor.btnCancel().setEnabled(true);
-			myWidgetAccessor.btnPrevious().setEnabled(true);
-			myWidgetAccessor.btnNext().setEnabled(true);
-			myWidgetAccessor.btnFinish().setEnabled(false);
+			case 1: 
+				myWidgetAccessor.btnCancel().setEnabled(true);
+				myWidgetAccessor.btnPrevious().setEnabled(true);
+				myWidgetAccessor.btnNext().setEnabled(true);
+				myWidgetAccessor.btnFinish().setEnabled(false);
 			break;	
 			
-			case 2: myWidgetAccessor.btnCancel().setEnabled(true);
-			myWidgetAccessor.btnPrevious().setEnabled(true);
-			myWidgetAccessor.btnNext().setEnabled(true);
-			myWidgetAccessor.btnFinish().setEnabled(false);
+			case 2: 
+				myWidgetAccessor.btnCancel().setEnabled(true);
+				myWidgetAccessor.btnPrevious().setEnabled(true);
+				myWidgetAccessor.btnNext().setEnabled(true);
+				myWidgetAccessor.btnFinish().setEnabled(false);
 			break;	
 			
-			case 3: myWidgetAccessor.btnCancel().setEnabled(true);
-			myWidgetAccessor.btnPrevious().setEnabled(true);
-			myWidgetAccessor.btnNext().setEnabled(false);
-			myWidgetAccessor.btnFinish().setEnabled(true);
+			case 3: 
+				myWidgetAccessor.btnCancel().setEnabled(true);
+				myWidgetAccessor.btnPrevious().setEnabled(true);
+				myWidgetAccessor.btnNext().setEnabled(false);
+				myWidgetAccessor.btnFinish().setEnabled(true);
 			break;	
 		}
 	}
 	
+//	cleans the fields of the wizard screens
 	private void clearFields()
 	{
 		myWidgetAccessor.textBoxName().setText(null); 
@@ -172,10 +170,11 @@ public class SliderController
 		myWidgetAccessor.numberInitPhone().setValue(null);
 		myWidgetAccessor.numberFinalPhone().setValue(null);
 		myWidgetAccessor.textBoxProfession().setText(null);
-		myWidgetAccessor.numberTimeExperience().setValue(null);
+		myWidgetAccessor.numberExperience().setValue(null);
 		myWidgetAccessor.radioButtonYears().setValue(true);
 	}
 	
+//	Checks that all personal fields are filled
 	private boolean verifyPersonal()
 	{
 		boolean complete = false;
@@ -191,22 +190,25 @@ public class SliderController
 		return complete;
 	}
 	
+//	Checks that all professional fields are filled
 	private boolean verifyProfessional()
 	{
 		boolean complete = false;
 		
 		if(!myWidgetAccessor.textBoxProfession().getValue().equals("") && 
-			myWidgetAccessor.numberTimeExperience().getValue() != null) 
+			myWidgetAccessor.numberExperience().getValue() != null) 
 		{
 			complete = true;
 		}
 		return complete;
 	}
 
+	/**
+	 * Interface that allows to access the widgets of the "slider" view.
+	 */
 	@BindView("slider")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
 		Slider slider();
 		
 		TextBox textBoxName();
@@ -216,22 +218,28 @@ public class SliderController
 		NumberTextBox numberFinalPhone();
 		
 		TextBox textBoxProfession();
-		NumberTextBox numberTimeExperience();
+		NumberTextBox numberExperience();
 		RadioButton radioButtonYears();
 		
-		HTML htmlResult();
+		Label labelResultName();
+		Label labelResultAge();
+		Label labelResultPhone();
+		Label labelResultProfession();
+		Label labelResultExperience();
 		
 		Button btnCancel();
 		Button btnPrevious();
 		Button btnNext();
 		Button btnFinish();
+		
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(SliderMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) {
+		this.componentDescription = componentDescription;
 	}
 }

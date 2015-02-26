@@ -6,33 +6,33 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="sliderController" 
 	onLoad="sliderController.onLoad"
-	title="${messages_slider.title}">
-	
+	title="Slider">
 	<center>
 	
-	<crux:styledPanel id="sliderPanel">
+	<crux:styledPanel id="mainPanel">
+		<gwt:flowPanel id="innerPanel">
     		<crux:slider id="slider" width="500px" height="250px">
 <!--     		WELCOME -->
     			<crux:widget>
-    				<gwt:HTMLPanel id="panelWelcome" styleName="sliderPanel">
-    					<gwt:label id="labelWelcome" text="${messages_slider.labelWelcome}"/>
+    				<gwt:flowPanel id="welcomePanel" styleName="sliderPanel">
+    					<gwt:label id="labelWelcome" text="Welcome" styleName="gwt-Label slider-first-page-title"/>
     					<br />
-    					<gwt:label id="labeNext" text="${messages_slider.labeNext}"/>
-    				</gwt:HTMLPanel>
+    					<gwt:label id="labeNext" text="Click Next to start" styleName="gwt-Label slider-first-page-title"/>
+    				</gwt:flowPanel>
     			</crux:widget>
 <!--     			PERSONAL -->
     			<crux:widget>
-    				<gwt:HTMLPanel id="panelPersonalData">
-	    				<gwt:label id="labelPersonal" text="${messages_slider.labelPersonal}"/>
+    				<gwt:flowPanel id="panelPersonalData">
+	    				<gwt:label id="labelPersonal" text="Personal Data" styleName="gwt-Label slider-page-title"/>
 	    				 <br />
 		    				<crux:formDisplay id="formPersonalData">
-								<crux:entry label="${messages_slider.personalName}">
+								<crux:entry label="Name:">
 									<gwt:textBox id="textBoxName" width="250px"/>
 								</crux:entry>
-								<crux:entry label="${messages_slider.personalAge}">
+								<crux:entry label="Age:">
 									<crux:numberTextBox id="numberBoxAge" maxLength="2" width="50px"/>
 								</crux:entry>
-								<crux:entry label="${messages_slider.personalPhone}">
+								<crux:entry label="Phone:">
 									<gwt:horizontalPanel id="panelPhone">
 										<crux:numberTextBox id="numberCodPhone" maxLength="3" width="50px" style="margin-right:5px;"/>
 										<crux:numberTextBox id="numberInitPhone" width="90px" style="margin-right:5px;"/>
@@ -40,49 +40,54 @@
 									</gwt:horizontalPanel>	
 								</crux:entry>
 							</crux:formDisplay>
-					</gwt:HTMLPanel>		
+					</gwt:flowPanel>		
     			</crux:widget>
 <!--     			PROFESSIONAL -->
     			<crux:widget>
-    				<gwt:HTMLPanel id="panelProfessionalData" >
-    					<gwt:label id="labelProfessional" text="${messages_slider.labelProfessional}"/>
+    				<gwt:flowPanel id="panelProfessionalData" >
+    					<gwt:label id="labelProfessional" text="Professional Data" styleName="gwt-Label slider-page-title"/>
     					 <br />
     						<crux:formDisplay id="formProfessionalData">
-								<crux:entry label="${messages_slider.profession}">
+								<crux:entry label="Profession: ">
 									<gwt:textBox id="textBoxProfession" width="250px"/>
 								</crux:entry>
-								<crux:entry label="${messages_slider.labelExperience}">
-									<gwt:HTMLPanel id="panelExperience">
-										<crux:numberTextBox id="numberTimeExperience" maxLength="2" width="50px"/>
-										<gwt:radioButton id="radioButtonYears" name="timeExperience" text="${messages_slider.radioYears}" checked="true"/>
-										<gwt:radioButton id="radioButtonMonths" name="timeExperience" text="${messages_slider.radioMonths}"/>
-									</gwt:HTMLPanel>
+								<crux:entry label="Length of experience:">
+									<gwt:flowPanel id="panelExperience">
+										<crux:numberTextBox id="numberExperience" maxLength="2" width="50px" style="margin-right:15px"/>
+										<gwt:radioButton id="radioButtonYears" name="timeExperience" text="Years" checked="true" style="margin-right:10px;"/>
+										<gwt:radioButton id="radioButtonMonths" name="timeExperience" text="Months"/>
+									</gwt:flowPanel>
 								</crux:entry>
 							</crux:formDisplay>
-    				</gwt:HTMLPanel>
+    				</gwt:flowPanel>
     			</crux:widget>
 <!--     			FINISH -->
     			<crux:widget>
-    				<gwt:HTMLPanel id="panelFinish" >
-    					<gwt:label id="labelCheckData" text="${messages_slider.labelCheckData}"/>
-    					<gwt:HTML id="htmlResult"/>
-    					<gwt:label id="labelFinish" text="${messages_slider.labelFinish}"/>
-    				</gwt:HTMLPanel>
+    				<gwt:flowPanel id="panelFinish">
+    					<gwt:label id="labelCheckData" text="Check all the information" styleName="gwt-Label slider-result-labels-title"/>
+						<gwt:label id="labelResultName" styleName="gwt-Label slider-result-labels"/>
+						<gwt:label id="labelResultAge" styleName="gwt-Label slider-result-labels"/>
+						<gwt:label id="labelResultPhone" styleName="gwt-Label slider-result-labels"/>
+						<gwt:label id="labelResultProfession" styleName="gwt-Label slider-result-labels"/>
+						<gwt:label id="labelResultExperience" styleName="gwt-Label slider-result-labels"/>
+    					<gwt:label id="labelFinish" text="Click back to change something or click Finish to end." styleName="gwt-Label slider-result-labels-title"/>
+    				</gwt:flowPanel>
     			</crux:widget>
-    			
 			</crux:slider>
-		</crux:styledPanel>
-		
-		<gwt:horizontalPanel id="panelButtons">
-		<crux:button id="btnCancel" text="${messages_slider.btnCancel}" onSelect="sliderController.cancel"/>
-		<crux:button id="btnPrevious" text="${messages_slider.btnPrevious}" onSelect="sliderController.previous"/>
-		<crux:button id="btnNext" text="${messages_slider.btnNext}" onSelect="sliderController.next"/>
-		<crux:button id="btnFinish" text="${messages_slider.btnFinish}" onSelect="sliderController.finish"/>
-		</gwt:horizontalPanel>
+			
+			<gwt:horizontalPanel id="panelButtons">
+				<crux:button id="btnCancel" text="Cancel" onSelect="sliderController.cancel"/>
+				<crux:button id="btnPrevious" text="Previous" onSelect="sliderController.previous"/>
+				<crux:button id="btnNext" text="Next" onSelect="sliderController.next"/>
+				<crux:button id="btnFinish" text="Finish" onSelect="sliderController.finish"/>
+			</gwt:horizontalPanel>
+		</gwt:flowPanel>
+	</crux:styledPanel>
 
-		<showcase:info title="${messages_slider.title}">
+		<!-- Component description -->
+		<showcase:info title="Slider">
 			<showcase:description>
-				<gwt:HTML id="htmlDescText"/>
+				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
 

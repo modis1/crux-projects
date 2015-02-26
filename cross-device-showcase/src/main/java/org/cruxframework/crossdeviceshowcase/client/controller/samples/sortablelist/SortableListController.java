@@ -1,16 +1,21 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.sortablelist;
 
+import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.widgets.client.sortablelist.SortableList;
 
 import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 
+/**
+ * @author flavia.jesus
+ *
+ */
 @Controller("sortableListController")
 public class SortableListController 
 {
@@ -18,45 +23,58 @@ public class SortableListController
 	private MyWidgetAccessor myWidgetAccessor;
 
 	@Inject
-	private SortableListMessages messages;
+	private DescriptionMessages componentDescription;
 
+	/** Calls methods at sortableList view on Load moment. */
 	@Expose
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.htmlDescText().setHTML(messages.htmlDescText());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.sortableListDescription());
 	}
 	
+	/**Adds a activity in sortableList component*/
 	@Expose
 	public void addActivity()
 	{
-		String newActivity = myWidgetAccessor.textBoxActivity().getValue();
-		if (!newActivity.equals(""))
+		String activityText = myWidgetAccessor.textBoxActivity().getValue();
+		
+		if (!activityText.equals(""))
 		{
-			myWidgetAccessor.sortableList().addItem(new Label(newActivity));
+			Label activity = new Label();
+			activity.addStyleName("sortableList-item");
+			activity.setText(activityText);
+			
+			myWidgetAccessor.sortableList().addItem(activity);
 			myWidgetAccessor.textBoxActivity().setValue("");
 		}
 	}
 	
+	/**Remove the selected activity in sortableList component*/
 	@Expose
-	public void removeSelectedItem()
+	public void removeActivity()
 	{
 		myWidgetAccessor.sortableList().removeSelectedItem();
 	}
 	
+	/**
+	 * Interface that allows to access the widgets of the "sortableList" view.
+	 */
 	@BindView("sortableList")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		HTML htmlDescText();
 		SortableList sortableList();
 		TextBox textBoxActivity();
+		HTML componentDescription();
 	}
 
-	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) {
+	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 
+	{
 		this.myWidgetAccessor = myWidgetAccessor;
 	}
 
-	public void setMessages(SortableListMessages messages) {
-		this.messages = messages;
+	public void setComponentDescription(DescriptionMessages componentDescription) 
+	{
+		this.componentDescription = componentDescription;
 	}
 }

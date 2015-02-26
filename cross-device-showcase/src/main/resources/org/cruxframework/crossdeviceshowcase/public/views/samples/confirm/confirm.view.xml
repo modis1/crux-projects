@@ -1,4 +1,4 @@
-<v:view
+<v:view 
 	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
@@ -13,13 +13,18 @@
 	<center>
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">
-				<faces:label id="labelName" styleName="faces-Label confirm-label"/>
-				<gwt:textBox id="textBoxName" placeHolder="Insert your name here"/>
-				<faces:button id="btnAction" text="Send Name" onSelect="confirmController.actionTask"/>
+				<faces:label id="labelName" styleName="faces-Label confirm-label" />
+				<gwt:textBox id="textBoxName" placeHolder="Insert your name here" />
+				<faces:button id="btnAction" text="Send Name"
+					onSelect="confirmController.showDialog" />
 			</gwt:flowPanel>
 		</crux:styledPanel>
-		
-<!-- 		Component description -->
+
+		<faces:confirm id="confirm" animation="bounce"
+			dialogTitle="Confirm Your Action" cancelLabel="No" okLabel="Yes"
+			onOk="confirmController.launchAction" message="Are you sure that want send your name?"/>
+
+		<!-- Component description -->
 		<showcase:info title="Confirm">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />

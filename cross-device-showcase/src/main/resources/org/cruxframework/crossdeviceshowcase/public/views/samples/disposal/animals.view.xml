@@ -8,13 +8,9 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useResource="showcaseCoreResourcesCommon"
 	title="Animals"> 
-
 	<center>
-		
-			<gwt:flowPanel id="innerPanel">
-				<faces:image id="image" url="${showcaseCoreResourcesCommon.animals}"/>
-			</gwt:flowPanel>
-		
+		<gwt:flowPanel id="innerPanel">
+			<faces:image id="image" url="${showcaseCoreResourcesCommon.animals}"/>
+		</gwt:flowPanel>	
 	</center>
-
 </v:view>

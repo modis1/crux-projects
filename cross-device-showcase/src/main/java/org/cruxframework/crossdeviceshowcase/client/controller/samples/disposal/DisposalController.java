@@ -10,7 +10,6 @@ import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.smartfaces.client.button.Button;
 import org.cruxframework.crux.smartfaces.client.dialog.DialogBox;
-import org.cruxframework.crux.smartfaces.client.dialog.animation.DialogAnimation;
 import org.cruxframework.crux.smartfaces.client.disposal.menudisposal.SideMenuDisposal;
 import org.cruxframework.crux.smartfaces.client.disposal.menudisposal.TopMenuDisposal;
 import org.cruxframework.crux.smartfaces.client.label.Label;
@@ -35,30 +34,24 @@ public class DisposalController {
 	{
 		/* Insert the component description*/
 		myWidgetAccessor.componentDescription().setHTML(componentDescription.disposalDescription());
-		
-		defineListBoxItemsMobile();
 	}
 	
 	@Expose
 	public void showTopMenuDisposal()
 	{
-		myWidgetAccessor.topMenuDisposalPanel().setVisible(true);
 		myWidgetAccessor.sideMenuDisposalPanel().setVisible(false);
-		myWidgetAccessor.listTopMenuType().setVisible(true);
-		myWidgetAccessor.listVerticalMenuType().setVisible(false);
+		myWidgetAccessor.typeMenuPanel().setVisible(false);
+		myWidgetAccessor.topMenuDisposalPanel().setVisible(true);
 		myWidgetAccessor.btnTopMenuDisposal().removeStyleName("unselected-button");
 		myWidgetAccessor.btnSideMenuDisposal().addStyleName("unselected-button");
-		
-		defineListBoxItemsMobile();
 	}
 	
 	@Expose
 	public void showSideMenuDisposal()
 	{
-		myWidgetAccessor.sideMenuDisposalPanel().setVisible(true);
 		myWidgetAccessor.topMenuDisposalPanel().setVisible(false);	
-		myWidgetAccessor.listTopMenuType().setVisible(false);
-		myWidgetAccessor.listVerticalMenuType().setVisible(true);
+		myWidgetAccessor.sideMenuDisposalPanel().setVisible(true);
+		myWidgetAccessor.typeMenuPanel().setVisible(true);
 		myWidgetAccessor.btnSideMenuDisposal().removeStyleName("unselected-button");
 		myWidgetAccessor.btnTopMenuDisposal().addStyleName("unselected-button");
 		
@@ -82,36 +75,9 @@ public class DisposalController {
 	{
 		if(isMobile())
 		{
-			if(myWidgetAccessor.topMenuDisposal().isVisible())
-			{
-				myWidgetAccessor.listTopMenuType().removeItem(1);
-			}
-			else
-			{
-				myWidgetAccessor.listVerticalMenuType().removeItem(1);
-			}
+			myWidgetAccessor.listVerticalMenuType().removeItem(1);
 		}
 	}
-
-	/*Defines top menu type choosed by user*/
-	@Expose
-	public void changeTopMenuType()
-	{
-		String menuType = myWidgetAccessor.listTopMenuType().getValue(myWidgetAccessor.listTopMenuType().getSelectedIndex());
-		
-		switch (menuType) 
-		{
-		case "horizontalDropdown":
-			myWidgetAccessor.topMenuDisposal().getMenu().setMenuType(LargeType.HORIZONTAL_DROPDOWN, null);
-			break;
-		case "horizontalAccordion":
-			myWidgetAccessor.topMenuDisposal().getMenu().setMenuType(LargeType.HORIZONTAL_ACCORDION, SmallType.HORIZONTAL_ACCORDION);
-			break;
-		default:
-			break;
-		}
-	}
-	
 	
 	/*Defines vertical menu type choosed by user*/
 	@Expose
@@ -141,13 +107,13 @@ public class DisposalController {
 	@Expose
 	public void showMessage()
 	{
-		DialogBox.show(new Label("You clicked on a sub-item under construction"), DialogAnimation.fade);
+		DialogBox.show(new Label("You clicked on a sub-item under construction."));
 	}
 	
 	@BindView("disposal")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		ListBox listTopMenuType();
+		FlowPanel typeMenuPanel();
 		ListBox listVerticalMenuType();
 		Button btnTopMenuDisposal();
 		Button btnSideMenuDisposal();

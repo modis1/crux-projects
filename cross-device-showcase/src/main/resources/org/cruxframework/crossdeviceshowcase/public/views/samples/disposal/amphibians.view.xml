@@ -11,9 +11,9 @@
 
 	<center>
 		<gwt:flowPanel id="innerPanel">
-			<faces:label id="title" text="Amphibians" styleName="faces-Label menu-disposal-views-title"/>
-			<faces:image id="image" url="${showcaseCoreResourcesCommon.amphibians}"/>
-			<faces:html id="textPpanel" styleName="menu-disposal-views-textPanel">
+			<faces:label id="title" text="Amphibians" styleName="faces-Label disposal-views-title"/>
+			<faces:image id="image" url="${showcaseCoreResourcesCommon.amphibians}" styleName="faces-Image disposal-image"/>
+			<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 				<p>
 					Amphibians are ectothermic, tetrapod vertebrates of the class Amphibia. Modern amphibians are all 
 					Lissamphibia. They inhabit a wide variety of habitats with most species living within terrestrial, 

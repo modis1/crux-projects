@@ -13,23 +13,16 @@
 	<center>
 		
 		<crux:styledPanel id="mainPanel">
-			<gwt:flowPanel id="innerPanel">
-			
-				<gwt:flowPanel id="buttonPanel">
+			<gwt:flowPanel id="innerPanel">			
+				<gwt:flowPanel id="buttonPanel" style="margin: 10px 0px 20px 0px;">
 					<faces:button id="btnTopMenuDisposal" text="TopMenuDisposal" onSelect="disposalController.showTopMenuDisposal"/>
-					<faces:button id="btnSideMenuDisposal" text="SideMenuDisposal" styleName="faces-Button unselected-button" onSelect="disposalController.showSideMenuDisposal"/>
+					<faces:button id="btnSideMenuDisposal" text="SideMenuDisposal" styleName="faces-Button unselected-button" 
+					onSelect="disposalController.showSideMenuDisposal"/>
 				</gwt:flowPanel>
-				<br />
-				
-				<gwt:flowPanel id="typeMenuPanel">
-					<faces:label id="textMenu" text="Choose the menu type" style="margin: 20px 0 10px 0;"/>
-					
-					<gwt:listBox id="listTopMenuType" onChange="disposalController.changeTopMenuType" visible="true">
-						<gwt:item label="Horizontal Accordion" selected="true" value="horizontalAccordion"/>
-						<gwt:item label="Horizontal Dropdown" value="horizontalDropdown"/>
-					</gwt:listBox>
-					
-					<gwt:listBox id="listVerticalMenuType" onChange="disposalController.changeVerticalMenuType" visible="false">
+<!-- 				panel to change menu type for sideMenuDisposal				 -->
+				<gwt:flowPanel id="typeMenuPanel" visible="false">
+					<faces:label id="textMenu" text="Choose the menu type" style="margin: 10px;"/>
+					<gwt:listBox id="listVerticalMenuType" onChange="disposalController.changeVerticalMenuType">
 						<gwt:item label="Vertical Accordion" selected="true" value="verticalAccordion"/>
 						<gwt:item label="Vertical Dropdown" value="verticalDropdown"/>
 						<gwt:item label="Vertical Tree" value="verticalTree"/>
@@ -38,14 +31,14 @@
 				</gwt:flowPanel>
 				<br />
 				
-				<gwt:flowPanel id="disposalPanel">
-<!-- 					Panel para o topMenuDisposal, este inicia visível -->
+				<gwt:flowPanel id="disposalsPanel">
+<!-- 					topMenuDisposal panel, this starts visible -->
 					<gwt:flowPanel id="topMenuDisposalPanel" visible="true">
 						<faces:topMenuDisposal id="topMenuDisposal">
 							<faces:view name="animals"/>
 							<faces:largeHeader><faces:label id="largeHeader" text="Animals" styleName="faces-label menu-disposal-title"/></faces:largeHeader>
 							<faces:smallHeader><faces:label id="SmallHeader" text="Animals"/></faces:smallHeader>
-							<faces:mainMenu menuType="HORIZONTAL_ACCORDION">
+							<faces:mainMenu menuType="HORIZONTAL_DROPDOWN">
 								<faces:menuItem label="Amphibians">
 									<faces:menuItem label="Description" targetView="amphibians"></faces:menuItem>
 									<faces:menuItem label="Curiosities" onSelect="disposalController.showMessage"></faces:menuItem>
@@ -63,7 +56,7 @@
 						</faces:topMenuDisposal>
 					</gwt:flowPanel>	
 				
-<!-- 					Panel para o topMenuDisposal, este inicia invisível -->
+<!-- 					sideMenuDisposalPanel panel, this starts invisible-->
 					<gwt:flowPanel id="sideMenuDisposalPanel" visible="false">
 						<faces:sideMenuDisposal id="sideMenuDisposal">
 							<faces:view name="animals"/>

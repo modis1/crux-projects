@@ -52,6 +52,5 @@
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
-
 	</center>
 </v:view>
