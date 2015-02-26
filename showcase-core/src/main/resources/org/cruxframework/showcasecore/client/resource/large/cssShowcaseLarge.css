@@ -922,16 +922,16 @@ body
 
 .disposal-image
 {
-	width: 700px;
-	height: 530px;
+	width: 700px !important;
+	height: 527px !important;
 	border: solid 4px #0b5a15;
 	border-radius: 15px;
-	background-size: 100%;
+	background-size: 100% !important;
 }
 
 .disposal-views-textPanel
 {
-	width: 800px;
+	width: 700px;
 	text-align: justify;
 	color: rgb(11, 90, 21);
 }
