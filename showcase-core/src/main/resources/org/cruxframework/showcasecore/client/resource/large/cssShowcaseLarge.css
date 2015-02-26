@@ -875,6 +875,7 @@ body
 	margin-top: 12%;
 }
 
+/* Timer */
 .timerPanel
 {
 	text-align:center;
@@ -882,10 +883,12 @@ body
 	border-radius: 3px;
 }
 
+/* TopMenuDisposal */
 .explanationMobile{
 	display:none;
 }
 
+/* Menu */
 .menuItem-wrapper
 {
 	text-align: left;
@@ -909,20 +912,31 @@ body
 	margin-right: 10px;
 }
 
-.menu-disposal-views-title
+
+/* Disposal */
+.disposal-views-title
 {
 	font-size: 20px;
 	margin-bottom: 15px;
 }
 
-.menu-disposal-views-textPanel
+.disposal-image
+{
+	width: 700px;
+	height: 530px;
+	border: solid 4px #0b5a15;
+	border-radius: 15px;
+	background-size: 100%;
+}
+
+.disposal-views-textPanel
 {
 	width: 800px;
 	text-align: justify;
 	color: rgb(11, 90, 21);
 }
 
-.menu-disposal-title
+.disposal-title
 {
 	font-size: 26px;
 }
@@ -934,12 +948,16 @@ body
 	color: lightgrey !important;
 }
 
+
+/* Confirm */
 .confirm-label
 {
 	font-size: 20px;
 	margin-bottom: 20px;
 }
 
+
+/* RollingPanel */
 .saleItem .faces-Image
 {
 	height: 120px;
@@ -974,6 +992,8 @@ body
 	overflow: hidden;
 }
 
+
+/* SwapViewContainer */
 .swapView-topPanel
 {
 	background-color: rgb(231, 1, 1);
@@ -1021,11 +1041,35 @@ body
 }
 
 
-.disposal-image
+/* SortableList */
+.sortableList-item
 {
-	width: 700px;
-	height: 530px;
-	border: solid 4px #0b5a15;
-	border-radius: 15px;
-	background-size: 100%;
+	margin: 10px 0px;
+}
+
+
+/* Slider */
+.slider-page-title
+{
+	font-size: 18px;
+	margin: 20px;
+}
+
+.slider-first-page-title
+{
+	font-size: 25px;
+	margin: 20px;
+}
+
+.slider-result-labels
+{
+	font-size: 15px;
+	margin: 5px;
+}
+
+.slider-result-labels-title
+{
+	font-size: 15px;
+	margin: 20px;
+	font-weight: bold;
 }
