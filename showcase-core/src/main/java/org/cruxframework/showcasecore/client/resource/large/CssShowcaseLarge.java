@@ -15,12 +15,13 @@
  */
 package org.cruxframework.showcasecore.client.resource.large;
 
-import com.google.gwt.resources.client.CssResource;
+import org.cruxframework.showcasecore.client.resource.common.CssShowcaseCommon;
+
 
 /**
  * @author Gesse Dafe
  *
  */
-public interface CssShowcaseLarge extends CssResource
+public interface CssShowcaseLarge extends CssShowcaseCommon
 {
 }

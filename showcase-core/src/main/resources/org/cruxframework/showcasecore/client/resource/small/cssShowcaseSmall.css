@@ -42,10 +42,6 @@ body
 	right: 15px;
 }
 
-.crux-MenuTabsDisposal .menuTabsHeader{
-	height: 62px !important;
-}
-
 .menuEntriesContainer
 {
 	padding: 10px;
@@ -142,12 +138,13 @@ body
 
 .projectIcon 
 {
-  background:svgIconCode no-repeat center center;
+  background:svgIconCode no-repeat center center;	
   background-size:auto 100%;
 }
 
 .crux-MenuTabsDisposal .menuTabsHeader
 {
+	height: 62px !important;
 	background:#4395c6 !important;
 	color:#fff !important;
 	box-shadow:0 -1px 0 rgba(0,0,0,0.11) inset, 0 1px 5px rgba(0,0,0,0.15) !important;

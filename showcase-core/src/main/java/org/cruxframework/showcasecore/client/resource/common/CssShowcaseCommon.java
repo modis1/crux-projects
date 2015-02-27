@@ -13,14 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.cruxframework.showcasecore.client.resource.small;
+package org.cruxframework.showcasecore.client.resource.common;
 
-import org.cruxframework.showcasecore.client.resource.common.CssShowcaseCommon;
+import com.google.gwt.resources.client.CssResource;
+
 
 /**
  * @author Gesse Dafe
  *
  */
-public interface CssShowcaseSmall extends CssShowcaseCommon
+public interface CssShowcaseCommon extends CssResource
 {
 }

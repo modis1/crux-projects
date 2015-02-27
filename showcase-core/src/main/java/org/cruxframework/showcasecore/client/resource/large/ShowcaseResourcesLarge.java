@@ -29,7 +29,7 @@ import com.google.gwt.resources.client.ImageResource;
 @Resource(value="showcaseCoreResources", supportedDevices={Device.all})
 public interface ShowcaseResourcesLarge extends ClientBundle
 {
-	@Source("cssShowcaseLarge.css")
+	@Source({"org/cruxframework/showcasecore/client/resource/common/cssShowcaseCommon.css", "cssShowcaseLarge.css"})
 	CssShowcaseLarge css();
 	
 	@Source("icon-layout.png")
