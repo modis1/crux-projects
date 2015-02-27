@@ -13,10 +13,10 @@
 	<center>		
 		<crux:styledPanel id="panel">
 			<gwt:HTMLPanel id="innerPanel">
-				<faces:label id="labelTitleText" text="Use the component sort buttons to reorder its tasks" styleName="faces-Label sortableList-item"/>
+				<faces:label id="labelTitleText" text="Use the component sort buttons to reorder its tasks" styleName="faces-Label sortableList-item heading"/>
 				<crux:sortableList id="sortableList" header="Tasks for the day" width="400px">
 					<crux:itemWidget>
-						<faces:label id="label1" text="Check emails." style="margin: 10px 0px;"/>
+						<faces:label id="label1" text="Check emails." />
 					</crux:itemWidget>
 					<crux:itemWidget>
 						<faces:label id="label2" text="Schedule meeting to budget revision." styleName="faces-Label sortableList-item"/>

@@ -14,7 +14,7 @@
 		
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">			
-				<gwt:flowPanel id="buttonPanel" style="margin: 10px 0px 20px 0px;">
+				<gwt:flowPanel id="buttonPanel" styleName="faces--group">
 					<faces:button id="btnTopMenuDisposal" text="TopMenuDisposal" onSelect="disposalController.showTopMenuDisposal"/>
 					<faces:button id="btnSideMenuDisposal" text="SideMenuDisposal" styleName="faces-Button unselected-button" 
 					onSelect="disposalController.showSideMenuDisposal"/>
@@ -33,7 +33,7 @@
 				
 				<gwt:flowPanel id="disposalsPanel">
 <!-- 					topMenuDisposal panel, this starts visible -->
-					<gwt:flowPanel id="topMenuDisposalPanel" visible="true">
+					<gwt:flowPanel id="topMenuDisposalPanel" visible="true" styleName="faces-TopMenuDisposal simulate-screen">
 						<faces:topMenuDisposal id="topMenuDisposal">
 							<faces:view name="animals"/>
 							<faces:largeHeader><faces:label id="largeHeader" text="Animals" styleName="faces-label menu-disposal-title"/></faces:largeHeader>
@@ -57,7 +57,7 @@
 					</gwt:flowPanel>	
 				
 <!-- 					sideMenuDisposalPanel panel, this starts invisible-->
-					<gwt:flowPanel id="sideMenuDisposalPanel" visible="false">
+					<gwt:flowPanel id="sideMenuDisposalPanel" visible="false" styleName="faces-SideMenuDisposal simulate-screen">
 						<faces:sideMenuDisposal id="sideMenuDisposal">
 							<faces:view name="animals"/>
 							<faces:largeHeader><faces:label id="largeHeader" text="Animals" styleName="faces-label menu-disposal-title"/></faces:largeHeader>

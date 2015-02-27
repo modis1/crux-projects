@@ -14,25 +14,26 @@
 
 	<center>
 		<crux:styledPanel id="mainPanel">
-			<crux:adaptiveGrid id="grid" dataSource="discDS" pageSize="5" styleName="grid">
-				 <crux:largeColumns>
-					 <crux:widgetColumn key="type" label="Type" width="70px">
-					 	<crux:image id="type" url="${showcaseCoreResourcesCommon.cd}" width="50px" height="30px" style="margin: 3px 10px;"/>
-					 </crux:widgetColumn>
-					 <crux:dataColumn key="discName" label="Album" width="150px" horizontalAlignment="center"/>
-					 <crux:dataColumn key="artistName" label="Artist" width="150px" horizontalAlignment="center"/>
-					 <crux:dataColumn key="releaseYear" label="Release" width="100px" horizontalAlignment="center"/>
-					 <crux:dataColumn key="stock" label="Stock" width="80px"/>
-		 		</crux:largeColumns>
-				 <crux:smallColumns>
-				 	<crux:dataColumn key="artistName" label="Artist"/>
-				 </crux:smallColumns>
-			</crux:adaptiveGrid>
-		</crux:styledPanel>		
-		<br />
-			
-		<crux:styledPanel id="panel">
-			<crux:sequentialPager id="sequentialPager" pageable="grid"/>
+			<gwt:flowPanel id="wrapper">
+				<crux:adaptiveGrid id="grid" dataSource="discDS" pageSize="5" styleName="grid">
+					<crux:largeColumns>
+						<crux:widgetColumn key="type" label="Type" width="70px">
+							<crux:image id="type" url="${showcaseCoreResourcesCommon.cd}" width="50px" height="30px" style="margin: 3px 10px;"/>
+						</crux:widgetColumn>
+						<crux:dataColumn key="discName" label="Album" width="150px" horizontalAlignment="center"/>
+						<crux:dataColumn key="artistName" label="Artist" width="150px" horizontalAlignment="center"/>
+						<crux:dataColumn key="releaseYear" label="Release" width="100px" horizontalAlignment="center"/>
+						<crux:dataColumn key="stock" label="Stock" width="80px"/>
+			 		</crux:largeColumns>
+					<crux:smallColumns>
+						<crux:dataColumn key="artistName" label="Artist"/>
+					</crux:smallColumns>
+				</crux:adaptiveGrid>
+				<gwt:HTMLPanel id="hr">
+					<hr />
+				</gwt:HTMLPanel>
+				<crux:sequentialPager id="sequentialPager" pageable="grid"/>
+			</gwt:flowPanel>
 		</crux:styledPanel>
 		
 		<!-- 		Component description       -->
