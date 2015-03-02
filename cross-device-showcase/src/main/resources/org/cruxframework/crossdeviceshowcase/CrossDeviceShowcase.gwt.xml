@@ -6,7 +6,7 @@
     <!-- ******* To enable superdevmode ******* -->
     
     <inherits name='org.cruxframework.crux.tools.codeserver.CruxCodeServer' />
-	<!--  <set-configuration-property name="devModeUrlWhitelistRegexp" value="http://(10\.1\.2\.156)(:\d+)?/.*" /> -->
+<!-- 	<set-configuration-property name="devModeUrlWhitelistRegexp" value="http://(10\.1\.2\.186)(:\d+)?/.*" /> -->
 
 	<!-- ******* Compilations options ******* -->
 	
@@ -18,10 +18,10 @@
     <!-- <set-property name="user.agent" value="ie10"/> -->
   
     <!-- Define your device type -->
-    <set-property name="device.features" value="largeDisplayMouse"/>
+<!--     <set-property name="device.features" value="largeDisplayMouse"/> -->
     <!-- <set-property name="device.features" value="largeDisplayTouch"/> -->
     <!-- <set-property name="device.features" value="largeDisplayArrows"/> -->
-    <!-- <set-property name="device.features" value="smallDisplayTouch"/> -->
+    <set-property name="device.features" value="smallDisplayTouch"/>
     <!-- <set-property name="device.features" value="smallDisplayArrows"/> -->
 	
 	<!-- ******* Application paths ******* -->

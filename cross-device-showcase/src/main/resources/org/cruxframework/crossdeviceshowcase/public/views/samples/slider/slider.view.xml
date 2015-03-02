@@ -11,7 +11,7 @@
 	
 	<crux:styledPanel id="mainPanel">
 		<gwt:flowPanel id="innerPanel">
-    		<crux:slider id="slider" width="500px" height="250px">
+    		<crux:slider id="slider" height="300px">
 <!--     		WELCOME -->
     			<crux:widget>
     				<gwt:flowPanel id="welcomePanel" styleName="sliderPanel">
