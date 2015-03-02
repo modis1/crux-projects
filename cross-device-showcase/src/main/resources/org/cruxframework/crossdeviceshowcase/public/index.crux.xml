@@ -26,8 +26,8 @@
 				<gwt:flowPanel id="topBarpanel">
 					<gwt:label text="${messages_showcase.shortWelcome}" id="activeViewPage" styleName="activeView"></gwt:label>
 
-					<faces:selectablePanel id="langTogglerSelector" onSelect="mainController.switchLocaleUrl">
-						<gwt:flowPanel id="langTogglerWrapper" styleName="lang-toggler-wrapper flex topBarIcon">
+					<faces:selectablePanel id="langTogglerSelector" styleName="topBarIcon" onSelect="mainController.switchLocaleUrl">
+						<gwt:flowPanel id="langTogglerWrapper" styleName="lang-toggler-wrapper flex">
 							<faces:label id="langEn" text="EN" styleName="lang-toggler-label active" />
 								<gwt:flowPanel id="langToggler" styleName="lang-toggler"></gwt:flowPanel>
 							<faces:label id="langPt" text="PT" styleName="lang-toggler-label" />
