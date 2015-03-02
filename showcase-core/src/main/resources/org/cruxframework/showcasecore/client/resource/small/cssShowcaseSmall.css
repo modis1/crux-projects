@@ -818,3 +818,17 @@ body
 .crux-TopMenuDisposal .headerPanel {
 	display: none;
 }
+
+.sm-lang-wrapper
+{
+	position:absolute;
+	right:5px;
+	width:110px;
+	padding:0;
+	margin-top:20px;
+}
+
+.sm-lang-wrapper .lang-toggler-label
+{
+	margin-top:1px;
+}
