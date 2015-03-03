@@ -7,6 +7,7 @@
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="disposalController"
+	useResource="showcaseCoreResources"
 	onLoad="disposalController.onLoad"
 	title="Disposal"> 
 
@@ -21,7 +22,7 @@
 				</gwt:flowPanel>
 <!-- 				panel to change menu type for sideMenuDisposal				 -->
 				<gwt:flowPanel id="typeMenuPanel" visible="false">
-					<faces:label id="textMenu" text="Choose the menu type" style="margin: 10px;"/>
+					<faces:label id="textMenu" text="Choose the menu type" styleName="faces-Label margin-top-bottom"/>
 					<gwt:listBox id="listVerticalMenuType" onChange="disposalController.changeVerticalMenuType">
 						<gwt:item label="Vertical Accordion" selected="true" value="verticalAccordion"/>
 						<gwt:item label="Vertical Dropdown" value="verticalDropdown"/>
@@ -79,6 +80,15 @@
 							<faces:footer><faces:label id="footer" text="Produced by: Crux Framework"/></faces:footer>
 						</faces:sideMenuDisposal>
 					</gwt:flowPanel>
+				</gwt:flowPanel>
+				
+				<gwt:flowPanel id="mobileDisposalPanel" visible="false">
+<!-- 					<gwt:flowPanel id="mobileTopMenuDisposalPanel"> -->
+<!-- 						<faces:image id="topMenuDisposal-img" url="${showcaseCoreResources.topMenuDisposal}"/> -->
+<!-- 					</gwt:flowPanel> -->
+<!-- 					<gwt:flowPanel id="mobileSideMenuDisposalPanel"> -->
+<!-- 						<faces:image id="sideMenuDisposal-img" url="${showcaseCoreResources.sideMenuDisposal}"/> -->
+<!-- 					</gwt:flowPanel> -->
 				</gwt:flowPanel>
 				
 			</gwt:flowPanel>

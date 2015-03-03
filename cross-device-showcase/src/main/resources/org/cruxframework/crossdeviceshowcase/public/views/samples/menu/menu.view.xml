@@ -13,7 +13,7 @@
 	<center>	
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">
-				<faces:menu id="menu" largeType="VerticalAccordion" smallType="VerticalAccordion">
+				<faces:menu id="menu" largeType="VerticalAccordion" smallType="VerticalAccordion" style="margin-bottom: 10px">
 					<faces:item>
 						<faces:itemWidget>
 							<faces:button id="truck" text="Truck"/>
@@ -32,7 +32,7 @@
 				</faces:menu>
 				
 				<gwt:flowPanel id="typeMenuPanel">
-					<faces:label id="textMenu" text="Choose the menu type" style="margin: 20px 0 10px 0;"/>
+					<faces:label id="textMenu" text="Choose the menu type" styleName="faces-Label margin-top-bottom"/>
 					<gwt:listBox id="listMenuType" onChange="menuController.changeMenuType">
 						<gwt:item label="Horizontal Accordion" value="horizontalAccordion"/>
 						<gwt:item label="Horizontal Dropdown" value="horizontalDropdown"/>
@@ -47,7 +47,7 @@
 		</crux:styledPanel>
 		
 <!-- 		Component description -->
-		<showcase:info title="Menu">
+		<showcase:info title="Menu" library="Widgets">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

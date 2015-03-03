@@ -73,7 +73,7 @@ public class MenuController {
 		if(!Screen.getCurrentDevice().getInput().equals(DeviceAdaptive.Input.mouse))
 		{
 			myWidgetAccessor.listMenuType().removeItem(1);
-			myWidgetAccessor.listMenuType().removeItem(3);
+			myWidgetAccessor.listMenuType().removeItem(2);
 		}	
 	}
 	

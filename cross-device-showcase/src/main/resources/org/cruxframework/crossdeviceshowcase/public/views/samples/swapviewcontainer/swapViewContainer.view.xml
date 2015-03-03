@@ -12,18 +12,19 @@
 
 	<center>
 		<crux:styledPanel id="mainPanel">
-			<gwt:flowPanel id="innerPanel">
-				<faces:swapViewContainer id="viewContainer" width="800px" height="600px">
+			<gwt:HTMLPanel id="innerPanel">
+				<faces:swapViewContainer id="viewContainer" styleName="faces-SwapViewContainer showcase-swapViewContainer">
 					<faces:view name="swapView1" active="true"/>
 					<faces:view name="swapView2"/>
 					<faces:view name="swapView3"/>
 				</faces:swapViewContainer>
-				<hr />
-				<faces:button id="backButton" text="Back" visible="false" style="float:left" styleName="faces-Button swapView-back-button"  onSelect="swapViewContainerController.previousView"/>
-				<faces:button id="buyButton" text="Buy Now" style="float:right" styleName="faces-Button swapView-buy-button" onSelect="swapViewContainerController.nextView"/>
-				<hr />
+				<gwt:HTMLPanel id="buttonPanel">
+					<faces:button id="backButton" text="Back" visible="false" styleName="faces-Button swapView-back-button"  onSelect="swapViewContainerController.previousView"/>
+					<faces:button id="buyButton" text="Buy Now" styleName="faces-Button swapView-buy-button" onSelect="swapViewContainerController.nextView"/>
+					<hr />
+				</gwt:HTMLPanel>
 				<gwt:flowPanel id="actionPanel">
-					<faces:label id="labelList" text="Choice a animation type for the view transitions" style="margin: 30px 0 10px 0;"/>
+					<faces:label id="labelList" text="Choice a animation type for the view transitions" styleName="faces-Label margin-top-bottom"/>
 					<gwt:listBox id="listAnimation">
 						<gwt:item label="Bounce" selected="true" value="bounce"/>
 						<gwt:item label="Fade" value="fade"/>
@@ -34,7 +35,7 @@
 						<gwt:item label="Rotate" value="rotate"/>	
 					</gwt:listBox>
 				</gwt:flowPanel>
-			</gwt:flowPanel>	
+			</gwt:HTMLPanel>
 		</crux:styledPanel>	
 
 <!-- 		Component description -->

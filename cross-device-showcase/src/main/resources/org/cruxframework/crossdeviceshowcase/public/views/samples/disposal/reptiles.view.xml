@@ -6,13 +6,13 @@
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
-	useResource="showcaseCoreResourcesCommon"
+	useResource="showcaseCoreResources"
 	title="Reptiles"> 
 
 	<center>
 		<gwt:flowPanel id="innerPanel">
 			<faces:label id="title" text="Reptiles" styleName="faces-Label disposal-views-title"/>
-			<faces:image id="image" url="${showcaseCoreResourcesCommon.reptiles}" styleName="faces-Image disposal-image"/>
+			<faces:image id="image" url="${showcaseCoreResources.reptiles}" styleName="faces-Image disposal-image"/>
 			<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 				<p>
 					Reptiles, the class Reptilia, are an evolutionary grade of animals, comprising today's turtles, 

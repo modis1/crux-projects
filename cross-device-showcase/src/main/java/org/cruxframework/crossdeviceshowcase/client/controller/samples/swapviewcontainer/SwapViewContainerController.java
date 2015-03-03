@@ -70,7 +70,7 @@ public class SwapViewContainerController
 	
 	private void setState1()
 	{
-		myWidgetAccessor.viewContainer().setAnimation(chooseAnimation());
+		myWidgetAccessor.viewContainer().setAnimationBackward(chooseAnimation());
 		myWidgetAccessor.viewContainer().showView("swapView1");
 		myWidgetAccessor.backButton().setVisible(false);
 		myWidgetAccessor.buyButton().setText("Buy Now");
@@ -79,7 +79,7 @@ public class SwapViewContainerController
 	
 	private void setState2()
 	{
-		myWidgetAccessor.viewContainer().setAnimation(chooseAnimation());
+		myWidgetAccessor.viewContainer().setAnimationBackward(chooseAnimation());
 		myWidgetAccessor.viewContainer().showView("swapView2");
 		myWidgetAccessor.backButton().setVisible(true);
 		myWidgetAccessor.buyButton().setText("Checkout");
@@ -88,7 +88,7 @@ public class SwapViewContainerController
 	
 	private void setState3()
 	{
-		myWidgetAccessor.viewContainer().setAnimation(chooseAnimation());
+		myWidgetAccessor.viewContainer().setAnimationBackward(chooseAnimation());
 		myWidgetAccessor.viewContainer().showView("swapView3");
 		myWidgetAccessor.backButton().setVisible(true);
 		myWidgetAccessor.buyButton().setText("Back to Start");
@@ -130,7 +130,7 @@ public class SwapViewContainerController
 		}
 		return swapAnimation;
 	}
-
+	
 	/**
 	 * Interface that allows to access the widgets of the "swapViewContainer" view.
 	 */

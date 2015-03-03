@@ -8,17 +8,17 @@
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="sequentialPagerController"
 	useDataSource="discDS"
-	useResource="showcaseCoreResourcesCommon"
+	useResource="showcaseCoreResources"
 	onLoad="sequentialPagerController.onLoad"
 	title="SequentialPager"> 
 
 	<center>
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="wrapper">
-				<crux:adaptiveGrid id="grid" dataSource="discDS" pageSize="5" styleName="grid">
+				<crux:adaptiveGrid id="grid" dataSource="discDS" pageSize="5" styleName="grid" width="100%">
 					<crux:largeColumns>
 						<crux:widgetColumn key="type" label="Type" width="70px">
-							<crux:image id="type" url="${showcaseCoreResourcesCommon.cd}" width="50px" height="30px" style="margin: 3px 10px;"/>
+							<crux:image id="type" url="${showcaseCoreResources.cd}" width="50px" height="30px" style="margin: 3px 10px;"/>
 						</crux:widgetColumn>
 						<crux:dataColumn key="discName" label="Album" width="150px" horizontalAlignment="center"/>
 						<crux:dataColumn key="artistName" label="Artist" width="150px" horizontalAlignment="center"/>

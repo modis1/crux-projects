@@ -6,11 +6,11 @@
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
-	useResource="showcaseCoreResourcesCommon"
+	useResource="showcaseCoreResources"
 	title="Animals"> 
 	<center>
 		<gwt:flowPanel id="innerPanel">
-			<faces:image id="image" url="${showcaseCoreResourcesCommon.animals}"/>
+			<faces:image id="image" url="${showcaseCoreResources.animals}"/>
 		</gwt:flowPanel>	
 	</center>
 </v:view>

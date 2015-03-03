@@ -6,13 +6,13 @@
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
-	useResource="showcaseCoreResourcesCommon"
+	useResource="showcaseCoreResources"
 	title="Birds"> 
 
 	<center>
 		<gwt:flowPanel id="innerPanel">
 			<faces:label id="title" text="Birds" styleName="faces-Label disposal-views-title"/>
-			<faces:image id="image" url="${showcaseCoreResourcesCommon.birds}" styleName="faces-Image disposal-image"/>
+			<faces:image id="image" url="${showcaseCoreResources.birds}" styleName="faces-Image disposal-image"/>
 			<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 				<p>
 					Birds (class Aves or clade Avialae) are feathered, winged, two-legged, warm-blooded, egg-laying vertebrates. 

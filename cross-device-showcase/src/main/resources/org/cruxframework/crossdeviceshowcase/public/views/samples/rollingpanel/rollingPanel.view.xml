@@ -6,36 +6,36 @@
 	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
-	useResource="showcaseCoreResourcesCommon"
+	useResource="showcaseCoreResources"
 	useController="rollingPanelController"
 	onLoad="rollingPanelController.onLoad"
 	title="RollingPanel"> 
 
 	<center>
-		<crux:styledPanel id="rollingPanel1">
+		<crux:styledPanel id="rollingPanel1" styleName="crux-StyledPanel rollingPanel-panel">
 			<gwt:flowPanel id="innerPanel1">
 <!-- 				Inserting image widgets to the RollingPanel component -->
-				<faces:label id="label1" text="This is a Image RollingPanel" style="margin-bottom:20px"/>
-				<faces:rollingPanel id="rollingPanelImages"  height="200px" width="900px" tooltip="Sports">
-					<faces:image id="baseball" url="${showcaseCoreResourcesCommon.baseball}" altText="Baseball" />
-					<faces:image id="basketball" url="${showcaseCoreResourcesCommon.basketball}"/>
-					<faces:image id="canoeing" url="${showcaseCoreResourcesCommon.canoeing}"/>
-					<faces:image id="football" url="${showcaseCoreResourcesCommon.football}"/>
-					<faces:image id="motocross" url="${showcaseCoreResourcesCommon.motocross}"/>
-					<faces:image id="running" url="${showcaseCoreResourcesCommon.running}"/>
-					<faces:image id="snowboard" url="${showcaseCoreResourcesCommon.snowboard}"/>
-					<faces:image id="soccerball" url="${showcaseCoreResourcesCommon.soccerball}"/>
-					<faces:image id="swimming" url="${showcaseCoreResourcesCommon.swimming}"/>
-					<faces:image id="volleyball" url="${showcaseCoreResourcesCommon.volleyball}"/>
+				<faces:label id="label1" text="This is a Image RollingPanel" styleName="faces-Label margin-bottom"/>
+				<faces:rollingPanel id="rollingPanelImages" tooltip="Sports" styleName="faces-RollingPanel showcase-RollingPanel">
+					<faces:image id="baseball" url="${showcaseCoreResources.baseball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="basketball" url="${showcaseCoreResources.basketball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="canoeing" url="${showcaseCoreResources.canoeing}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="football" url="${showcaseCoreResources.football}" styleName="faces-Image rollingPanel-image" />
+					<faces:image id="motocross" url="${showcaseCoreResources.motocross}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="running" url="${showcaseCoreResources.running}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="snowboard" url="${showcaseCoreResources.snowboard}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="soccerball" url="${showcaseCoreResources.soccerball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="swimming" url="${showcaseCoreResources.swimming}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="volleyball" url="${showcaseCoreResources.volleyball}" styleName="faces-Image rollingPanel-image"/>
 				</faces:rollingPanel>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 		
-		<crux:styledPanel id="rollingPanel2" style="margin-top:50px">
+		<crux:styledPanel id="rollingPanel2">
 			<gwt:flowPanel id="innerPanel2">
 <!-- 				Inserting Personal widgets created to Sports Store for controller -->
-				<faces:label id="label2" text="This is a Customized Component RollingPanel" style="margin-bottom:20px"/>
-				<faces:rollingPanel id="rollingPanelCustomizedWidget" height="250px" width="900px" tooltip="Sports Store"/>
+				<faces:label id="label2" text="This is a Customized Component RollingPanel" styleName="faces-Label margin-bottom"/>
+				<faces:rollingPanel id="rollingPanelCustomizedWidget" styleName="faces-RollingPanel showcase-cust-RollingPanel" tooltip="Sports Store"/>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 		

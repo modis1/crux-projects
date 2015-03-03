@@ -14,9 +14,9 @@
 		<crux:styledPanel id="panel">
 			<gwt:HTMLPanel id="innerPanel">
 				<faces:label id="labelTitleText" text="Use the component sort buttons to reorder its tasks" styleName="faces-Label sortableList-item heading"/>
-				<crux:sortableList id="sortableList" header="Tasks for the day" width="400px">
+				<crux:sortableList id="sortableList" header="Tasks for the day">			
 					<crux:itemWidget>
-						<faces:label id="label1" text="Check emails." />
+						<faces:label id="label1" text="Check emails."/>
 					</crux:itemWidget>
 					<crux:itemWidget>
 						<faces:label id="label2" text="Schedule meeting to budget revision." styleName="faces-Label sortableList-item"/>
@@ -33,7 +33,7 @@
 				</crux:sortableList>
 				<hr />
 				<faces:label id="labelActions" text="Add or remove a new activity" styleName="faces-Label sortableList-item"/>
-				<gwt:textBox id="textBoxActivity" width="250px"/>
+				<gwt:textBox id="textBoxActivity" styleName="gwt-TextBox sortableList-input"/>
 				<crux:button id="btnAddActivity" text="Add" onSelect="sortableListController.addActivity"/>
 				<crux:button id="btnRemoveActivity" text="Remove" onSelect="sortableListController.removeActivity"/>	
 			</gwt:HTMLPanel>
