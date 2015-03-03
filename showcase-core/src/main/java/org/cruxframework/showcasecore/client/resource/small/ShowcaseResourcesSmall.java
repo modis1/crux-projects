@@ -17,8 +17,8 @@ package org.cruxframework.showcasecore.client.resource.small;
 
 import org.cruxframework.crux.core.client.resources.Resource;
 import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
+import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
-import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
 
@@ -27,7 +27,7 @@ import com.google.gwt.resources.client.ImageResource;
  *
  */
 @Resource(value="showcaseCoreResources", supportedDevices={Device.smallDisplayArrows, Device.smallDisplayTouch})
-public interface ShowcaseResourcesSmall extends ClientBundle
+public interface ShowcaseResourcesSmall extends ShowcaseResourcesCommon
 {
 	@Source({"org/cruxframework/showcasecore/client/resource/common/cssShowcaseCommon.css", "cssShowcaseSmall.css"})
 	CssShowcaseSmall css();
@@ -84,25 +84,31 @@ public interface ShowcaseResourcesSmall extends ClientBundle
 	DataResource noise();
 	
 	
-	
-	
-	
-	
+
 	@Source("heads.png")
 	ImageResource heads();
 	
 	@Source("tails.png")
 	ImageResource tails();
 	
-	@Source("swapView1.png")
-	ImageResource swapView1();
-	
-	@Source("swapView2.png")
-	ImageResource swapView2();
-	
-	@Source("swapView3.png")
-	ImageResource swapView3();
-	
 	@Source("mundi.jpg")
 	DataResource mundi();
+	
+	//SwapViewContainer	
+	@Source("mobileProduct.png")
+	ImageResource product();
+	
+	@Source("mobileAddedProduct.png")
+	ImageResource addedProduct();
+	
+	@Source("mobilePurchaseCompleted.png")
+	ImageResource purchaseCompleted();
+	
+	
+//	Disposal
+	@Source("topMenuDisposal.png")
+	ImageResource topMenuDisposal();
+	
+	@Source("sideMenuDisposal.png")
+	ImageResource sideMenuDisposal();
 }

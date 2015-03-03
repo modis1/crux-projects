@@ -17,8 +17,9 @@ package org.cruxframework.showcasecore.client.resource.large;
 
 import org.cruxframework.crux.core.client.resources.Resource;
 import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
+import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
-import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.ClientBundle.Source;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
 
@@ -26,8 +27,8 @@ import com.google.gwt.resources.client.ImageResource;
  * @author Gesse Dafe
  *
  */
-@Resource(value="showcaseCoreResources", supportedDevices={Device.all})
-public interface ShowcaseResourcesLarge extends ClientBundle
+@Resource(value="showcaseCoreResources", supportedDevices={Device.largeDisplayArrows, Device.largeDisplayMouse, Device.largeDisplayTouch})
+public interface ShowcaseResourcesLarge extends ShowcaseResourcesCommon
 {
 	@Source({"org/cruxframework/showcasecore/client/resource/common/cssShowcaseCommon.css", "cssShowcaseLarge.css"})
 	CssShowcaseLarge css();
@@ -89,17 +90,13 @@ public interface ShowcaseResourcesLarge extends ClientBundle
 	@Source("tails.png")
 	ImageResource tails();
 	
-	@Source("swapView1.png")
-	DataResource swapView1();
+	//SwapViewContainer	
+	@Source("product.png")
+	ImageResource product();
+		
+	@Source("addedProduct.png")
+	ImageResource addedProduct();
 	
-	@Source("swapView2.png")
-	DataResource swapView2();
-	
-	@Source("swapView3.png")
-	DataResource swapView3();
-	
-	@Source("countries/argentina.jpg")
-	ImageResource argentina();
-	
-	
+	@Source("purchaseCompleted.png")
+	ImageResource purchaseCompleted();
 }

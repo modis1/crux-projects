@@ -15,19 +15,17 @@
  */
 package org.cruxframework.showcasecore.client.resource.common;
 
-import org.cruxframework.crux.core.client.resources.Resource;
-import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
-
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.resources.client.ImageResource.ImageOptions;
+import com.google.gwt.resources.client.ImageResource.RepeatStyle;
 import com.google.gwt.resources.client.TextResource;
 
 /**
  * @author @author Samuel Almeida Cardoso (samuel@cruxframework.org)
  *
  */
-@Resource(value="showcaseCoreResourcesCommon", supportedDevices={Device.all})
 public interface ShowcaseResourcesCommon extends ClientBundle
 {
 	@Source("cssShowcaseCommon.css")
@@ -214,16 +212,8 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	
 	//SwapViewContainer
 	@Source("shopping.png")
+//	@ImageOptions(repeatStyle=RepeatStyle.Vertical)
 	ImageResource shopping();
-	
-	@Source("product.png")
-	ImageResource product();
-	
-	@Source("addedProduct.png")
-	ImageResource addedProduct();
-	
-	@Source("purchaseCompleted.png")
-	ImageResource purchaseCompleted();
 	
 //	SwapPanel
 	@Source("crux.png")
