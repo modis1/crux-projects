@@ -893,8 +893,6 @@ body
 .menuItem-wrapper
 {
 	text-align: left;
-	padding: 10px 20px;
-	border-bottom: 1px solid rgb(205, 205, 219);
 }
 
 .menuItem-label-style
