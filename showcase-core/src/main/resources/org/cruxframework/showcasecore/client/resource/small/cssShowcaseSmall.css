@@ -1094,3 +1094,13 @@ body
 {
 	margin-right: 0px;
 }
+
+.sm-lang-wrapper
+{
+	position:absolute;
+	padding:0;
+	top:0;
+	width:120px;
+	right:10px;
+	margin:20px 0 0 0;
+}
