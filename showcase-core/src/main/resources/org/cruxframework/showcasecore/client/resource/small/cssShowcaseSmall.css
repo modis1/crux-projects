@@ -138,7 +138,7 @@ body
 
 .projectIcon 
 {
-  background:svgIconCode no-repeat center center;	
+  background:svgIconCode no-repeat center center;
   background-size:auto 100%;
 }
 
@@ -819,16 +819,283 @@ body
 	display: none;
 }
 
-.sm-lang-wrapper
+
+
+
+
+
+/* Menu */
+.menuItem-wrapper
 {
-	position:absolute;
-	right:5px;
-	width:110px;
-	padding:0;
-	margin-top:20px;
+	text-align: left;
+	padding: 10px 5px;
+	border-bottom: 1px solid rgb(205, 205, 219);
 }
 
-.sm-lang-wrapper .lang-toggler-label
+.menuItem-label-style
 {
-	margin-top:1px;
+	display: inline !important;
+	vertical-align: middle;
+	margin-right: 5px;
+	color: #1c5994 !important;
+}
+
+.menuItem-image-style
+{
+	height: 25px;
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 13px;
+}
+
+
+/* Disposal */
+.disposal-views-title
+{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.disposal-image
+{
+	width: 700px !important;
+	height: 527px !important;
+	border: solid 4px #0b5a15;
+	border-radius: 15px;
+	background-size: 100% !important;
+}
+
+.disposal-views-textPanel
+{
+	width: 700px;
+	text-align: justify;
+	color: rgb(11, 90, 21);
+}
+
+.disposal-title
+{
+	font-size: 26px;
+}
+
+.unselected-button
+{
+	background: gray !important;
+	border: 1px solid gray !important;
+	color: lightgrey !important;
+}
+
+
+/* Confirm */
+.confirm-label
+{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+
+/* RollingPanel */
+.showcase-RollingPanel
+{
+	height: 200px;
+	width: 250px;
+}
+
+.rollingPanel-panel
+{
+	margin-bottom: 50px;
+}
+
+.rollingPanel-image
+{
+	width: 300px !important;
+	height: 180px !important;
+	background-size: 100% !important;
+}
+
+.saleItem .faces-Image
+{
+	height: 120px;
+	width: 120px;
+	margin: 5px;
+}
+
+.saleItem .faces-Label
+{
+	font-size: 19px;
+	margin-top: 10px;
+}
+
+.saleItem .label-price
+{
+	font-size: 40px;
+	color: #e70101;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 1);
+	font-family: monospace;
+}
+
+.saleItem-wrapper-panel
+{
+	height: 230px;
+	width: 200px;
+	border: solid 2px white;
+	margin: 0px 0.5px;
+	background-color: #eee;
+	border-radius: 10px;
+	border-bottom: solid 3px #c8c8c8;
+	border-right: solid 3px #c8c8c8;
+	overflow: hidden;
+}
+
+
+/* SwapPanel */
+.showcase-swapPanel
+{
+	width: 100% !important;
+	height: 380px !important;
+	text-align:center;
+}
+
+.swapPanel-button
+{
+	margin: 0 auto;	
+}
+
+/* SwapViewContainer */
+.showcase-swapViewContainer
+{
+	width: 100%;
+/* 	height: 600px; */
+}
+
+.swapView-image
+{
+	width: 290px !important;
+	height: 391px !important;
+	background-size: 100% !important;
+}
+
+/* .swapView-topPanel-image */
+/* { */
+/* 	width: 290px; */
+/* 	height: 431px; */
+/* 	background-size: 100%; */
+/* } */
+
+.swapView-topPanel
+{
+	background-color: rgb(231, 1, 1);
+	padding: 6px;
+}
+
+.swapView-topPanel-title
+{
+	color: white;
+	font-size: 30px;
+	font-weight: 900;
+	display: inline;
+}
+
+.swapView-topPanel-logo
+{
+	vertical-align: middle;
+	width: 66px !important;
+	height: 75px !important;
+	background-size: 100% !important;
+}
+
+.swapView-topPanel-login
+{
+	color: white;
+	font-size: 14px;
+	display: inline;
+	vertical-align: middle;
+}
+
+.swapView-buy-button
+{
+	background-color: #e70101 !important;
+	border: 1px solid #bc0505!important;
+	border-radius: 6px !important;
+	font-size: 15px !important;
+	width: 140px;
+}
+
+.swapView-back-button
+{
+	border-radius: 6px !important;
+	font-size: 15px !important;
+	width: 140px;
+	margin-bottom: 8px;
+}
+
+
+/* SortableList */
+.sortableList-item
+{
+	margin: 10px 0px;
+}
+
+.sortableList-input
+{
+	width :230px;
+}
+
+/* Slider */
+
+.touchSliderItem
+{
+	position: relative !important;
+}
+
+.showcase-slider
+{
+	height: 400px;
+}
+
+.slider-page-title
+{
+/* 	font-size: 15px; */
+	margin: 20px;
+	font-weight: bold;
+}
+
+.slider-first-page-title
+{
+	font-size: 20px;
+	margin: 20px;
+}
+
+.slider-result-labels
+{
+/* 	font-size: 15px; */
+	margin: 5px;
+}
+
+.slider-result-labels-title
+{
+/* 	font-size: 15px; */
+	margin: 20px;
+	font-weight: bold;
+}
+
+.slider-input
+{
+	width: 250px;
+}
+
+/* Default styles */
+.margin-top-bottom
+{
+	margin: 15px 0px;
+}
+
+.margin-bottom
+{
+	margin-bottom: 10px;
+}
+
+.list-button
+{
+	margin-right: 0px;
 }
