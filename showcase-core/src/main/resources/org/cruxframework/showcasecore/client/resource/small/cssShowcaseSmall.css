@@ -965,15 +965,16 @@ body
 
 
 /* RollingPanel */
-.showcase-RollingPanel
+.showcase-RollingPanel, .showcase-cust-RollingPanel
 {
-	height: 200px;
+	height: 300px;
 	width: 250px;
 }
 
 .rollingPanel-panel
 {
 	margin-bottom: 50px;
+	display: block !important;
 }
 
 .rollingPanel-image
