@@ -913,32 +913,34 @@ body
 
 
 /* Disposal */
-/* .disposal-views-title */
-/* { */
-/* 	font-size: 20px; */
-/* 	margin-bottom: 15px; */
-/* } */
+/*
+.disposal-views-title
+{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
 
-/* .disposal-image */
-/* { */
-/* 	width: 700px !important; */
-/* 	height: 527px !important; */
-/* 	border: solid 4px #0b5a15; */
-/* 	border-radius: 15px; */
-/* 	background-size: 100% !important; */
-/* } */
+.disposal-image
+{
+	width: 700px !important;
+	height: 527px !important;
+	border: solid 4px #0b5a15;
+	border-radius: 15px;
+	background-size: 100% !important;
+}
 
-/* .disposal-views-textPanel */
-/* { */
-/* 	width: 700px; */
-/* 	text-align: justify; */
-/* 	color: rgb(11, 90, 21); */
-/* } */
+.disposal-views-textPanel
+{
+	width: 700px;
+	text-align: justify;
+	color: rgb(11, 90, 21);
+}
 
-/* .disposal-title */
-/* { */
-/* 	font-size: 26px; */
-/* } */
+.disposal-title
+{
+	font-size: 26px;
+}
+*/
 
 .mobileDisposal
 {
@@ -1174,4 +1176,9 @@ body
 	width:120px;
 	right:10px;
 	margin:20px 0 0 0;
+}
+
+.ie-version
+{
+	line-height:18px;
 }

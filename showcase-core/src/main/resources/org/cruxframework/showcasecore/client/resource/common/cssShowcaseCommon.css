@@ -69,20 +69,6 @@ pre code *, pre code span
 	margin: 0px 10px;
 	vertical-align: middle;
 }
-.ie-panel
-{
-	display:inline-block
-}
-.ie-version
-{
-	background-color: white;
-	width: 30px;
-	height: 20px;
-	padding: 3px;
-	border-radius: 14px;
-	display: inline-block;
-	vertical-align: middle;
-}
 .center, .buttonsPanel
 {
 	text-align:center;
@@ -210,4 +196,28 @@ pre code *, pre code span
 .textLibrary
 {
 	display: inline-block;
+}
+
+.ie-panel
+{
+	display: inline-block;
+	position: relative;
+}
+
+.ie-version
+{
+	background-color:white;
+	width:19px;
+	height:19px;
+	text-align:center;
+	border-radius:24px;
+	position:absolute;
+	right:-4px;
+	top:-4px;
+	background:red;
+	color:white;
+	font-weight:bold;
+	font-size:11px;
+	line-height:13px;
+	box-shadow:0 0 0 2px rgba(255, 0, 0, 0.21);
 }
