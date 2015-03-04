@@ -44,6 +44,45 @@ pre code *, pre code span
     padding: 10px 0 20px;   
 }
 
+.textLibrary
+{
+	color: #000000;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.textBrowser
+{
+	color: #000000;
+    font-size: 15px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.browser-panel
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.browser-image
+{
+	margin: 0px 10px;
+	vertical-align: middle;
+}
+.ie-panel
+{
+	display:inline-block
+}
+.ie-version
+{
+	background-color: white;
+	width: 30px;
+	height: 20px;
+	padding: 3px;
+	border-radius: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
 .center, .buttonsPanel
 {
 	text-align:center;
@@ -143,4 +182,32 @@ pre code *, pre code span
 	width: 25px;
 	vertical-align: middle;
 	margin-right: 10px;
+}
+
+/* Wellcome */
+.doc-title
+{
+	font-size: 20px;
+}
+.fl-right
+{
+	float: right;
+}
+.tc
+{
+	text-align: center;
+}
+.btn-link
+{
+	text-decoration: none;
+	margin-top: 5px;
+ 	display: block;
+	margin: 0 auto;
+	width: 140px;
+}
+
+/* Description components */
+.textLibrary
+{
+	display: inline-block;
 }
