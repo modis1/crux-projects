@@ -891,8 +891,6 @@ body
 .menuItem-wrapper
 {
 	text-align: left;
-	padding: 10px 5px;
-	border-bottom: 1px solid rgb(205, 205, 219);
 }
 
 .menuItem-label-style
@@ -1200,7 +1198,7 @@ body
 {
 	color: #3F3F3F;
 	font-size: 20px;
-	padding: 10px;
+	padding: 10px !important;
 	background: #F8F8F8;
 	margin: -10px -10px 10px -10px;
 	border-bottom: 1px solid #ccc;
