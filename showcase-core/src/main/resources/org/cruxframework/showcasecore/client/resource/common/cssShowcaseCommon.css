@@ -193,9 +193,10 @@ pre code *, pre code span
 }
 
 /* Description components */
-.textLibrary
+.textLibrary, .textBrowser
 {
 	display: inline-block;
+	font-weight:bold;
 }
 
 .ie-panel

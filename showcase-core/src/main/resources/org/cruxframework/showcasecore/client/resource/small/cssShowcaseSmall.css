@@ -1180,5 +1180,31 @@ body
 
 .ie-version
 {
-	line-height:18px;
+	padding-top:3px;
+}
+
+
+.sm-speech-panel
+{
+	display: block !important;
+	padding: 10px 0;
+	background: white;
+	margin: 7px -10px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	margin-bottom:10px !important;
+}
+
+.textDescTitle
+{
+	color: #3F3F3F;
+	font-size: 20px;
+	padding: 10px;
+	background: #F8F8F8;
+	margin: -10px -10px 10px -10px;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	text-align: center;
+	display: block;
 }

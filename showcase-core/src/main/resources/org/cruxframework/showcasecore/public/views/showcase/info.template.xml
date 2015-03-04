@@ -12,11 +12,12 @@
 <!-- 	#{teste} -->
 	<div class="speechBubble">
 	    <faces:label id="labelTitle" text="#{title}" styleName="textDescTitle"/>
-	    <faces:label id="labelLibrary" text="#{library}" styleName="textLibrary"/>
+	    <faces:label id="titleLibrary" text="Biblioteca:" styleName="textLibrary"/>
+	    <faces:label id="labelLibrary" text="#{library}" styleName="textLibrary sm-speech-panel"/>
 	    
 	    <gwt:flowPanel id="browserPanel">
 	    	<faces:label id="browsersLabel" text="${messages_showcase.browsers}" styleName="textBrowser"/>
-	    	<gwt:flowPanel id="browsers" styleName="browser-panel">
+	    	<gwt:flowPanel id="browsers" styleName="browser-panel sm-speech-panel">
 	    		<gwt:flowPanel id="iePanel" styleName="ie-panel">
 			    	<faces:image id="ie" url="${showcaseCoreResources.ie9}" visible="#{ie-visible}" styleName="faces-Image browser-image"/>
 			    	<faces:label id="ieVersion" text="#{ie-version}" styleName="ie-version"/>
