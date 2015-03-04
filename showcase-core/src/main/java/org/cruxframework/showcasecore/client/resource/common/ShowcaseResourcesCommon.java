@@ -38,6 +38,20 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	CssResource cssPrism();
 	
 	
+//	Browsers
+	@Source("browsers/ie9.png")
+	ImageResource ie9();
+	
+	@Source("browsers/chrome.png")
+	ImageResource chrome();
+	
+	@Source("browsers/safari.png")
+	ImageResource safari();
+	
+	@Source("browsers/firefox.png")
+	ImageResource firefox();
+	
+	
 //	RandomPager
 	@Source("countries/algeria.jpg")
 	ImageResource algeria();

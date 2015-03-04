@@ -4,12 +4,30 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	library="showcase"
+	useResource="showcaseCoreResources"
 	useController="mainController"> 
-	
+<!-- 	#{teste} -->
 	<div class="speechBubble">
-	   <gwt:label id="labelTitle" text="#{title}" styleName="textDescTitle"/>
+	    <faces:label id="labelTitle" text="#{title}" styleName="textDescTitle"/>
+	    <faces:label id="labelLibrary" text="#{library}" styleName="textLibrary"/>
+	    
+	    <gwt:flowPanel id="browserPanel">
+	    	<faces:label id="browsersLabel" text="${messages_showcase.browsers}" styleName="textBrowser"/>
+	    	<gwt:flowPanel id="browsers" styleName="browser-panel">
+	    		<gwt:flowPanel id="iePanel" styleName="ie-panel">
+			    	<faces:image id="ie" url="${showcaseCoreResources.ie9}" visible="#{ie-visible}" styleName="faces-Image browser-image"/>
+			    	<faces:label id="ieVersion" text="#{ie-version}" styleName="ie-version"/>
+		    	</gwt:flowPanel>
+		    	<faces:image id="chrome" url="${showcaseCoreResources.chrome}" visible="#{chrome-visible}" styleName="faces-Image browser-image"/>
+		    	<faces:image id="firefox" url="${showcaseCoreResources.firefox}" visible="#{firefox-visible}" styleName="faces-Image browser-image"/>
+		    	<faces:image id="safari" url="${showcaseCoreResources.safari}" visible="#{safari-visible}" styleName="faces-Image browser-image"/>
+	    	</gwt:flowPanel>
+	   	</gwt:flowPanel>
+	   	
+	    <hr style="background-color:#999"/>
 		<gwt:HTMLPanel id="descriptionCointainer">
 			<t:section name="description"/>
 		</gwt:HTMLPanel>
