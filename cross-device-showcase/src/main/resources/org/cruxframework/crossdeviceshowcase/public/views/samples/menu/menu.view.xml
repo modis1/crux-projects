@@ -16,17 +16,17 @@
 				<faces:menu id="menu" largeType="VerticalAccordion" smallType="VerticalAccordion" style="margin-bottom: 10px">
 					<faces:item>
 						<faces:itemWidget>
-							<faces:button id="truck" text="Truck"/>
+							<faces:label id="truck" text="Truck"/>
 						</faces:itemWidget>
 					</faces:item>
 					<faces:item>
 						<faces:itemWidget>
-							<faces:button id="car" text="Car"/>
+							<faces:label id="car" text="Car"/>
 						</faces:itemWidget>
 					</faces:item>
 					<faces:item>
 						<faces:itemWidget>
-							<faces:button id="motorcycle" text="Motorcycle"/>
+							<faces:label id="motorcycle" text="Motorcycle"/>
 						</faces:itemWidget>
 					</faces:item>
 				</faces:menu>
@@ -47,7 +47,7 @@
 		</crux:styledPanel>
 		
 <!-- 		Component description -->
-		<showcase:info title="Menu" library="Widgets">
+		<showcase:info title="Menu" library="${messages_showcase.facesLibrary}" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

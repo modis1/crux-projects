@@ -14,12 +14,12 @@
 	<center>
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">
-				<faces:swapPanel id="swapPanel" height="340px" style="text-align:center" animation="bounce" onSwap="swapPanelController.showMessage">
-					<faces:button id="button" text="I am a Button"/>
+				<faces:swapPanel id="swapPanel" styleName="faces-SwapPanel showcase-swapPanel" animation="bounce" onSwap="swapPanelController.showMessage">
+					<faces:button id="button" text="I am a Button" style="margin: 0 auto;"/>
 				</faces:swapPanel>
 								
 				<!-- 	formDisplay widget to swap in panel 	-->	
-				<crux:formDisplay id="form" visible="false">
+				<crux:formDisplay id="form" visible="false" style="margin: 0 auto;">
 					<crux:entry label="Name: ">
 						<gwt:textBox id="txtName"/>
 					</crux:entry>
@@ -41,7 +41,7 @@
 				<hr />
 				<gwt:flowPanel id="actionPanel">
 					<faces:label id="labelList" text="Choice a animation type and swap the widget" style="margin: 30px 0 10px 0;"/>
-					<gwt:listBox id="listAnimation">
+					<gwt:listBox id="listAnimation" styleName="">
 						<gwt:item label="Bounce" selected="true" value="bounce"/>
 						<gwt:item label="Fade" value="fade"/>
 						<gwt:item label="Flip X" value="flipX"/>
@@ -50,7 +50,7 @@
 						<gwt:item label="Roll" value="roll"/>
 						<gwt:item label="Rotate" value="rotate"/>	
 					</gwt:listBox>
-					<faces:button id="btnSwapWidget" text="Swap Widget" onSelect="swapPanelController.swapPanel"/>
+					<faces:button id="btnSwapWidget" text="Swap Widget" styleName="faces-Button sp-button-margin" onSelect="swapPanelController.swapPanel"/>
 				</gwt:flowPanel>
 			</gwt:flowPanel>	
 		</crux:styledPanel>	

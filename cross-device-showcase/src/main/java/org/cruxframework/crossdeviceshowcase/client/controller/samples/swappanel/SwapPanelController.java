@@ -4,8 +4,6 @@ import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages
 import org.cruxframework.crux.core.client.controller.Controller;
 import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
-import org.cruxframework.crux.core.client.screen.DeviceAdaptive;
-import org.cruxframework.crux.core.client.screen.Screen;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
 import org.cruxframework.crux.smartfaces.client.button.Button;
@@ -15,7 +13,6 @@ import org.cruxframework.crux.smartfaces.client.swappanel.SwapAnimation;
 import org.cruxframework.crux.smartfaces.client.swappanel.SwapPanel;
 import org.cruxframework.crux.widgets.client.formdisplay.FormDisplay;
 import org.cruxframework.crux.widgets.client.image.Image;
-import org.cruxframework.crux.widgets.client.textbox.NumberTextBox;
 import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
 import com.google.gwt.user.client.ui.HTML;
@@ -46,8 +43,6 @@ public class SwapPanelController
 	{
 		/* Insert the component description*/
 		myWidgetAccessor.componentDescription().setHTML(componentDescription.swapPanelDescription());
-		
-		invisibleFieldMobile();
 	}
 	
 	/** Performs exchange of widgets on the panel according to the status variable*/
@@ -115,21 +110,12 @@ public class SwapPanelController
 		DialogBox.show(new Label(MESSAGE));
 	}
 	
-	private void invisibleFieldMobile()
-	{
-		if(!Screen.getCurrentDevice().getInput().equals(DeviceAdaptive.Input.mouse))
-		{
-			myWidgetAccessor.numberAge().setVisible(false);	
-		}
-	}
-	
 	/**
 	 * Interface that allows to access the widgets of the "swapPanel" view.
 	 */
 	@BindView("swapPanel")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{	
-		NumberTextBox numberAge();
 		ListBox listAnimation();
 		Button button();
 		FormDisplay form();

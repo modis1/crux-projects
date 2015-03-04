@@ -43,8 +43,6 @@ public class AdaptiveGridController
 		myWidgetAccessor.componentDescription().setHTML(componentDescription.adaptivegridDescription());
 		
 		loadData();
-		
-		sendEmail();
 	}
 	
 	/*Method responsible for populating the grid*/

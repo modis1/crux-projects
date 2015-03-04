@@ -34,28 +34,57 @@ public class DisposalController {
 	{
 		/* Insert the component description*/
 		myWidgetAccessor.componentDescription().setHTML(componentDescription.disposalDescription());
+		
+		showTopMenuDisposal();
 	}
 	
 	@Expose
 	public void showTopMenuDisposal()
 	{
-		myWidgetAccessor.sideMenuDisposalPanel().setVisible(false);
-		myWidgetAccessor.typeMenuPanel().setVisible(false);
-		myWidgetAccessor.topMenuDisposalPanel().setVisible(true);
-		myWidgetAccessor.btnTopMenuDisposal().removeStyleName("unselected-button");
-		myWidgetAccessor.btnSideMenuDisposal().addStyleName("unselected-button");
+		if(!isMobile())
+		{
+			myWidgetAccessor.sideMenuDisposalPanel().setVisible(false);
+			myWidgetAccessor.typeMenuPanel().setVisible(false);
+			myWidgetAccessor.topMenuDisposalPanel().setVisible(true);
+			myWidgetAccessor.btnTopMenuDisposal().removeStyleName("unselected-button");
+			myWidgetAccessor.btnSideMenuDisposal().addStyleName("unselected-button");
+		}
+		else
+		{
+			mobileVisiblePanels();
+			myWidgetAccessor.mobileTopMenuDisposalPanel().setVisible(true);
+			myWidgetAccessor.mobileSideMenuDisposalPanel().setVisible(false);
+			myWidgetAccessor.btnTopMenuDisposal().removeStyleName("unselected-button");
+			myWidgetAccessor.btnSideMenuDisposal().addStyleName("unselected-button");
+		}
 	}
 	
 	@Expose
 	public void showSideMenuDisposal()
 	{
-		myWidgetAccessor.topMenuDisposalPanel().setVisible(false);	
-		myWidgetAccessor.sideMenuDisposalPanel().setVisible(true);
-		myWidgetAccessor.typeMenuPanel().setVisible(true);
-		myWidgetAccessor.btnSideMenuDisposal().removeStyleName("unselected-button");
-		myWidgetAccessor.btnTopMenuDisposal().addStyleName("unselected-button");
-		
-		defineListBoxItemsMobile();
+		if(!isMobile())
+		{
+			myWidgetAccessor.topMenuDisposalPanel().setVisible(false);	
+			myWidgetAccessor.sideMenuDisposalPanel().setVisible(true);
+			myWidgetAccessor.typeMenuPanel().setVisible(true);
+			myWidgetAccessor.btnSideMenuDisposal().removeStyleName("unselected-button");
+			myWidgetAccessor.btnTopMenuDisposal().addStyleName("unselected-button");
+		}
+		else
+		{
+			mobileVisiblePanels();
+			myWidgetAccessor.mobileTopMenuDisposalPanel().setVisible(false);
+			myWidgetAccessor.mobileSideMenuDisposalPanel().setVisible(true);
+			myWidgetAccessor.btnSideMenuDisposal().removeStyleName("unselected-button");
+			myWidgetAccessor.btnTopMenuDisposal().addStyleName("unselected-button");
+		}
+	}
+	
+	private void mobileVisiblePanels()
+	{
+		myWidgetAccessor.disposalsPanel().setVisible(false);
+		myWidgetAccessor.mobileDisposalPanel().setVisible(true);
+		myWidgetAccessor.typeMenuPanel().setVisible(false);
 	}
 	
 	/*Check device type*/
@@ -68,15 +97,6 @@ public class DisposalController {
 		{
 			return false;
 		}	
-	}
-	
-	/*Defines menu types according to the device*/
-	private void defineListBoxItemsMobile()
-	{
-		if(isMobile())
-		{
-			myWidgetAccessor.listVerticalMenuType().removeItem(1);
-		}
 	}
 	
 	/*Defines vertical menu type choosed by user*/
@@ -113,6 +133,7 @@ public class DisposalController {
 	@BindView("disposal")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
+		FlowPanel disposalsPanel();
 		FlowPanel typeMenuPanel();
 		ListBox listVerticalMenuType();
 		Button btnTopMenuDisposal();
@@ -122,6 +143,10 @@ public class DisposalController {
 		TopMenuDisposal topMenuDisposal();
 		SideMenuDisposal sideMenuDisposal();
 		HTML componentDescription();
+		
+		FlowPanel mobileSideMenuDisposalPanel();
+		FlowPanel mobileTopMenuDisposalPanel();
+		FlowPanel mobileDisposalPanel();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

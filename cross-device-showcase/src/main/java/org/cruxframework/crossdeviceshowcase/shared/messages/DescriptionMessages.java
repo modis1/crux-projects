@@ -194,7 +194,7 @@ public interface DescriptionMessages extends Messages
 	
 	@DefaultMessage("<p>O Menu é um componente cross-device baseado nas tags nav, ul e li. Para compor seus ítens e sub-ítens é possível utilizar tags HTML, "
 			+ "Strings e até mesmo outros componentes."
-	        +"Neste exemplo foi utilizado o componente <code>Button</code> como ítem principal e foram criados componentes personalizados <code>MyMenuItem</code> "
+	        +"Neste exemplo foi utilizado o componente <code>Label</code> como ítem principal e foram criados componentes personalizados <code>MyMenuItem</code> "
 	        + "para preencher os sub-ítens.</p>"
 	        +"<p>O exemplo também demonstra que este Menu tem diferentes formas de apresentação. Através dos atributos <code>largeType</code> e <code>smallType</code>, "
 	        + "pode-se definir como este será apresentado em dispositivos de tela grande como desktops ou pequena como smatphones, proporcionando uma melhor "

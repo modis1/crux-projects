@@ -19,16 +19,31 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Bem-vindo ao Crux 5 Showcase!")
 	String welcome();
 	
-	@DefaultMessage("O Crux Framework 5 provê uma série de componentes cross-device para aplicações Web."
+	@DefaultMessage("O Crux Framework 5 provê uma série de componentes cross-device para aplicações Web. "
 			+ "Neste showcase são apresentados exemplos de uso dos componentes oferecidos pelo Crux.") 
 	String info1();
 	
-	@DefaultMessage("Em cada exemplo é apresentado o componente, como é o seu funcionamento e sua apresentação na tela."
+	@DefaultMessage("Em cada exemplo é apresentado o componente, como é o seu funcionamento e sua apresentação na tela. "
 			+ "Também está disponível para consulta o código fonte de cada exemplo.")
 	String info2();
 	
-	@DefaultMessage("Este site está em construção, a cada dia novos exemplos são elaborados e adicionados ao showcase.")
+	@DefaultMessage("Atualmente o crux mantém duas bibliotecas de componentes: SmartFaces e Widgets.")
 	String info3();
+
+	@DefaultMessage("Componentes que exploram os novos padrões HTML5 e CSS3, disponíveis nos browsers mais modernos.")
+	String facesText();
+	
+	@DefaultMessage("Componentes que possuem implementações compatíveis com browsers antigos.")
+	String widgetText();
+	
+	@DefaultMessage("Biblioteca: Widgets")
+	String widgetsLibrary();
+	
+	@DefaultMessage("Biblioteca: SmartFaces")
+	String facesLibrary();
+	
+	@DefaultMessage("Browsers compatíveis:")
+	String browsers();
 	
 	@DefaultMessage("Elementos de Formulário")
 	String formElements();

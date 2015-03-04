@@ -11,8 +11,7 @@
 	onLoad="disposalController.onLoad"
 	title="Disposal"> 
 
-	<center>
-		
+	<center>	
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">			
 				<gwt:flowPanel id="buttonPanel" styleName="faces--group">
@@ -33,8 +32,8 @@
 				<br />
 				
 				<gwt:flowPanel id="disposalsPanel">
-<!-- 					topMenuDisposal panel, this starts visible -->
-					<gwt:flowPanel id="topMenuDisposalPanel" visible="true" styleName="faces-TopMenuDisposal simulate-screen">
+<!-- 					topMenuDisposal panel, this starts invisible -->
+					<gwt:flowPanel id="topMenuDisposalPanel" visible="false" styleName="faces-TopMenuDisposal simulate-screen">
 						<faces:topMenuDisposal id="topMenuDisposal">
 							<faces:view name="animals"/>
 							<faces:largeHeader><faces:label id="largeHeader" text="Animals" styleName="faces-label menu-disposal-title"/></faces:largeHeader>
@@ -82,14 +81,15 @@
 					</gwt:flowPanel>
 				</gwt:flowPanel>
 				
-				<gwt:flowPanel id="mobileDisposalPanel" visible="false">
+<!-- 				Imagens representando os disposals -->
+<!-- 				<gwt:flowPanel id="mobileDisposalPanel" visible="false"> -->
 <!-- 					<gwt:flowPanel id="mobileTopMenuDisposalPanel"> -->
-<!-- 						<faces:image id="topMenuDisposal-img" url="${showcaseCoreResources.topMenuDisposal}"/> -->
+<!-- 						<faces:image id="topMenuDisposal-img" url="${showcaseCoreResources.topMenuDisposal}" styleName="faces-image mobileDisposal"/> -->
 <!-- 					</gwt:flowPanel> -->
 <!-- 					<gwt:flowPanel id="mobileSideMenuDisposalPanel"> -->
-<!-- 						<faces:image id="sideMenuDisposal-img" url="${showcaseCoreResources.sideMenuDisposal}"/> -->
+<!-- 						<faces:image id="sideMenuDisposal-img" url="${showcaseCoreResources.sideMenuDisposal}" styleName="faces-image mobileDisposal"/> -->
 <!-- 					</gwt:flowPanel> -->
-				</gwt:flowPanel>
+<!-- 				</gwt:flowPanel> -->
 				
 			</gwt:flowPanel>
 		</crux:styledPanel>
