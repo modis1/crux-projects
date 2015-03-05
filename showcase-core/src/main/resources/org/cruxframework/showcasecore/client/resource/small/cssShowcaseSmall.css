@@ -833,7 +833,7 @@ body
 	border-radius: 100px;
 	opacity:0.75;
 	-moz-opacity: 0.75;
-	filter: listeral("alpha(opacity=75);");
+	filter: literal("alpha(opacity=75);");
 }
 
 .dialogViewContainer
@@ -1205,4 +1205,9 @@ body
 	font-weight: bold;
 	text-align: center;
 	display: block;
+}
+
+.faces-StyledPanel
+{
+	display:block !important;
 }
