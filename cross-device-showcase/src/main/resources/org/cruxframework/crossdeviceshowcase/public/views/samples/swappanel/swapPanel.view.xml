@@ -14,12 +14,9 @@
 	<center>
 		<crux:styledPanel id="mainPanel">
 			<gwt:flowPanel id="innerPanel">
-				<faces:swapPanel id="swapPanel" styleName="faces-SwapPanel showcase-swapPanel" animation="bounce" onSwap="swapPanelController.showMessage">
-					<faces:button id="button" text="I am a Button" style="margin: 0 auto;"/>
-				</faces:swapPanel>
-								
-				<!-- 	formDisplay widget to swap in panel 	-->	
-				<crux:formDisplay id="form" visible="false" style="margin: 0 auto;">
+				<faces:swapPanel id="swapPanel" styleName="faces-SwapPanel" animation="bounce" onSwap="swapPanelController.showMessage">
+				<!-- formDisplay widget to swap in panel -->
+				<crux:formDisplay id="form" visible="true" style="margin: 0 auto;">
 					<crux:entry label="Name: ">
 						<gwt:textBox id="txtName"/>
 					</crux:entry>
@@ -36,6 +33,9 @@
 						<gwt:textBox id="txtProfession"/>
 					</crux:entry>
 				</crux:formDisplay>
+				</faces:swapPanel>
+								
+					<faces:button id="button" text="I am a Button" visible="false" style="margin: 0 auto;"/>
 					
 				<!--	 Button to call widget transition method and ListBox to choice animation	-->
 				<hr />

@@ -222,3 +222,18 @@ pre code *, pre code span
 	line-height:13px;
 	box-shadow:0 0 0 2px rgba(255, 0, 0, 0.21);
 }
+
+.faces-StyledPanel
+{
+	display: inline-block;
+	background:#fff;
+	border: 1px solid #c7c7c7;
+	box-shadow: 0 1px 3px rgba(90, 90, 90, 0.2);
+	padding:10px;
+	margin:10px;
+}
+
+.faces-RollingPanel
+{
+	max-width:500px;
+}

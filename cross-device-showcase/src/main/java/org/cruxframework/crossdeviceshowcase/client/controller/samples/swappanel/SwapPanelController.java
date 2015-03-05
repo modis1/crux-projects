@@ -58,7 +58,7 @@ public class SwapPanelController
 			myWidgetAccessor.form().setVisible(true);
 			myWidgetAccessor.swapPanel().transitTo(myWidgetAccessor.form(), chooseAnimation());
 			status = 2;
-			break;	
+			break;
 		case 2:
 			myWidgetAccessor.swapPanel().transitTo(myWidgetAccessor.button(), chooseAnimation());
 			status = 0;
