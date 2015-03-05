@@ -580,7 +580,7 @@ body
 	margin:5px;
 	opacity:0.40;
 	-moz-opacity: 0.40;
-	filter: alpha(opacity=40);
+	filter: literal("alpha(opacity=40);");
 }
 
 .imageStyleSmall1
@@ -702,7 +702,7 @@ body
 	border-radius: 100px;
 	opacity:0.75;
 	-moz-opacity: 0.75;
-	filter: alpha(opacity=75);
+	filter: literal("alpha(opacity=75);");
 }
 
 .dialogBoxPanel
@@ -833,7 +833,7 @@ body
 	border-radius: 100px;
 	opacity:0.75;
 	-moz-opacity: 0.75;
-	filter: alpha(opacity=75);
+	filter: listeral("alpha(opacity=75);");
 }
 
 .dialogViewContainer
@@ -967,7 +967,6 @@ body
 /* RollingPanel */
 .showcase-RollingPanel, .showcase-cust-RollingPanel
 {
-	height: 300px;
 	width: 250px;
 }
 
