@@ -16,16 +16,16 @@
 <!-- 				Inserting image widgets to the RollingPanel component -->
 				<faces:label id="label1" text="This is a Image RollingPanel" styleName="faces-Label margin-bottom"/>
 				<faces:rollingPanel id="rollingPanelImages" tooltip="Sports" styleName="faces-RollingPanel">
-					<gwt:image id="baseball" url="${showcaseCoreResources.baseball}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="basketball" url="${showcaseCoreResources.basketball}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="canoeing" url="${showcaseCoreResources.canoeing}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="football" url="${showcaseCoreResources.football}" styleName="faces-Image rollingPanel-image" />
-					<gwt:image id="motocross" url="${showcaseCoreResources.motocross}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="running" url="${showcaseCoreResources.running}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="snowboard" url="${showcaseCoreResources.snowboard}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="soccerball" url="${showcaseCoreResources.soccerball}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="swimming" url="${showcaseCoreResources.swimming}" styleName="faces-Image rollingPanel-image"/>
-					<gwt:image id="volleyball" url="${showcaseCoreResources.volleyball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="baseball" url="${showcaseCoreResources.baseball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="basketball" url="${showcaseCoreResources.basketball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="canoeing" url="${showcaseCoreResources.canoeing}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="football" url="${showcaseCoreResources.football}" styleName="faces-Image rollingPanel-image" />
+					<faces:image id="motocross" url="${showcaseCoreResources.motocross}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="running" url="${showcaseCoreResources.running}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="snowboard" url="${showcaseCoreResources.snowboard}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="soccerball" url="${showcaseCoreResources.soccerball}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="swimming" url="${showcaseCoreResources.swimming}" styleName="faces-Image rollingPanel-image"/>
+					<faces:image id="volleyball" url="${showcaseCoreResources.volleyball}" styleName="faces-Image rollingPanel-image"/>
 				</faces:rollingPanel>
 			</gwt:flowPanel>
 		
@@ -36,7 +36,7 @@
 		</gwt:flowPanel>
 		
 <!-- 		Component description -->
-		<showcase:info title="RollingPanel">
+		<showcase:info title="RollingPanel" library="SmartFaces" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>
