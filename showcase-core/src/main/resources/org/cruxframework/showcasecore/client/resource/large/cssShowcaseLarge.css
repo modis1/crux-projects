@@ -1031,11 +1031,11 @@ body
 
 /* SwapPanel */
 .showcase-swapPanel
-{
-	width: 300px !important;
-	height: 280px !important;
-	text-align:center;
-}
+/* { */
+/* 	width: 300px !important; */
+/* 	height: 280px !important; */
+/* 	text-align:center; */
+/* } */
 
 .swapPanel-input-size
 {
@@ -1115,7 +1115,7 @@ body
 /* Slider */
 .showcase-slider
 {
-	width: 500px;
+	width: 400px;
 	height: 250px;
 }
 
@@ -1128,7 +1128,7 @@ body
 .slider-first-page-title
 {
 	font-size: 25px;
-	margin: 20px;
+	margin: 40px 0;
 }
 
 .slider-result-labels

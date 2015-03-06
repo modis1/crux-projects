@@ -911,35 +911,6 @@ body
 
 
 /* Disposal */
-/*
-.disposal-views-title
-{
-	font-size: 20px;
-	margin-bottom: 15px;
-}
-
-.disposal-image
-{
-	width: 700px !important;
-	height: 527px !important;
-	border: solid 4px #0b5a15;
-	border-radius: 15px;
-	background-size: 100% !important;
-}
-
-.disposal-views-textPanel
-{
-	width: 700px;
-	text-align: justify;
-	color: rgb(11, 90, 21);
-}
-
-.disposal-title
-{
-	font-size: 26px;
-}
-*/
-
 .mobileDisposal
 {
 	width: 90% !important;
@@ -1020,12 +991,12 @@ body
 
 
 /* SwapPanel */
-.showcase-swapPanel
-{
-	width: 100% !important;
-	height: 380px !important;
-	text-align:center;
-}
+/* .showcase-swapPanel */
+/* { */
+/* 	width: 100% !important; */
+/* 	height: 380px !important; */
+/* 	text-align:center; */
+/* } */
 
 /* SwapViewContainer */
 .showcase-swapViewContainer
@@ -1036,7 +1007,7 @@ body
 
 .swapView-image
 {
-	width: 290px !important;
+	width: 280px !important;
 	height: 391px !important;
 	background-size: 100% !important;
 }
@@ -1119,9 +1090,14 @@ body
 	height: 400px;
 }
 
+.slider-panel
+{
+	padding: 20px 10px;
+}
+
 .slider-page-title
 {
-/* 	font-size: 15px; */
+	font-size: 17px;
 	margin: 20px;
 	font-weight: bold;
 }
@@ -1129,7 +1105,7 @@ body
 .slider-first-page-title
 {
 	font-size: 20px;
-	margin: 20px;
+	margin: 40px 0 !important;
 }
 
 .slider-result-labels

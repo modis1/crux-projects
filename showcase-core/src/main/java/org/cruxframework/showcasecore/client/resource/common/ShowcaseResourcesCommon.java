@@ -226,7 +226,7 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	
 	//SwapViewContainer
 	@Source("shopping.png")
-//	@ImageOptions(repeatStyle=RepeatStyle.Vertical)
+	@ImageOptions(repeatStyle=RepeatStyle.Vertical)
 	ImageResource shopping();
 	
 //	SwapPanel
