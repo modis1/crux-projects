@@ -30,17 +30,14 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Atualmente o crux mantém duas bibliotecas de componentes: SmartFaces e Widgets.")
 	String info3();
 
-	@DefaultMessage("Componentes que exploram os novos padrões HTML5 e CSS3, disponíveis nos browsers mais modernos.")
+	@DefaultMessage("Componentes que exploram os novos padrões HTML5 e CSS3, disponíveis para os browsers mais modernos.")
 	String facesText();
 	
 	@DefaultMessage("Componentes que possuem implementações compatíveis com browsers antigos.")
 	String widgetText();
 	
-	@DefaultMessage("Biblioteca: Widgets")
-	String widgetsLibrary();
-	
-	@DefaultMessage("Biblioteca: SmartFaces")
-	String facesLibrary();
+	@DefaultMessage("Biblioteca:")
+	String library();
 	
 	@DefaultMessage("Browsers compatíveis:")
 	String browsers();
@@ -48,7 +45,7 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Elementos de Formulário")
 	String formElements();
 	
-	@DefaultMessage("Elementos de Layout")
+	@DefaultMessage("Elementos de Layout e Painéis")
 	String layoutElements();
 	
 	@DefaultMessage("Caixas de Diálogo")

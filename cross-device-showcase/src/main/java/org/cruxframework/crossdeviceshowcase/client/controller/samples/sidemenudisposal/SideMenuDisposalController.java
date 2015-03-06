@@ -1,4 +1,4 @@
-package org.cruxframework.crossdeviceshowcase.client.controller.samples.disposal;
+package org.cruxframework.crossdeviceshowcase.client.controller.samples.sidemenudisposal;
 
 import org.cruxframework.crossdeviceshowcase.shared.messages.DescriptionMessages;
 import org.cruxframework.crux.core.client.controller.Controller;
@@ -8,10 +8,8 @@ import org.cruxframework.crux.core.client.screen.DeviceAdaptive;
 import org.cruxframework.crux.core.client.screen.Screen;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
-import org.cruxframework.crux.smartfaces.client.button.Button;
 import org.cruxframework.crux.smartfaces.client.dialog.DialogBox;
 import org.cruxframework.crux.smartfaces.client.disposal.menudisposal.SideMenuDisposal;
-import org.cruxframework.crux.smartfaces.client.disposal.menudisposal.TopMenuDisposal;
 import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.smartfaces.client.menu.Type.LargeType;
 import org.cruxframework.crux.smartfaces.client.menu.Type.SmallType;
@@ -20,8 +18,8 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.ListBox;
 
-@Controller("disposalController")
-public class DisposalController {
+@Controller("sideMenuDisposalController")
+public class SideMenuDisposalController {
 	
 	@Inject
 	private DescriptionMessages componentDescription;
@@ -33,64 +31,25 @@ public class DisposalController {
 	public void onLoad()
 	{
 		/* Insert the component description*/
-		myWidgetAccessor.componentDescription().setHTML(componentDescription.topMenuDisposalDescription());
+		myWidgetAccessor.componentDescription().setHTML(componentDescription.sideMenuDisposalDescription());
 		
-		showTopMenuDisposal();
+		showPanels();
 	}
 	
-	@Expose
-	public void showTopMenuDisposal()
+	private void showPanels()
 	{
-		if(!isMobile())
+		if(isMobile())
 		{
 			myWidgetAccessor.sideMenuDisposalPanel().setVisible(false);
 			myWidgetAccessor.typeMenuPanel().setVisible(false);
-			myWidgetAccessor.topMenuDisposalPanel().setVisible(true);
-			myWidgetAccessor.btnTopMenuDisposal().removeStyleName("unselected-button");
-			myWidgetAccessor.btnSideMenuDisposal().addStyleName("unselected-button");
+			myWidgetAccessor.mobileDisposalPanel().setVisible(true);
 		}
-		else
-		{
-			mobileVisiblePanels();
-			myWidgetAccessor.mobileTopMenuDisposalPanel().setVisible(true);
-			myWidgetAccessor.mobileSideMenuDisposalPanel().setVisible(false);
-			myWidgetAccessor.btnTopMenuDisposal().removeStyleName("unselected-button");
-			myWidgetAccessor.btnSideMenuDisposal().addStyleName("unselected-button");
-		}
-	}
-	
-	@Expose
-	public void showSideMenuDisposal()
-	{
-		if(!isMobile())
-		{
-			myWidgetAccessor.topMenuDisposalPanel().setVisible(false);	
-			myWidgetAccessor.sideMenuDisposalPanel().setVisible(true);
-			myWidgetAccessor.typeMenuPanel().setVisible(true);
-			myWidgetAccessor.btnSideMenuDisposal().removeStyleName("unselected-button");
-			myWidgetAccessor.btnTopMenuDisposal().addStyleName("unselected-button");
-		}
-		else
-		{
-			mobileVisiblePanels();
-			myWidgetAccessor.mobileTopMenuDisposalPanel().setVisible(false);
-			myWidgetAccessor.mobileSideMenuDisposalPanel().setVisible(true);
-			myWidgetAccessor.btnSideMenuDisposal().removeStyleName("unselected-button");
-			myWidgetAccessor.btnTopMenuDisposal().addStyleName("unselected-button");
-		}
-	}
-	
-	private void mobileVisiblePanels()
-	{
-		myWidgetAccessor.disposalsPanel().setVisible(false);
-		myWidgetAccessor.mobileDisposalPanel().setVisible(true);
-		myWidgetAccessor.typeMenuPanel().setVisible(false);
 	}
 	
 	/*Check device type*/
 	private boolean isMobile()
 	{
-		if(!Screen.getCurrentDevice().getInput().equals(DeviceAdaptive.Input.mouse))
+		if(Screen.getCurrentDevice().getSize().equals(DeviceAdaptive.Size.small))
 		{
 			return true;
 		}else
@@ -99,11 +58,11 @@ public class DisposalController {
 		}	
 	}
 	
-	/*Defines vertical menu type choosed by user*/
+	/*Defines menu type choosed by user*/
 	@Expose
-	public void changeVerticalMenuType()
+	public void changeMenuType()
 	{
-		String menuType = myWidgetAccessor.listVerticalMenuType().getValue(myWidgetAccessor.listVerticalMenuType().getSelectedIndex());
+		String menuType = myWidgetAccessor.listMenuType().getValue(myWidgetAccessor.listMenuType().getSelectedIndex());
 		
 		switch (menuType) 
 		{
@@ -130,23 +89,15 @@ public class DisposalController {
 		DialogBox.show(new Label("You clicked on a sub-item under construction."));
 	}
 	
-	@BindView("disposal")
+	@BindView("sideMenuDisposal")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		FlowPanel disposalsPanel();
-		FlowPanel typeMenuPanel();
-		ListBox listVerticalMenuType();
-		Button btnTopMenuDisposal();
-		Button btnSideMenuDisposal();
-		FlowPanel topMenuDisposalPanel();
-		FlowPanel sideMenuDisposalPanel();
-		TopMenuDisposal topMenuDisposal();
 		SideMenuDisposal sideMenuDisposal();
-		HTML componentDescription();
-		
-		FlowPanel mobileSideMenuDisposalPanel();
-		FlowPanel mobileTopMenuDisposalPanel();
+		ListBox listMenuType();
+		FlowPanel typeMenuPanel();
+		FlowPanel sideMenuDisposalPanel();
 		FlowPanel mobileDisposalPanel();
+		HTML componentDescription();
 	}
 
 	public void setMyWidgetAccessor(MyWidgetAccessor myWidgetAccessor) 

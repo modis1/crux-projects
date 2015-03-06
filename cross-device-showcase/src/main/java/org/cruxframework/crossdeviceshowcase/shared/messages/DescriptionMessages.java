@@ -182,11 +182,6 @@ public interface DescriptionMessages extends Messages
 			+ "alcança a contagem de 5 segundos.</p>")
 	String timerDescription();
 	
-	@DefaultMessage("<p>Menu interativo cross-device, se adpta a dispositivos de tela grande como desktops e telas pequenas como celulares. "
-			+"Possui definição da página inicial do menu e também possibilita que as páginas possam ser inseridas no menu de forma declarativa e programática.</p>" 
-			+"<p>Neste exemplo a página <b>Buscar Lojas</b> foi adicionada programaticamente através de uma controller.</p>")
-	String topMenuDisposalDescription();
-	
 	@DefaultMessage("<p>RandomPager é um paginador que tem conhecimento do número total de páginas. Desta forma, o usuário final pode ter um maior"
 			+ "controle sobre o material paginado.</p>"
 			+ "<p>No exemplo implementado, o componente faz a páginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
@@ -201,12 +196,20 @@ public interface DescriptionMessages extends Messages
 	        + "visualização e usabilidade.</p>")
 	String menuDescription();
 	
-	@DefaultMessage("<p>Disposals são  componentes que definem o layout de uma página. Para tanto, estes componentes renderizam "
-			+ "automaticamente um menu, um view container, um cabeçalho e um rodapé. Desta forma, basta definir valores para os "
-			+ "atributos do layout e a página estará pronta. Inclusive a ligação entre o menu e as views que serão acionadas por ele.</p>"
-			+"<p>O exemplo apresenta os componentes <code>TopMenuDisposal</code> e <code>SideMenuDisposal</code>. Estes possuem "
-			+ "diferentes formas de disposição do layout e apresentação do menu, o que garante um layout mais adaptável às necessidades.</p>")
-	String disposalDescription();
+	@DefaultMessage("<p>Este é um componente cross-device que além de ser um menu, também define o layout completo de uma página. "
+			+ "Para tanto, este renderiza automaticamente um menu, um view container, um cabeçalho e um rodapé. "
+			+ "Desta forma, basta definir valores para os atributos do layout e a página estará pronta. Inclusive a ligação entre o "
+			+ "menu e as views que serão acionadas por ele.</p>"
+			+"<p>O SideMenuDisposal também permite a mudança do tipo de apresentação do menu, disponibilizando os tipos "
+			+ "<code>Accordion</code>, <code>Dropdown</code>, <code>Tree</code> e <code>Slide</code>, garantindo um layout "
+			+ "mais adaptável às necessidades.</p>")
+	String sideMenuDisposalDescription();
+	
+	@DefaultMessage("<p>Este é um componente de menu cross-device que também define o layout completo da página. "
+			+ "O topMenuDisposal é composto de um menu, um view container, um cabeçalho e um rodapé. Para utilizá-lo, "
+			+ "basta definir os valores para seus atributos de layout e a página estará pronta. Inclusive a ligação entre o "
+			+ "menu e as views que serão acionadas por ele.</p>")
+	String topMenuDisposalDescription();
 	
 	@DefaultMessage("<p>O confirm é uma caixa de diálogo preparada para dar sequência a uma ação, após a confirmação do usuário. "
 			+ "Desta forma, este componente ajuda a evitar que erros de navegação prejudiquem os resultados para os usuários.</p>"

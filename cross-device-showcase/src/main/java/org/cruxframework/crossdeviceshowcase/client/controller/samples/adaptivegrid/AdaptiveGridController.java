@@ -16,18 +16,18 @@ import org.cruxframework.crux.smartfaces.client.dialog.Confirm;
 import org.cruxframework.crux.smartfaces.client.dialog.DialogBox;
 import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.widgets.client.deviceadaptivegrid.DeviceAdaptiveGrid;
-import org.cruxframework.crux.widgets.client.event.row.RowClickEvent;
-import org.cruxframework.crux.widgets.client.event.row.RowClickHandler;
+import org.cruxframework.crux.widgets.client.event.SelectEvent;
 import org.cruxframework.crux.widgets.client.grid.DataRow;
 
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Widget;
 
 @Controller("adaptivegridController")
 public class AdaptiveGridController
 {
-	static final String DIALOG_TITLE = "Confirm Your Action";
-	static final String SEND_EMAIL = "Send e-mail to ";
-	static final String SUCCSESS_EMAIL = "E-mail successfully sent!";
+	private final String DIALOG_TITLE = "Confirm Your Action";
+	private final String SEND_EMAIL = "Send e-mail to ";
+	private final String SUCCSESS_EMAIL = "E-mail successfully sent!";
 	
 	@Inject
 	private MyWidgetAccessor myWidgetAccessor;
@@ -72,25 +72,18 @@ public class AdaptiveGridController
 	
 	/**Method to send email to person of the grid row*/
 	@Expose
-	public void sendEmail()
+	public void sendEmail(SelectEvent event)
 	{
-		myWidgetAccessor.grid().addRowClickHandler(new RowClickHandler() 
-		{			
+		DataRow row = myWidgetAccessor.grid().getRow((Widget) event.getSource());
+		PersonDTO dto = (PersonDTO) row.getBoundObject();
+		Confirm.show(DIALOG_TITLE, SEND_EMAIL + dto.getName()+"?", new OkHandler() 
+		{
 			@Override
-			public void onRowClick(RowClickEvent event) 
-			{
-				DataRow row = event.getRow();
-				PersonDTO dto = (PersonDTO) row.getBoundObject();
-				Confirm.show(DIALOG_TITLE, SEND_EMAIL + dto.getName()+"?", new OkHandler() 
-				{
-					@Override
-					public void onOk(OkEvent event) 
-					{					
-						DialogBox.show(new Label(SUCCSESS_EMAIL));
-					}
-				}, null);		
+			public void onOk(OkEvent event) 
+			{					
+				DialogBox.show(new Label(SUCCSESS_EMAIL));
 			}
-		});	
+		}, null);		
 	}
 	
 	/**

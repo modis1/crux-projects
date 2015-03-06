@@ -73,7 +73,7 @@ public class ImageController
 	public void image3()
 	{
 		myWidgetAccessor.labelInformImage().setText(MESSAGE_STATUE_TEXT);
-		myWidgetAccessor.labelTitleImage().setText(MESSAGE_TOWER_TITLE);
+		myWidgetAccessor.labelTitleImage().setText(MESSAGE_STATUE_TITLE);
 		myWidgetAccessor.image3().setStyleName("imageStyleBig3");
 		myWidgetAccessor.image1().setStyleName("imageStyleSmall1");
 		myWidgetAccessor.image2().setStyleName("imageStyleSmall2");
