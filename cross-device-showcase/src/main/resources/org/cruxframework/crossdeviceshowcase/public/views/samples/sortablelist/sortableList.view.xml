@@ -40,7 +40,7 @@
 		</crux:styledPanel>
 		
 <!-- 		Component description -->
-		<showcase:info title="SortableList">
+		<showcase:info title="SortableList" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

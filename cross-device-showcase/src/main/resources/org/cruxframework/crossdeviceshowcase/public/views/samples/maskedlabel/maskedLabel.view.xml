@@ -28,7 +28,7 @@
 		</crux:styledPanel>
 
 		<!-- 		Component description -->
-		<showcase:info title="MaskedLabel">
+		<showcase:info title="MaskedLabel" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

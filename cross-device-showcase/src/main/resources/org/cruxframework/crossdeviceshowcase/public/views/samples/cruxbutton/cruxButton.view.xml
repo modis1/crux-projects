@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="cruxButtonController" title="Button"
@@ -12,10 +13,10 @@
 	<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel1">
 			<gwt:HTMLPanel id="html" styleName="center">
-				<crux:button id="cruxBtn" text="I am a button" />
+				<faces:button id="cruxBtn" text="I am a button"/>
 				<hr />
 				<h4>
-					<gwt:label id="h4" text="States" />
+					<faces:label id="h4" text="States" />
 				</h4>
 				<div class="btn-Group">
 					<gwt:radioButton name="color"
@@ -35,7 +36,7 @@
 		</crux:styledPanel>
 
 		<!-- 		Component description -->
-		<showcase:info title="Button">
+		<showcase:info title="Button" library="SmartFaces" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

@@ -82,15 +82,14 @@
 				</gwt:flowPanel>
 				
 <!-- 				Imagens representando os disposals -->
-<!-- 				<gwt:flowPanel id="mobileDisposalPanel" visible="false"> -->
-<!-- 					<gwt:flowPanel id="mobileTopMenuDisposalPanel"> -->
+				<gwt:flowPanel id="mobileDisposalPanel" visible="false">
+					<gwt:flowPanel id="mobileTopMenuDisposalPanel">
 <!-- 						<faces:image id="topMenuDisposal-img" url="${showcaseCoreResources.topMenuDisposal}" styleName="faces-image mobileDisposal"/> -->
-<!-- 					</gwt:flowPanel> -->
-<!-- 					<gwt:flowPanel id="mobileSideMenuDisposalPanel"> -->
+					</gwt:flowPanel>
+					<gwt:flowPanel id="mobileSideMenuDisposalPanel">
 <!-- 						<faces:image id="sideMenuDisposal-img" url="${showcaseCoreResources.sideMenuDisposal}" styleName="faces-image mobileDisposal"/> -->
-<!-- 					</gwt:flowPanel> -->
-<!-- 				</gwt:flowPanel> -->
-				
+					</gwt:flowPanel>
+				</gwt:flowPanel>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 		

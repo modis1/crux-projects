@@ -45,7 +45,7 @@
 	</center>	
 		
 	<!-- 		Component description -->
-	<showcase:info title="Anchor">
+	<showcase:info title="Anchor" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

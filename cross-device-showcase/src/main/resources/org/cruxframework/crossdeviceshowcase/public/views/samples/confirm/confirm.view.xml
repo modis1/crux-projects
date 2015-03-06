@@ -27,7 +27,7 @@
 			onOk="confirmController.launchAction" message="Are you sure that want send your name?"/>
 
 		<!-- Component description -->
-		<showcase:info title="Confirm">
+		<showcase:info title="Confirm" library="SmartFaces" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

@@ -27,7 +27,7 @@
 		</crux:promoBanner>
 
 		<!-- 		Component description -->
-		<showcase:info title="PromoBanner">
+		<showcase:info title="PromoBanner" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

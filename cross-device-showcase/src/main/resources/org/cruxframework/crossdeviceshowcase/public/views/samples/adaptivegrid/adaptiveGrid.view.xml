@@ -26,13 +26,17 @@
 					</crux:widgetColumn>
 				</crux:largeColumns>
 				<crux:smallColumns>
-					<crux:dataColumn key="name" label="Name" width="80px"/>
+					<crux:dataColumn key="name" label="Name" width="40%"/>
+					<crux:widgetColumn key="actions" width="40%">
+						<crux:button id="btnMobileSendEmail" text="Send e-mail" 
+						onSelect="adaptivegridController.sendEmail"/>
+					</crux:widgetColumn>
 				</crux:smallColumns>
 			</crux:adaptiveGrid>
 		</crux:styledPanel>
-
+		
 <!-- 		Component description -->
-		<showcase:info title="DeviceAdaptiveGrid">
+		<showcase:info title="DeviceAdaptiveGrid" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

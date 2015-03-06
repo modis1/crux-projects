@@ -13,7 +13,7 @@
 		
 		<crux:downloadButton id="downloadButton" text="Download" onSelect="downloadButtonController.download"/>
 		
-		<showcase:info title="${messages_downloadButton.title}">
+		<showcase:info title="${messages_downloadButton.title}" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="htmlDescText" />
 			</showcase:description>

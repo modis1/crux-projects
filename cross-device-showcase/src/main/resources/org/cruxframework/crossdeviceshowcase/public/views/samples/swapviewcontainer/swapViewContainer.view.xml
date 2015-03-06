@@ -12,8 +12,8 @@
 
 	<center>
 		<crux:styledPanel id="mainPanel">
-			<gwt:HTMLPanel id="innerPanel">
-				<faces:swapViewContainer id="viewContainer" styleName="faces-SwapViewContainer showcase-swapViewContainer">
+			<gwt:flowPanel id="innerPanel">
+				<faces:swapViewContainer id="viewContainer" styleName="faces-SwapViewContainer">
 					<faces:view name="swapView1" active="true"/>
 					<faces:view name="swapView2"/>
 					<faces:view name="swapView3"/>
@@ -35,11 +35,11 @@
 						<gwt:item label="Rotate" value="rotate"/>	
 					</gwt:listBox>
 				</gwt:flowPanel>
-			</gwt:HTMLPanel>
+			</gwt:flowPanel>
 		</crux:styledPanel>	
 
 <!-- 		Component description -->
-		<showcase:info title="swapViewContainer">
+		<showcase:info title="swapViewContainer" library="SmartFaces" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

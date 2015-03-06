@@ -31,7 +31,7 @@
 		</crux:styledPanel>
 
 		<!-- 		Component description -->
-		<showcase:info title="SingleSelect">
+		<showcase:info title="SingleSelect" library="Widgets" ie-version="7+">
 			<showcase:description>			
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

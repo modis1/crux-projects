@@ -47,7 +47,7 @@
 		</crux:styledPanel>
 		
 <!-- 		Component description -->
-		<showcase:info title="Menu" library="${messages_showcase.facesLibrary}" ie-version="9+">
+		<showcase:info title="Menu" library="SmartFaces" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

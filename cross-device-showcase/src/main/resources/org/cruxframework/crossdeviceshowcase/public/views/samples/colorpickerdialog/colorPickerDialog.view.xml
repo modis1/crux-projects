@@ -26,7 +26,7 @@
 			text="Choose color" onClose="colorPickerDialogController.changeColor" />
 
 		<!-- 		Component description -->
-		<showcase:info title="ColorPicker">
+		<showcase:info title="ColorPicker" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

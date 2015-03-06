@@ -54,21 +54,27 @@
 			
 			<crux:menuSection label="${messages_showcase.menuElements}" />
 			<crux:menuEntry label="Filter" targetView="filter"/>
+			<crux:menuEntry label="Menu" targetView="menu"/>
 			<crux:menuEntry label="ListShuttle" targetView="listShuttle"/>
 			<crux:menuEntry label="StackMenu" targetView="stackMenu"/>
-			<crux:menuEntry label="TopMenuDisposal" targetView="topMenuDisposal"/>
-			
+			<crux:menuEntry label="SideMenuDisposal" targetView="sideMenuDisposal"/>
+			<crux:menuEntry label="SortableList" targetView="sortableList"/>
+			<crux:menuEntry label="TopMenuDisposal" targetView="topMenuDisposal"/>			
 			
 			<crux:menuSection label="${messages_showcase.dataElements}" />
 			<crux:menuEntry label="DeviceAdaptiveGrid" targetView="adaptiveGrid"/>
 			<crux:menuEntry label="RandomPager" targetView="randomPager"/>
+			<crux:menuEntry label="Sequential Pager" targetView="sequentialPager"/>
 			
 			<crux:menuSection label="${messages_showcase.layoutElements}"/>
 			<crux:menuEntry label="FormDisplay" targetView="formDisplay" />
+			<crux:menuEntry label="RollingPanel" targetView="rollingPanel"/>
+			<crux:menuEntry label="Slider" targetView="slider"/>
 			<crux:menuEntry label="StoryBoard" targetView="storyBoard"/>
 			<crux:menuEntry label="StyledPanel" targetView="styledPanel"/>
 			
 			<crux:menuSection label="${messages_showcase.dialogBoxes}"/>
+			<crux:menuEntry label="Confirm" targetView="confirm"/>
 			<crux:menuEntry label="DialogBox" targetView="dialogBox"/>
 			<crux:menuEntry label="DialogViewContainer" targetView="dialogViewContainer"/>
 			<crux:menuEntry label="MessageBox" targetView="messageBox"/>
@@ -84,18 +90,10 @@
 			<crux:menuEntry label="ScrollBanner" targetView="scrollBanner"/>
 			<crux:menuEntry label="Timer" targetView="timer"/>
 			
-			<crux:menuSection label="Novos" />
-			<crux:menuEntry label="Menu" targetView="menu"/>
-			<crux:menuEntry label="Disposal" targetView="disposal"/>
-			<crux:menuEntry label="Confirm" targetView="confirm"/>
-			<crux:menuEntry label="RollingPanel" targetView="rollingPanel"/>
-			<crux:menuEntry label="SwapPanel" targetView="swapPanel"/>
-			<crux:menuEntry label="Swap View Container" targetView="swapViewContainer"/>
-			<crux:menuEntry label="Sortable List" targetView="sortableList"/>
-			<crux:menuEntry label="Slider" targetView="slider"/>
-			<crux:menuEntry label="Sequential Pager" targetView="sequentialPager"/>
-			<crux:menuEntry label="Random Pager" targetView="randomPager"/>
-			<crux:menuEntry label="SortableList" targetView="sortableList"/>
+<!-- 			<crux:menuSection label="News" /> -->
+<!-- 			<crux:menuEntry label="SwapPanel" targetView="swapPanel"/> -->
+<!-- 			<crux:menuEntry label="SwapViewContainer" targetView="swapViewContainer"/> -->
+
 <!-- 			<crux:menuEntry label="Grid" targetView="grid"/> -->
 <!-- 			<crux:menuEntry label="Download Button" targetView="downloadButton"/> -->
 <!-- 			<crux:menuEntry label="Date Picker" targetView="datePicker"/> -->

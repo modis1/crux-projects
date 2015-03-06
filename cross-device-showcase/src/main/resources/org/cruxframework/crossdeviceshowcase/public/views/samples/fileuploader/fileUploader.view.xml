@@ -18,7 +18,7 @@
 		</crux:styledPanel>
 
 		<!-- 		Component description -->
-		<showcase:info title="FileUploader">
+		<showcase:info title="FileUploader" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

@@ -20,7 +20,7 @@
 		</gwt:verticalPanel>
 
 		<!-- 		Component description -->
-		<showcase:info title="ScrollBanner">
+		<showcase:info title="ScrollBanner" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

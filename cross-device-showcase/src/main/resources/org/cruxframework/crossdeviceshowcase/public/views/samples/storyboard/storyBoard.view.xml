@@ -15,7 +15,7 @@
 		</crux:storyboard>
 
 		<!-- 		Component description -->
-		<showcase:info title="StoryBoard">
+		<showcase:info title="StoryBoard" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription"/>
 			</showcase:description>

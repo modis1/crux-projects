@@ -2,6 +2,7 @@
 	xmlns:v="http://www.cruxframework.org/view"
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="sliderController" 
@@ -11,21 +12,21 @@
 	
 	<crux:styledPanel id="mainPanel">
 		<gwt:flowPanel id="innerPanel">
-    		<crux:slider id="slider" styleName="scrux-Slider showcase-slider" >
+    		<crux:slider id="slider" styleName="crux-Slider showcase-slider">
 <!--     		WELCOME -->
     			<crux:widget>
-    				<gwt:flowPanel id="welcomePanel" styleName="sliderPanel">
-    					<gwt:label id="labelWelcome" text="Welcome" styleName="gwt-Label slider-first-page-title"/>
+    				<gwt:flowPanel id="welcomePanel" styleName="slider-panel">
+    					<faces:label id="labelWelcome" text="Welcome" styleName="faces-Label slider-first-page-title"/>
     					<br />
-    					<gwt:label id="labeNext" text="Click Next to start" styleName="gwt-Label slider-first-page-title"/>
+    					<faces:label id="labeNext" text="Click Next to start" styleName="faces-Label slider-first-page-title"/>
     				</gwt:flowPanel>
     			</crux:widget>
 <!--     			PERSONAL -->
     			<crux:widget>
-    				<gwt:flowPanel id="panelPersonalData">
-	    				<gwt:label id="labelPersonal" text="Personal Data" styleName="gwt-Label slider-page-title"/>
+    				<gwt:flowPanel id="panelPersonalData" styleName="slider-panel-personal">
+	    				<faces:label id="labelPersonal" text="Personal Data" styleName="faces-Label slider-page-title"/>
 	    				 <br />
-		    				<crux:formDisplay id="formPersonalData">
+		    				<crux:formDisplay id="formPersonalData" style="margin-bottom: 20px;">
 								<crux:entry label="Name:">
 									<gwt:textBox id="textBoxName" styleName="gwt-TextBox slider-input"/>
 								</crux:entry>
@@ -44,18 +45,20 @@
     			</crux:widget>
 <!--     			PROFESSIONAL -->
     			<crux:widget>
-    				<gwt:flowPanel id="panelProfessionalData" >
-    					<gwt:label id="labelProfessional" text="Professional Data" styleName="gwt-Label slider-page-title"/>
+    				<gwt:flowPanel id="panelProfessionalData" styleName="slider-panel">
+    					<faces:label id="labelProfessional" text="Professional Data" styleName="faces-Label slider-page-title"/>
     					 <br />
     						<crux:formDisplay id="formProfessionalData">
 								<crux:entry label="Profession: ">
 									<gwt:textBox id="textBoxProfession" styleName="gwt-TextBox slider-input"/>
 								</crux:entry>
 								<crux:entry label="Length of experience:">
-									<gwt:flowPanel id="panelExperience">
-										<crux:numberTextBox id="numberExperience" maxLength="2" width="50px" style="margin-right:15px"/>
-										<gwt:radioButton id="radioButtonYears" name="timeExperience" text="Years" checked="true" style="margin-right:10px;"/>
-										<gwt:radioButton id="radioButtonMonths" name="timeExperience" text="Months"/>
+									<gwt:flowPanel id="panelExperience" style="vertical-align: middle">
+										<crux:numberTextBox id="numberExperience" maxLength="2" width="50px" style="margin-right:15px; display:inline-block"/>
+										<gwt:flowPanel id="radioPanel" style="display:inline-block">
+											<gwt:radioButton id="radioButtonYears" name="timeExperience" text="Years" checked="true" style="margin-right:10px; vertical"/>
+											<gwt:radioButton id="radioButtonMonths" name="timeExperience" text="Months"/>
+										</gwt:flowPanel>
 									</gwt:flowPanel>
 								</crux:entry>
 							</crux:formDisplay>
@@ -63,15 +66,16 @@
     			</crux:widget>
 <!--     			FINISH -->
     			<crux:widget>
-    				<gwt:flowPanel id="panelFinish">
-    					<gwt:label id="labelCheckData" text="Check all the information" styleName="gwt-Label slider-result-labels-title"/>
-						<gwt:label id="labelResultName" styleName="gwt-Label slider-result-labels"/>
-						<gwt:label id="labelResultAge" styleName="gwt-Label slider-result-labels"/>
-						<gwt:label id="labelResultPhone" styleName="gwt-Label slider-result-labels"/>
-						<gwt:label id="labelResultProfession" styleName="gwt-Label slider-result-labels"/>
-						<gwt:label id="labelResultExperience" styleName="gwt-Label slider-result-labels"/>
-    					<gwt:label id="labelFinish" text="Click back to change something or click Finish to end." styleName="gwt-Label slider-result-labels-title"/>
-    				</gwt:flowPanel>
+    				<gwt:HTMLPanel id="panelFinish" styleName="slider-panel">
+    					<faces:label id="labelCheckData" text="Check all the information" styleName="faces-Label slider-page-title"/>
+						<faces:label id="labelResultName" styleName="faces-Label slider-result-labels"/>
+						<faces:label id="labelResultAge" styleName="faces-Label slider-result-labels"/>
+						<faces:label id="labelResultPhone" styleName="faces-Label slider-result-labels"/>
+						<faces:label id="labelResultProfession" styleName="faces-Label slider-result-labels"/>
+						<faces:label id="labelResultExperience" styleName="faces-Label slider-result-labels"/>
+						<br />
+    					<faces:label id="labelFinish" text="Back to change something or click Finish to end." styleName="faces-Label slider-result-labels"/>
+    				</gwt:HTMLPanel>
     			</crux:widget>
 			</crux:slider>
 			
@@ -85,7 +89,7 @@
 	</crux:styledPanel>
 
 		<!-- Component description -->
-		<showcase:info title="Slider">
+		<showcase:info title="Slider" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

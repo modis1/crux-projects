@@ -23,7 +23,7 @@
 		
 <!-- 		</crux:styledPanel> -->
 
-		<showcase:info title="${messages_grid.title}">
+		<showcase:info title="${messages_grid.title}" library="Widgets" ie-version="7+">
 			<showcase:description>
 				<gwt:HTML id="htmlDescText"/>
 			</showcase:description>
