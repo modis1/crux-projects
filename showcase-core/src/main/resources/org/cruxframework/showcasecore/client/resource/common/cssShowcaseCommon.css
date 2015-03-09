@@ -226,7 +226,7 @@ pre code *, pre code span
 .faces-StyledPanel
 {
 	display: inline-block;
-	background:#fff;
+	background: #fff;
 	border: 1px solid #c7c7c7;
 	box-shadow: 0 1px 3px rgba(90, 90, 90, 0.2);
 	padding:10px;
