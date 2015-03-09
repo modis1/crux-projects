@@ -1031,11 +1031,11 @@ body
 
 /* SwapPanel */
 .showcase-swapPanel
-/* { */
-/* 	width: 300px !important; */
-/* 	height: 280px !important; */
-/* 	text-align:center; */
-/* } */
+{
+	width: 300px !important;
+	height: 280px !important;
+	text-align:center;
+}
 
 .swapPanel-input-size
 {

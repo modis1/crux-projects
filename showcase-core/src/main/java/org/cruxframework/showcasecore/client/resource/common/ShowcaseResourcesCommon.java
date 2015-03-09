@@ -15,6 +15,7 @@
  */
 package org.cruxframework.showcasecore.client.resource.common;
 
+import com.google.gwt.i18n.client.Messages.Optional;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.resources.client.ImageResource;
@@ -39,16 +40,20 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	
 	
 //	Browsers
-	@Source("browsers/ie9.png")
+	@Source("browsers/ie.png")
+	@ImageOptions(repeatStyle=RepeatStyle.Both)
 	ImageResource ie9();
 	
 	@Source("browsers/chrome.png")
+	@ImageOptions(repeatStyle=RepeatStyle.Both)
 	ImageResource chrome();
 	
 	@Source("browsers/safari.png")
+	@ImageOptions(repeatStyle=RepeatStyle.Both)
 	ImageResource safari();
 	
 	@Source("browsers/firefox.png")
+	@ImageOptions(repeatStyle=RepeatStyle.Both)
 	ImageResource firefox();
 	
 	

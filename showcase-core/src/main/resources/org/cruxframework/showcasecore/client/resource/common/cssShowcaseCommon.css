@@ -68,6 +68,10 @@ pre code *, pre code span
 {
 	margin: 0px 10px;
 	vertical-align: middle;
+	height: 27px !important;
+	width: 27px !important;
+	background-size: 100% !important;
+	
 }
 .center, .buttonsPanel
 {
