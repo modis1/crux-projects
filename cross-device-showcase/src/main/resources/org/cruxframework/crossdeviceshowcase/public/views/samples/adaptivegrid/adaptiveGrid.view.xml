@@ -1,45 +1,44 @@
-<v:view 
-    xmlns="http://www.w3.org/1999/xhtml" 
-    xmlns:v="http://www.cruxframework.org/view"
+<v:view  
+	xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:v="http://www.cruxframework.org/view"
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
-	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
+	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
+	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="adaptivegridController"
 	onLoad="adaptivegridController.onLoad"
-	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useDataSource="personDS" 
 	title="DeviceAdaptiveGrid">
 
 	<center>
-<!-- 		Component use sample  -->
+		<!-- Component use sample -->
 		<crux:styledPanel id="panel1">
-			<crux:adaptiveGrid id="grid"  width="100%"
-				dataSource="personDS" styleName="grid">
+			<crux:adaptiveGrid id="grid" width="100%" dataSource="personDS" styleName="grid">
 				<crux:largeColumns>
 					<crux:dataColumn key="name" label="Name" width="170px"/>
-					<crux:dataColumn key="age" label="Age" width="70px" />
+					<crux:dataColumn key="age" label="Age" width="70px"/>
 					<crux:dataColumn key="status" label="Status" width="90px"/>
-					<crux:dataColumn key="birthday" label="Day of Birth" width="130px"
-						formatter="dateFormatter" />
+					<crux:dataColumn key="birthday" label="Day of Birth" width="130px" formatter="dateFormatter"/>
 					<crux:widgetColumn key="actions" label="E-mail">
-						<crux:button id="btnSendEmail" text="Send e-mail" onSelect="adaptivegridController.sendEmail"/>
+						<faces:button id="btnSendEmail" text="Send e-mail" onSelect="adaptivegridController.sendEmail"/>
 					</crux:widgetColumn>
 				</crux:largeColumns>
 				<crux:smallColumns>
-					<crux:dataColumn key="name" label="Name" width="40%"/>
+					<crux:dataColumn key="name" label="Name" width="40%" />
 					<crux:widgetColumn key="actions" width="40%">
-						<crux:button id="btnMobileSendEmail" text="Send e-mail" 
-						onSelect="adaptivegridController.sendEmail"/>
+						<faces:button id="btnMobileSendEmail" text="Send e-mail" onSelect="adaptivegridController.sendEmail"/>
 					</crux:widgetColumn>
 				</crux:smallColumns>
 			</crux:adaptiveGrid>
 		</crux:styledPanel>
-		
-<!-- 		Component description -->
+
+		<!-- Component description -->
 		<showcase:info title="DeviceAdaptiveGrid" library="Widgets" ie-version="7+">
 			<showcase:description>
-				<gwt:HTML id="componentDescription"/>
+				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
+		
 	</center>
 </v:view>

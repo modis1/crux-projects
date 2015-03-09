@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="dialogViewContainerController" 
@@ -14,7 +15,7 @@
 		</crux:dialogViewContainer>
 
 		<crux:styledPanel id="mainPanel">
-			<crux:button id="buttonShowDialog" text="Show DialogViewContainer"
+			<faces:button id="buttonShowDialog" text="Show DialogViewContainer"
 				onSelect="dialogViewContainerController.openDialog" />
 		</crux:styledPanel>
 
@@ -26,5 +27,4 @@
 		</showcase:info>
 
 	</center>
-
 </v:view>

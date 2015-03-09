@@ -5,10 +5,10 @@ import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.widgets.client.styledpanel.StyledPanel;
 
 import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 
 @Controller("viewRegisterController")

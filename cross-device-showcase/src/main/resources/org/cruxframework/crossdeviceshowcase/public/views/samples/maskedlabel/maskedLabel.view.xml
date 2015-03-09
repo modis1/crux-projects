@@ -2,6 +2,7 @@
 	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="maskedLabelController"
@@ -9,30 +10,27 @@
 	useFormatter="dateFormatter" 
 	onLoad="maskedLabelController.onLoad"
 	title="MaskedLabel" >
-
 	<center>
-	<!-- 		Component use sample  -->
+		<!-- Component use sample -->
 		<crux:styledPanel id="panel">
 			<gwt:flowPanel id="imgPanel" styleName="guilePanel">
 				<crux:formDisplay id="form">
 					<crux:entry label="Caracter:">
-						<gwt:label id="nameLabel" text="Guile"
-							styleName="gwt-Label valueLabel" />
+						<faces:label id="nameLabel" text="Guile" styleName="gwt-Label valueLabel" />
 					</crux:entry>
 					<crux:entry label="Date of birth:">
-						<crux:maskedLabel id="birthDate" formatter="dateFormatter"
-							styleName="crux-MaskedLabel valueLabel" />
+						<crux:maskedLabel id="birthDate" formatter="dateFormatter" styleName="crux-MaskedLabel valueLabel" />
 					</crux:entry>
 				</crux:formDisplay>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 
-		<!-- 		Component description -->
+		<!-- Component description -->
 		<showcase:info title="MaskedLabel" library="Widgets" ie-version="7+">
 			<showcase:description>
-				<gwt:HTML id="componentDescription"/>
+				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
+		
 	</center>
-
 </v:view>

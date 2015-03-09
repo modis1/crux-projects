@@ -45,8 +45,8 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Elementos de Formulário")
 	String formElements();
 	
-	@DefaultMessage("Elementos de Layout e Painéis")
-	String layoutElements();
+	@DefaultMessage("Layouts e Painéis")
+	String layoutsAndPanels();
 	
 	@DefaultMessage("Caixas de Diálogo")
 	String dialogBoxes();
@@ -54,18 +54,13 @@ public interface ShowcaseMessages extends Messages
 	@DefaultMessage("Elementos de Dados")
 	String dataElements();
 	
-	@DefaultMessage("Elementos de Imagem")
-	String imageElements();
-	
-	@DefaultMessage("Elementos de Informação")
-	String infoElements();
+	@DefaultMessage("Imagens e Outros")
+	String imagesAndOthers();
+
+	@DefaultMessage("Menus e Listas")
+	String menusAndLists();
 	
 	@DefaultMessage("Database não suportada")
 	String databaseNotSupportedError();
 	
-	@DefaultMessage("Elementos de menu e Lista")
-	String menuElements();
-	
-	@DefaultMessage("Elementos diversos")
-	String miscellaneousElements();	
 }

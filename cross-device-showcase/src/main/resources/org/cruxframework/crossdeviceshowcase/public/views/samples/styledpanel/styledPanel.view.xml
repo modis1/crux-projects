@@ -3,33 +3,31 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="styledPanelController" 
 	onLoad="styledPanelController.onLoad" 
-	title="StyledPanel"> 
+	title="StyledPanel">
 
 	<center>
-	<!-- 		Component use sample  -->
+		<!-- Component use sample -->
 		<gwt:HTMLPanel id="styledWrap" styleName="styledWrap">
-			<crux:styledPanel id="panel1" height="110px" width="200px"
-				styleName="rs-left">
-				<crux:button id="btnSample" text="I am a button" />
+			<crux:styledPanel id="panel1" height="110px" width="200px" styleName="rs-left">
+				<faces:button id="btnSample" text="I am a button" />
 			</crux:styledPanel>
-			<crux:styledPanel id="panel2" height="110px" width="200px"
-				styleName="rs-left">
-				<gwt:label id="txtSample" text="I am a label" />
+			<crux:styledPanel id="panel2" height="110px" width="200px" styleName="rs-left">
+				<faces:label id="txtSample" text="I am a label" />
 			</crux:styledPanel>
 			<gwt:simplePanel id="clear" styleName="clear"></gwt:simplePanel>
 		</gwt:HTMLPanel>
 
-		<!-- 		Component description -->
+		<!-- Component description -->
 		<showcase:info title="StyledPanel" library="Widgets" ie-version="7+">
 			<showcase:description>
-				<gwt:HTML id="componentDescription"/>
+				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
 
 	</center>
-
 </v:view>

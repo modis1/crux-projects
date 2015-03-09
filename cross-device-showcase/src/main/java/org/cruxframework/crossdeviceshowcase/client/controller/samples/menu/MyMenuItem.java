@@ -1,11 +1,11 @@
 package org.cruxframework.crossdeviceshowcase.client.controller.samples.menu;
 
 import org.cruxframework.crux.smartfaces.client.image.Image;
+import org.cruxframework.crux.smartfaces.client.label.Label;
 
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.Label;
 
 public class MyMenuItem extends Composite{
 

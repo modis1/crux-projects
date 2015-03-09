@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view"
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="textAreaController" 
@@ -10,50 +11,40 @@
 	title="TextArea">
 
 	<center>
-	<!-- 		Component use sample  -->
+		<!-- Component use sample -->
 		<crux:styledPanel id="painel">
 			<gwt:HTMLPanel id="StatesWrapper" styleName="center">
 				<crux:formDisplay id="form">
 					<crux:entry>
-						<gwt:label id="labelText" text="A TextArea with dynamic max-length:" />
+						<faces:label id="labelText" text="A TextArea with dynamic max-length:" />
 					</crux:entry>
 					<crux:entry>
-						<crux:textArea id="textArea" visibleLines="6" 
-						focus="true" text="Enter a new number and click Apply to change the max-length." />
+						<crux:textArea id="textArea" visibleLines="6" focus="true" text="Enter a new number and click Apply to change the max-length." />
 					</crux:entry>
 					<crux:entry>
 						<gwt:HTMLPanel id="limitLengthWrapper" styleName="cf">
 							<gwt:textBox id="textBox" width="50px" value="150" />
-							<crux:button id="applyButton" text="Apply"
-								onSelect="textAreaController.applyMaxLength" styleName="crux-Button rs-right" />
+							<faces:button id="applyButton" text="Apply" onSelect="textAreaController.applyMaxLength" styleName="crux-Button rs-right" />
 						</gwt:HTMLPanel>
 					</crux:entry>
 				</crux:formDisplay>
 				<hr />
 				<h4>
-					<gwt:label id="h4" text="States" />
+					<faces:label id="h4" text="States" />
 				</h4>
 				<div class="btn-Group">
-					<gwt:radioButton name="color"
-						onChange="textAreaController.handleDefault" id="radioDefault"
-						text="Default" checked="true"></gwt:radioButton>
-					<gwt:radioButton name="color"
-						onChange="textAreaController.handleSuccess" id="radioSuccess"
-						text="Success"></gwt:radioButton>
-					<gwt:radioButton name="color"
-						onChange="textAreaController.handleWarning" id="radioWarning"
-						text="Warning"></gwt:radioButton>
-					<gwt:radioButton name="color"
-						onChange="textAreaController.handleError" id="radioError"
-						text="Error"></gwt:radioButton>
+					<gwt:radioButton name="color" onChange="textAreaController.handleDefault" id="radioDefault" text="Default" checked="true"/>
+					<gwt:radioButton name="color" onChange="textAreaController.handleSuccess" id="radioSuccess" text="Success"/>
+					<gwt:radioButton name="color" onChange="textAreaController.handleWarning" id="radioWarning" text="Warning"/>
+					<gwt:radioButton name="color" onChange="textAreaController.handleError" id="radioError" text="Error"/>
 				</div>
 			</gwt:HTMLPanel>
 		</crux:styledPanel>
 
-		<!-- 		Component description -->
+		<!-- Component description -->
 		<showcase:info title="TextArea" library="Widgets" ie-version="7+">
 			<showcase:description>
-				<gwt:HTML id="componentDescription"/>
+				<gwt:HTML id="componentDescription" />
 			</showcase:description>
 		</showcase:info>
 

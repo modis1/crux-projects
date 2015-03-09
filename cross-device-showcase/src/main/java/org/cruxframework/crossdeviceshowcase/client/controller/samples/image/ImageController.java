@@ -6,10 +6,10 @@ import org.cruxframework.crux.core.client.controller.Expose;
 import org.cruxframework.crux.core.client.ioc.Inject;
 import org.cruxframework.crux.core.client.screen.views.BindView;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.widgets.client.image.Image;
 
 import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.Label;
 
 @Controller("imageController")
 public class ImageController

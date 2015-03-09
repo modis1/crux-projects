@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase" 
 	useController="viewRegisterController" 
@@ -10,10 +11,10 @@
 
 	<center>
 			<gwt:HTMLPanel id="parentPanel" styleName="dialogViewContainer">
-				<gwt:label id="labelText" text="Enter the information requested below and click confirm." />
+				<faces:label id="labelText" text="Enter the information requested below and click confirm." />
 				<br />
 				<gwt:HTMLPanel id="panelError" visible="false">
-					<gwt:label id="errorMessage" text="Fill out all fields." styleName="errorMessage"/>
+					<faces:label id="errorMessage" text="Fill out all fields." styleName="errorMessage"/>
 				</gwt:HTMLPanel>
 				
 				<crux:styledPanel id="formPanel">
@@ -28,25 +29,24 @@
 							<gwt:textBox id="txtAddress" maxLength="60"/>
 						</crux:entry>
 						<crux:entry horizontalAlignment="center">
-							<crux:button id="btnRegister" text="Confirm"
+							<faces:button id="btnRegister" text="Confirm"
 								onSelect="viewRegisterController.showResult"/>
 						</crux:entry>
 					</crux:formDisplay>
 				</crux:styledPanel>
 
 				<gwt:HTMLPanel id="panelResult" visible="false" styleName="dialogViewContainerResult">
-					<gwt:label id="labelResult" text="register completed!" styleName="successMessage"/>
+					<faces:label id="labelResult" text="register completed!" styleName="successMessage"/>
 					<br />
 					<gwt:HTMLPanel id="panelResultData" styleName="panelResultData">
-					<gwt:label id="labelResultName"/>
+					<faces:label id="labelResultName"/>
 					<br />
-					<gwt:label id="labelResultEmail"/>
+					<faces:label id="labelResultEmail"/>
 					<br />
-					<gwt:label id="labelResultAddress"/>
+					<faces:label id="labelResultAddress"/>
 					</gwt:HTMLPanel>
-				</gwt:HTMLPanel>
-				
+				</gwt:HTMLPanel>			
 			</gwt:HTMLPanel>
+			
 	</center>
-
 </v:view>

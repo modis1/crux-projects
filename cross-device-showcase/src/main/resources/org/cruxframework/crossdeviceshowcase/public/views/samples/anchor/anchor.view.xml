@@ -3,51 +3,53 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="anchorController"
 	onLoad="anchorController.onLoad"
 	title="Anchor"> 
-	
+
 	<center>
-	<!-- 		Component use sample  -->
+		<!-- Component use sample -->
 		<crux:styledPanel id="wrapper">
 			<gwt:HTMLPanel id="panel" styleName="center">
 				<a id="home" style="color:#1c5994"></a>
-	
-				<crux:anchor id="anchorHome" href="#end" onSelect="anchorController.pgEnd" >
+
+				<crux:anchor id="anchorHome" href="#end" onSelect="anchorController.pgEnd">
 					<h5>Go to Bottom of page</h5>
 				</crux:anchor>
-					
+
 				<gwt:HTMLPanel id="wrapper1" styleName="anchorWrapper">
-					<gwt:label id="labelDeclarative" text="Link implemented declaratively."/>
+					<faces:label id="labelDeclarative" text="Link implemented declaratively."/>
 					<br />
-					<crux:anchor id="anchor" href="http://www.cruxframework.org"  target="_self">
+					<crux:anchor id="anchor" href="http://www.cruxframework.org" target="_self">
 						<button>Crux Framework</button>
 					</crux:anchor>
 				</gwt:HTMLPanel>
-				
+
 				<gwt:HTMLPanel id="wrapper2" styleName="anchorWrapper">
-					<gwt:label id="labelProgramatic" text="Link implemented by a controller."/>
+					<faces:label id="labelProgramatic" text="Link implemented by a controller."/>
 					<br />
 					<gwt:textBox id="textBoxUrl" text="http://www.cruxframework.org" readOnly="true"/>
-					<crux:button id="buttonLink" text="Open page" 
-					onSelect="anchorController.openUrl"/>
+					<faces:button id="buttonLink" text="Open page" onSelect="anchorController.openUrl"/>
 				</gwt:HTMLPanel>
-				    
-					<a id="end" style="color:#1c5994"></a>
-					
+
+				<a id="end" style="color:#1c5994"></a>
+
 				<crux:anchor id="anchorEnd" href="#home">
-					<h5>Go to top of page</h5><h2></h2>
+					<h5>Go to top of page</h5>
+					<h2></h2>
 				</crux:anchor>
-			</gwt:HTMLPanel>	
+			</gwt:HTMLPanel>
 		</crux:styledPanel>
-	</center>	
-		
-	<!-- 		Component description -->
+
+	<!-- Component description -->
 	<showcase:info title="Anchor" library="Widgets" ie-version="7+">
-			<showcase:description>
-				<gwt:HTML id="componentDescription"/>
-			</showcase:description>
-		</showcase:info>
+		<showcase:description>
+			<gwt:HTML id="componentDescription" />
+		</showcase:description>
+	</showcase:info>
+	</center>
+	
 </v:view>

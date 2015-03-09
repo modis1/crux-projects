@@ -52,21 +52,21 @@
 			<crux:menuEntry label="TextBox" targetView="gwtTextBox"/>
 			<crux:menuEntry label="SingleSelect" targetView="singleSelect"/>
 			
-			<crux:menuSection label="${messages_showcase.menuElements}" />
-			<crux:menuEntry label="Filter" targetView="filter"/>
+			<crux:menuSection label="${messages_showcase.menusAndLists}" />
 			<crux:menuEntry label="Menu" targetView="menu"/>
-			<crux:menuEntry label="ListShuttle" targetView="listShuttle"/>
 			<crux:menuEntry label="StackMenu" targetView="stackMenu"/>
 			<crux:menuEntry label="SideMenuDisposal" targetView="sideMenuDisposal"/>
-			<crux:menuEntry label="SortableList" targetView="sortableList"/>
 			<crux:menuEntry label="TopMenuDisposal" targetView="topMenuDisposal"/>			
+			<crux:menuEntry label="Filter" targetView="filter"/>
+			<crux:menuEntry label="ListShuttle" targetView="listShuttle"/>			
+			<crux:menuEntry label="SortableList" targetView="sortableList"/>
 			
 			<crux:menuSection label="${messages_showcase.dataElements}" />
 			<crux:menuEntry label="DeviceAdaptiveGrid" targetView="adaptiveGrid"/>
 			<crux:menuEntry label="RandomPager" targetView="randomPager"/>
 			<crux:menuEntry label="Sequential Pager" targetView="sequentialPager"/>
 			
-			<crux:menuSection label="${messages_showcase.layoutElements}"/>
+			<crux:menuSection label="${messages_showcase.layoutsAndPanels}"/>
 			<crux:menuEntry label="FormDisplay" targetView="formDisplay" />
 			<crux:menuEntry label="RollingPanel" targetView="rollingPanel"/>
 			<crux:menuEntry label="Slider" targetView="slider"/>
@@ -80,16 +80,15 @@
 			<crux:menuEntry label="MessageBox" targetView="messageBox"/>
 			<crux:menuEntry label="ProgressBox" targetView="progressBox"/>
 			
-			<crux:menuSection label="${messages_showcase.imageElements}"/>
+			<crux:menuSection label="${messages_showcase.imagesAndOthers}"/>
 			<crux:menuEntry label="Image" targetView="image"/>
 			<crux:menuEntry label="PromoBanner" targetView="promoBanner"/>
 			<crux:menuEntry label="SlideShow" targetView="slideshow"/>
-			
-			<crux:menuSection label="${messages_showcase.miscellaneousElements}" />
 			<crux:menuEntry label="Anchor" targetView="anchor"/>
 			<crux:menuEntry label="ScrollBanner" targetView="scrollBanner"/>
 			<crux:menuEntry label="Timer" targetView="timer"/>
 			
+<!-- 			<crux:menuSection label="${messages_showcase.miscellaneousElements}" /> -->		
 <!-- 			<crux:menuSection label="News" /> -->
 <!-- 			<crux:menuEntry label="SwapPanel" targetView="swapPanel"/> -->
 <!-- 			<crux:menuEntry label="SwapViewContainer" targetView="swapViewContainer"/> -->

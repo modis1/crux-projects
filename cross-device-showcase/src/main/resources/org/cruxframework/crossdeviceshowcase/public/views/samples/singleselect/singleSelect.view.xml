@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view" 
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt"
 	useController="singleSelectController"
 	onLoad="singleSelectController.onLoad"
@@ -13,7 +14,7 @@
 		<!-- 		Component use sample  -->
 		<crux:styledPanel id="panel">
 			<gwt:HTMLPanel styleName="center" id="parentPanel">
-				<gwt:label id="labelText" text="Choose one of the departments and then select one of the listed employees." />
+				<faces:label id="labelText" text="Choose one of the departments and then select one of the listed employees." />
 				<br />
 					<gwt:HTMLPanel id="panelDepartmentsEmployers">
 						<crux:singleSelect id="singleSelectDepartments"

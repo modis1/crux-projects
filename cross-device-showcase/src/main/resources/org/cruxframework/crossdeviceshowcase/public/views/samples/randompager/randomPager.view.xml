@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view"
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="randomPagerController"
@@ -27,7 +28,6 @@
 				 		<crux:widgetColumn key="flag" label="Flag" width="80px">
 				 			<crux:image id="imageFlag" width="50px" height="30px" style="margin:10px; border:solid 1px #999"/>
 				 		</crux:widgetColumn>
-	<!-- 			 	<crux:dataColumn key="flag" label="Flag" width="80px"/> -->
 				 	</crux:smallColumns>
 				</crux:adaptiveGrid>
 				<gwt:HTMLPanel id="hr">

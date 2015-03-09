@@ -3,6 +3,7 @@
 	xmlns:v="http://www.cruxframework.org/view"
 	xmlns:core="http://www.cruxframework.org/crux" 
 	xmlns:crux="http://www.cruxframework.org/crux/widgets"
+	xmlns:faces="http://www.cruxframework.org/crux/smart-faces"
 	xmlns:gwt="http://www.cruxframework.org/crux/gwt" 
 	xmlns:showcase="http://www.cruxframework.org/templates/showcase"
 	useController="stackMenuController" 
@@ -36,5 +37,4 @@
 		</showcase:info>
 
 	</center>
-
 </v:view>

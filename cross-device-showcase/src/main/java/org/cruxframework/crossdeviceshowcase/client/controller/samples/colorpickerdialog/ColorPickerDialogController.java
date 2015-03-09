@@ -9,13 +9,13 @@ import org.cruxframework.crux.core.client.screen.views.View;
 import org.cruxframework.crux.core.client.screen.views.ViewDeactivateEvent;
 import org.cruxframework.crux.core.client.screen.views.ViewDeactivateHandler;
 import org.cruxframework.crux.core.client.screen.views.WidgetAccessor;
+import org.cruxframework.crux.smartfaces.client.label.Label;
 import org.cruxframework.crux.widgets.client.colorpicker.ColorPickerDialog;
 
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.Label;
 
 @Controller("colorPickerDialogController")
 public class ColorPickerDialogController 

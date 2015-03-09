@@ -23,7 +23,7 @@
     			</crux:widget>
 <!--     			PERSONAL -->
     			<crux:widget>
-    				<gwt:flowPanel id="panelPersonalData" styleName="slider-panel-personal">
+    				<gwt:flowPanel id="panelPersonalData" styleName="slider-panel">
 	    				<faces:label id="labelPersonal" text="Personal Data" styleName="faces-Label slider-page-title"/>
 	    				 <br />
 		    				<crux:formDisplay id="formPersonalData" style="margin-bottom: 20px;">
@@ -66,24 +66,23 @@
     			</crux:widget>
 <!--     			FINISH -->
     			<crux:widget>
-    				<gwt:HTMLPanel id="panelFinish" styleName="slider-panel">
+    				<gwt:HTMLPanel id="panelFinish" styleName="slider-result-panel">
     					<faces:label id="labelCheckData" text="Check all the information" styleName="faces-Label slider-page-title"/>
-						<faces:label id="labelResultName" styleName="faces-Label slider-result-labels"/>
-						<faces:label id="labelResultAge" styleName="faces-Label slider-result-labels"/>
-						<faces:label id="labelResultPhone" styleName="faces-Label slider-result-labels"/>
-						<faces:label id="labelResultProfession" styleName="faces-Label slider-result-labels"/>
-						<faces:label id="labelResultExperience" styleName="faces-Label slider-result-labels"/>
-						<br />
-    					<faces:label id="labelFinish" text="Back to change something or click Finish to end." styleName="faces-Label slider-result-labels"/>
+							<faces:label id="labelResultName" styleName="faces-Label slider-result-labels"/>
+							<faces:label id="labelResultAge" styleName="faces-Label slider-result-labels"/>
+							<faces:label id="labelResultPhone" styleName="faces-Label slider-result-labels"/>
+							<faces:label id="labelResultProfession" styleName="faces-Label slider-result-labels"/>
+							<faces:label id="labelResultExperience" styleName="faces-Label slider-result-labels"/>
+    					<faces:label id="labelFinish" text="Back to change something or click Finish to end." styleName="faces-Label slider-result-labels-finish"/>
     				</gwt:HTMLPanel>
     			</crux:widget>
 			</crux:slider>
 			
 			<gwt:horizontalPanel id="panelButtons">
-				<crux:button id="btnCancel" text="Cancel" onSelect="sliderController.cancel"/>
-				<crux:button id="btnPrevious" text="Previous" onSelect="sliderController.previous"/>
-				<crux:button id="btnNext" text="Next" onSelect="sliderController.next"/>
-				<crux:button id="btnFinish" text="Finish" onSelect="sliderController.finish"/>
+				<faces:button id="btnCancel" text="Cancel" onSelect="sliderController.cancel"/>
+				<faces:button id="btnPrevious" text="Previous" onSelect="sliderController.previous"/>
+				<faces:button id="btnNext" text="Next" onSelect="sliderController.next"/>
+				<faces:button id="btnFinish" text="Finish" onSelect="sliderController.finish"/>
 			</gwt:horizontalPanel>
 		</gwt:flowPanel>
 	</crux:styledPanel>
