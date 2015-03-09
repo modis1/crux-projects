@@ -11,8 +11,8 @@
 
 	<center>		
 			<gwt:flowPanel id="innerPanel">
-				<faces:label id="title" text="Mammals" styleName="faces-Label disposal-views-title"/>
 				<faces:image id="image" url="${showcaseCoreResources.mammals}" styleName="faces-Image disposal-image"/>
+				<faces:label id="title" text="Mammals" styleName="faces-Label disposal-views-title"/>
 				<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 					<p>
 						Mammals (class Mammalia /məˈmeɪli.ə/) are a clade of endothermic amniotes distinguished from 

@@ -11,8 +11,8 @@
 
 	<center>
 		<gwt:flowPanel id="innerPanel">
-			<faces:label id="title" text="Birds" styleName="faces-Label disposal-views-title"/>
 			<faces:image id="image" url="${showcaseCoreResources.birds}" styleName="faces-Image disposal-image"/>
+			<faces:label id="title" text="Birds" styleName="faces-Label disposal-views-title"/>
 			<faces:html id="textPpanel" styleName="disposal-views-textPanel">
 				<p>
 					Birds (class Aves or clade Avialae) are feathered, winged, two-legged, warm-blooded, egg-laying vertebrates. 
