@@ -19,7 +19,6 @@ import org.cruxframework.crux.core.client.resources.Resource;
 import org.cruxframework.crux.core.client.screen.DeviceAdaptive.Device;
 import org.cruxframework.showcasecore.client.resource.common.ShowcaseResourcesCommon;
 
-import com.google.gwt.resources.client.ClientBundle.Source;
 import com.google.gwt.resources.client.DataResource;
 import com.google.gwt.resources.client.ImageResource;
 
@@ -57,14 +56,17 @@ public interface ShowcaseResourcesLarge extends ShowcaseResourcesCommon
 	@Source("banner3.jpg")
 	ImageResource banner3promo();
 	
+	//Image
 	@Source("coliseu.jpg")
-	DataResource image1Image();
+	ImageResource coliseu();
 	
 	@Source("eiffel.jpg")
-	DataResource image2Image();
+	ImageResource eiffel();
 	
 	@Source("liberty.jpg")
-	DataResource image3Image();
+	ImageResource liberty();
+	
+	
 	
 	@Source("crux.png")
 	ImageResource crux();

@@ -19,6 +19,7 @@ import com.google.gwt.i18n.client.Messages.Optional;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.resources.client.ClientBundle.Source;
 import com.google.gwt.resources.client.ImageResource.ImageOptions;
 import com.google.gwt.resources.client.ImageResource.RepeatStyle;
 import com.google.gwt.resources.client.TextResource;
@@ -228,6 +229,13 @@ public interface ShowcaseResourcesCommon extends ClientBundle
 	
 	@Source("animals.png")
 	ImageResource animals();	
+	
+//	Disposal-mobile
+	@Source("topMenuDisposal.png")
+	ImageResource topMenuDisposal();
+	
+	@Source("sideMenuDisposal.png")
+	ImageResource sideMenuDisposal();
 	
 	//SwapViewContainer
 	@Source("shopping.png")

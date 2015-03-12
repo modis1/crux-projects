@@ -8,9 +8,9 @@
 @url banner1promoUrl banner1promo;
 @url banner1promoUr2 banner1promo;
 @url banner1promoUr3 banner1promo;
-@url image1ImageUrl image1Image;
-@url image2ImageUrl image2Image;
-@url image3ImageUrl image3Image;
+@url imageColiseuUrl coliseu;
+@url imageEiffelUrl eiffel;
+@url imageLibertyUrl liberty;
 @url mundiUrl mundi;
 @url guileUrl guile;
 @url logoSmallUrl logoSmall;
@@ -219,9 +219,6 @@ body
 }
 
 
-
-
-
 .mainWelcome
 {
 	width: 100%;
@@ -274,9 +271,6 @@ body
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-
-
 
 
 
@@ -526,77 +520,41 @@ body
 	width:90%;
 }
 
-.imageStyleNormal1, .imageStyleNormal2, .imageStyleNormal3
+/* MessageBox */
+.messageBox-Button
+{
+	margin-bottom: 3px !important;
+}
+
+
+/* Image */
+.imageNormal
 {
 	width:150px !important;
 	height:100px !important; 
-	background-size: 100% 100%;
+	background-size: 100% 100% !important;
 	margin:5px;
 }
 
-.imageStyleNormal1
+.imageBig
 {
-	background-image: image1ImageUrl;
-}
-
-.imageStyleNormal2
-{
-	background-image: image2ImageUrl;
-}
-
-.imageStyleNormal3
-{
-	background-image: image3ImageUrl;
-}
-
-.imageStyleBig1, .imageStyleBig2, .imageStyleBig3
-{
-	width:200px !important;
-	height:156px !important; 
-	background-size: 100% 100%;
+	width:260px !important;
+	height:185px !important; 
+	background-size: 100% 100% !important;
 	margin:5px;
 }
 
-.imageStyleBig1
+.imageSmall
 {
-	background-image: image1ImageUrl;
-}
-
-.imageStyleBig2
-{
-	background-image: image2ImageUrl;
-}
-
-.imageStyleBig3
-{
-	background-image: image3ImageUrl;
-}
-
-.imageStyleSmall1, .imageStyleSmall2, .imageStyleSmall3
-{
-	width:120px !important;
-	height:94px !important; 
-	background-size: 100% 100%;
+	width:100px !important;
+	height:80px !important; 
+	background-size: 100% 100% !important;
 	margin:5px;
 	opacity:0.40;
 	-moz-opacity: 0.40;
 	filter: literal("alpha(opacity=40);");
 }
 
-.imageStyleSmall1
-{
-	background-image: image1ImageUrl;
-}
-
-.imageStyleSmall2
-{
-	background-image: image2ImageUrl;
-}
-
-.imageStyleSmall3
-{
-	background-image: image3ImageUrl;
-}
 
 .imagelabelInformImage
 {
@@ -844,7 +802,9 @@ body
 
 .dialogViewContainerResult
 {
-	margin-top: 12%;
+	margin: 12% 0;
+  width: 256px;
+  text-align: center;
 }
 
 .radioPanel
@@ -881,10 +841,6 @@ body
 .crux-TopMenuDisposal .headerPanel {
 	display: none;
 }
-
-
-
-
 
 
 /* Menu */

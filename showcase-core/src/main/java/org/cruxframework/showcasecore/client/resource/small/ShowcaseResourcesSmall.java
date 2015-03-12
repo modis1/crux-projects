@@ -59,14 +59,17 @@ public interface ShowcaseResourcesSmall extends ShowcaseResourcesCommon
 	@Source("banner3.jpg")
 	ImageResource banner3promo();
 	
+//Image
 	@Source("coliseu.jpg")
-	DataResource image1Image();
+	ImageResource coliseu();
 	
 	@Source("eiffel.jpg")
-	DataResource image2Image();
+	ImageResource eiffel();
 	
 	@Source("liberty.jpg")
-	DataResource image3Image();
+	ImageResource liberty();
+	
+	
 	
 	@Source("crux.png")
 	ImageResource crux();
@@ -104,11 +107,4 @@ public interface ShowcaseResourcesSmall extends ShowcaseResourcesCommon
 	@Source("mobilePurchaseCompleted.png")
 	ImageResource purchaseCompleted();
 	
-	
-//	Disposal
-	@Source("topMenuDisposal.png")
-	ImageResource topMenuDisposal();
-	
-	@Source("sideMenuDisposal.png")
-	ImageResource sideMenuDisposal();
 }
