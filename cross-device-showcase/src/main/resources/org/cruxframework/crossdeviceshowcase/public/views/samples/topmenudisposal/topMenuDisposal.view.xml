@@ -46,8 +46,7 @@
 				
 <!-- 				Image representing the disposals -->
 				<gwt:flowPanel id="mobileDisposalPanel" visible="false">
-<!-- 					<faces:image id="topMenuDisposal_img" url="${showcaseCoreResources.topMenuDisposal}" -->
-<!-- 					styleName="faces-image mobileDisposal"/> -->
+					<faces:image id="topMenuDisposal_img" url="${showcaseCoreResources.topMenuDisposal}" styleName="faces-image mobileDisposal"/>
 				</gwt:flowPanel>
 					
 			</gwt:flowPanel>

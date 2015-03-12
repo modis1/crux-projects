@@ -56,15 +56,14 @@
 				
 <!-- 				Image representing the disposals -->
 				<gwt:flowPanel id="mobileDisposalPanel" visible="false">
-<!-- 					<faces:image id="sideMenuDisposal_img"  url="${showcaseCoreResources.sideMenuDisposal}"  -->
-<!-- 					styleName="faces-image mobileDisposal"/> -->
+						<faces:image id="sideMenuDisposal_img"  url="${showcaseCoreResources.sideMenuDisposal}" styleName="faces-image mobileDisposal"/>
 				</gwt:flowPanel>
 				
 			</gwt:flowPanel>
 		</crux:styledPanel>
 		
 <!-- 		Component description -->
-		<showcase:info title="Disposal" library="SmartFaces" ie-version="9+">
+		<showcase:info title="SideMenuDisposal" library="SmartFaces" ie-version="9+">
 			<showcase:description>
 				<gwt:HTML id="componentDescription" />
 			</showcase:description>

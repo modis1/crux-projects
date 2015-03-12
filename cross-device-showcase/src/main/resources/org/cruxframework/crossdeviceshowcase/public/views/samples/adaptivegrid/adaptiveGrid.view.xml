@@ -25,8 +25,8 @@
 					</crux:widgetColumn>
 				</crux:largeColumns>
 				<crux:smallColumns>
-					<crux:dataColumn key="name" label="Name" width="40%" />
-					<crux:widgetColumn key="actions" width="40%">
+					<crux:dataColumn key="name" label="Name" width="45%" />
+					<crux:widgetColumn key="actions" width="37%">
 						<faces:button id="btnMobileSendEmail" text="Send e-mail" onSelect="adaptivegridController.sendEmail"/>
 					</crux:widgetColumn>
 				</crux:smallColumns>

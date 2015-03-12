@@ -16,7 +16,7 @@
 			<gwt:flowPanel id="flowPanel">
 				<faces:label id="ipLabel" text="Enter a date:" style="margin:10px"/>
 				<crux:maskedTextBox id="dateInput" formatter="maskedDateFormatter" styleName="gwt-TextBox crux-MaskedTextBox dateInput smallWidthInput" />
-				<faces:button id="btnParseDate" onSelect="maskedTextBoxController.readDate" text="Check" styleName="crux-Button"/>
+				<faces:button id="btnParseDate" onSelect="maskedTextBoxController.readDate" text="Check"/>
 			</gwt:flowPanel>
 		</crux:styledPanel>
 

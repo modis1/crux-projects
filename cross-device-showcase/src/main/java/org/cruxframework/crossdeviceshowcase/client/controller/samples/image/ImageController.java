@@ -50,41 +50,41 @@ public class ImageController
 	}
 	
 	@Expose
-	public void image1()
+	public void detailColosseum()
 	{
 		myWidgetAccessor.labelInformImage().setText(MESSAGE_COLOSSEUM_TEXT);
 		myWidgetAccessor.labelTitleImage().setText(MESSAGE_COLOSSEUM_TITLE);
-		myWidgetAccessor.image1().setStyleName("imageStyleBig1");
-		myWidgetAccessor.image2().setStyleName("imageStyleSmall2");
-		myWidgetAccessor.image3().setStyleName("imageStyleSmall3");
+		myWidgetAccessor.colosseum().setStyleName("imageBig");
+		myWidgetAccessor.tower().setStyleName("imageSmall");
+		myWidgetAccessor.statue().setStyleName("imageSmall");
 	}
 		
 	@Expose
-	public void image2()
+	public void detailTower()
 	{
 		myWidgetAccessor.labelInformImage().setText(MESSAGE_TOWER_TEXT);
 		myWidgetAccessor.labelTitleImage().setText(MESSAGE_TOWER_TITLE);
-		myWidgetAccessor.image2().setStyleName("imageStyleBig2");
-		myWidgetAccessor.image1().setStyleName("imageStyleSmall1");
-		myWidgetAccessor.image3().setStyleName("imageStyleSmall3");
+		myWidgetAccessor.tower().setStyleName("imageBig");
+		myWidgetAccessor.colosseum().setStyleName("imageSmall");
+		myWidgetAccessor.statue().setStyleName("imageSmall");
 	}
 	
 	@Expose
-	public void image3()
+	public void detailStatue()
 	{
 		myWidgetAccessor.labelInformImage().setText(MESSAGE_STATUE_TEXT);
 		myWidgetAccessor.labelTitleImage().setText(MESSAGE_STATUE_TITLE);
-		myWidgetAccessor.image3().setStyleName("imageStyleBig3");
-		myWidgetAccessor.image1().setStyleName("imageStyleSmall1");
-		myWidgetAccessor.image2().setStyleName("imageStyleSmall2");
+		myWidgetAccessor.statue().setStyleName("imageBig");
+		myWidgetAccessor.colosseum().setStyleName("imageSmall");
+		myWidgetAccessor.tower().setStyleName("imageSmall");
 	}
 	
 	@BindView("image")
 	public static interface MyWidgetAccessor extends WidgetAccessor
 	{
-		Image image1();
-		Image image2();
-		Image image3();
+		Image colosseum();
+		Image tower();
+		Image statue();
 		Label labelTitleImage();
 		Label labelInformImage();
 		HTML componentDescription();

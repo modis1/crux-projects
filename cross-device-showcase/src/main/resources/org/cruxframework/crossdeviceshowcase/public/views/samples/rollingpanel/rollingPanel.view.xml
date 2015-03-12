@@ -15,7 +15,7 @@
 			<gwt:flowPanel id="innerPanel1" styleName="faces-StyledPanel block showcase-rollingPanel">
 <!-- 				Inserting image widgets to the RollingPanel component -->
 				<faces:label id="label1" text="This is a Image RollingPanel" styleName="faces-Label margin-bottom"/>
-				<faces:rollingPanel id="rollingPanelImages" tooltip="Sports" styleName="faces-RollingPanel">
+				<faces:rollingPanel id="rollingPanelImages" tooltip="Sports">
 					<faces:image id="baseball" url="${showcaseCoreResources.baseball}" styleName="faces-Image rollingPanel-image"/>
 					<faces:image id="basketball" url="${showcaseCoreResources.basketball}" styleName="faces-Image rollingPanel-image"/>
 					<faces:image id="canoeing" url="${showcaseCoreResources.canoeing}" styleName="faces-Image rollingPanel-image"/>
@@ -32,7 +32,7 @@
 		<gwt:flowPanel id="innerPanel2" styleName="faces-StyledPanel block showcase-rollingPanel">
 <!-- 				Inserting Personal widgets created to Sports Store for controller -->
 				<faces:label id="label2" text="This is a Customized Component RollingPanel" styleName="faces-Label margin-bottom"/>
-				<faces:rollingPanel id="rollingPanelCustomizedWidget" styleName="faces-RollingPanel" tooltip="Sports Store"/>
+				<faces:rollingPanel id="rollingPanelCustomizedWidget" tooltip="Sports Store"/>
 		</gwt:flowPanel>
 		
 <!-- 		Component description -->

@@ -13,13 +13,14 @@
 
 	<center>
 	<!-- 		Component use sample  -->
+		<crux:styledPanel id="mainPanel">
 			<gwt:HTMLPanel id="panel">
-				<faces:label id="labelText" text="Clique sobre as imagens para ter informações"/>
+				<faces:label id="labelText" text="Click on the images to have information"/>
 				<br />
 						<crux:storyboard id="imagePanel">
-						<crux:image id="image1" styleName="imageStyleNormal1" onSelect="imageController.image1"/>
-						<crux:image id="image2" styleName="imageStyleNormal2" onSelect="imageController.image2"/>
-						<crux:image id="image3" styleName="imageStyleNormal3" onSelect="imageController.image3"/>
+							<crux:image id="colosseum" url="${showcaseCoreResources.coliseu}" styleName="imageNormal" onSelect="imageController.detailColosseum" tooltip="Colosseum"/>
+							<crux:image id="tower" url="${showcaseCoreResources.eiffel}" styleName="imageNormal" onSelect="imageController.detailTower" tooltip="Eiffel Tower"/>
+							<crux:image id="statue" url="${showcaseCoreResources.liberty}" styleName="imageNormal" onSelect="imageController.detailStatue" tooltip="Statue of Liberty"/>
 						</crux:storyboard>				
 				<gwt:HTMLPanel id="labelPanel">
 					<faces:label id="labelTitleImage" styleName="imagelabelTitleImage"/>
@@ -27,6 +28,7 @@
 					<faces:label id="labelInformImage" styleName="imagelabelInformImage"/>
 				</gwt:HTMLPanel>
 			</gwt:HTMLPanel>
+		</crux:styledPanel>	
 
 		<!-- 		Component description -->
 		<showcase:info title="Image" library="Widgets" ie-version="7+">

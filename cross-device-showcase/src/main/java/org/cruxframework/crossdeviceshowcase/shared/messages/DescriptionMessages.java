@@ -182,9 +182,9 @@ public interface DescriptionMessages extends Messages
 			+ "alcança a contagem de 5 segundos.</p>")
 	String timerDescription();
 	
-	@DefaultMessage("<p>RandomPager é um paginador que tem conhecimento do número total de páginas. Desta forma, o usuário final pode ter um maior"
+	@DefaultMessage("<p>RandomPager é um paginador que tem conhecimento do número total de páginas. Desta forma, o usuário final pode ter um maior "
 			+ "controle sobre o material paginado.</p>"
-			+ "<p>No exemplo implementado, o componente faz a páginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
+			+ "<p>No exemplo implementado, o componente faz a paginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
 	String randomPagerDescription();
 	
 	@DefaultMessage("<p>O Menu é um componente cross-device baseado nas tags nav, ul e li. Para compor seus ítens e sub-ítens é possível utilizar tags HTML, "
@@ -197,7 +197,7 @@ public interface DescriptionMessages extends Messages
 	String menuDescription();
 	
 	@DefaultMessage("<p>Este é um componente cross-device que além de ser um menu, também define o layout completo de uma página. "
-			+ "Para tanto, este renderiza automaticamente um menu, um view container, um cabeçalho e um rodapé. "
+			+ "Para tanto, este renderiza automaticamente um menu, um viewContainer, um cabeçalho e um rodapé. "
 			+ "Desta forma, basta definir valores para os atributos do layout e a página estará pronta. Inclusive a ligação entre o "
 			+ "menu e as views que serão acionadas por ele.</p>"
 			+"<p>O SideMenuDisposal também permite a mudança do tipo de apresentação do menu, disponibilizando os tipos "
@@ -242,7 +242,7 @@ public interface DescriptionMessages extends Messages
 	
 	@DefaultMessage("<p>SequentialPager é um paginador que não prevê o tamanho da fonte de dados para a carga instantânea. Este paginador tem "
 			+ "conhecimento da dimensão da fonte de dados somente após escanear todas as páginas disponíveis. "
-			+ "<p>No exemplo implementado, o componente faz a páginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
+			+ "<p>No exemplo implementado, o componente faz a paginação dos resultados de um componente de Grid (DeviceAdaptiveGrid).</p>")
 	String sequentialPagerDescription();	
 	
 	@DefaultMessage("<p>O sortableList é um componente de ordenação. Este permite que seja adicionado qualquer componente "

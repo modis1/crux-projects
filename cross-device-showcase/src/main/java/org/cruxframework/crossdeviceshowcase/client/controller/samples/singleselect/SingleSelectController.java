@@ -82,7 +82,7 @@ public class SingleSelectController
 			if (indexEmployee >= 0)
 			{
 				String itemEmployee = myWidgetAccessor.singleSelectEmployees().getItemText(indexEmployee);
-				FlatMessageBox.show("You selected the employee (a) " + itemEmployee + " of the " + itemDepartment+" department.", MessageType.INFO);
+				FlatMessageBox.show("You selected the employee " + itemEmployee + " of the " + itemDepartment+" department.", MessageType.INFO);
 			}
 		}				
 	}

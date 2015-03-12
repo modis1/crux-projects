@@ -14,10 +14,10 @@
 		<!-- Component use sample -->
 		<crux:styledPanel id="styled">
 			<gwt:flowPanel id="flow" width="100%">
-				<faces:button id="showMessageBtnInfo" text="Show Info" onSelect="messageBoxController.showInfo" />
-				<faces:button id="showMessageBtnSuccess" text="Show Success" onSelect="messageBoxController.showSuccess" />
-				<faces:button id="showMessageBtnWarn" text="Show warn" onSelect="messageBoxController.showWarn" />
-				<faces:button id="showMessageBtnError" text="Show Error" onSelect="messageBoxController.showError" />
+				<faces:button id="showMessageBtnInfo" text="Show Info" styleName="faces-Button messageBox-Button" onSelect="messageBoxController.showInfo" />
+				<faces:button id="showMessageBtnSuccess" text="Show Success" styleName="faces-Button messageBox-Button" onSelect="messageBoxController.showSuccess" />
+				<faces:button id="showMessageBtnWarn" text="Show warn" styleName="faces-Button messageBox-Button" onSelect="messageBoxController.showWarn" />
+				<faces:button id="showMessageBtnError" text="Show Error" styleName="faces-Button messageBox-Button" onSelect="messageBoxController.showError" />
 			</gwt:flowPanel>
 		</crux:styledPanel>
 

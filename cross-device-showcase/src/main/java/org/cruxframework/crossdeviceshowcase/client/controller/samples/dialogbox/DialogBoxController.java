@@ -53,7 +53,7 @@ public class DialogBoxController
 	@Expose
 	public void openDialog()
 	{		
-		dialogBox.setTitle("Dialog Box");
+		dialogBox.setTitle("DialogBox");
 		dialogBox.setModal(true);
 		dialogBox.show();
 		dialogBox.center();	

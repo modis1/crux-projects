@@ -46,7 +46,7 @@
 			<crux:menuEntry label="DateBox" targetView="dateBox"/>
 			<crux:menuEntry label="FileUploader" targetView="fileUploader"/>
 			<crux:menuEntry label="MaskedLabel" targetView="maskedLabel"/>
-			<crux:menuEntry label="MaskedTextbox" targetView="maskedTextBox"/>
+			<crux:menuEntry label="MaskedTextBox" targetView="maskedTextBox"/>
 			<crux:menuEntry label="NumberTextBox" targetView="numberTextBox"/>
 			<crux:menuEntry label="TextArea" targetView="textArea"/>
 			<crux:menuEntry label="TextBox" targetView="gwtTextBox"/>
@@ -64,7 +64,7 @@
 			<crux:menuSection label="${messages_showcase.dataElements}" />
 			<crux:menuEntry label="DeviceAdaptiveGrid" targetView="adaptiveGrid"/>
 			<crux:menuEntry label="RandomPager" targetView="randomPager"/>
-			<crux:menuEntry label="Sequential Pager" targetView="sequentialPager"/>
+			<crux:menuEntry label="SequentialPager" targetView="sequentialPager"/>
 			
 			<crux:menuSection label="${messages_showcase.layoutsAndPanels}"/>
 			<crux:menuEntry label="FormDisplay" targetView="formDisplay" />
